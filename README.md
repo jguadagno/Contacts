@@ -1,6 +1,8 @@
 # Contacts
 
-This repository is being used for the stream ***Coding with JoeG***. Follow the stream on [Twitch](https://twitch.tv/jguadagno).  We'll follow the [outline](outline.md) for content for the stream.  You should be able to following along with the outline as we go.
+This repository is being used for the stream ***Coding with JoeG***. Follow the stream on [Twitch](https://twitch.tv/jguadagno).  
+
+We'll follow the development flow [outlined here](outline.md) for content for the stream. The stream and outline will have us build a brand new application to manage and view your contacts.  I know, we have our phones for that, but everyone should understand the basic needs of the application. You should be able to following along with the stream as we go.
 
 ## Setup
 
