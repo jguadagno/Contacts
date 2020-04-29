@@ -6,7 +6,8 @@ This is the development flow that we follow to build the contacts application
 
 Do we want to start with introducing Visual Studio? Visual Studio Code? JetBrains Rider?
 
-Video: [Introduction to IDEs - Part 1](https://youtu.be/19nRZ6CBXDI): [Microsoft Visual Studio](https://visualstudio.microsoft.com/), [Microsoft Visual Studio Code](https://code.visualstudio.com/?wt.mc_id=DX_841432).
+* Video: [Introduction to IDEs - Part 1](https://youtu.be/19nRZ6CBXDI): [Microsoft Visual Studio](https://visualstudio.microsoft.com/), [Microsoft Visual Studio Code](https://code.visualstudio.com/?wt.mc_id=DX_841432).
+* Video: [Introduction to IDEs - Part 2](https://youtu.be/qlg9n-T064Q): [JetBrains](https://www.jetbrains.com/) [Rider](https://www.jetbrains.com/rider/)
 
 ## Domain
 
