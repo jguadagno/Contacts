@@ -13,8 +13,6 @@ Do we want to start with introducing Visual Studio? Visual Studio Code? JetBrain
 
 ### Model Development
 
-Built out the Contacts.Domain models. ([Video](https://youtu.be/XkCFW9rqSz0)) Commit Id: [0e3443be](https://github.com/jguadagno/Contacts/commit/0e3443bfe8657f250fd0830e0e36ae22a8ec3a62)
-
 ### Business Layer
 
 ### Unit Test the Application
