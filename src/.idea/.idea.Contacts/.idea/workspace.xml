@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="14fd18ef-6fed-455b-81a5-09cb395c5fc7" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Contacts.Domain/Contact.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Contacts.Logic/ContactManager.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/ce9f6330-c82c-4c1f-8d2d-d38c2e428fd1/console.sql" />
+        <option value="$PROJECT_DIR$/Contacts.Logic/Class1.cs" />
+        <option value="$PROJECT_DIR$/Contacts.Logic/ContactManager.cs" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1bT19vhsOSwgDwrjXR8syDmb0Om" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="autoscrollToSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="sqlserver" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="14fd18ef-6fed-455b-81a5-09cb395c5fc7" name="Default Changelist" comment="" />
+      <created>1588641122454</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1588641122454</updated>
+      <workItem from="1588641127938" duration="8634000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="null" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
+  <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="440" y="190" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1588721526102">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="440" y="190" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1680.1050/-607.-1800.3200.1800@0.0.1680.1050" timestamp="1588721526102" />
+    <state width="1126" height="295" key="GridCell.Tab.0.bottom" timestamp="1588714499668">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="1126" height="295" key="GridCell.Tab.0.bottom/0.0.1680.1050/-607.-1777.3200.1777@0.0.1680.1050" timestamp="1588714499668" />
+    <state width="1126" height="295" key="GridCell.Tab.0.center" timestamp="1588714499667">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="1126" height="295" key="GridCell.Tab.0.center/0.0.1680.1050/-607.-1777.3200.1777@0.0.1680.1050" timestamp="1588714499667" />
+    <state width="1126" height="295" key="GridCell.Tab.0.left" timestamp="1588714499664">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="1126" height="295" key="GridCell.Tab.0.left/0.0.1680.1050/-607.-1777.3200.1777@0.0.1680.1050" timestamp="1588714499664" />
+    <state width="1126" height="295" key="GridCell.Tab.0.right" timestamp="1588714499667">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="1126" height="295" key="GridCell.Tab.0.right/0.0.1680.1050/-607.-1777.3200.1777@0.0.1680.1050" timestamp="1588714499667" />
+    <state x="340" y="201" key="Rider.ProjectTemplateDialog.Size" timestamp="1588720024961">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="340" y="201" key="Rider.ProjectTemplateDialog.Size/0.0.1680.1050/-607.-1777.3200.1777@0.0.1680.1050" timestamp="1588720024961" />
+    <state x="340" y="201" key="Rider.ProjectTemplateDialog.Size/0.0.1680.1050/-607.-1800.3200.1800@0.0.1680.1050" timestamp="1588719927629" />
+    <state x="379" y="164" key="SettingsEditor" timestamp="1588715646075">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="379" y="164" key="SettingsEditor/0.0.1680.1050/-607.-1800.3200.1800@0.0.1680.1050" timestamp="1588715646075" />
+  </component>
+</project>

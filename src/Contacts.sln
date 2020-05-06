@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contacts.Domain", "Contacts.Domain\Contacts.Domain.csproj", "{2C0E4798-C750-400A-AF50-0E0E0EB072D4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contacts.Logic", "Contacts.Logic\Contacts.Logic.csproj", "{A0614ABC-550E-43D3-B2E8-EDBF43F793FE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2C0E4798-C750-400A-AF50-0E0E0EB072D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C0E4798-C750-400A-AF50-0E0E0EB072D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C0E4798-C750-400A-AF50-0E0E0EB072D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C0E4798-C750-400A-AF50-0E0E0EB072D4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A0614ABC-550E-43D3-B2E8-EDBF43F793FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0614ABC-550E-43D3-B2E8-EDBF43F793FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0614ABC-550E-43D3-B2E8-EDBF43F793FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0614ABC-550E-43D3-B2E8-EDBF43F793FE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
