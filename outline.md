@@ -13,7 +13,22 @@ Do we want to start with introducing Visual Studio? Visual Studio Code? JetBrain
 
 ### Model Development
 
-### Business Layer
+Built out the Contacts.Domain models.  [Video](https://youtu.be/XkCFW9rqSz0) Commit Id: [0e3443be](https://github.com/jguadagno/Contacts/commit/0e3443bfe8657f250fd0830e0e36ae22a8ec3a62)
+
+### Business / Manager Layer
+
+Built out the Manager Layer. [Video](https://youtu.be/wZmzM3AWAyk) Commit Id: [f89e811](https://github.com/jguadagno/Contacts/commit/f89e8116ae3bbefe20f50b6a8fdfcd642e34db38)
+
+### Data Layer
+
+Let's persist the data.
+
+#### Helpful Links
+
+* [Getting Started with EF Core](https://docs.microsoft.com/en-us/ef/core/get-started/?tabs=netcore-cli)
+* [Managing Connection Strings in Entity Framework Core](https://www.learnentityframeworkcore.com/connection-strings)
+* [SQLite Connection Strings](https://www.connectionstrings.com/sqlite/)
+* [SQLite](https://sqlite.org/index.html)
 
 ### Unit Test the Application
 
