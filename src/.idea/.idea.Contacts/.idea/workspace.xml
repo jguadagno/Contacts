@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="14fd18ef-6fed-455b-81a5-09cb395c5fc7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Contacts/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Contacts/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Contacts/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Contacts/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Contacts/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Contacts/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Contacts.Logic/ContactManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Contacts.Logic/ContactManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Contacts.sln" beforeDir="false" afterPath="$PROJECT_DIR$/Contacts.sln" afterDir="false" />
-    </list>
+    <list default="true" id="14fd18ef-6fed-455b-81a5-09cb395c5fc7" name="Default Changelist" comment="Created the initial database with EF Core" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,10 +9,13 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="SET_USER_NAME_GLOBALLY" value="false" />
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Contacts.Data/ContactContext.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Contacts.Domain/Contact.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Contacts.Data/Migrations/20200507235336_InitialCreate.Designer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Contacts.Data/Migrations/ContactContextModelSnapshot.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Contacts.Logic/ContactManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Contacts.Data/Migrations/20200507235336_InitialCreate.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Contacts.Console/Program.cs" root0="FORCE_HIGHLIGHTING" />
@@ -78,8 +75,16 @@
       <option name="presentableId" value="Default" />
       <updated>1588641122454</updated>
       <workItem from="1588641127938" duration="8634000" />
-      <workItem from="1588889985236" duration="3682000" />
+      <workItem from="1588889985236" duration="3999000" />
     </task>
+    <task id="LOCAL-00001" summary="Created the initial database with EF Core">
+      <created>1588899122166</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1588899122166</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -87,8 +92,21 @@
   </component>
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="Created the initial database with EF Core" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created the initial database with EF Core" />
   </component>
   <component name="WindowStateProjectService">
     <state x="440" y="190" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1588895282515">
@@ -120,6 +138,10 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="379" y="164" key="SettingsEditor/0.0.1680.1050/-607.-1800.3200.1800@0.0.1680.1050" timestamp="1588715646075" />
+    <state x="340" y="202" key="Vcs.Push.Dialog.v2" timestamp="1588899126844">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="340" y="202" key="Vcs.Push.Dialog.v2/0.0.1680.1050/-607.-1800.3200.1800@0.0.1680.1050" timestamp="1588899126844" />
     <state x="653" y="236" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1588895340275">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>

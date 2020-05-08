@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="Contacts">
+  <database-model serializer="dbm" dbms="SQLITE" family-id="SQLITE" format-version="4.18">
+    <root id="1">
+      <ServerVersion>3.25.1</ServerVersion>
+    </root>
+    <schema id="2" parent="1" name="main">
+      <Current>1</Current>
+    </schema>
+    <collation id="3" parent="1" name="BINARY"/>
+    <collation id="4" parent="1" name="NOCASE"/>
+    <collation id="5" parent="1" name="RTRIM"/>
+    <table id="6" parent="2" name="AddressTypes"/>
+    <table id="7" parent="2" name="Addresses"/>
+    <table id="8" parent="2" name="Contacts"/>
+    <table id="9" parent="2" name="PhoneTypes"/>
+    <table id="10" parent="2" name="Phones"/>
+    <table id="11" parent="2" name="__EFMigrationsHistory"/>
+    <table id="12" parent="2" name="sqlite_master">
+      <System>1</System>
+    </table>
+    <table id="13" parent="2" name="sqlite_sequence">
+      <System>1</System>
+    </table>
+    <column id="14" parent="6" name="AddressTypeId">
+      <Position>1</Position>
+      <DataType>INTEGER|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="15" parent="6" name="Type">
+      <Position>2</Position>
+      <DataType>TEXT|0s</DataType>
+    </column>
+    <column id="16" parent="6" name="Description">
+      <Position>3</Position>
+      <DataType>TEXT|0s</DataType>
+    </column>
+    <key id="17" parent="6" name="PK_AddressTypes">
+      <ColNames>AddressTypeId</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="18" parent="7" name="AddressId">
+      <Position>1</Position>
+      <DataType>INTEGER|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="19" parent="7" name="StreetAddress">
+      <Position>2</Position>
+      <DataType>TEXT|0s</DataType>
+    </column>
+    <column id="20" parent="7" name="SecondaryAddress">
+      <Position>3</Position>
+      <DataType>TEXT|0s</DataType>
+    </column>
+    <column id="21" parent="7" name="Unit">
+      <Position>4</Position>
+      <DataType>TEXT|0s</DataType>
+    </column>
+    <column id="22" parent="7" name="City">
+      <Position>5</Position>
+      <DataType>TEXT|0s</DataType>
+    </column>
+    <column id="23" parent="7" name="State">
+      <Position>6</Position>
+      <DataType>TEXT|0s</DataType>
+    </column>
+    <column id="24" parent="7" name="Country">
+      <Position>7</Position>
+      <DataType>TEXT|0s</DataType>
+    </column>
+    <column id="25" parent="7" name="PostalCode">
+      <Position>8</Position>
+      <DataType>TEXT|0s</DataType>
+    </column>
+    <column id="26" parent="7" name="AddressTypeId">
+      <Position>9</Position>
+      <DataType>INTEGER|0s</DataType>
+    </column>
+    <column id="27" parent="7" name="ContactId">
+      <Position>10</Position>
+      <DataType>INTEGER|0s</DataType>
+    </column>
+    <index id="28" parent="7" name="IX_Addresses_AddressTypeId">
+      <ColNames>AddressTypeId</ColNames>
+      <ColumnCollations></ColumnCollations>
+    </index>
+    <index id="29" parent="7" name="IX_Addresses_ContactId">
+      <ColNames>ContactId</ColNames>
+      <ColumnCollations></ColumnCollations>
+    </index>
+    <key id="30" parent="7" name="PK_Addresses">
+      <ColNames>AddressId</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="31" parent="7" name="FK_Addresses_AddressTypes_AddressTypeId">
+      <ColNames>AddressTypeId</ColNames>
+      <RefTableName>AddressTypes</RefTableName>
+      <RefKeyName>PK_AddressTypes</RefKeyName>
+      <RefColNames>AddressTypeId</RefColNames>
+      <OnDelete>restrict</OnDelete>
+    </foreign-key>
+    <foreign-key id="32" parent="7" name="FK_Addresses_Contacts_ContactId">
+      <ColNames>ContactId</ColNames>
+      <RefTableName>Contacts</RefTableName>
+      <RefKeyName>PK_Contacts</RefKeyName>
+      <RefColNames>ContactId</RefColNames>
+      <OnDelete>restrict</OnDelete>
+    </foreign-key>
+    <column id="33" parent="8" name="ContactId">
+      <Position>1</Position>
+      <DataType>INTEGER|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="34" parent="8" name="FirstName">
+      <Position>2</Position>
+      <DataType>TEXT|0s</DataType>
+    </column>
+    <column id="35" parent="8" name="MiddleName">
+      <Position>3</Position>
+      <DataType>TEXT|0s</DataType>
+    </column>
+    <column id="36" parent="8" name="LastName">
+      <Position>4</Position>
+      <DataType>TEXT|0s</DataType>
+    </column>
+    <column id="37" parent="8" name="EmailAddress">
+      <Position>5</Position>
+      <DataType>TEXT|0s</DataType>
+    </column>
+    <column id="38" parent="8" name="Birthday">
+      <Position>6</Position>
+      <DataType>TEXT|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="39" parent="8" name="Anniversary">
+      <Position>7</Position>
+      <DataType>TEXT|0s</DataType>
+    </column>
+    <column id="40" parent="8" name="ImageUrl">
+      <Position>8</Position>
+      <DataType>TEXT|0s</DataType>
+    </column>
+    <key id="41" parent="8" name="PK_Contacts">
+      <ColNames>ContactId</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="42" parent="9" name="PhoneTypeId">
+      <Position>1</Position>
+      <DataType>INTEGER|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="43" parent="9" name="Type">
+      <Position>2</Position>
+      <DataType>TEXT|0s</DataType>
+    </column>
+    <column id="44" parent="9" name="Description">
+      <Position>3</Position>
+      <DataType>TEXT|0s</DataType>
+    </column>
+    <key id="45" parent="9" name="PK_PhoneTypes">
+      <ColNames>PhoneTypeId</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="46" parent="10" name="PhoneId">
+      <Position>1</Position>
+      <DataType>INTEGER|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="47" parent="10" name="PhoneNumber">
+      <Position>2</Position>
+      <DataType>TEXT|0s</DataType>
+    </column>
+    <column id="48" parent="10" name="Extension">
+      <Position>3</Position>
+      <DataType>TEXT|0s</DataType>
+    </column>
+    <column id="49" parent="10" name="PhoneTypeId">
+      <Position>4</Position>
+      <DataType>INTEGER|0s</DataType>
+    </column>
+    <column id="50" parent="10" name="ContactId">
+      <Position>5</Position>
+      <DataType>INTEGER|0s</DataType>
+    </column>
+    <index id="51" parent="10" name="IX_Phones_PhoneTypeId">
+      <ColNames>PhoneTypeId</ColNames>
+      <ColumnCollations></ColumnCollations>
+    </index>
+    <index id="52" parent="10" name="IX_Phones_ContactId">
+      <ColNames>ContactId</ColNames>
+      <ColumnCollations></ColumnCollations>
+    </index>
+    <key id="53" parent="10" name="PK_Phones">
+      <ColNames>PhoneId</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="54" parent="10" name="FK_Phones_PhoneTypes_PhoneTypeId">
+      <ColNames>PhoneTypeId</ColNames>
+      <RefTableName>PhoneTypes</RefTableName>
+      <RefKeyName>PK_PhoneTypes</RefKeyName>
+      <RefColNames>PhoneTypeId</RefColNames>
+      <OnDelete>restrict</OnDelete>
+    </foreign-key>
+    <foreign-key id="55" parent="10" name="FK_Phones_Contacts_ContactId">
+      <ColNames>ContactId</ColNames>
+      <RefTableName>Contacts</RefTableName>
+      <RefKeyName>PK_Contacts</RefKeyName>
+      <RefColNames>ContactId</RefColNames>
+      <OnDelete>restrict</OnDelete>
+    </foreign-key>
+    <column id="56" parent="11" name="MigrationId">
+      <Position>1</Position>
+      <DataType>TEXT|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="57" parent="11" name="ProductVersion">
+      <Position>2</Position>
+      <DataType>TEXT|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="58" parent="11" name="sqlite_autoindex___EFMigrationsHistory_1">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>MigrationId</ColNames>
+      <ColumnCollations></ColumnCollations>
+      <Unique>1</Unique>
+    </index>
+    <key id="59" parent="11" name="PK___EFMigrationsHistory">
+      <ColNames>MigrationId</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>sqlite_autoindex___EFMigrationsHistory_1</UnderlyingIndexName>
+    </key>
+    <column id="60" parent="12" name="type">
+      <Position>1</Position>
+      <DataType>text|0s</DataType>
+    </column>
+    <column id="61" parent="12" name="name">
+      <Position>2</Position>
+      <DataType>text|0s</DataType>
+    </column>
+    <column id="62" parent="12" name="tbl_name">
+      <Position>3</Position>
+      <DataType>text|0s</DataType>
+    </column>
+    <column id="63" parent="12" name="rootpage">
+      <Position>4</Position>
+      <DataType>int|0s</DataType>
+    </column>
+    <column id="64" parent="12" name="sql">
+      <Position>5</Position>
+      <DataType>text|0s</DataType>
+    </column>
+    <column id="65" parent="13" name="name">
+      <Position>1</Position>
+    </column>
+    <column id="66" parent="13" name="seq">
+      <Position>2</Position>
+    </column>
+  </database-model>
+</dataSource>
