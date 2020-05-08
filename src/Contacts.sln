@@ -4,6 +4,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contacts.Domain", "Contacts
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contacts.Logic", "Contacts.Logic\Contacts.Logic.csproj", "{A0614ABC-550E-43D3-B2E8-EDBF43F793FE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contacts.Data", "Contacts.Data\Contacts.Data.csproj", "{52597FF3-2460-438E-AB28-4DE8CF2A5523}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contacts.Console", "Contacts.Console\Contacts.Console.csproj", "{EF7DFAB8-FB92-445C-B749-1F07D3CD6459}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +22,13 @@ Global
 		{A0614ABC-550E-43D3-B2E8-EDBF43F793FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A0614ABC-550E-43D3-B2E8-EDBF43F793FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A0614ABC-550E-43D3-B2E8-EDBF43F793FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{52597FF3-2460-438E-AB28-4DE8CF2A5523}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52597FF3-2460-438E-AB28-4DE8CF2A5523}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52597FF3-2460-438E-AB28-4DE8CF2A5523}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52597FF3-2460-438E-AB28-4DE8CF2A5523}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF7DFAB8-FB92-445C-B749-1F07D3CD6459}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF7DFAB8-FB92-445C-B749-1F07D3CD6459}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF7DFAB8-FB92-445C-B749-1F07D3CD6459}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF7DFAB8-FB92-445C-B749-1F07D3CD6459}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
