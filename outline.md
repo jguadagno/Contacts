@@ -68,6 +68,7 @@ Setup the environment
 
 **NOTE**: These are tentative and might change as we build out the application
 
+* Azurite ([docs](https://docs.microsoft.com/en-us/azure/storage/common/storage-use-azurite))
 * Azure SQL Database ([docs](https://azure.microsoft.com/en-us/services/sql-database/))
 * Azure Web Apps ([docs](https://azure.microsoft.com/en-us/services/app-service/web/))
 * Azure API Management ([docs](https://azure.microsoft.com/en-us/services/api-management/)
