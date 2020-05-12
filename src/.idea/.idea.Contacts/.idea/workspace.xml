@@ -19,14 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="14fd18ef-6fed-455b-81a5-09cb395c5fc7" name="Default Changelist" comment="Created the initial database with EF Core">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Contacts/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Contacts/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Contacts/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Contacts/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Contacts.Console/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Contacts.Console/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Contacts.Data/Contacts.Data.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Contacts.Data/Contacts.Data.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Contacts.Logic/ContactManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Contacts.Logic/ContactManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Contacts.Logic/Contacts.Logic.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Contacts.Logic/Contacts.Logic.csproj" afterDir="false" />
-    </list>
+    <list default="true" id="14fd18ef-6fed-455b-81a5-09cb395c5fc7" name="Default Changelist" comment="Created the initial database with EF Core" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -102,7 +95,7 @@
       <updated>1588641122454</updated>
       <workItem from="1588641127938" duration="8634000" />
       <workItem from="1588889985236" duration="4174000" />
-      <workItem from="1589237615872" duration="3352000" />
+      <workItem from="1589237615872" duration="3635000" />
     </task>
     <task id="LOCAL-00001" summary="Created the initial database with EF Core">
       <created>1588899122166</created>
@@ -111,7 +104,14 @@
       <option name="project" value="LOCAL" />
       <updated>1588899122166</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Commit for episode 2020-05-11 - Database Connectivity">
+      <created>1589242011192</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1589242011192</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -134,33 +134,34 @@
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="Created the initial database with EF Core" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created the initial database with EF Core" />
+    <MESSAGE value="Commit for episode 2020-05-11 - Database Connectivity" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit for episode 2020-05-11 - Database Connectivity" />
   </component>
   <component name="WindowStateProjectService">
     <state x="440" y="190" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1588895282515">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="440" y="190" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1680.1050/-607.-1800.3200.1800@0.0.1680.1050" timestamp="1588895282515" />
-    <state width="1628" height="282" key="GridCell.Tab.0.bottom" timestamp="1589241189307">
+    <state width="1628" height="282" key="GridCell.Tab.0.bottom" timestamp="1589241551783">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1628" height="282" key="GridCell.Tab.0.bottom/0.0.1680.1050/-607.-1777.3200.1777@0.0.1680.1050" timestamp="1589241189307" />
-    <state width="1628" height="282" key="GridCell.Tab.0.bottom/0.0.1680.1050/-607.-1800.3200.1800@0.0.1680.1050" timestamp="1589241143580" />
-    <state width="1628" height="282" key="GridCell.Tab.0.center" timestamp="1589241189260">
+    <state width="1628" height="282" key="GridCell.Tab.0.bottom/0.0.1680.1050/-607.-1777.3200.1777@0.0.1680.1050" timestamp="1589241551783" />
+    <state width="1628" height="282" key="GridCell.Tab.0.bottom/0.0.1680.1050/-607.-1800.3200.1800@0.0.1680.1050" timestamp="1589241508556" />
+    <state width="1628" height="282" key="GridCell.Tab.0.center" timestamp="1589241551746">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1628" height="282" key="GridCell.Tab.0.center/0.0.1680.1050/-607.-1777.3200.1777@0.0.1680.1050" timestamp="1589241189260" />
-    <state width="1628" height="282" key="GridCell.Tab.0.center/0.0.1680.1050/-607.-1800.3200.1800@0.0.1680.1050" timestamp="1589241143561" />
-    <state width="1628" height="282" key="GridCell.Tab.0.left" timestamp="1589241189183">
+    <state width="1628" height="282" key="GridCell.Tab.0.center/0.0.1680.1050/-607.-1777.3200.1777@0.0.1680.1050" timestamp="1589241551746" />
+    <state width="1628" height="282" key="GridCell.Tab.0.center/0.0.1680.1050/-607.-1800.3200.1800@0.0.1680.1050" timestamp="1589241508513" />
+    <state width="1628" height="282" key="GridCell.Tab.0.left" timestamp="1589241551739">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1628" height="282" key="GridCell.Tab.0.left/0.0.1680.1050/-607.-1777.3200.1777@0.0.1680.1050" timestamp="1589241189183" />
-    <state width="1628" height="282" key="GridCell.Tab.0.left/0.0.1680.1050/-607.-1800.3200.1800@0.0.1680.1050" timestamp="1589241143557" />
-    <state width="1628" height="282" key="GridCell.Tab.0.right" timestamp="1589241189286">
+    <state width="1628" height="282" key="GridCell.Tab.0.left/0.0.1680.1050/-607.-1777.3200.1777@0.0.1680.1050" timestamp="1589241551739" />
+    <state width="1628" height="282" key="GridCell.Tab.0.left/0.0.1680.1050/-607.-1800.3200.1800@0.0.1680.1050" timestamp="1589241508419" />
+    <state width="1628" height="282" key="GridCell.Tab.0.right" timestamp="1589241551761">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1628" height="282" key="GridCell.Tab.0.right/0.0.1680.1050/-607.-1777.3200.1777@0.0.1680.1050" timestamp="1589241189286" />
-    <state width="1628" height="282" key="GridCell.Tab.0.right/0.0.1680.1050/-607.-1800.3200.1800@0.0.1680.1050" timestamp="1589241143565" />
+    <state width="1628" height="282" key="GridCell.Tab.0.right/0.0.1680.1050/-607.-1777.3200.1777@0.0.1680.1050" timestamp="1589241551761" />
+    <state width="1628" height="282" key="GridCell.Tab.0.right/0.0.1680.1050/-607.-1800.3200.1800@0.0.1680.1050" timestamp="1589241508546" />
     <state x="340" y="201" key="Rider.ProjectTemplateDialog.Size" timestamp="1588893810073">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
@@ -170,10 +171,10 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="379" y="164" key="SettingsEditor/0.0.1680.1050/-607.-1800.3200.1800@0.0.1680.1050" timestamp="1588715646075" />
-    <state x="340" y="202" key="Vcs.Push.Dialog.v2" timestamp="1588899126844">
+    <state x="340" y="202" key="Vcs.Push.Dialog.v2" timestamp="1589242013521">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="340" y="202" key="Vcs.Push.Dialog.v2/0.0.1680.1050/-607.-1800.3200.1800@0.0.1680.1050" timestamp="1588899126844" />
+    <state x="340" y="202" key="Vcs.Push.Dialog.v2/0.0.1680.1050/-607.-1800.3200.1800@0.0.1680.1050" timestamp="1589242013521" />
     <state x="653" y="236" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1588895340275">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>

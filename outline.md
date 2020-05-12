@@ -23,9 +23,13 @@ Built out the Manager Layer. [Video](https://youtu.be/wZmzM3AWAyk) Commit Id: [f
 
 Let's persist the data.
 
-Adding the Sqlite Database, EntityFrameworkCore, and EntityFramework migrations
+**Part 1**: Adding the Sqlite Database, EntityFrameworkCore, and EntityFramework migrations
 
 ([Video](https://youtu.be/kf3hQ1rt8SY)) Commit Id: [ef63479](https://github.com/jguadagno/Contacts/commit/ef63479328252ce06c6312aa62446f294deb7e58)
+
+**Part 2**: Connecting the Contacts Manager to the Database
+
+([Video](https://youtu.be/CSTHbmINagM)) Commit Id: [242a970](https://github.com/jguadagno/Contacts/commit/242a97023bee18972325e0c253d9339c056edaca
 
 #### Helpful Links
 
