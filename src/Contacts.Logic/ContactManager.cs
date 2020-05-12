@@ -1,19 +1,27 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+using Contacts.Data;
 using Contacts.Domain;
 
 namespace Contacts.Logic
 {
     public class ContactManager
     {
+        private ContactContext _contactContext;
+
+        public ContactManager()
+        {
+            _contactContext = new ContactContext();
+        }
         public Contact GetContact(int contactId)
         {
-            throw new NotImplementedException();
+            return _contactContext.Contacts.Find(contactId);
         }
 
         public List<Contact> GetContacts()
         {
-            throw new NotImplementedException();
+            return _contactContext.Contacts.ToList();
         }
 
         public List<Contact> GetContacts(string firstName, string lastName)
@@ -27,11 +35,12 @@ namespace Contacts.Logic
             {
                 throw new ArgumentNullException(nameof(firstName), "firstName is a required field");
             }
-            
-            throw new NotImplementedException();
+
+            return _contactContext.Contacts
+                .Where(contact => contact.LastName == lastName && contact.FirstName == firstName).ToList();
         }
 
-        public int SaveContact(Contact contact)
+        public bool SaveContact(Contact contact)
         {
             // Data Validation
             // Null Checks
@@ -72,13 +81,14 @@ namespace Contacts.Logic
                 throw new ArgumentOutOfRangeException(nameof(contact.Anniversary), contact.Anniversary,
                     "The anniversary can not be earlier than the birthday.");
             }
-            
-            throw new NotImplementedException();
+
+            _contactContext.Contacts.Add(contact);
+            return _contactContext.SaveChanges() != 0;
         }
 
         public bool DeleteContact(int contactId)
         {
-            throw new NotImplementedException();
+            return DeleteContact(GetContact(contactId));
         }
 
         public bool DeleteContact(Contact contact)
@@ -86,10 +96,11 @@ namespace Contacts.Logic
             // Data Validation
             if (contact == null)
             {
-                throw new ArgumentNullException(nameof(contact), "The contact parameter is required!");
+                return false;
             }
             
-            return DeleteContact(contact.ContactId);
+            _contactContext.Contacts.Remove(contact);
+            return _contactContext.SaveChanges() != 0;
         }
 
     }
