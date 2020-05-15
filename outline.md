@@ -42,7 +42,7 @@ Let's persist the data.
 
 Introduced Unit Testing to the Application with [xUnit](https://xunit.net/)
 
-Video [https://youtu.be/azlDSfepbEo](https://youtu.be/azlDSfepbEo) : Commit Id []()
+Video [https://youtu.be/azlDSfepbEo](https://youtu.be/azlDSfepbEo) : Commit Id [3549059](35490594fa1520128b1965cb7ff743a56fdef8ce)
 
 Introduce [Moqs](https://github.com/Moq/moq4) and/or [Microsoft Fakes](https://docs.microsoft.com/en-us/visualstudio/test/isolating-code-under-test-with-microsoft-fakes?view=vs-2019)
 
