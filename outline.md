@@ -29,7 +29,7 @@ Let's persist the data.
 
 **Part 2**: Connecting the Contacts Manager to the Database
 
-([Video](https://youtu.be/CSTHbmINagM)) Commit Id: [242a970](https://github.com/jguadagno/Contacts/commit/242a97023bee18972325e0c253d9339c056edaca
+([Video](https://youtu.be/CSTHbmINagM)) Commit Id: [242a970](https://github.com/jguadagno/Contacts/commit/242a97023bee18972325e0c253d9339c056edaca)
 
 #### Helpful Links
 
@@ -40,7 +40,11 @@ Let's persist the data.
 
 ### Unit Test the Application
 
-Introduce [Moqs](https://github.com/Moq/moq4) and/or [Microsoft Fakes](https://docs.microsoft.com/en-us/visualstudio/test/isolating-code-under-test-with-microsoft-fakes?view=vs-2019) or [xUnit](https://xunit.net/)
+Introduced Unit Testing to the Application with [xUnit](https://xunit.net/)
+
+Video [https://youtu.be/azlDSfepbEo](https://youtu.be/azlDSfepbEo) : Commit Id []()
+
+Introduce [Moqs](https://github.com/Moq/moq4) and/or [Microsoft Fakes](https://docs.microsoft.com/en-us/visualstudio/test/isolating-code-under-test-with-microsoft-fakes?view=vs-2019)
 
 ## Data Persistance Layer
 

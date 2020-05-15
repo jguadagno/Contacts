@@ -8,7 +8,7 @@ namespace Contacts.Logic
 {
     public class ContactManager
     {
-        private ContactContext _contactContext;
+        private readonly ContactContext _contactContext;
 
         public ContactManager()
         {
@@ -28,12 +28,12 @@ namespace Contacts.Logic
         {
             if (string.IsNullOrEmpty(lastName))
             {
-                throw new ArgumentNullException(nameof(lastName), "lastname is a required field");
+                throw new ArgumentNullException(nameof(lastName), "LastName is a required field");
             }
 
             if (string.IsNullOrEmpty(firstName))
             {
-                throw new ArgumentNullException(nameof(firstName), "firstName is a required field");
+                throw new ArgumentNullException(nameof(firstName), "FirstName is a required field");
             }
 
             return _contactContext.Contacts
@@ -46,17 +46,17 @@ namespace Contacts.Logic
             // Null Checks
             if (contact == null)
             {
-                throw new ArgumentNullException(nameof(contact), "contact is a required field");
+                throw new ArgumentNullException(nameof(contact), "Contact is a required field");
             }
 
             if (string.IsNullOrEmpty(contact.FirstName))
             {
-                throw new ArgumentNullException(nameof(contact.FirstName), "firstName is a required field");
+                throw new ArgumentNullException(nameof(contact.FirstName), "FirstName is a required field");
             }
 
             if (string.IsNullOrEmpty(contact.LastName))
             {
-                throw new ArgumentNullException(nameof(contact.LastName), "lastName is a required field");
+                throw new ArgumentNullException(nameof(contact.LastName), "LastName is a required field");
             }
 
             if (string.IsNullOrEmpty(contact.EmailAddress))
