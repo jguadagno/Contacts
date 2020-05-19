@@ -42,7 +42,11 @@ Let's persist the data.
 
 Introduced Unit Testing to the Application with [xUnit](https://xunit.net/)
 
-Video [https://youtu.be/azlDSfepbEo](https://youtu.be/azlDSfepbEo) : Commit Id [3549059](https://github.com/jguadagno/Contacts/commit/35490594fa1520128b1965cb7ff743a56fdef8ce)
+[Video](https://youtu.be/azlDSfepbEo) : Commit Id [3549059](https://github.com/jguadagno/Contacts/commit/35490594fa1520128b1965cb7ff743a56fdef8ce)
+
+Introduced the *poor persons* dependency injection
+
+[Video](https://youtu.be/VkAZmWauQeA) : Commit Id [7a71d94](https://github.com/jguadagno/Contacts/commit/0b7a94ec6fb42c57899e85e20c44d83004bd347c)
 
 Introduce [Moqs](https://github.com/Moq/moq4) and/or [Microsoft Fakes](https://docs.microsoft.com/en-us/visualstudio/test/isolating-code-under-test-with-microsoft-fakes?view=vs-2019)
 
