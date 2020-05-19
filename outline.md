@@ -13,11 +13,17 @@ Do we want to start with introducing Visual Studio? Visual Studio Code? JetBrain
 
 ### Model Development
 
-Built out the Contacts.Domain models.  [Video](https://youtu.be/XkCFW9rqSz0) Commit Id: [0e3443be](https://github.com/jguadagno/Contacts/commit/0e3443bfe8657f250fd0830e0e36ae22a8ec3a62)
+Built out the Contacts.Domain models.  
+
+* [Video](https://youtu.be/XkCFW9rqSz0)
+* Source Code [0e3443be](https://github.com/jguadagno/Contacts/commit/0e3443bfe8657f250fd0830e0e36ae22a8ec3a62)
 
 ### Business / Manager Layer
 
-Built out the Manager Layer. [Video](https://youtu.be/wZmzM3AWAyk) Commit Id: [f89e811](https://github.com/jguadagno/Contacts/commit/f89e8116ae3bbefe20f50b6a8fdfcd642e34db38)
+**Built out the Manager Layer.**
+
+* [Video](https://youtu.be/wZmzM3AWAyk)
+* Source Code [f89e811](https://github.com/jguadagno/Contacts/commit/f89e8116ae3bbefe20f50b6a8fdfcd642e34db38)
 
 ### Data Layer
 
@@ -25,13 +31,17 @@ Let's persist the data.
 
 **Part 1**: Adding the Sqlite Database, EntityFrameworkCore, and EntityFramework migrations
 
-([Video](https://youtu.be/kf3hQ1rt8SY)) Commit Id: [ef63479](https://github.com/jguadagno/Contacts/commit/ef63479328252ce06c6312aa62446f294deb7e58)
+* [Video](https://youtu.be/kf3hQ1rt8SY)
+* Source Code [ef63479](https://github.com/jguadagno/Contacts/commit/ef63479328252ce06c6312aa62446f294deb7e58)
 
 **Part 2**: Connecting the Contacts Manager to the Database
 
-([Video](https://youtu.be/CSTHbmINagM)) Commit Id: [242a970](https://github.com/jguadagno/Contacts/commit/242a97023bee18972325e0c253d9339c056edaca)
+* [Video](https://youtu.be/CSTHbmINagM)
+* Source Code [242a970](https://github.com/jguadagno/Contacts/commit/242a97023bee18972325e0c253d9339c056edaca)
 
 #### Helpful Links
+
+Reference guides/posts that were used to build out the data layer
 
 * [Getting Started with EF Core](https://docs.microsoft.com/en-us/ef/core/get-started/?tabs=netcore-cli)
 * [Managing Connection Strings in Entity Framework Core](https://www.learnentityframeworkcore.com/connection-strings)
@@ -42,11 +52,13 @@ Let's persist the data.
 
 Introduced Unit Testing to the Application with [xUnit](https://xunit.net/)
 
-[Video](https://youtu.be/azlDSfepbEo) : Commit Id [3549059](https://github.com/jguadagno/Contacts/commit/35490594fa1520128b1965cb7ff743a56fdef8ce)
+* [Video](https://youtu.be/azlDSfepbEo)
+* Source Code [3549059](https://github.com/jguadagno/Contacts/commit/35490594fa1520128b1965cb7ff743a56fdef8ce)
 
 Introduced the *poor persons* dependency injection
 
-[Video](https://youtu.be/VkAZmWauQeA) : Commit Id [7a71d94](https://github.com/jguadagno/Contacts/commit/0b7a94ec6fb42c57899e85e20c44d83004bd347c)
+* [Video](https://youtu.be/VkAZmWauQeA)
+* Source Code [7a71d94](https://github.com/jguadagno/Contacts/commit/0b7a94ec6fb42c57899e85e20c44d83004bd347c)
 
 Introduce [Moqs](https://github.com/Moq/moq4) and/or [Microsoft Fakes](https://docs.microsoft.com/en-us/visualstudio/test/isolating-code-under-test-with-microsoft-fakes?view=vs-2019)
 
