@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace Contacts.Data.Migrations
+namespace Contacts.Data.Sqlite.Migrations
 {
     public partial class InitialCreate : Migration
     {

@@ -1,5 +1,8 @@
 ﻿using System;
+using Contacts.Data;
+using Contacts.Data.Sqlite;
 using Contacts.Domain;
+using Contacts.Domain.Models;
 using Contacts.Logic;
 using Microsoft.EntityFrameworkCore.Query.Internal;
 
@@ -9,7 +12,7 @@ namespace Contacts.Console
     {
         static void Main(string[] args)
         {
-            var contactManager = new ContactManager();
+            var contactManager = new ContactManager(new ContactRepository(new SqliteDataStore()));
             
             System.Console.WriteLine("--- Contact #1 ---");
             var searchedContact = contactManager.GetContact(1);

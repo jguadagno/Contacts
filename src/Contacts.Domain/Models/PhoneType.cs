@@ -1,4 +1,4 @@
-namespace Contacts.Domain
+namespace Contacts.Domain.Models
 {
     public class PhoneType
     {

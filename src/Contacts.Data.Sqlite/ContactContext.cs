@@ -1,8 +1,7 @@
-﻿using System;
-using Contacts.Domain;
+﻿using Contacts.Domain.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace Contacts.Data
+namespace Contacts.Data.Sqlite
 {
     public class ContactContext: DbContext
     {

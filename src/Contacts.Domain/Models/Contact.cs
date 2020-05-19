@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Contacts.Domain
+namespace Contacts.Domain.Models
 {
     public class Contact
     {

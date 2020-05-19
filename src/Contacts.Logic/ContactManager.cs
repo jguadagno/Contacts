@@ -1,27 +1,27 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using Contacts.Data;
-using Contacts.Domain;
+using Contacts.Domain.Interfaces;
+using Contacts.Domain.Models;
 
 namespace Contacts.Logic
 {
     public class ContactManager
     {
-        private readonly ContactContext _contactContext;
+        private readonly IContactRepository _contactRepository;
 
-        public ContactManager()
+        public ContactManager(IContactRepository contactRepository)
         {
-            _contactContext = new ContactContext();
+            _contactRepository = contactRepository;
         }
         public Contact GetContact(int contactId)
         {
-            return _contactContext.Contacts.Find(contactId);
+            return _contactRepository.GetContact(contactId);
         }
 
         public List<Contact> GetContacts()
         {
-            return _contactContext.Contacts.ToList();
+            return _contactRepository.GetContacts();
         }
 
         public List<Contact> GetContacts(string firstName, string lastName)
@@ -36,8 +36,7 @@ namespace Contacts.Logic
                 throw new ArgumentNullException(nameof(firstName), "FirstName is a required field");
             }
 
-            return _contactContext.Contacts
-                .Where(contact => contact.LastName == lastName && contact.FirstName == firstName).ToList();
+            return _contactRepository.GetContacts(firstName, lastName);
         }
 
         public bool SaveContact(Contact contact)
@@ -82,8 +81,7 @@ namespace Contacts.Logic
                     "The anniversary can not be earlier than the birthday.");
             }
 
-            _contactContext.Contacts.Add(contact);
-            return _contactContext.SaveChanges() != 0;
+            return _contactRepository.SaveContact(contact);
         }
 
         public bool DeleteContact(int contactId)
@@ -98,9 +96,8 @@ namespace Contacts.Logic
             {
                 return false;
             }
-            
-            _contactContext.Contacts.Remove(contact);
-            return _contactContext.SaveChanges() != 0;
+
+            return _contactRepository.DeleteContact(contact);
         }
 
     }

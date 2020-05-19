@@ -1,17 +1,27 @@
 using System;
 using System.Linq;
-using Contacts.Domain;
+using Contacts.Data;
+using Contacts.Data.Sqlite;
+using Contacts.Domain.Interfaces;
+using Contacts.Domain.Models;
 using Xunit;
 
 namespace Contacts.Logic.Tests
 {
     public class ContactManagerTests
     {
+        private readonly IContactRepository _contactRepository;
+
+        public ContactManagerTests()
+        {
+            _contactRepository  = new ContactRepository(new SqliteDataStore());
+        }
+        
         [Fact]
         public void GetContact_WithAnInvalidId_ShouldReturnNull()
         {
             // Arrange 
-            var contactManager = new ContactManager();
+            var contactManager = new ContactManager(_contactRepository);
             
             // Act
             var contact = contactManager.GetContact(-1);
@@ -24,7 +34,7 @@ namespace Contacts.Logic.Tests
         public void GetContact_WithAValidId_ShouldReturnContact()
         {
             // Arrange 
-            var contactManager = new ContactManager();
+            var contactManager = new ContactManager(_contactRepository);
             
             // Act
             // Assumes that a contact record exists with the ContactId of 1
@@ -38,7 +48,7 @@ namespace Contacts.Logic.Tests
         public void GetContacts_ShouldReturnLists()
         {
             // Arrange
-            var contactManager = new ContactManager();
+            var contactManager = new ContactManager(_contactRepository);
             
             // Act
             var contacts = contactManager.GetContacts();
@@ -51,7 +61,7 @@ namespace Contacts.Logic.Tests
         public void GetContacts_WithNullFirstName_ShouldThrowException()
         {
             // Arrange 
-            var contactManager = new ContactManager();
+            var contactManager = new ContactManager(_contactRepository);
 
             // Act
             ArgumentNullException ex =
@@ -68,7 +78,7 @@ namespace Contacts.Logic.Tests
         public void GetContacts_WithNullLastName_ShouldThrowException()
         {
             // Arrange 
-            var contactManager = new ContactManager();
+            var contactManager = new ContactManager(_contactRepository);
 
             // Act
             ArgumentNullException ex =
@@ -83,7 +93,7 @@ namespace Contacts.Logic.Tests
         public void GetContacts_WithValidParameters_ShouldReturnLists()
         {
             // Arrange 
-            var contactManager = new ContactManager();
+            var contactManager = new ContactManager(_contactRepository);
 
             // Act
             var contacts = contactManager.GetContacts("Joseph", "Guadagno");
@@ -97,7 +107,7 @@ namespace Contacts.Logic.Tests
         public void SaveContact_WithANullContact_ShouldThrowException()
         {
             // Arrange 
-            var contactManager = new ContactManager();
+            var contactManager = new ContactManager(_contactRepository);
             
             // Act
             ArgumentNullException ex = Assert.Throws<ArgumentNullException>(()  => contactManager.SaveContact(null));
@@ -111,7 +121,7 @@ namespace Contacts.Logic.Tests
         public void SaveContact_WithNullFirstName_ShouldThrowException()
         {
             // Arrange 
-            var contactManager = new ContactManager();
+            var contactManager = new ContactManager(_contactRepository);
 
             var contact = new Contact();
             
@@ -128,7 +138,7 @@ namespace Contacts.Logic.Tests
         public void SaveContact_WithNullLastName_ShouldThrowException()
         {
             // Arrange 
-            var contactManager = new ContactManager();
+            var contactManager = new ContactManager(_contactRepository);
 
             var contact = new Contact
             {
@@ -148,7 +158,7 @@ namespace Contacts.Logic.Tests
         public void SaveContact_WithNullEmailAddress_ShouldThrowException()
         {
             // Arrange 
-            var contactManager = new ContactManager();
+            var contactManager = new ContactManager(_contactRepository);
 
             var contact = new Contact
             {
@@ -169,7 +179,7 @@ namespace Contacts.Logic.Tests
         public void SaveContact_WithBirthdayInFuture_ShouldThrowException()
         {
             // Arrange 
-            var contactManager = new ContactManager();
+            var contactManager = new ContactManager(_contactRepository);
             var futureDate = new DateTime(2030, 12, 31,23,59,59);
 
             var contact = new Contact
@@ -194,7 +204,7 @@ namespace Contacts.Logic.Tests
         public void SaveContact_WithAnniversaryInFuture_ShouldThrowException()
         {
             // Arrange 
-            var contactManager = new ContactManager();
+            var contactManager = new ContactManager(_contactRepository);
             var futureDate = new DateTime(2030, 12, 31,23,59,59);
             var contact = new Contact
             {
@@ -219,7 +229,7 @@ namespace Contacts.Logic.Tests
         public void SaveContact_WithAnniversaryBeforeBirthday_ShouldThrowException()
         {
             // Arrange 
-            var contactManager = new ContactManager();
+            var contactManager = new ContactManager(_contactRepository);
 
             var contact = new Contact
             {
@@ -244,7 +254,7 @@ namespace Contacts.Logic.Tests
         public void SaveContact_WithValidContact_ShouldReturnTrue()
         {
             // Arrange 
-            var contactManager = new ContactManager();
+            var contactManager = new ContactManager(_contactRepository);
 
             var contact = new Contact
             {
@@ -266,7 +276,7 @@ namespace Contacts.Logic.Tests
         public void DeleteContact_WithInvalidContactId_ShouldReturnFalse()
         {
             // Arrange
-            var contactManager = new ContactManager();
+            var contactManager = new ContactManager(_contactRepository);
             
             // Act
             // This assumes that there is no record with the id of -1
@@ -280,7 +290,7 @@ namespace Contacts.Logic.Tests
         public void DeleteContact_WithNullContact_ShouldReturnFalse()
         {
             // Arrange
-            var contactManager = new ContactManager();
+            var contactManager = new ContactManager(_contactRepository);
             
             // Act
             // This assumes that there is no record with the id of -1
@@ -294,7 +304,7 @@ namespace Contacts.Logic.Tests
         public void DeleteContact_WithExistingContact_ShouldReturnTrue()
         {
             // Arrange
-            var contactManager = new ContactManager();
+            var contactManager = new ContactManager(_contactRepository);
             
             // Create a fake contact
             // NOTE: This is only for testing and demonstration.  Your unit tests should not
