@@ -1,84 +1,106 @@
 using System;
-using System.Linq;
-using Contacts.Data;
-using Contacts.Data.Sqlite;
+using System.Collections.Generic;
 using Contacts.Domain.Interfaces;
 using Contacts.Domain.Models;
 using Xunit;
+using Moq;
+using Range = Moq.Range;
 
 namespace Contacts.Logic.Tests
 {
     public class ContactManagerTests
     {
-        private readonly IContactRepository _contactRepository;
-
-        public ContactManagerTests()
-        {
-            _contactRepository  = new ContactRepository(new SqliteDataStore());
-        }
-        
         [Fact]
         public void GetContact_WithAnInvalidId_ShouldReturnNull()
         {
             // Arrange 
-            var contactManager = new ContactManager(_contactRepository);
-            
+            var mockContactRepository = new Mock<IContactRepository>();
+            mockContactRepository.Setup(contactRepository =>
+                contactRepository.GetContact(It.IsInRange(int.MinValue, 0, Range.Inclusive))
+            ).Returns<Contact>(null);
+
+            var contactManager = new ContactManager(mockContactRepository.Object);
+
             // Act
-            var contact = contactManager.GetContact(-1);
-            
+            var contact = contactManager.GetContact(-1); // Any number less than zero
+
             // Assert
             Assert.Null(contact);
         }
-        
+
         [Fact]
         public void GetContact_WithAValidId_ShouldReturnContact()
         {
             // Arrange 
-            var contactManager = new ContactManager(_contactRepository);
-            
+            var mockContactRepository = new Mock<IContactRepository>();
+            mockContactRepository.Setup(contactRepository =>
+                contactRepository.GetContact(It.IsInRange(1, int.MaxValue, Range.Inclusive))
+            ).Returns((int contactId) => new Contact
+            {
+                ContactId = contactId
+            });
+
+            var contactManager = new ContactManager(mockContactRepository.Object);
+            const int requestedContactId = 1;
+
             // Act
             // Assumes that a contact record exists with the ContactId of 1
-            var contact = contactManager.GetContact(1);
-            
+            var contact = contactManager.GetContact(requestedContactId);
+
             // Assert
             Assert.NotNull(contact);
+            Assert.Equal(requestedContactId, contact.ContactId);
         }
 
         [Fact]
         public void GetContacts_ShouldReturnLists()
         {
             // Arrange
-            var contactManager = new ContactManager(_contactRepository);
-            
+            var mockContactRepository = new Mock<IContactRepository>();
+            mockContactRepository.Setup(contactRepository =>
+                contactRepository.GetContacts()
+            ).Returns(new List<Contact>
+            {
+                new Contact {ContactId = 1}, new Contact {ContactId = 2}
+            });
+
+            var contactManager = new ContactManager(mockContactRepository.Object);
+
             // Act
             var contacts = contactManager.GetContacts();
-            
+
             // Assert
             Assert.NotNull(contacts);
+            Assert.Equal(2, contacts.Count);
         }
 
         [Fact]
         public void GetContacts_WithNullFirstName_ShouldThrowException()
         {
             // Arrange 
-            var contactManager = new ContactManager(_contactRepository);
+            var mockContactRepository = new Mock<IContactRepository>();
+            mockContactRepository.Setup(contactRepository =>
+                contactRepository.GetContacts(null, It.IsAny<string>()));
 
+            var contactManager = new ContactManager(mockContactRepository.Object);
             // Act
             ArgumentNullException ex =
                 Assert.Throws<ArgumentNullException>(() => contactManager.GetContacts(null, "Guadagno"));
 
             // Assert
-            
             Assert.Equal("firstName", ex.ParamName);
             Assert.Equal("FirstName is a required field (Parameter 'firstName')", ex.Message);
-            
         }
-        
+
         [Fact]
         public void GetContacts_WithNullLastName_ShouldThrowException()
         {
             // Arrange 
-            var contactManager = new ContactManager(_contactRepository);
+            var mockContactRepository = new Mock<IContactRepository>();
+            mockContactRepository.Setup(contactRepository =>
+                contactRepository.GetContacts(It.IsAny<string>(), null));
+
+            var contactManager = new ContactManager(mockContactRepository.Object);
 
             // Act
             ArgumentNullException ex =
@@ -88,30 +110,45 @@ namespace Contacts.Logic.Tests
             Assert.Equal("lastName", ex.ParamName);
             Assert.Equal("LastName is a required field (Parameter 'lastName')", ex.Message);
         }
-        
+
         [Fact]
         public void GetContacts_WithValidParameters_ShouldReturnLists()
         {
             // Arrange 
-            var contactManager = new ContactManager(_contactRepository);
+            var mockContactRepository = new Mock<IContactRepository>();
+            mockContactRepository.Setup(contactRepository =>
+                contactRepository.GetContacts(It.IsAny<string>(), It.IsAny<string>())).Returns(
+                (string firstName, string lastName) => new List<Contact>
+                {
+                    new Contact {ContactId = 1, FirstName = firstName, LastName = lastName}
+                });
+
+            var contactManager = new ContactManager(mockContactRepository.Object);
+            const string requestedFirstName = "Joseph";
+            const string requestedLastname = "Guadagno";
 
             // Act
-            var contacts = contactManager.GetContacts("Joseph", "Guadagno");
-            
+            var contacts = contactManager.GetContacts(requestedFirstName, requestedLastname);
+
             // Assert
             Assert.NotNull(contacts);
             Assert.True(contacts.Count > 0);
+            Assert.Equal(requestedFirstName, contacts[0].FirstName);
+            Assert.Equal(requestedLastname, contacts[0].LastName);
         }
 
         [Fact]
         public void SaveContact_WithANullContact_ShouldThrowException()
         {
             // Arrange 
-            var contactManager = new ContactManager(_contactRepository);
-            
+            var mockContactRepository = new Mock<IContactRepository>();
+            mockContactRepository.Setup(contactRepository =>
+                contactRepository.SaveContact(null));
+            var contactManager = new ContactManager(mockContactRepository.Object);
+
             // Act
-            ArgumentNullException ex = Assert.Throws<ArgumentNullException>(()  => contactManager.SaveContact(null));
-            
+            ArgumentNullException ex = Assert.Throws<ArgumentNullException>(() => contactManager.SaveContact(null));
+
             // Assert
             Assert.Equal("contact", ex.ParamName);
             Assert.Equal("Contact is a required field (Parameter 'contact')", ex.Message);
@@ -121,24 +158,29 @@ namespace Contacts.Logic.Tests
         public void SaveContact_WithNullFirstName_ShouldThrowException()
         {
             // Arrange 
-            var contactManager = new ContactManager(_contactRepository);
+            var mockContactRepository = new Mock<IContactRepository>();
+            mockContactRepository.Setup(contactRepository =>
+                contactRepository.SaveContact(It.IsAny<Contact>()));
+            var contactManager = new ContactManager(mockContactRepository.Object);
 
             var contact = new Contact();
-            
+
             // Act
-            ArgumentNullException ex = Assert.Throws<ArgumentNullException>(() =>  contactManager.SaveContact(contact));
+            ArgumentNullException ex = Assert.Throws<ArgumentNullException>(() => contactManager.SaveContact(contact));
 
             // Assert
             Assert.Equal("FirstName", ex.ParamName);
             Assert.Equal("FirstName is a required field (Parameter 'FirstName')", ex.Message);
-            
         }
-        
+
         [Fact]
         public void SaveContact_WithNullLastName_ShouldThrowException()
         {
             // Arrange 
-            var contactManager = new ContactManager(_contactRepository);
+            var mockContactRepository = new Mock<IContactRepository>();
+            mockContactRepository.Setup(contactRepository =>
+                contactRepository.SaveContact(It.IsAny<Contact>()));
+            var contactManager = new ContactManager(mockContactRepository.Object);
 
             var contact = new Contact
             {
@@ -146,19 +188,21 @@ namespace Contacts.Logic.Tests
             };
 
             // Act
-            ArgumentNullException ex = Assert.Throws<ArgumentNullException>(() =>  contactManager.SaveContact(contact));
+            ArgumentNullException ex = Assert.Throws<ArgumentNullException>(() => contactManager.SaveContact(contact));
 
             // Assert
             Assert.Equal("LastName", ex.ParamName);
             Assert.Equal("LastName is a required field (Parameter 'LastName')", ex.Message);
-            
         }
-        
+
         [Fact]
         public void SaveContact_WithNullEmailAddress_ShouldThrowException()
         {
             // Arrange 
-            var contactManager = new ContactManager(_contactRepository);
+            var mockContactRepository = new Mock<IContactRepository>();
+            mockContactRepository.Setup(contactRepository =>
+                contactRepository.SaveContact(It.IsAny<Contact>()));
+            var contactManager = new ContactManager(mockContactRepository.Object);
 
             var contact = new Contact
             {
@@ -167,20 +211,23 @@ namespace Contacts.Logic.Tests
             };
 
             // Act
-            ArgumentNullException ex = Assert.Throws<ArgumentNullException>(() =>  contactManager.SaveContact(contact));
+            ArgumentNullException ex = Assert.Throws<ArgumentNullException>(() => contactManager.SaveContact(contact));
 
             // Assert
             Assert.Equal("EmailAddress", ex.ParamName);
             Assert.Equal("EmailAddress is a required field (Parameter 'EmailAddress')", ex.Message);
-            
         }
-        
+
         [Fact]
         public void SaveContact_WithBirthdayInFuture_ShouldThrowException()
         {
             // Arrange 
-            var contactManager = new ContactManager(_contactRepository);
-            var futureDate = new DateTime(2030, 12, 31,23,59,59);
+            var mockContactRepository = new Mock<IContactRepository>();
+            mockContactRepository.Setup(contactRepository =>
+                contactRepository.SaveContact(It.IsAny<Contact>()));
+            var contactManager = new ContactManager(mockContactRepository.Object);
+
+            var futureDate = new DateTime(2030, 12, 31, 23, 59, 59);
 
             var contact = new Contact
             {
@@ -189,23 +236,27 @@ namespace Contacts.Logic.Tests
                 EmailAddress = "jguadagno@hotmail.com",
                 Birthday = futureDate
             };
-            
+
             // Act
-            ArgumentOutOfRangeException ex = Assert.Throws<ArgumentOutOfRangeException>(() =>  contactManager.SaveContact(contact));
+            ArgumentOutOfRangeException ex =
+                Assert.Throws<ArgumentOutOfRangeException>(() => contactManager.SaveContact(contact));
 
             // Assert
             Assert.Equal("Birthday", ex.ParamName);
             Assert.Equal(futureDate, ex.ActualValue);
             Assert.StartsWith("The birthday can not be in the future", ex.Message);
-            
         }
-        
+
         [Fact]
         public void SaveContact_WithAnniversaryInFuture_ShouldThrowException()
         {
             // Arrange 
-            var contactManager = new ContactManager(_contactRepository);
-            var futureDate = new DateTime(2030, 12, 31,23,59,59);
+            var mockContactRepository = new Mock<IContactRepository>();
+            mockContactRepository.Setup(contactRepository =>
+                contactRepository.SaveContact(It.IsAny<Contact>()));
+            var contactManager = new ContactManager(mockContactRepository.Object);
+
+            var futureDate = new DateTime(2030, 12, 31, 23, 59, 59);
             var contact = new Contact
             {
                 FirstName = "Joseph",
@@ -214,22 +265,25 @@ namespace Contacts.Logic.Tests
                 Birthday = DateTime.Now.AddDays(-1),
                 Anniversary = futureDate
             };
-            
+
             // Act
-            ArgumentOutOfRangeException ex = Assert.Throws<ArgumentOutOfRangeException>(() =>  contactManager.SaveContact(contact));
+            ArgumentOutOfRangeException ex =
+                Assert.Throws<ArgumentOutOfRangeException>(() => contactManager.SaveContact(contact));
 
             // Assert
             Assert.Equal("Anniversary", ex.ParamName);
             Assert.Equal(futureDate, ex.ActualValue);
             Assert.StartsWith("The anniversary can not be in the future", ex.Message);
-            
         }
-        
+
         [Fact]
         public void SaveContact_WithAnniversaryBeforeBirthday_ShouldThrowException()
         {
             // Arrange 
-            var contactManager = new ContactManager(_contactRepository);
+            var mockContactRepository = new Mock<IContactRepository>();
+            mockContactRepository.Setup(contactRepository =>
+                contactRepository.SaveContact(It.IsAny<Contact>()));
+            var contactManager = new ContactManager(mockContactRepository.Object);
 
             var contact = new Contact
             {
@@ -241,20 +295,24 @@ namespace Contacts.Logic.Tests
             };
 
             // Act
-            ArgumentOutOfRangeException ex = Assert.Throws<ArgumentOutOfRangeException>(() =>  contactManager.SaveContact(contact));
+            ArgumentOutOfRangeException ex =
+                Assert.Throws<ArgumentOutOfRangeException>(() => contactManager.SaveContact(contact));
 
             // Assert
             Assert.Equal("Anniversary", ex.ParamName);
             Assert.Equal(contact.Anniversary, ex.ActualValue);
             Assert.StartsWith("The anniversary can not be earlier than the birthday.", ex.Message);
-            
         }
 
         [Fact]
         public void SaveContact_WithValidContact_ShouldReturnTrue()
         {
             // Arrange 
-            var contactManager = new ContactManager(_contactRepository);
+            var mockContactRepository = new Mock<IContactRepository>();
+            mockContactRepository.Setup(contactRepository => contactRepository.SaveContact(It.IsAny<Contact>()))
+                .Returns(true);
+
+            var contactManager = new ContactManager(mockContactRepository.Object);
 
             var contact = new Contact
             {
@@ -276,26 +334,32 @@ namespace Contacts.Logic.Tests
         public void DeleteContact_WithInvalidContactId_ShouldReturnFalse()
         {
             // Arrange
-            var contactManager = new ContactManager(_contactRepository);
-            
+            var mockContactRepository = new Mock<IContactRepository>();
+            mockContactRepository.Setup(contactRepository =>
+                contactRepository.DeleteContact(It.IsInRange(int.MinValue, 0, Range.Inclusive))).Returns(false);
+            var contactManager = new ContactManager(mockContactRepository.Object);
+
             // Act
             // This assumes that there is no record with the id of -1
             var wasDeleted = contactManager.DeleteContact(-1);
-            
+
             // Assert
             Assert.False(wasDeleted);
         }
-        
+
         [Fact]
         public void DeleteContact_WithNullContact_ShouldReturnFalse()
         {
             // Arrange
-            var contactManager = new ContactManager(_contactRepository);
-            
+            var mockContactRepository = new Mock<IContactRepository>();
+            mockContactRepository.Setup(contactRepository =>
+                contactRepository.DeleteContact(It.IsAny<Contact>())).Returns(false);
+            var contactManager = new ContactManager(mockContactRepository.Object);
+
             // Act
             // This assumes that there is no record with the id of -1
             var wasDeleted = contactManager.DeleteContact(null);
-            
+
             // Assert
             Assert.False(wasDeleted);
         }
@@ -304,12 +368,12 @@ namespace Contacts.Logic.Tests
         public void DeleteContact_WithExistingContact_ShouldReturnTrue()
         {
             // Arrange
-            var contactManager = new ContactManager(_contactRepository);
-            
+            var mockContactRepository = new Mock<IContactRepository>();
+            mockContactRepository.Setup(contactRepository =>
+                contactRepository.DeleteContact(It.IsAny<Contact>())).Returns(true);
+            var contactManager = new ContactManager(mockContactRepository.Object);
+
             // Create a fake contact
-            // NOTE: This is only for testing and demonstration.  Your unit tests should not
-            //    be adding, removing, or changing data.  
-            //    We will introduce Mocking in a later session to show how you can avoid this.
             var contact = new Contact
             {
                 FirstName = "TestUserFirstName",
@@ -317,26 +381,12 @@ namespace Contacts.Logic.Tests
                 EmailAddress = "TestUser@example.com",
                 Birthday = DateTime.Now
             };
-            var wasSaved = contactManager.SaveContact(contact);
-            if (wasSaved == false)
-            {
-                throw new Exception("Failed to create the test record");
-            }
 
-            var contactsToDelete = contactManager.GetContacts(contact.FirstName, contact.LastName);
-            if (contactsToDelete == null || contactsToDelete.Count == 0)
-            {
-                throw new Exception("Failed to find the test record");
-            }
-
-            var contactToDelete = contactsToDelete.First();
-            
             // Act
-            var wasDeleted = contactManager.DeleteContact(contactToDelete);
-            
+            var wasDeleted = contactManager.DeleteContact(contact);
+
             // Assert
             Assert.True(wasDeleted);
-
         }
     }
 }

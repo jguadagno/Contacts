@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using Contacts.Data;
 using Contacts.Domain.Interfaces;
 using Contacts.Domain.Models;
 
@@ -26,14 +25,15 @@ namespace Contacts.Logic
 
         public List<Contact> GetContacts(string firstName, string lastName)
         {
-            if (string.IsNullOrEmpty(lastName))
-            {
-                throw new ArgumentNullException(nameof(lastName), "LastName is a required field");
-            }
-
+            
             if (string.IsNullOrEmpty(firstName))
             {
                 throw new ArgumentNullException(nameof(firstName), "FirstName is a required field");
+            }
+            
+            if (string.IsNullOrEmpty(lastName))
+            {
+                throw new ArgumentNullException(nameof(lastName), "LastName is a required field");
             }
 
             return _contactRepository.GetContacts(firstName, lastName);
