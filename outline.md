@@ -20,7 +20,7 @@ Built out the Contacts.Domain models.
 
 ### Business / Manager Layer
 
-**Built out the Manager Layer.**
+Built out the Manager Layer.
 
 * [Video](https://youtu.be/wZmzM3AWAyk)
 * Source Code [f89e811](https://github.com/jguadagno/Contacts/commit/f89e8116ae3bbefe20f50b6a8fdfcd642e34db38)
@@ -60,7 +60,12 @@ Introduced the *poor persons* dependency injection
 * [Video](https://youtu.be/VkAZmWauQeA)
 * Source Code [7a71d94](https://github.com/jguadagno/Contacts/commit/0b7a94ec6fb42c57899e85e20c44d83004bd347c)
 
-Introduce [Moqs](https://github.com/Moq/moq4) and/or [Microsoft Fakes](https://docs.microsoft.com/en-us/visualstudio/test/isolating-code-under-test-with-microsoft-fakes?view=vs-2019)
+Introduced [Moqs](https://github.com/Moq/moq4) to mock out unit tests and avoid using the database with running units tests.
+
+* [Video](https://youtu.be/Yy6LK9k9ZS8)
+* Source Code [0421077](https://github.com/jguadagno/Contacts/commit/042107737c3b403e18b4d430bd8f1ef69ba9664e)
+
+[Microsoft Fakes](https://docs.microsoft.com/en-us/visualstudio/test/isolating-code-under-test-with-microsoft-fakes?view=vs-2019)
 
 ## Data Persistance Layer
 
