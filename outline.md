@@ -65,7 +65,13 @@ Introduced [Moqs](https://github.com/Moq/moq4) to mock out unit tests and avoid 
 * [Video](https://youtu.be/Yy6LK9k9ZS8)
 * Source Code [0421077](https://github.com/jguadagno/Contacts/commit/042107737c3b403e18b4d430bd8f1ef69ba9664e)
 
-[Microsoft Fakes](https://docs.microsoft.com/en-us/visualstudio/test/isolating-code-under-test-with-microsoft-fakes?view=vs-2019)
+As an alternative to Moqs, you can look at
+[Microsoft Fakes](https://docs.microsoft.com/en-us/visualstudio/test/isolating-code-under-test-with-microsoft-fakes?view=vs-2019) or Telerik [Just Mocks](https://www.telerik.com/products/mocking.aspx)
+
+Check out the code coverage for our unit tests and ended up adding more tests.
+
+* [Video](https://youtu.be/Ccyf3FyKZDU)
+* Source Code [e1c0985](https://github.com/jguadagno/Contacts/commit/e1c09853b0335fa8c4f94e732508208c6e8f0c92)
 
 ## Data Persistance Layer
 
