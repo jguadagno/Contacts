@@ -388,5 +388,74 @@ namespace Contacts.Logic.Tests
             // Assert
             Assert.True(wasDeleted);
         }
+
+        [Fact]
+        public void GetContactFullName_WithAllNamesNull_ShouldReturnErrorString()
+        {
+            // Arrange
+            string firstName = null;
+            string lastName = null;
+            string middleName = null;
+            string expectedFullName = "Could not determine the contact name";
+            
+            var contact = new Contact
+            {
+                FirstName = firstName,
+                MiddleName = middleName,
+                LastName = lastName
+            };
+
+            // Act
+            var fullName = contact.FullName;
+
+            // Assert
+            Assert.Equal(expectedFullName, fullName);
+        }
+        
+        [Fact]
+        public void GetContactFullName_WithNullMiddleName_ShouldReturnStringWithFirstNameAndLastName()
+        {
+            // Arrange
+            string firstName = "Joseph";
+            string lastName = "Guadagno";
+            string middleName = null;
+            string expectedFullName = $"{firstName} {lastName}";
+            
+            var contact = new Contact
+            {
+                FirstName = firstName,
+                MiddleName = middleName,
+                LastName = lastName
+            };
+
+            // Act
+            var fullName = contact.FullName;
+
+            // Assert
+            Assert.Equal(expectedFullName, fullName);
+        }
+        
+        [Fact]
+        public void GetContactFullName_WithAllNamesNotNumber_ShouldReturnStringWithFirstNameAndMiddleNameAndLastName()
+        {
+            // Arrange
+            string firstName = "Joseph";
+            string lastName = "Guadagno";
+            string middleName = "James";
+            string expectedFullName = $"{firstName} {middleName} {lastName}";
+            
+            var contact = new Contact
+            {
+                FirstName = firstName,
+                MiddleName = middleName,
+                LastName = lastName
+            };
+
+            // Act
+            var fullName = contact.FullName;
+
+            // Assert
+            Assert.Equal(expectedFullName, fullName);
+        }
     }
 }

@@ -1,5 +1,9 @@
+using System.Diagnostics.CodeAnalysis;
+
 namespace Contacts.Domain.Models
 {
+    [ExcludeFromCodeCoverage]
+
     public class AddressType
     {
         public int AddressTypeId { get; set; }

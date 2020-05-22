@@ -1,15 +1,16 @@
 ﻿using System;
+using System.Diagnostics.CodeAnalysis;
 using Contacts.Data;
 using Contacts.Data.Sqlite;
-using Contacts.Domain;
 using Contacts.Domain.Models;
 using Contacts.Logic;
-using Microsoft.EntityFrameworkCore.Query.Internal;
 
 namespace Contacts.Console
 {
+    [ExcludeFromCodeCoverage]
     class Program
     {
+        [ExcludeFromCodeCoverage]
         static void Main(string[] args)
         {
             var contactManager = new ContactManager(new ContactRepository(new SqliteDataStore()));
@@ -57,6 +58,7 @@ namespace Contacts.Console
 
         }
 
+        [ExcludeFromCodeCoverage]
         private static Contact GetValidContact()
         {
             return new Contact

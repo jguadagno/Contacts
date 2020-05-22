@@ -1,8 +1,10 @@
-﻿using Contacts.Domain.Models;
+﻿using System.Diagnostics.CodeAnalysis;
+using Contacts.Domain.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace Contacts.Data.Sqlite
 {
+    [ExcludeFromCodeCoverage]
     public class ContactContext: DbContext
     {
         public DbSet<Contact> Contacts { get; set; }

@@ -21,9 +21,18 @@
   <component name="ChangeListManager">
     <list default="true" id="14fd18ef-6fed-455b-81a5-09cb395c5fc7" name="Default Changelist" comment="Created the initial database with EF Core">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Contacts/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Contacts/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Contacts.Console/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Contacts.Console/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Contacts.Data.Sqlite/ContactContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Contacts.Data.Sqlite/ContactContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Contacts.Data.Sqlite/Migrations/20200507235336_InitialCreate.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Contacts.Data.Sqlite/Migrations/20200507235336_InitialCreate.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Contacts.Data.Sqlite/Migrations/ContactContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Contacts.Data.Sqlite/Migrations/ContactContextModelSnapshot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Contacts.Data.Sqlite/SqliteDataStore.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Contacts.Data.Sqlite/SqliteDataStore.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Contacts.Data/ContactRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Contacts.Data/ContactRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Contacts.Domain/Models/Address.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Contacts.Domain/Models/Address.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Contacts.Domain/Models/AddressType.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Contacts.Domain/Models/AddressType.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Contacts.Domain/Models/Contact.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Contacts.Domain/Models/Contact.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Contacts.Domain/Models/Phone.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Contacts.Domain/Models/Phone.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Contacts.Domain/Models/PhoneType.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Contacts.Domain/Models/PhoneType.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Contacts.Logic.Tests/ContactManagerTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Contacts.Logic.Tests/ContactManagerTests.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Contacts.Logic.Tests/Contacts.Logic.Tests.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Contacts.Logic.Tests/Contacts.Logic.Tests.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Contacts.Logic/ContactManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Contacts.Logic/ContactManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +58,6 @@
     <setting file="file://$PROJECT_DIR$/Contacts.Console/Program.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Contacts.Domain/Models/Address.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Contacts.Domain/Models/AddressType.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Contacts.Domain/Interfaces/IContactRepository.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9152434B-0FAC-463B-87F2-DD9AF798817F/02/c977ac4d/Assert.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Contacts.Data/ContactRepository.cs" root0="FORCE_HIGHLIGHTING" />
@@ -63,25 +71,26 @@
         <option value="$PROJECT_DIR$/Contacts.Data/ContactContext.cs" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
         <option value="$PROJECT_DIR$/Contacts.Logic.Tests/UnitTest1.cs" />
-        <option value="$PROJECT_DIR$/Contacts.Domain/Models/Address.cs" />
-        <option value="$PROJECT_DIR$/Contacts.Domain/Models/AddressType.cs" />
-        <option value="$PROJECT_DIR$/Contacts.Domain/Models/Contact.cs" />
-        <option value="$PROJECT_DIR$/Contacts.Domain/Models/Phone.cs" />
-        <option value="$PROJECT_DIR$/Contacts.Domain/Models/PhoneType.cs" />
         <option value="$PROJECT_DIR$/Contacts.Data.Sqlite/Class1.cs" />
-        <option value="$PROJECT_DIR$/Contacts.Data.Sqlite/ContactContext.cs" />
         <option value="$PROJECT_DIR$/Contacts.Data.Sqlite/Migrations/20200507235336_InitialCreate.cs" />
-        <option value="$PROJECT_DIR$/Contacts.Data.Sqlite/Migrations/ContactContextModelSnapshot.cs" />
         <option value="$PROJECT_DIR$/Contacts.Data/Contacts.Data.csproj" />
         <option value="$PROJECT_DIR$/Contacts.Domain/Interfaces/IContactDataStore.cs" />
         <option value="$PROJECT_DIR$/Contacts.Domain/Interfaces/IContactRepository.cs" />
         <option value="$PROJECT_DIR$/Contacts.Data.Sqlite/ContactDataStore.cs" />
-        <option value="$PROJECT_DIR$/Contacts.Data/ContactRepository.cs" />
         <option value="$PROJECT_DIR$/Contacts.Data.Sqlite/SqliteData.cs" />
-        <option value="$PROJECT_DIR$/Contacts.Data.Sqlite/SqliteDataStore.cs" />
-        <option value="$PROJECT_DIR$/Contacts.Console/Program.cs" />
         <option value="$PROJECT_DIR$/Contacts.Logic/ContactManager.cs" />
+        <option value="$PROJECT_DIR$/Contacts.Domain/Models/Address.cs" />
+        <option value="$PROJECT_DIR$/Contacts.Domain/Models/AddressType.cs" />
+        <option value="$PROJECT_DIR$/Contacts.Domain/Models/Phone.cs" />
+        <option value="$PROJECT_DIR$/Contacts.Domain/Models/PhoneType.cs" />
+        <option value="$PROJECT_DIR$/Contacts.Domain/Models/Contact.cs" />
         <option value="$PROJECT_DIR$/Contacts.Logic.Tests/ContactManagerTests.cs" />
+        <option value="$PROJECT_DIR$/Contacts.Data.Sqlite/SqliteDataStore.cs" />
+        <option value="$PROJECT_DIR$/Contacts.Data/ContactRepository.cs" />
+        <option value="$PROJECT_DIR$/Contacts.Data.Sqlite/ContactContext.cs" />
+        <option value="$PROJECT_DIR$/Contacts.Data.Sqlite/Migrations/ContactContextModelSnapshot.cs" />
+        <option value="$PROJECT_DIR$/Contacts.Data.Sqlite/Migrations/20200507235336_InitialCreate.Designer.cs" />
+        <option value="$PROJECT_DIR$/Contacts.Console/Program.cs" />
       </list>
     </option>
   </component>
@@ -99,7 +108,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Issue.Navigation" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RunManager" selected=".NET Project.Contacts.Console">
     <configuration name="Contacts.Console" type="DotNetProject" factoryName=".NET Project">
@@ -133,7 +142,8 @@
       <workItem from="1589237615872" duration="11740000" />
       <workItem from="1589669000898" duration="529000" />
       <workItem from="1589838738834" duration="4211000" />
-      <workItem from="1589928987934" duration="4396000" />
+      <workItem from="1589928987934" duration="4627000" />
+      <workItem from="1590101929862" duration="3285000" />
     </task>
     <task id="LOCAL-00001" summary="Created the initial database with EF Core">
       <created>1588899122166</created>
@@ -163,17 +173,24 @@
       <option name="project" value="LOCAL" />
       <updated>1589854395725</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Introduced Moqs to the Contacts.Logic.Tests.csproj project">
+      <created>1589939993147</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1589939993147</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="2" />
   </component>
   <component name="UnitTestsCoverage.Settings">
-    <option name="coveragePercentColumnWidth" value="188" />
+    <option name="coveragePercentColumnWidth" value="155" />
     <option name="sortOrder" value="DESCENDING" />
     <option name="sortedColumn" value="1" />
-    <option name="symbolColumnWidth" value="271" />
+    <option name="symbolColumnWidth" value="222" />
     <coverage-tree-state>
       <expand>
         <path>
@@ -183,56 +200,20 @@
         <path>
           <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
           <item name="1" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="3" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="241" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
         </path>
         <path>
           <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
           <item name="1" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="3" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="210" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="241" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="197" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
         </path>
         <path>
           <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
           <item name="1" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="3" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="210" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="211" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-        </path>
-        <path>
-          <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
-          <item name="1" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="6" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-        </path>
-        <path>
-          <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
-          <item name="1" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="6" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="133" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-        </path>
-        <path>
-          <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
-          <item name="1" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="6" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="133" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="134" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-        </path>
-        <path>
-          <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
-          <item name="1" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="4" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-        </path>
-        <path>
-          <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
-          <item name="1" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="4" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="219" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-        </path>
-        <path>
-          <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
-          <item name="1" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="4" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="219" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="15" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="241" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="197" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="198" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
         </path>
       </expand>
       <select />
@@ -258,7 +239,8 @@
     <MESSAGE value="Commit for episode 2020-05-11 - Database Connectivity" />
     <MESSAGE value="Commit for episode 2020-05-14 - Unit Tests" />
     <MESSAGE value="Introduced poor persons Dependency Injection" />
-    <option name="LAST_COMMIT_MESSAGE" value="Introduced poor persons Dependency Injection" />
+    <MESSAGE value="Introduced Moqs to the Contacts.Logic.Tests.csproj project" />
+    <option name="LAST_COMMIT_MESSAGE" value="Introduced Moqs to the Contacts.Logic.Tests.csproj project" />
   </component>
   <component name="WindowStateProjectService">
     <state x="440" y="190" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1588895282515">
@@ -269,106 +251,106 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="603" y="237" key="#xdebugger.evaluate/0.0.1680.1050@0.0.1680.1050" timestamp="1589932940095" />
-    <state width="1638" height="295" key="GridCell.Tab.0.bottom" timestamp="1589932970351">
+    <state width="1638" height="295" key="GridCell.Tab.0.bottom" timestamp="1590017377448">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state width="1638" height="295" key="GridCell.Tab.0.bottom/0.0.1680.1050/-525.-1692.3008.1692@0.0.1680.1050" timestamp="1589902947564" />
     <state width="1628" height="282" key="GridCell.Tab.0.bottom/0.0.1680.1050/-607.-1692.3008.1692@0.0.1680.1050" timestamp="1589498349297" />
     <state width="1628" height="282" key="GridCell.Tab.0.bottom/0.0.1680.1050/-607.-1777.3200.1777@0.0.1680.1050" timestamp="1589241551783" />
     <state width="1628" height="282" key="GridCell.Tab.0.bottom/0.0.1680.1050/-607.-1800.3200.1800@0.0.1680.1050" timestamp="1589241508556" />
-    <state width="1638" height="295" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1589932970351" />
+    <state width="1638" height="295" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1590017377448" />
     <state width="1628" height="282" key="GridCell.Tab.0.bottom/0.23.1680.1027/-607.-1669.3008.1669@-607.-1669.3008.1669" timestamp="1589513625212" />
-    <state width="1638" height="295" key="GridCell.Tab.0.center" timestamp="1589932970350">
+    <state width="1638" height="295" key="GridCell.Tab.0.center" timestamp="1590017377447">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state width="1638" height="295" key="GridCell.Tab.0.center/0.0.1680.1050/-525.-1692.3008.1692@0.0.1680.1050" timestamp="1589902947562" />
     <state width="1628" height="282" key="GridCell.Tab.0.center/0.0.1680.1050/-607.-1692.3008.1692@0.0.1680.1050" timestamp="1589498349285" />
     <state width="1628" height="282" key="GridCell.Tab.0.center/0.0.1680.1050/-607.-1777.3200.1777@0.0.1680.1050" timestamp="1589241551746" />
     <state width="1628" height="282" key="GridCell.Tab.0.center/0.0.1680.1050/-607.-1800.3200.1800@0.0.1680.1050" timestamp="1589241508513" />
-    <state width="1638" height="295" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1589932970350" />
+    <state width="1638" height="295" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1590017377447" />
     <state width="1628" height="282" key="GridCell.Tab.0.center/0.23.1680.1027/-607.-1669.3008.1669@-607.-1669.3008.1669" timestamp="1589513625212" />
-    <state width="1638" height="295" key="GridCell.Tab.0.left" timestamp="1589932970349">
+    <state width="1638" height="295" key="GridCell.Tab.0.left" timestamp="1590017377446">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state width="1638" height="295" key="GridCell.Tab.0.left/0.0.1680.1050/-525.-1692.3008.1692@0.0.1680.1050" timestamp="1589902947560" />
     <state width="1628" height="282" key="GridCell.Tab.0.left/0.0.1680.1050/-607.-1692.3008.1692@0.0.1680.1050" timestamp="1589498349280" />
     <state width="1628" height="282" key="GridCell.Tab.0.left/0.0.1680.1050/-607.-1777.3200.1777@0.0.1680.1050" timestamp="1589241551739" />
     <state width="1628" height="282" key="GridCell.Tab.0.left/0.0.1680.1050/-607.-1800.3200.1800@0.0.1680.1050" timestamp="1589241508419" />
-    <state width="1638" height="295" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1589932970349" />
+    <state width="1638" height="295" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1590017377446" />
     <state width="1628" height="282" key="GridCell.Tab.0.left/0.23.1680.1027/-607.-1669.3008.1669@-607.-1669.3008.1669" timestamp="1589513625211" />
-    <state width="1638" height="295" key="GridCell.Tab.0.right" timestamp="1589932970351">
+    <state width="1638" height="295" key="GridCell.Tab.0.right" timestamp="1590017377447">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state width="1638" height="295" key="GridCell.Tab.0.right/0.0.1680.1050/-525.-1692.3008.1692@0.0.1680.1050" timestamp="1589902947563" />
     <state width="1628" height="282" key="GridCell.Tab.0.right/0.0.1680.1050/-607.-1692.3008.1692@0.0.1680.1050" timestamp="1589498349289" />
     <state width="1628" height="282" key="GridCell.Tab.0.right/0.0.1680.1050/-607.-1777.3200.1777@0.0.1680.1050" timestamp="1589241551761" />
     <state width="1628" height="282" key="GridCell.Tab.0.right/0.0.1680.1050/-607.-1800.3200.1800@0.0.1680.1050" timestamp="1589241508546" />
-    <state width="1638" height="295" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1589932970351" />
+    <state width="1638" height="295" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1590017377447" />
     <state width="1628" height="282" key="GridCell.Tab.0.right/0.23.1680.1027/-607.-1669.3008.1669@-607.-1669.3008.1669" timestamp="1589513625212" />
-    <state width="1638" height="365" key="GridCell.Tab.1.bottom" timestamp="1589932960168">
+    <state width="1638" height="365" key="GridCell.Tab.1.bottom" timestamp="1590017377430">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="365" key="GridCell.Tab.1.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1589932960168" />
-    <state width="1638" height="365" key="GridCell.Tab.1.center" timestamp="1589932960167">
+    <state width="1638" height="365" key="GridCell.Tab.1.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1590017377430" />
+    <state width="1638" height="365" key="GridCell.Tab.1.center" timestamp="1590017377428">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="365" key="GridCell.Tab.1.center/0.0.1680.1050@0.0.1680.1050" timestamp="1589932960167" />
-    <state width="1638" height="365" key="GridCell.Tab.1.left" timestamp="1589932960166">
+    <state width="1638" height="365" key="GridCell.Tab.1.center/0.0.1680.1050@0.0.1680.1050" timestamp="1590017377428" />
+    <state width="1638" height="365" key="GridCell.Tab.1.left" timestamp="1590017377428">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="365" key="GridCell.Tab.1.left/0.0.1680.1050@0.0.1680.1050" timestamp="1589932960166" />
-    <state width="1638" height="365" key="GridCell.Tab.1.right" timestamp="1589932960167">
+    <state width="1638" height="365" key="GridCell.Tab.1.left/0.0.1680.1050@0.0.1680.1050" timestamp="1590017377428" />
+    <state width="1638" height="365" key="GridCell.Tab.1.right" timestamp="1590017377429">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="365" key="GridCell.Tab.1.right/0.0.1680.1050@0.0.1680.1050" timestamp="1589932960167" />
-    <state width="1638" height="365" key="GridCell.Tab.2.bottom" timestamp="1589932960171">
+    <state width="1638" height="365" key="GridCell.Tab.1.right/0.0.1680.1050@0.0.1680.1050" timestamp="1590017377429" />
+    <state width="1638" height="365" key="GridCell.Tab.2.bottom" timestamp="1590017377432">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="365" key="GridCell.Tab.2.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1589932960171" />
-    <state width="1638" height="365" key="GridCell.Tab.2.center" timestamp="1589932960169">
+    <state width="1638" height="365" key="GridCell.Tab.2.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1590017377432" />
+    <state width="1638" height="365" key="GridCell.Tab.2.center" timestamp="1590017377431">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="365" key="GridCell.Tab.2.center/0.0.1680.1050@0.0.1680.1050" timestamp="1589932960169" />
-    <state width="1638" height="365" key="GridCell.Tab.2.left" timestamp="1589932960168">
+    <state width="1638" height="365" key="GridCell.Tab.2.center/0.0.1680.1050@0.0.1680.1050" timestamp="1590017377431" />
+    <state width="1638" height="365" key="GridCell.Tab.2.left" timestamp="1590017377430">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="365" key="GridCell.Tab.2.left/0.0.1680.1050@0.0.1680.1050" timestamp="1589932960168" />
-    <state width="1638" height="365" key="GridCell.Tab.2.right" timestamp="1589932960170">
+    <state width="1638" height="365" key="GridCell.Tab.2.left/0.0.1680.1050@0.0.1680.1050" timestamp="1590017377430" />
+    <state width="1638" height="365" key="GridCell.Tab.2.right" timestamp="1590017377431">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="365" key="GridCell.Tab.2.right/0.0.1680.1050@0.0.1680.1050" timestamp="1589932960170" />
-    <state width="1638" height="365" key="GridCell.Tab.3.bottom" timestamp="1589932960174">
+    <state width="1638" height="365" key="GridCell.Tab.2.right/0.0.1680.1050@0.0.1680.1050" timestamp="1590017377431" />
+    <state width="1638" height="365" key="GridCell.Tab.3.bottom" timestamp="1590017377434">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="365" key="GridCell.Tab.3.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1589932960174" />
-    <state width="1638" height="365" key="GridCell.Tab.3.center" timestamp="1589932960172">
+    <state width="1638" height="365" key="GridCell.Tab.3.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1590017377434" />
+    <state width="1638" height="365" key="GridCell.Tab.3.center" timestamp="1590017377433">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="365" key="GridCell.Tab.3.center/0.0.1680.1050@0.0.1680.1050" timestamp="1589932960172" />
-    <state width="1638" height="365" key="GridCell.Tab.3.left" timestamp="1589932960172">
+    <state width="1638" height="365" key="GridCell.Tab.3.center/0.0.1680.1050@0.0.1680.1050" timestamp="1590017377433" />
+    <state width="1638" height="365" key="GridCell.Tab.3.left" timestamp="1590017377432">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="365" key="GridCell.Tab.3.left/0.0.1680.1050@0.0.1680.1050" timestamp="1589932960172" />
-    <state width="1638" height="365" key="GridCell.Tab.3.right" timestamp="1589932960173">
+    <state width="1638" height="365" key="GridCell.Tab.3.left/0.0.1680.1050@0.0.1680.1050" timestamp="1590017377432" />
+    <state width="1638" height="365" key="GridCell.Tab.3.right" timestamp="1590017377433">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="365" key="GridCell.Tab.3.right/0.0.1680.1050@0.0.1680.1050" timestamp="1589932960173" />
-    <state width="1638" height="365" key="GridCell.Tab.4.bottom" timestamp="1589932960176">
+    <state width="1638" height="365" key="GridCell.Tab.3.right/0.0.1680.1050@0.0.1680.1050" timestamp="1590017377433" />
+    <state width="1638" height="365" key="GridCell.Tab.4.bottom" timestamp="1590017377436">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="365" key="GridCell.Tab.4.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1589932960176" />
-    <state width="1638" height="365" key="GridCell.Tab.4.center" timestamp="1589932960175">
+    <state width="1638" height="365" key="GridCell.Tab.4.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1590017377436" />
+    <state width="1638" height="365" key="GridCell.Tab.4.center" timestamp="1590017377435">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="365" key="GridCell.Tab.4.center/0.0.1680.1050@0.0.1680.1050" timestamp="1589932960175" />
-    <state width="1638" height="365" key="GridCell.Tab.4.left" timestamp="1589932960174">
+    <state width="1638" height="365" key="GridCell.Tab.4.center/0.0.1680.1050@0.0.1680.1050" timestamp="1590017377435" />
+    <state width="1638" height="365" key="GridCell.Tab.4.left" timestamp="1590017377434">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="365" key="GridCell.Tab.4.left/0.0.1680.1050@0.0.1680.1050" timestamp="1589932960174" />
-    <state width="1638" height="365" key="GridCell.Tab.4.right" timestamp="1589932960176">
+    <state width="1638" height="365" key="GridCell.Tab.4.left/0.0.1680.1050@0.0.1680.1050" timestamp="1590017377434" />
+    <state width="1638" height="365" key="GridCell.Tab.4.right" timestamp="1590017377435">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="365" key="GridCell.Tab.4.right/0.0.1680.1050@0.0.1680.1050" timestamp="1589932960176" />
+    <state width="1638" height="365" key="GridCell.Tab.4.right/0.0.1680.1050@0.0.1680.1050" timestamp="1590017377435" />
     <state x="340" y="182" key="Rider.ProjectTemplateDialog.Size" timestamp="1589843781610">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
@@ -380,16 +362,17 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="566" y="236" key="RiderGenerateDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1589845207689" />
-    <state x="379" y="164" key="SettingsEditor" timestamp="1589858771142">
+    <state x="379" y="164" key="SettingsEditor" timestamp="1590102822201">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="154" y="-1428" key="SettingsEditor/0.0.1680.1050/-525.-1692.3008.1692@-525.-1692.3008.1692" timestamp="1589675193864" />
     <state x="379" y="164" key="SettingsEditor/0.0.1680.1050/-525.-1692.3008.1692@0.0.1680.1050" timestamp="1589858771142" />
     <state x="379" y="164" key="SettingsEditor/0.0.1680.1050/-607.-1800.3200.1800@0.0.1680.1050" timestamp="1588715646075" />
-    <state x="340" y="202" key="Vcs.Push.Dialog.v2" timestamp="1589854402583">
+    <state x="379" y="164" key="SettingsEditor/0.0.1680.1050@0.0.1680.1050" timestamp="1590102822201" />
+    <state x="340" y="202" key="Vcs.Push.Dialog.v2" timestamp="1589939996415">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="340" y="202" key="Vcs.Push.Dialog.v2/0.0.1680.1050/-525.-1692.3008.1692@0.0.1680.1050" timestamp="1589854402583" />
+    <state x="340" y="202" key="Vcs.Push.Dialog.v2/0.0.1680.1050/-525.-1692.3008.1692@0.0.1680.1050" timestamp="1589939996415" />
     <state x="340" y="202" key="Vcs.Push.Dialog.v2/0.0.1680.1050/-607.-1800.3200.1800@0.0.1680.1050" timestamp="1589242013521" />
     <state x="2" y="-1348" key="Vcs.Push.Dialog.v2/0.23.1680.1027/-607.-1669.3008.1669@-607.-1669.3008.1669" timestamp="1589513007054" />
     <state x="653" y="236" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1588895340275">

@@ -1,5 +1,9 @@
+using System.Diagnostics.CodeAnalysis;
+
 namespace Contacts.Domain.Models
 {
+    [ExcludeFromCodeCoverage]
+
     public class Phone 
     {
         public int PhoneId { get; set; }

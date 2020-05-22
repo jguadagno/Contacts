@@ -1,46 +1,48 @@
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using Contacts.Domain.Interfaces;
 using Contacts.Domain.Models;
 
 namespace Contacts.Data
 {
-public class ContactRepository : IContactRepository
-{
-    private readonly IContactDataStore _contactDataStore;
-
-    public ContactRepository(IContactDataStore contactDataStore)
+    [ExcludeFromCodeCoverage]
+    public class ContactRepository : IContactRepository
     {
-        _contactDataStore = contactDataStore;
-    }
+        private readonly IContactDataStore _contactDataStore;
 
-    public Contact GetContact(int contactId)
-    {
-        return _contactDataStore.GetContact(contactId);
-    }
+        public ContactRepository(IContactDataStore contactDataStore)
+        {
+            _contactDataStore = contactDataStore;
+        }
 
-    public List<Contact> GetContacts()
-    {
-        return _contactDataStore.GetContacts();
-    }
+        public Contact GetContact(int contactId)
+        {
+            return _contactDataStore.GetContact(contactId);
+        }
 
-    public List<Contact> GetContacts(string firstName, string lastName)
-    {
-        return _contactDataStore.GetContacts(firstName, lastName);
-    }
+        public List<Contact> GetContacts()
+        {
+            return _contactDataStore.GetContacts();
+        }
 
-    public bool SaveContact(Contact contact)
-    {
-        return _contactDataStore.SaveContact(contact);
-    }
+        public List<Contact> GetContacts(string firstName, string lastName)
+        {
+            return _contactDataStore.GetContacts(firstName, lastName);
+        }
 
-    public bool DeleteContact(int contactId)
-    {
-        return _contactDataStore.DeleteContact(contactId);
-    }
+        public bool SaveContact(Contact contact)
+        {
+            return _contactDataStore.SaveContact(contact);
+        }
 
-    public bool DeleteContact(Contact contact)
-    {
-        return _contactDataStore.DeleteContact(contact);
+        public bool DeleteContact(int contactId)
+        {
+            return _contactDataStore.DeleteContact(contactId);
+        }
+
+        public bool DeleteContact(Contact contact)
+        {
+            return _contactDataStore.DeleteContact(contact);
+        }
     }
-}
 }

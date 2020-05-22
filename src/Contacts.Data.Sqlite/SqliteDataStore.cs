@@ -1,11 +1,13 @@
 using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using Contacts.Domain.Interfaces;
 using Contacts.Domain.Models;
 
 namespace Contacts.Data.Sqlite
 {
+    [ExcludeFromCodeCoverage]
     public class SqliteDataStore: IContactDataStore
     {        
         private readonly ContactContext _contactContext;
