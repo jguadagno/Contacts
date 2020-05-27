@@ -1,6 +1,6 @@
 ﻿using System.Diagnostics.CodeAnalysis;
-using Contacts.Domain.Models;
 using Microsoft.EntityFrameworkCore;
+using Contacts.Data.Sqlite.Models;
 
 namespace Contacts.Data.Sqlite
 {

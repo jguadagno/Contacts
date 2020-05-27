@@ -77,15 +77,14 @@ Check out the code coverage for our unit tests and ended up adding more tests.
 
 ### Data Objects
 
+We build out the new Sqlite.Models in preparation of changing databases.  
+
 ### Data Mapping
 
-Map from Domain classes to the data storage
+Map from Domain classes to the data storage. We also implemented [Automapper](https://www.automapper.org) to the project.
 
-Add unit tests to validate mapping?
-
-### Data Manager
-
-Commonly referred to as a Repository or follow the repository pattern
+* [Video](https://youtu.be/MKeGYHjfhf8)
+* Source Code [00dfc82](https://github.com/jguadagno/Contacts/commit/00dfc825f4fe69c3f1c7033bed1d685d42319513)
 
 ## Expose the Application
 

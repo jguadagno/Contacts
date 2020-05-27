@@ -47,14 +47,14 @@ namespace Contacts.Console
             }
             
             // NOTE: Skipping after the first successful add
-            //System.Console.WriteLine("--- Adding Contact ---");
-            //var wasSaved = contactManager.SaveContact(GetValidContact());
-            //System.Console.Write(wasSaved ? "Contact was added": "Contact was NOT added");
-
+            // System.Console.WriteLine("--- Adding Contact ---");
+            // var wasSaved = contactManager.SaveContact(GetValidContact());
+            // System.Console.Write(wasSaved ? "Contact was added": "Contact was NOT added");
+            
             // NOTE: Skipping after the first successful delete
-            //System.Console.WriteLine("--- Deleting Contact ---");
-            //var wasDeleted = contactManager.DeleteContact(2);
-            //System.Console.Write(wasDeleted ? "Contact was deleted": "Contact was NOT deleted");
+            // System.Console.WriteLine("--- Deleting Contact ---");
+            // var wasDeleted = contactManager.DeleteContact(2);
+            // System.Console.Write(wasDeleted ? "Contact was deleted": "Contact was NOT deleted");
 
         }
 

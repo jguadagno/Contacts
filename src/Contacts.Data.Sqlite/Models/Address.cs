@@ -1,6 +1,7 @@
 using System.Diagnostics.CodeAnalysis;
+using Contacts.Domain.Models;
 
-namespace Contacts.Domain.Models
+namespace Contacts.Data.Sqlite.Models
 {
     [ExcludeFromCodeCoverage]
 
