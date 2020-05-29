@@ -90,7 +90,21 @@ Map from Domain classes to the data storage. We also implemented [Automapper](ht
 
 Let's take the applications *Business Layer* and expose it via an API
 
+The new API is based off of [Create a web API](https://docs.microsoft.com/en-us/aspnet/core/tutorials/first-web-api)
+
 ### New Web API
+
+First round, we added the GetContacts, GetContact, and SaveContact
+
+* [Video](https://youtu.be/A0I6iCbyc1Q)
+* Source Code [d309dfe](https://github.com/jguadagno/Contacts/commit/d309dfe3e6f4b29cd3c472f6ba3632ae17fbf61a)
+
+Next up:
+
+- [ ] Implement DeleteContact
+- [ ] Implement SearchContact
+- [ ] Update SaveContact method to return the saved contact
+- [ ] Use ASP.NET Core Dependency Inject to create the `ContactManager` and required dependencies
 
 ### Validate the API Works
 
