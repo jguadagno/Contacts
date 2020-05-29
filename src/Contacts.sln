@@ -12,6 +12,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contacts.Logic.Tests", "Con
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contacts.Data.Sqlite", "Contacts.Data.Sqlite\Contacts.Data.Sqlite.csproj", "{C487C364-6D0C-4D35-9989-F309079B9A5A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contacts.Api", "Contacts.Api\Contacts.Api.csproj", "{4438D2B3-8C0A-4692-975F-9E92887F47B8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -42,5 +44,9 @@ Global
 		{C487C364-6D0C-4D35-9989-F309079B9A5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C487C364-6D0C-4D35-9989-F309079B9A5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C487C364-6D0C-4D35-9989-F309079B9A5A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4438D2B3-8C0A-4692-975F-9E92887F47B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4438D2B3-8C0A-4692-975F-9E92887F47B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4438D2B3-8C0A-4692-975F-9E92887F47B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4438D2B3-8C0A-4692-975F-9E92887F47B8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
