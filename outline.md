@@ -73,7 +73,7 @@ Check out the code coverage for our unit tests and ended up adding more tests.
 * [Video](https://youtu.be/Ccyf3FyKZDU)
 * Source Code [e1c0985](https://github.com/jguadagno/Contacts/commit/e1c09853b0335fa8c4f94e732508208c6e8f0c92)
 
-## Data Persistance Layer
+## Data Persistence Layer
 
 ### Data Objects
 
@@ -99,16 +99,22 @@ First round, we added the GetContacts, GetContact, and SaveContact
 * [Video](https://youtu.be/A0I6iCbyc1Q)
 * Source Code [d309dfe](https://github.com/jguadagno/Contacts/commit/d309dfe3e6f4b29cd3c472f6ba3632ae17fbf61a)
 
+Second round, we added the DeleteContact and GetContacts (Search) endpoints. Improved the SaveContact endpoint.
+
 Next up:
 
-- [ ] Implement DeleteContact
-- [ ] Implement SearchContact
-- [ ] Update SaveContact method to return the saved contact
+* [Video](https://youtu.be/ee247e0CH6k)
+* Source Code [e77b039](https://github.com/jguadagno/Contacts/commit/e77b039fe1d7b4eb7bd3805d93aff2862112bfbf)
+
 - [ ] Use ASP.NET Core Dependency Inject to create the `ContactManager` and required dependencies
 
 ### Validate the API Works
 
 Use Postman and/or HttpRequest in Visual Studio Code and/or Rider's HttpClient
+
+### Document the Api
+
+Let's add Swagger to the Api
 
 ## To the Cloud
 
