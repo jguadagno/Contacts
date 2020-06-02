@@ -8,7 +8,7 @@ namespace Contacts.Domain.Interfaces
         Contact GetContact(int contactId);
         List<Contact> GetContacts();
         List<Contact> GetContacts(string firstName, string lastName);
-        bool SaveContact(Contact contact);
+        Contact SaveContact(Contact contact);
         bool DeleteContact(int contactId);
         bool DeleteContact(Contact contact);
     }

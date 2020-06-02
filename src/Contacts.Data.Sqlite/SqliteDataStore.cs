@@ -54,16 +54,25 @@ namespace Contacts.Data.Sqlite
             return _mapper.Map<List<Contact>>(dbContact);
         }
 
-        public bool SaveContact(Contact contact)
+        public Contact SaveContact(Contact contact)
         {
             var dbContact = _mapper.Map<Sqlite.Models.Contact>(contact);
             _contactContext.Contacts.Add(dbContact);
-            return _contactContext.SaveChanges() != 0;
+
+            var wasSaved = _contactContext.SaveChanges() != 0;
+            if (wasSaved)
+            {
+                contact.ContactId = dbContact.ContactId;
+                return contact;
+            }
+            return null;
         }
 
         public bool DeleteContact(int contactId)
         {
-            return DeleteContact(GetContact(contactId));
+            var contact = _contactContext.Contacts.Find(contactId);
+            _contactContext.Contacts.Remove(contact);
+            return _contactContext.SaveChanges() != 0;
         }
 
         public bool DeleteContact(Contact contact)

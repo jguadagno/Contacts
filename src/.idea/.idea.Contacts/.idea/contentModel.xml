@@ -12,7 +12,10 @@
     <e p="$APPLICATION_CONFIG_DIR$/scratches" t="IncludeRecursive" />
     <e p="$USER_HOME$/Library/Caches/JetBrains/Rider2020.1/extResources" t="IncludeRecursive" />
     <e p="$USER_HOME$/Library/Caches/JetBrains/Rider2020.1/resharper-host/local/Transient/ReSharperHost/v201/SolutionCaches/_Contacts.663759292.00" t="ExcludeRecursive" />
+    <e p="$PROJECT_DIR$/../outline.md" t="Include" />
+    <e p="$PROJECT_DIR$/../README.md" t="Include" />
     <e p="$PROJECT_DIR$" t="IncludeFlat">
+      <e p="Contacts-Sample-Requests.http" t="Include" />
       <e p="Contacts.Api" t="IncludeRecursive">
         <e p="appsettings.Development.json" t="Include" />
         <e p="appsettings.json" t="Include" />
@@ -131,6 +134,7 @@
         </e>
       </e>
       <e p="Contacts.sln" t="IncludeFlat" />
+      <e p="ExtraStuff" t="Include" />
       <e p="packages" t="ExcludeRecursive" />
     </e>
   </component>

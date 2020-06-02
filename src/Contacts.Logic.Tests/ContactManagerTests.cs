@@ -308,26 +308,28 @@ namespace Contacts.Logic.Tests
         public void SaveContact_WithValidContact_ShouldReturnTrue()
         {
             // Arrange 
-            var mockContactRepository = new Mock<IContactRepository>();
-            mockContactRepository.Setup(contactRepository => contactRepository.SaveContact(It.IsAny<Contact>()))
-                .Returns(true);
-
-            var contactManager = new ContactManager(mockContactRepository.Object);
-
             var contact = new Contact
             {
+                ContactId = 1,
                 FirstName = "Joseph",
                 LastName = "Guadagno",
                 EmailAddress = "jguadagno@hotmail.com",
                 Birthday = DateTime.Now.AddDays(-10),
                 Anniversary = DateTime.Now.AddDays(-1)
             };
+            
+            var mockContactRepository = new Mock<IContactRepository>();
+            mockContactRepository.Setup(contactRepository => contactRepository.SaveContact(It.IsAny<Contact>()))
+                .Returns(() => contact);
 
+            var contactManager = new ContactManager(mockContactRepository.Object);
+            
             // Act
-            var wasSaved = contactManager.SaveContact(contact);
+            var savedContact = contactManager.SaveContact(contact);
 
             // Assert
-            Assert.True(wasSaved);
+            Assert.NotNull(savedContact);
+            Assert.Equal(contact.ContactId, savedContact.ContactId);
         }
 
         [Fact]

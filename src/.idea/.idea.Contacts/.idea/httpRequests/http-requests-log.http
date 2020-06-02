@@ -1,3 +1,91 @@
+GET https://localhost:5001/contacts/search?firstname=Deidre&lastname=Guadagno
+
+<> 2020-06-01T045842.200.json
+
+###
+
+GET https://localhost:5001/contacts/search?firstname=Joseph&lastname=Guadagno
+
+<> 2020-06-01T045811.200.json
+
+###
+
+GET https://localhost:5001/contacts/search?firstname=Joseph&lastname=Guadagno
+
+<> 2020-06-01T045704.400.json
+
+###
+
+DELETE https://localhost:5001/contacts/34
+
+###
+
+DELETE https://localhost:5001/contacts/35
+
+###
+
+DELETE https://localhost:5001/contacts/35
+
+<> 2020-06-01T044548.500.txt
+
+###
+
+DELETE https://localhost:5001/contacts/35
+
+<> 2020-06-01T044056.500.txt
+
+###
+
+DELETE https://localhost:5001/contacts/35
+
+<> 2020-06-01T043250.500.txt
+
+###
+
+DELETE https://localhost:5001/contacts/35
+
+<> 2020-06-01T043101.500.txt
+
+###
+
+DELETE https://localhost:5001/contacts/35
+
+<> 2020-06-01T042552.500.txt
+
+###
+
+DELETE https://localhost:5001/contacts/35
+
+<> 2020-06-01T042342.500.txt
+
+###
+
+POST https://localhost:5001/contacts
+Content-Type: application/json
+
+{
+  "FirstName": "Deidre",
+  "LastName" : "Guadagno",
+  "MiddleName" : "Ann",
+  "EmailAddress" : "dontmail@example.com"
+}
+
+<> 2020-06-01T041835.201.json
+
+###
+
+POST https://localhost:5001/contacts
+Content-Type: application/json
+
+{
+  "FirstName": "Deidre",
+  "LastName" : "Guadagno",
+  "MiddleName" : "Ann",
+  "EmailAddress" : "dontmail@example.com"
+}
+
+###
+
 POST https://localhost:5001/contacts
 Content-Type: application/json
 

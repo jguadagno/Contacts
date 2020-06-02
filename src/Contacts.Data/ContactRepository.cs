@@ -30,7 +30,7 @@ namespace Contacts.Data
             return _contactDataStore.GetContacts(firstName, lastName);
         }
 
-        public bool SaveContact(Contact contact)
+        public Contact SaveContact(Contact contact)
         {
             return _contactDataStore.SaveContact(contact);
         }

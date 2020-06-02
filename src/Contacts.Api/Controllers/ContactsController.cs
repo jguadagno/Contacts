@@ -29,15 +29,36 @@ namespace Contacts.Api.Controllers
         public ActionResult<Domain.Models.Contact> SaveContact(Domain.Models.Contact contact)
         {
             var contactManager = new Logic.ContactManager(new ContactRepository(new SqliteDataStore()));
-            var wasSaved = contactManager.SaveContact(contact);
+            var savedContact = contactManager.SaveContact(contact);
 
-            if (wasSaved)
+            if (savedContact != null)
             {
                 return CreatedAtAction(nameof(GetContact), new {id = contact.ContactId},
                     contact);
             }
             return Problem("Failed to insert the contact");
         }
-        
+
+        [HttpDelete("{id}")]
+        public ActionResult<bool> DeleteContact(int id)
+        {
+            var contactManager = new Logic.ContactManager(new ContactRepository(new SqliteDataStore()));
+            var wasDeleted = contactManager.DeleteContact(id);
+            if (wasDeleted)
+            {
+                return NoContent();
+            }
+            else
+            {
+                return NotFound();
+            }
+        }
+
+        [HttpGet("search")]
+        public List<Domain.Models.Contact> GetContacts([FromQuery]string firstname, [FromQuery]string lastname)
+        {
+            var contactManager = new Logic.ContactManager(new ContactRepository(new SqliteDataStore()));
+            return contactManager.GetContacts(firstname, lastname);
+        }
     }
 }

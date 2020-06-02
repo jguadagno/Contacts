@@ -39,7 +39,7 @@ namespace Contacts.Logic
             return _contactRepository.GetContacts(firstName, lastName);
         }
 
-        public bool SaveContact(Contact contact)
+        public Contact SaveContact(Contact contact)
         {
             // Data Validation
             // Null Checks
@@ -86,7 +86,7 @@ namespace Contacts.Logic
 
         public bool DeleteContact(int contactId)
         {
-            return DeleteContact(GetContact(contactId));
+            return _contactRepository.DeleteContact(contactId);
         }
 
         public bool DeleteContact(Contact contact)
