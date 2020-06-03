@@ -21,12 +21,6 @@
   <component name="ChangeListManager">
     <list default="true" id="14fd18ef-6fed-455b-81a5-09cb395c5fc7" name="Default Changelist" comment="Created the initial database with EF Core">
       <change beforePath="$PROJECT_DIR$/../outline.md" beforeDir="false" afterPath="$PROJECT_DIR$/../outline.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Contacts/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Contacts/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Contacts.Api/Contacts.Api.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Contacts.Api/Contacts.Api.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Contacts.Api/Controllers/ContactsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Contacts.Api/Controllers/ContactsController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Contacts.Api/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Contacts.Api/Startup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Contacts.Domain/Contacts.Domain.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Contacts.Domain/Contacts.Domain.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Contacts.Domain/Models/Contact.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Contacts.Domain/Models/Contact.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,9 +107,9 @@
         <option value="$PROJECT_DIR$/Contacts-Sample-Requests.http" />
         <option value="$PROJECT_DIR$/Contacts.Api/Contacts.Api.csproj" />
         <option value="$PROJECT_DIR$/Contacts.Domain/Models/Contact.cs" />
-        <option value="$PROJECT_DIR$/../outline.md" />
         <option value="$PROJECT_DIR$/Contacts.Api/Startup.cs" />
         <option value="$PROJECT_DIR$/Contacts.Api/Controllers/ContactsController.cs" />
+        <option value="$PROJECT_DIR$/../outline.md" />
       </list>
     </option>
   </component>
@@ -338,7 +332,7 @@
       <workItem from="1590534010147" duration="3583000" />
       <workItem from="1590705986640" duration="4070000" />
       <workItem from="1591052129093" duration="4018000" />
-      <workItem from="1591135233308" duration="2069000" />
+      <workItem from="1591135233308" duration="2415000" />
     </task>
     <task id="LOCAL-00001" summary="Created the initial database with EF Core">
       <created>1588899122166</created>
@@ -389,7 +383,14 @@
       <option name="project" value="LOCAL" />
       <updated>1591063216528</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Added the documentation to the Api">
+      <created>1591144236306</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1591144236306</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -433,7 +434,8 @@
     <MESSAGE value="Introduced Moqs to the Contacts.Logic.Tests.csproj project" />
     <MESSAGE value="Added Delete, Search to the API. Improved Save." />
     <MESSAGE value="Added Video and Source Code links for June 1st, 2020 stream" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Video and Source Code links for June 1st, 2020 stream" />
+    <MESSAGE value="Added the documentation to the Api" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added the documentation to the Api" />
   </component>
   <component name="WindowStateProjectService">
     <state x="424" y="104" key="#Contacts.Api:_IIS_Express" timestamp="1590708432716">
@@ -453,40 +455,40 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state width="473" height="464" key="DebuggerActiveHint/0.0.1680.1050@0.0.1680.1050" timestamp="1591054351511" />
-    <state width="1638" height="295" key="GridCell.Tab.0.bottom" timestamp="1591143604618">
+    <state width="1638" height="295" key="GridCell.Tab.0.bottom" timestamp="1591144250564">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="295" key="GridCell.Tab.0.bottom/0.0.1680.1050/-525.-1692.3008.1692@0.0.1680.1050" timestamp="1591143604618" />
+    <state width="1638" height="295" key="GridCell.Tab.0.bottom/0.0.1680.1050/-525.-1692.3008.1692@0.0.1680.1050" timestamp="1591144250564" />
     <state width="1628" height="282" key="GridCell.Tab.0.bottom/0.0.1680.1050/-607.-1692.3008.1692@0.0.1680.1050" timestamp="1589498349297" />
     <state width="1628" height="282" key="GridCell.Tab.0.bottom/0.0.1680.1050/-607.-1777.3200.1777@0.0.1680.1050" timestamp="1589241551783" />
     <state width="1628" height="282" key="GridCell.Tab.0.bottom/0.0.1680.1050/-607.-1800.3200.1800@0.0.1680.1050" timestamp="1589241508556" />
     <state width="1638" height="295" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1591140708827" />
     <state width="1638" height="365" key="GridCell.Tab.0.bottom/0.23.1680.1027/-525.-1692.3008.1692@0.23.1680.1027" timestamp="1591066987095" />
     <state width="1628" height="282" key="GridCell.Tab.0.bottom/0.23.1680.1027/-607.-1669.3008.1669@-607.-1669.3008.1669" timestamp="1589513625212" />
-    <state width="1638" height="295" key="GridCell.Tab.0.center" timestamp="1591143604616">
+    <state width="1638" height="295" key="GridCell.Tab.0.center" timestamp="1591144250562">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="295" key="GridCell.Tab.0.center/0.0.1680.1050/-525.-1692.3008.1692@0.0.1680.1050" timestamp="1591143604616" />
+    <state width="1638" height="295" key="GridCell.Tab.0.center/0.0.1680.1050/-525.-1692.3008.1692@0.0.1680.1050" timestamp="1591144250562" />
     <state width="1628" height="282" key="GridCell.Tab.0.center/0.0.1680.1050/-607.-1692.3008.1692@0.0.1680.1050" timestamp="1589498349285" />
     <state width="1628" height="282" key="GridCell.Tab.0.center/0.0.1680.1050/-607.-1777.3200.1777@0.0.1680.1050" timestamp="1589241551746" />
     <state width="1628" height="282" key="GridCell.Tab.0.center/0.0.1680.1050/-607.-1800.3200.1800@0.0.1680.1050" timestamp="1589241508513" />
     <state width="1638" height="295" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1591140708826" />
     <state width="1638" height="365" key="GridCell.Tab.0.center/0.23.1680.1027/-525.-1692.3008.1692@0.23.1680.1027" timestamp="1591066987093" />
     <state width="1628" height="282" key="GridCell.Tab.0.center/0.23.1680.1027/-607.-1669.3008.1669@-607.-1669.3008.1669" timestamp="1589513625212" />
-    <state width="1638" height="295" key="GridCell.Tab.0.left" timestamp="1591143604614">
+    <state width="1638" height="295" key="GridCell.Tab.0.left" timestamp="1591144250561">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="295" key="GridCell.Tab.0.left/0.0.1680.1050/-525.-1692.3008.1692@0.0.1680.1050" timestamp="1591143604614" />
+    <state width="1638" height="295" key="GridCell.Tab.0.left/0.0.1680.1050/-525.-1692.3008.1692@0.0.1680.1050" timestamp="1591144250561" />
     <state width="1628" height="282" key="GridCell.Tab.0.left/0.0.1680.1050/-607.-1692.3008.1692@0.0.1680.1050" timestamp="1589498349280" />
     <state width="1628" height="282" key="GridCell.Tab.0.left/0.0.1680.1050/-607.-1777.3200.1777@0.0.1680.1050" timestamp="1589241551739" />
     <state width="1628" height="282" key="GridCell.Tab.0.left/0.0.1680.1050/-607.-1800.3200.1800@0.0.1680.1050" timestamp="1589241508419" />
     <state width="1638" height="295" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1591140708825" />
     <state width="1638" height="365" key="GridCell.Tab.0.left/0.23.1680.1027/-525.-1692.3008.1692@0.23.1680.1027" timestamp="1591066987091" />
     <state width="1628" height="282" key="GridCell.Tab.0.left/0.23.1680.1027/-607.-1669.3008.1669@-607.-1669.3008.1669" timestamp="1589513625211" />
-    <state width="1638" height="295" key="GridCell.Tab.0.right" timestamp="1591143604617">
+    <state width="1638" height="295" key="GridCell.Tab.0.right" timestamp="1591144250563">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="295" key="GridCell.Tab.0.right/0.0.1680.1050/-525.-1692.3008.1692@0.0.1680.1050" timestamp="1591143604617" />
+    <state width="1638" height="295" key="GridCell.Tab.0.right/0.0.1680.1050/-525.-1692.3008.1692@0.0.1680.1050" timestamp="1591144250563" />
     <state width="1628" height="282" key="GridCell.Tab.0.right/0.0.1680.1050/-607.-1692.3008.1692@0.0.1680.1050" timestamp="1589498349289" />
     <state width="1628" height="282" key="GridCell.Tab.0.right/0.0.1680.1050/-607.-1777.3200.1777@0.0.1680.1050" timestamp="1589241551761" />
     <state width="1628" height="282" key="GridCell.Tab.0.right/0.0.1680.1050/-607.-1800.3200.1800@0.0.1680.1050" timestamp="1589241508546" />
@@ -607,10 +609,10 @@
     <state x="379" y="164" key="SettingsEditor/0.0.1680.1050/-525.-1692.3008.1692@0.0.1680.1050" timestamp="1589858771142" />
     <state x="379" y="164" key="SettingsEditor/0.0.1680.1050/-607.-1800.3200.1800@0.0.1680.1050" timestamp="1588715646075" />
     <state x="379" y="164" key="SettingsEditor/0.0.1680.1050@0.0.1680.1050" timestamp="1590102822201" />
-    <state x="340" y="202" key="Vcs.Push.Dialog.v2" timestamp="1591063219536">
+    <state x="340" y="202" key="Vcs.Push.Dialog.v2" timestamp="1591144240319">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="340" y="202" key="Vcs.Push.Dialog.v2/0.0.1680.1050/-525.-1692.3008.1692@0.0.1680.1050" timestamp="1591063219536" />
+    <state x="340" y="202" key="Vcs.Push.Dialog.v2/0.0.1680.1050/-525.-1692.3008.1692@0.0.1680.1050" timestamp="1591144240319" />
     <state x="340" y="202" key="Vcs.Push.Dialog.v2/0.0.1680.1050/-607.-1800.3200.1800@0.0.1680.1050" timestamp="1589242013521" />
     <state x="2" y="-1348" key="Vcs.Push.Dialog.v2/0.23.1680.1027/-607.-1669.3008.1669@-607.-1669.3008.1669" timestamp="1589513007054" />
     <state x="653" y="236" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1588895340275">

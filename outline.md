@@ -118,8 +118,8 @@ Let's us [Swagger](https://swagger.io/) to add documentation to our Api
 
 The [example](https://docs.microsoft.com/en-us/aspnet/core/tutorials/getting-started-with-swashbuckle?view=aspnetcore-3.1&tabs=visual-studio) we followed along with on the stream/video
 
-* [Video]()
-* Source Code []()
+* [Video](https://youtu.be/7xVmrorkH2U")
+* Source Code [397d781](https://github.com/jguadagno/Contacts/commit/c7fa40c623af0b1acfd5ae3a3d7427e1922c8d45)
 
 ## To the Cloud
 
