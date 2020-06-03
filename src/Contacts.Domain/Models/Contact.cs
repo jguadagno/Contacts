@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
+using System.ComponentModel.DataAnnotations;
 
 namespace Contacts.Domain.Models
 {
@@ -12,14 +13,19 @@ namespace Contacts.Domain.Models
         }
 
         public int ContactId { get; set; }
+        [Required]
         public string FirstName { get; set; }
         [ExcludeFromCodeCoverage]
         public string MiddleName { get; set; }
+        [Required]
         public string LastName { get; set; }
+        [EmailAddress]
         public string EmailAddress { get; set; }
+        [Required]
         public DateTime Birthday { get; set; }
         public DateTime? Anniversary { get; set; }
         [ExcludeFromCodeCoverage]
+        [Url]
         public string ImageUrl { get; set; }
         [ExcludeFromCodeCoverage]
         public List<Address> Addresses { get; set;}

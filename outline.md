@@ -114,7 +114,12 @@ Use Postman and/or HttpRequest in Visual Studio Code and/or Rider's HttpClient
 
 ### Document the Api
 
-Let's add Swagger to the Api
+Let's us [Swagger](https://swagger.io/) to add documentation to our Api
+
+The [example](https://docs.microsoft.com/en-us/aspnet/core/tutorials/getting-started-with-swashbuckle?view=aspnetcore-3.1&tabs=visual-studio) we followed along with on the stream/video
+
+* [Video]()
+* Source Code []()
 
 ## To the Cloud
 
