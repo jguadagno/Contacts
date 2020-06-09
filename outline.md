@@ -106,8 +106,7 @@ Next up:
 * [Video](https://youtu.be/ee247e0CH6k)
 * Source Code [e77b039](https://github.com/jguadagno/Contacts/commit/e77b039fe1d7b4eb7bd3805d93aff2862112bfbf)
 
-- [ ] Use ASP.NET Core Dependency Inject to create the `ContactManager` and required dependencies
-
+- [ ] 
 ### Validate the API Works
 
 Use Postman and/or HttpRequest in Visual Studio Code and/or Rider's HttpClient
@@ -118,7 +117,16 @@ Let's us [Swagger](https://swagger.io/) to add documentation to our Api
 
 The [example](https://docs.microsoft.com/en-us/aspnet/core/tutorials/getting-started-with-swashbuckle?view=aspnetcore-3.1&tabs=visual-studio) we followed along with on the stream/video
 
-* [Video](https://youtu.be/7xVmrorkH2U")
+* [Video](https://youtu.be/7xVmrorkH2U)
+* Source Code [397d781](https://github.com/jguadagno/Contacts/commit/c7fa40c623af0b1acfd5ae3a3d7427e1922c8d45)
+
+### Improve the Api
+
+We validated that the Api allows for saving the reference properties or address and phone.
+
+We used ASP.NET Core Dependency Inject to create the `ContactManager` and required dependencies
+
+* [Video](https://t.co/o8Y3O8ighf)
 * Source Code [397d781](https://github.com/jguadagno/Contacts/commit/c7fa40c623af0b1acfd5ae3a3d7427e1922c8d45)
 
 ## To the Cloud

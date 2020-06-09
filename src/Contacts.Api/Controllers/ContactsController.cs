@@ -1,6 +1,5 @@
 using System.Collections.Generic;
-using Contacts.Data;
-using Contacts.Data.Sqlite;
+using Contacts.Domain.Interfaces;
 using Contacts.Domain.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -16,6 +15,14 @@ namespace Contacts.Api.Controllers
     [Route("[controller]")]
     public class ContactsController: Controller
     {
+
+        private readonly IContactManager _contactManager;
+        
+        public ContactsController(IContactManager contactManager)
+        {
+            _contactManager = contactManager;
+        }
+        
         /// <summary>
         /// List all of the contacts currently available
         /// </summary>
@@ -27,8 +34,7 @@ namespace Contacts.Api.Controllers
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public List<Domain.Models.Contact> GetContacts()
         {
-            var contactManager = new Logic.ContactManager(new ContactRepository(new SqliteDataStore()));
-            return contactManager.GetContacts();
+            return _contactManager.GetContacts();
         }
         
         /// <summary>
@@ -43,8 +49,7 @@ namespace Contacts.Api.Controllers
         [HttpGet("{id}")]
         public Domain.Models.Contact GetContact(int id)
         {
-            var contactManager = new Logic.ContactManager(new ContactRepository(new SqliteDataStore()));
-            return contactManager.GetContact(id);
+            return _contactManager.GetContact(id);
         }
 
         /// <summary>
@@ -59,8 +64,7 @@ namespace Contacts.Api.Controllers
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public ActionResult<Domain.Models.Contact> SaveContact(Domain.Models.Contact contact)
         {
-            var contactManager = new Logic.ContactManager(new ContactRepository(new SqliteDataStore()));
-            var savedContact = contactManager.SaveContact(contact);
+            var savedContact = _contactManager.SaveContact(contact);
 
             if (savedContact != null)
             {
@@ -82,8 +86,7 @@ namespace Contacts.Api.Controllers
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public ActionResult<bool> DeleteContact(int id)
         {
-            var contactManager = new Logic.ContactManager(new ContactRepository(new SqliteDataStore()));
-            var wasDeleted = contactManager.DeleteContact(id);
+            var wasDeleted = _contactManager.DeleteContact(id);
             if (wasDeleted)
             {
                 return NoContent();
@@ -107,8 +110,7 @@ namespace Contacts.Api.Controllers
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public List<Domain.Models.Contact> GetContacts([FromQuery]string firstname, [FromQuery]string lastname)
         {
-            var contactManager = new Logic.ContactManager(new ContactRepository(new SqliteDataStore()));
-            return contactManager.GetContacts(firstname, lastname);
+            return _contactManager.GetContacts(firstname, lastname);
         }
     }
 }

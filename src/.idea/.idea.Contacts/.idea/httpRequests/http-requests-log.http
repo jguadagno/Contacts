@@ -1,3 +1,49 @@
+POST https://localhost:5001/contacts
+Content-Type: application/json
+
+{
+  "FirstName": "Brady",
+  "LastName" : "Gaster",
+  "MiddleName" : "Louis",
+  "EmailAddress" : "dontmail@example.com",
+  "Phones": [
+    {
+      "phonenumber": "8675309",
+      "extension": ""
+    }
+  ]
+}
+
+<> 2020-06-08T044410.201.json
+
+###
+
+POST https://localhost:5001/contacts
+Content-Type: application/json
+
+{
+  "FirstName": "Brady",
+  "LastName" : "Gaster",
+  "MiddleName" : "Louis",
+  "EmailAddress" : "dontmail@example.com",
+  "Phones": [
+    {
+      "phonenumber": "8675309",
+      "extension": ""
+    }
+  ]
+}
+
+<> 2020-06-08T043904.201.json
+
+###
+
+GET https://localhost:5001/contacts
+
+<> 2020-06-08T040736.200.json
+
+###
+
 GET https://localhost:5001/contacts/search?firstname=Deidre&lastname=Guadagno
 
 <> 2020-06-01T045842.200.json

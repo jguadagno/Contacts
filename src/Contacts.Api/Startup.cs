@@ -4,6 +4,10 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Threading.Tasks;
+using Contacts.Data;
+using Contacts.Data.Sqlite;
+using Contacts.Domain.Interfaces;
+using Contacts.Logic;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -53,6 +57,10 @@ namespace Contacts.Api
                 var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
                 c.IncludeXmlComments(xmlPath);
             });
+
+            services.AddTransient<IContactDataStore, SqliteDataStore>();
+            services.AddTransient<IContactRepository, ContactRepository>();
+            services.AddTransient<IContactManager, ContactManager>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

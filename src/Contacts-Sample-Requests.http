@@ -25,6 +25,26 @@ Content-Type: application/json
 <> 2020-05-28T045658.201.json
 
 
+### Save Valid Contact with address and phone number
+POST https://localhost:5001/contacts
+Content-Type: application/json
+
+{
+  "FirstName": "Brady",
+  "LastName" : "Gaster",
+  "MiddleName" : "Louis",
+  "EmailAddress" : "dontmail@example.com",
+  "Phones": [
+    {
+      "phonenumber": "8675309",
+      "extension": ""
+    }
+  ]
+}
+
+
+
+
 ### Save Invalid Contact
 POST https://localhost:5001/contacts
 Content-Type: application/json

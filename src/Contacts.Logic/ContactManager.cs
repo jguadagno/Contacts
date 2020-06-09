@@ -5,7 +5,7 @@ using Contacts.Domain.Models;
 
 namespace Contacts.Logic
 {
-    public class ContactManager
+    public class ContactManager : IContactManager
     {
         private readonly IContactRepository _contactRepository;
 

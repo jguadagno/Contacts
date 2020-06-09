@@ -66,9 +66,9 @@
         <e p="ContactContext.cs" t="Include" />
         <e p="Contacts.Data.Sqlite.csproj" t="IncludeRecursive" />
         <e p="Migrations" t="Include">
-          <e p="20200507235336_InitialCreate.cs" t="Include" />
-          <e p="20200507235336_InitialCreate.Designer.cs" t="Include" />
           <e p="ContactContextModelSnapshot.cs" t="Include" />
+          <e p="InitialCreate.cs" t="Include" />
+          <e p="InitialCreate.Designer.cs" t="Include" />
         </e>
         <e p="Models" t="Include">
           <e p="Address.cs" t="Include" />
@@ -92,6 +92,7 @@
         <e p="Contacts.Domain.csproj" t="IncludeRecursive" />
         <e p="Interfaces" t="Include">
           <e p="IContactDataStore.cs" t="Include" />
+          <e p="IContactManager.cs" t="Include" />
           <e p="IContactRepository.cs" t="Include" />
         </e>
         <e p="Models" t="Include">

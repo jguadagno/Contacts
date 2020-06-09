@@ -5,6 +5,7 @@ using System.Linq;
 using AutoMapper;
 using Contacts.Data.Sqlite.Models;
 using Contacts.Domain.Interfaces;
+using Microsoft.EntityFrameworkCore;
 using Contact = Contacts.Domain.Models.Contact;
 
 namespace Contacts.Data.Sqlite
@@ -26,7 +27,11 @@ namespace Contacts.Data.Sqlite
         }
         public Contact GetContact(int contactId)
         {
-            var dbContact = _contactContext.Contacts.Find(contactId);
+            // TODO: Will will probably want to come back and remove the extra dependencies to a new set of endpoints
+            var dbContact = _contactContext.Contacts
+                .Include(c => c.Addresses)
+                .Include(c => c.Phones)
+                .FirstOrDefault(c => c.ContactId == contactId);
             var contact = _mapper.Map<Contact>(dbContact);
             return contact;
         }
