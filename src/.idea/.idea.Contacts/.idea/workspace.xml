@@ -19,20 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="14fd18ef-6fed-455b-81a5-09cb395c5fc7" name="Default Changelist" comment="Created the initial database with EF Core">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Contacts/.idea/httpRequests/http-requests-log.http" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Contacts/.idea/httpRequests/http-requests-log.http" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Contacts/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Contacts/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Contacts-Sample-Requests.http" beforeDir="false" afterPath="$PROJECT_DIR$/Contacts-Sample-Requests.http" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Contacts.Api/Controllers/ContactsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Contacts.Api/Controllers/ContactsController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Contacts.Data.Sqlite/Models/Address.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Contacts.Data.Sqlite/Models/Address.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Contacts.Data.Sqlite/SqliteDataStore.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Contacts.Data.Sqlite/SqliteDataStore.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Contacts.Data/ContactRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Contacts.Data/ContactRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Contacts.Domain/Interfaces/IContactDataStore.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Contacts.Domain/Interfaces/IContactDataStore.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Contacts.Domain/Interfaces/IContactManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Contacts.Domain/Interfaces/IContactManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Contacts.Domain/Interfaces/IContactRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Contacts.Domain/Interfaces/IContactRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Contacts.Logic.Tests/ContactManagerTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Contacts.Logic.Tests/ContactManagerTests.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Contacts.Logic/ContactManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Contacts.Logic/ContactManager.cs" afterDir="false" />
-    </list>
+    <list default="true" id="14fd18ef-6fed-455b-81a5-09cb395c5fc7" name="Default Changelist" comment="Created the initial database with EF Core" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -66,6 +53,7 @@
     <setting file="file://$PROJECT_DIR$/Contacts.Data.Sqlite/Migrations/ContactContextModelSnapshot.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Contacts.Logic/ContactManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Contacts.Data.Sqlite/Migrations/InitialCreate.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Address.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Contacts.Data.Sqlite/SqliteDataStore.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Contacts.Domain/Interfaces/IContactDataStore.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Contacts.Data.Sqlite/Models/AddressType.cs" root0="FORCE_HIGHLIGHTING" />
@@ -113,7 +101,6 @@
         <option value="$PROJECT_DIR$/Contacts.Data.Sqlite/Models/Contact.cs" />
         <option value="$PROJECT_DIR$/Contacts.Data.Sqlite/Models/Phone.cs" />
         <option value="$PROJECT_DIR$/Contacts.Data.Sqlite/ContactContext.cs" />
-        <option value="$PROJECT_DIR$/../outline.md" />
         <option value="$PROJECT_DIR$/Contacts.Domain/Interfaces/IContactRepository.cs" />
         <option value="$PROJECT_DIR$/Contacts.Domain/Interfaces/IContactManager.cs" />
         <option value="$PROJECT_DIR$/Contacts.Domain/Interfaces/IContactDataStore.cs" />
@@ -124,6 +111,7 @@
         <option value="$PROJECT_DIR$/Contacts-Sample-Requests.http" />
         <option value="$PROJECT_DIR$/Contacts.Api/Controllers/ContactsController.cs" />
         <option value="$PROJECT_DIR$/Contacts.Logic.Tests/ContactManagerTests.cs" />
+        <option value="$PROJECT_DIR$/../outline.md" />
       </list>
     </option>
   </component>
@@ -410,7 +398,7 @@
       <workItem from="1591052129093" duration="4018000" />
       <workItem from="1591135233308" duration="3136000" />
       <workItem from="1591654106191" duration="4325000" />
-      <workItem from="1591742807069" duration="5944000" />
+      <workItem from="1591742807069" duration="6227000" />
     </task>
     <task id="LOCAL-00001" summary="Created the initial database with EF Core">
       <created>1588899122166</created>
@@ -489,7 +477,14 @@
       <option name="project" value="LOCAL" />
       <updated>1591752368433</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Wrapped up the Api">
+      <created>1591833271781</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1591833271781</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -537,7 +532,8 @@
     <MESSAGE value="Added Dependency Injection to the Api" />
     <MESSAGE value="Added Video and Code section from stream June 8th, 2020" />
     <MESSAGE value="Added the first part of the Phones endpoint." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added the first part of the Phones endpoint." />
+    <MESSAGE value="Wrapped up the Api" />
+    <option name="LAST_COMMIT_MESSAGE" value="Wrapped up the Api" />
   </component>
   <component name="WindowStateProjectService">
     <state x="424" y="104" key="#Contacts.Api:_IIS_Express" timestamp="1590708432716">
@@ -735,11 +731,11 @@
     <state x="379" y="164" key="SettingsEditor/0.0.1680.1050/-525.-1692.3008.1692@0.0.1680.1050" timestamp="1589858771142" />
     <state x="379" y="164" key="SettingsEditor/0.0.1680.1050/-607.-1800.3200.1800@0.0.1680.1050" timestamp="1588715646075" />
     <state x="379" y="164" key="SettingsEditor/0.0.1680.1050@0.0.1680.1050" timestamp="1591743889705" />
-    <state x="84" y="-1366" key="Vcs.Push.Dialog.v2" timestamp="1591671572897">
-      <screen x="-525" y="-1692" width="3008" height="1692" />
+    <state x="340" y="202" key="Vcs.Push.Dialog.v2" timestamp="1591833282740">
+      <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="84" y="-1366" key="Vcs.Push.Dialog.v2/0.0.1680.1050/-525.-1692.3008.1692@-525.-1692.3008.1692" timestamp="1591671572897" />
-    <state x="340" y="202" key="Vcs.Push.Dialog.v2/0.0.1680.1050/-525.-1692.3008.1692@0.0.1680.1050" timestamp="1591144240319" />
+    <state x="340" y="202" key="Vcs.Push.Dialog.v2/0.0.1680.1050/-525.-1692.3008.1692@0.0.1680.1050" timestamp="1591833282740" />
     <state x="340" y="202" key="Vcs.Push.Dialog.v2/0.0.1680.1050/-607.-1800.3200.1800@0.0.1680.1050" timestamp="1589242013521" />
     <state x="2" y="-1348" key="Vcs.Push.Dialog.v2/0.23.1680.1027/-607.-1669.3008.1669@-607.-1669.3008.1669" timestamp="1589513007054" />
     <state x="653" y="236" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1588895340275">

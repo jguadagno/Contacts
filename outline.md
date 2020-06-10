@@ -136,8 +136,8 @@ Worked on getting the first part of the `phones` endpoint.
 
 Wrapped up the Api by adding methods, endpoints, tests, and documentation for the GetContactPhones, GetContactPhone, GetContactAddresses, and GetContactAddress
 
-* [Video]()
-* Source Code []()
+* [Video](https://youtu.be/eiauddTufQU)
+* Source Code [abe7719](https://github.com/jguadagno/Contacts/commit/abe7719ad53b9bac8067f807ee125bdc9416828b)
 
 
 ## To the Cloud
