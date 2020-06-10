@@ -49,5 +49,20 @@ namespace Contacts.Data
         {
             return _contactDataStore.GetContactPhones(contactId);
         }
+
+        public Phone GetContactPhone(int contactId, int phoneId)
+        {
+            return _contactDataStore.GetContactPhone(contactId, phoneId);
+        }
+
+        public List<Address> GetContactAddresses(int contactId)
+        {
+            return _contactDataStore.GetContactAddresses(contactId);
+        }
+
+        public Address GetContactAddress(int contactId, int addressId)
+        {
+            return _contactDataStore.GetContactAddress(contactId, addressId);
+        }
     }
 }

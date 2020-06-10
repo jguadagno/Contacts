@@ -2,6 +2,86 @@ POST https://localhost:5001/contacts
 Content-Type: application/json
 
 {
+  "FirstName": "Jane",
+  "LastName" : "Alice",
+  "MiddleName" : "Doe",
+  "EmailAddress" : "jane.a.doe@example.com",
+  "Phones": [
+    {
+      "phonenumber": "8675309",
+      "extension": ""
+    },
+    {
+      "phonenumber": "5551212",
+      "extension": "12345"
+    }
+  ],
+  "Addresses": [
+    {
+      "StreetAddress": "123 Main Street",
+      "SecondaryAddress": "2nd Floor",
+      "Unit": "all",
+      "City": "Chandler",
+      "State": "AZ",
+      "Country": "US",
+      "PostalCode": "85248"
+    }
+  ]
+}
+
+<> 2020-06-10T033248.201.json
+
+###
+
+POST https://localhost:5001/contacts
+Content-Type: application/json
+
+{
+  "FirstName": "Jane",
+  "LastName" : "Alice",
+  "MiddleName" : "Doe",
+  "EmailAddress" : "jane.a.doe@example.com",
+  "Phones": [
+    {
+      "phonenumber": "8675309",
+      "extension": ""
+    },
+    {
+      "phonenumber": "5551212",
+      "extension": "12345"
+    }
+  ],
+  "Address": [
+    {
+      "StreetAddress": "123 Main Street",
+      "SecondaryAddress": "2nd Floor",
+      "Unit": "all",
+      "City": "Chandler",
+      "State": "AZ",
+      "Country": "US",
+      "PostalCode": "85248"
+    }
+  ]
+}
+
+<> 2020-06-10T032858.201.json
+
+###
+
+GET https://localhost:5001/contacts/37/phones
+
+<> 2020-06-10T030504.200.json
+
+###
+
+GET https://localhost:5001/contcts/37/phones
+
+###
+
+POST https://localhost:5001/contacts
+Content-Type: application/json
+
+{
   "FirstName": "Brady",
   "LastName" : "Gaster",
   "MiddleName" : "Louis",

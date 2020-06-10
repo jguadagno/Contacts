@@ -30,20 +30,32 @@ POST https://localhost:5001/contacts
 Content-Type: application/json
 
 {
-  "FirstName": "Brady",
-  "LastName" : "Gaster",
-  "MiddleName" : "Louis",
-  "EmailAddress" : "dontmail@example.com",
+  "FirstName": "Jane",
+  "LastName" : "Alice",
+  "MiddleName" : "Doe",
+  "EmailAddress" : "jane.a.doe@example.com",
   "Phones": [
     {
       "phonenumber": "8675309",
       "extension": ""
+    },
+    {
+      "phonenumber": "5551212",
+      "extension": "12345"
+    }
+  ],
+  "Addresses": [
+    {
+      "StreetAddress": "123 Main Street",
+      "SecondaryAddress": "2nd Floor",
+      "Unit": "all",
+      "City": "Chandler",
+      "State": "AZ",
+      "Country": "US",
+      "PostalCode": "85248"
     }
   ]
 }
-
-
-
 
 ### Save Invalid Contact
 POST https://localhost:5001/contacts
@@ -66,3 +78,16 @@ GET https://localhost:5001/contacts/search?firstname=Joseph&lastname=Guadagno
 
 ### Search for Contact
 GET https://localhost:5001/contacts/search?firstname=Deidre&lastname=Guadagno
+
+
+### Get the phones for Contact
+GET https://localhost:5001/contacts/37/phones
+
+### Get the phone by phone id for Contact
+GET https://localhost:5001/contacts/37/phones/1
+
+### Get the addresses for Contact
+GET https://localhost:5001/contacts/37/addresses
+
+### Get the address by id for Contact
+GET https://localhost:5001/contacts/37/addresses/1

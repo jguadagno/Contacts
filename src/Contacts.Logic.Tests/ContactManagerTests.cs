@@ -478,5 +478,61 @@ namespace Contacts.Logic.Tests
             Assert.NotNull(phones);
             
         }
+        
+        // GetContactPhone
+        [Fact]
+        public void GetContactPhone_WithValidContactIdAndPhoneId_ShouldReturnPhone()
+        {
+            // Arrange
+            var mockContactRepository = new Mock<IContactRepository>();
+            var setup = mockContactRepository.Setup(contactRepository =>
+                    contactRepository.GetContactPhone(It.IsAny<int>(), It.IsAny<int>()))
+                .Returns(new Phone());
+            var contactManager = new ContactManager(mockContactRepository.Object);
+            
+            // Act
+            var phone = contactManager.GetContactPhone(1, 1);
+
+            // Assert
+            Assert.NotNull(phone);
+            
+        }
+        
+        // GetContactAddress
+        [Fact]
+        public void GetContactAddress_WithValidContactIdAndAddressId_ShouldReturnAddress()
+        {
+            // Arrange
+            var mockContactRepository = new Mock<IContactRepository>();
+            var setup = mockContactRepository.Setup(contactRepository =>
+                contactRepository.GetContactAddress(It.IsAny<int>(), It.IsAny<int>()))
+                    .Returns(new Address());
+            var contactManager = new ContactManager(mockContactRepository.Object);
+            
+            // Act
+            var address = contactManager.GetContactAddress(1, 1);
+
+            // Assert
+            Assert.NotNull(address);
+            
+        }
+        
+        // GetContactAddresses
+        [Fact]
+        public void GetContactAddresses_WithValidContactId_ShouldReturnAListOfAddresses()
+        {
+            // Arrange
+            var mockContactRepository = new Mock<IContactRepository>();
+            mockContactRepository.Setup(contactRepository =>
+                contactRepository.GetContactAddresses(It.IsAny<int>())).Returns(new List<Address>());
+            var contactManager = new ContactManager(mockContactRepository.Object);
+            
+            // Act
+            var addresses = contactManager.GetContactAddresses(1);
+
+            // Assert
+            Assert.NotNull(addresses);
+            
+        }
     }
 }

@@ -96,10 +96,35 @@ namespace Contacts.Data.Sqlite
         public List<Domain.Models.Phone> GetContactPhones(int contactId)
         {
             var dbPhones = _contactContext.Phones
-                .Where(phone => phone.Contact.ContactId == contactId).ToList();
+                .Where(p => p.Contact.ContactId == contactId).ToList();
 
             var phones = _mapper.Map<List<Domain.Models.Phone>>(dbPhones);
             return phones;
+        }
+
+        public Domain.Models.Phone GetContactPhone(int contactId, int phoneId)
+        {
+            var dbPhone = _contactContext.Phones
+                .FirstOrDefault(p => p.Contact.ContactId == contactId && p.PhoneId == phoneId);
+            var phone = _mapper.Map<Domain.Models.Phone>(dbPhone);
+            return phone;
+        }
+        
+        public List<Domain.Models.Address> GetContactAddresses(int contactId)
+        {
+            var dbAddresses = _contactContext.Addresses
+                .Where(a => a.Contact.ContactId == contactId).ToList();
+
+            var addresses = _mapper.Map<List<Domain.Models.Address>>(dbAddresses);
+            return addresses;
+        }
+
+        public Domain.Models.Address GetContactAddress(int contactId, int addressId)
+        {
+            var dbAddress = _contactContext.Addresses
+                .FirstOrDefault(a => a.Contact.ContactId == contactId && a.AddressId == addressId);
+            var address = _mapper.Map<Domain.Models.Address>(dbAddress);
+            return address;
         }
     }
 }

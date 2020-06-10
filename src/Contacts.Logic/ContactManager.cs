@@ -104,5 +104,17 @@ namespace Contacts.Logic
         {
             return _contactRepository.GetContactPhones(contactId);
         }
+        public Phone GetContactPhone(int contactId, int phoneId)
+        {
+            return _contactRepository.GetContactPhone(contactId, phoneId);
+        }
+        public List<Address> GetContactAddresses(int contactId)
+        {
+            return _contactRepository.GetContactAddresses(contactId);
+        }
+        public Address GetContactAddress(int contactId, int addressId)
+        {
+            return _contactRepository.GetContactAddress(contactId, addressId);
+        }
     }
 }

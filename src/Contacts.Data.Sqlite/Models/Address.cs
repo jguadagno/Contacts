@@ -17,5 +17,6 @@ namespace Contacts.Data.Sqlite.Models
         public string PostalCode { get; set; }
 
         public AddressType AddressType { get; set; }
+        public virtual Contact Contact { get; set; }
     }
 }

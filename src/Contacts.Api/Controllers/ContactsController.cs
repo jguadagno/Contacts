@@ -113,10 +113,58 @@ namespace Contacts.Api.Controllers
             return _contactManager.GetContacts(firstname, lastname);
         }
 
+        /// <summary>
+        /// Gets phone numbers for the contact
+        /// </summary>
+        /// <param name="id">The primary identifier of the contact</param>
+        /// <returns>A list of <see cref="Phone"/></returns>
+        /// <response code="200">Ok</response>
+        /// <response code="400">If the request is poorly formatted</response>    
         [HttpGet("{id}/phones")]
-        public List<Phone> GetContactPhone(int id)
+        public List<Phone> GetContactPhones(int id)
         {
             return _contactManager.GetContactPhones(id);
+        }
+
+        /// <summary>
+        /// Gets a specific phone for the specified contact
+        /// </summary>
+        /// <param name="id">The primary identifier of the contact</param>
+        /// <param name="phoneId">The primary identifier of the phone number</param>
+        /// <returns>A <see cref="Contact"/></returns>
+        /// <response code="200">Ok</response>
+        /// <response code="400">If the request is poorly formatted</response>    
+        [HttpGet("{id}/phones/{phoneId}")]
+        public Phone GetContactPhone(int id, int phoneId)
+        {
+            return _contactManager.GetContactPhone(id, phoneId);
+        }
+        
+        /// <summary>
+        /// Gets addresses for the contact
+        /// </summary>
+        /// <param name="id">The primary identifier of the contact</param>
+        /// <returns>A list of <see cref="Address"/>es</returns>
+        /// <response code="200">Ok</response>
+        /// <response code="400">If the request is poorly formatted</response>    
+        [HttpGet("{id}/addresses")]
+        public List<Address> GetContactAddresses(int id)
+        {
+            return _contactManager.GetContactAddresses(id);
+        }
+
+        /// <summary>
+        /// Gets a specific phone for a specific contact\
+        /// </summary>
+        /// <param name="id">The primary identifier of the contact</param>
+        /// <param name="addressId">The primary identifier of the address</param>
+        /// <returns>A <see cref="Contact"/></returns>
+        /// <response code="200">Ok</response>
+        /// <response code="400">If the request is poorly formatted</response>    
+        [HttpGet("{id}/addresses/{addressId}")]
+        public Address GetContactAddress(int id, int addressId)
+        {
+            return _contactManager.GetContactAddress(id, addressId);
         }
     }
 }
