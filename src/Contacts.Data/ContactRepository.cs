@@ -44,5 +44,10 @@ namespace Contacts.Data
         {
             return _contactDataStore.DeleteContact(contact);
         }
+
+        public List<Phone> GetContactPhones(int contactId)
+        {
+            return _contactDataStore.GetContactPhones(contactId);
+        }
     }
 }

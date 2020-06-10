@@ -100,5 +100,9 @@ namespace Contacts.Logic
             return _contactRepository.DeleteContact(contact);
         }
 
+        public List<Phone> GetContactPhones(int contactId)
+        {
+            return _contactRepository.GetContactPhones(contactId);
+        }
     }
 }

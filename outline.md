@@ -129,6 +129,11 @@ We used ASP.NET Core Dependency Inject to create the `ContactManager` and requir
 * [Video](https://t.co/o8Y3O8ighf)
 * Source Code [3f55ac17](https://github.com/jguadagno/Contacts/commit/3f55ac17654a23a2156b4b831bf4f45706142cad)
 
+Worked on getting the first part of the `phones` endpoint.
+
+* [Video](https://youtu.be/g-0x-JjR0_U)
+* Source Code []()
+
 ## To the Cloud
 
 Setup the environment

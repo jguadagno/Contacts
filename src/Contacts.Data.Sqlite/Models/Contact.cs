@@ -9,7 +9,7 @@ namespace Contacts.Data.Sqlite.Models
     public class Contact
     {
         public Contact() {
-            Addresses = new List<Data.Sqlite.Models.Address>();
+            Addresses = new List<Address>();
             Phones = new List<Phone>();
         }
 
@@ -22,7 +22,7 @@ namespace Contacts.Data.Sqlite.Models
         public DateTime? Anniversary { get; set; }
         public string ImageUrl { get; set; }
 
-        public List<Data.Sqlite.Models.Address> Addresses { get; set;}
+        public List<Address> Addresses { get; set;}
         public List<Phone> Phones {get; set;}
 
     }

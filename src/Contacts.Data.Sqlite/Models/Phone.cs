@@ -11,5 +11,6 @@ namespace Contacts.Data.Sqlite.Models
         public string Extension { get; set; }
 
         public PhoneType PhoneType { get; set;}
+        public virtual Contact Contact { get; set; }
     }
 }

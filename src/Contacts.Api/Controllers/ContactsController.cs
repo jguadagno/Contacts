@@ -112,5 +112,11 @@ namespace Contacts.Api.Controllers
         {
             return _contactManager.GetContacts(firstname, lastname);
         }
+
+        [HttpGet("{id}/phones")]
+        public List<Phone> GetContactPhone(int id)
+        {
+            return _contactManager.GetContactPhones(id);
+        }
     }
 }

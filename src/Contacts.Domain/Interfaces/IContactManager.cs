@@ -11,5 +11,7 @@ namespace Contacts.Domain.Interfaces
         Contact SaveContact(Contact contact);
         bool DeleteContact(int contactId);
         bool DeleteContact(Contact contact);
+
+        List<Phone> GetContactPhones(int contactId);
     }
 }

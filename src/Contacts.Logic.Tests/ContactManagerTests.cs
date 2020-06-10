@@ -459,5 +459,24 @@ namespace Contacts.Logic.Tests
             // Assert
             Assert.Equal(expectedFullName, fullName);
         }
+        
+        // GetContactPhones
+
+        [Fact]
+        public void GetContactPhones_WithValidContactId_ShouldReturnAListOfPhones()
+        {
+            // Arrange
+            var mockContactRepository = new Mock<IContactRepository>();
+            mockContactRepository.Setup(contactRepository =>
+                contactRepository.GetContactPhones(It.IsAny<int>())).Returns(new List<Phone>());
+            var contactManager = new ContactManager(mockContactRepository.Object);
+            
+            // Act
+            var phones = contactManager.GetContactPhones(1);
+
+            // Assert
+            Assert.NotNull(phones);
+            
+        }
     }
 }

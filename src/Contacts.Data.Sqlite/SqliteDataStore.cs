@@ -6,7 +6,6 @@ using AutoMapper;
 using Contacts.Data.Sqlite.Models;
 using Contacts.Domain.Interfaces;
 using Microsoft.EntityFrameworkCore;
-using Contact = Contacts.Domain.Models.Contact;
 
 namespace Contacts.Data.Sqlite
 {
@@ -25,24 +24,24 @@ namespace Contacts.Data.Sqlite
             });
             _mapper = new Mapper(configuration);
         }
-        public Contact GetContact(int contactId)
+        public Domain.Models.Contact GetContact(int contactId)
         {
             // TODO: Will will probably want to come back and remove the extra dependencies to a new set of endpoints
             var dbContact = _contactContext.Contacts
                 .Include(c => c.Addresses)
                 .Include(c => c.Phones)
                 .FirstOrDefault(c => c.ContactId == contactId);
-            var contact = _mapper.Map<Contact>(dbContact);
+            var contact = _mapper.Map<Domain.Models.Contact>(dbContact);
             return contact;
         }
 
-        public List<Contact> GetContacts()
+        public List<Domain.Models.Contact> GetContacts()
         {
             var contacts = _contactContext.Contacts.ToList();
-            return _mapper.Map<List<Contact>>(contacts);
+            return _mapper.Map<List<Domain.Models.Contact>>(contacts);
         }
 
-        public List<Contact> GetContacts(string firstName, string lastName)
+        public List<Domain.Models.Contact> GetContacts(string firstName, string lastName)
         {
             if (string.IsNullOrEmpty(lastName))
             {
@@ -56,10 +55,10 @@ namespace Contacts.Data.Sqlite
 
             var dbContact = _contactContext.Contacts
                 .Where(contact => contact.LastName == lastName && contact.FirstName == firstName).ToList();
-            return _mapper.Map<List<Contact>>(dbContact);
+            return _mapper.Map<List<Domain.Models.Contact>>(dbContact);
         }
 
-        public Contact SaveContact(Contact contact)
+        public Domain.Models.Contact SaveContact(Domain.Models.Contact contact)
         {
             var dbContact = _mapper.Map<Sqlite.Models.Contact>(contact);
             _contactContext.Contacts.Add(dbContact);
@@ -79,8 +78,8 @@ namespace Contacts.Data.Sqlite
             _contactContext.Contacts.Remove(contact);
             return _contactContext.SaveChanges() != 0;
         }
-
-        public bool DeleteContact(Contact contact)
+        
+        public bool DeleteContact(Domain.Models.Contact contact)
         {
             // Data Validation
             if (contact == null)
@@ -92,6 +91,15 @@ namespace Contacts.Data.Sqlite
             
             _contactContext.Contacts.Remove(dbContact);
             return _contactContext.SaveChanges() != 0;
+        }
+
+        public List<Domain.Models.Phone> GetContactPhones(int contactId)
+        {
+            var dbPhones = _contactContext.Phones
+                .Where(phone => phone.Contact.ContactId == contactId).ToList();
+
+            var phones = _mapper.Map<List<Domain.Models.Phone>>(dbPhones);
+            return phones;
         }
     }
 }

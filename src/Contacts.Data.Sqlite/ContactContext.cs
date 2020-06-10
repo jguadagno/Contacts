@@ -13,6 +13,7 @@ namespace Contacts.Data.Sqlite
         public DbSet<AddressType> AddressTypes { get; set; }
         public DbSet<PhoneType> PhoneTypes { get; set; }
         
+        // TODO: Move this to appsettings.json
         protected override void OnConfiguring(DbContextOptionsBuilder options)
             => options.UseSqlite("Data Source=/Users/jguadagno/Projects/Databases/contacts.db");
     }
