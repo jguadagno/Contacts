@@ -141,8 +141,8 @@ Wrapped up the Api by adding methods, endpoints, tests, and documentation for th
 Added Authentication and Authorization using the [Microsoft Identity Platform](https://docs.microsoft.com/en-us/azure/active-directory/develop/). 
 This was part of a blog post [Protecting an ASP.NET Core Web API with Microsoft Identity Platform](https://www.josephguadagno.net/2020/06/12/protecting-an-asp-net-core-api-with-microsoft-identity-platform)
 
-* [Video]()
-* Source []()
+* [Video](https://youtu.be/8sCR0hLeMxM)
+* Source [a611c6f](https://github.com/jguadagno/Contacts/commit/a611c6f9c8f027dbcfef365a2a5edf665636213a)
 
 
 ## To the Cloud
