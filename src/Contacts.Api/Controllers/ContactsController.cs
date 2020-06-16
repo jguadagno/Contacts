@@ -1,8 +1,10 @@
 using System.Collections.Generic;
 using Contacts.Domain.Interfaces;
 using Contacts.Domain.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Identity.Web.Resource;
 
 namespace Contacts.Api.Controllers
 {
@@ -12,6 +14,7 @@ namespace Contacts.Api.Controllers
     /// The contacts endpoints provide the functionality to maintain our contacts.
     /// </summary>
     [ApiController]
+    [Authorize]
     [Route("[controller]")]
     public class ContactsController: Controller
     {
@@ -34,6 +37,7 @@ namespace Contacts.Api.Controllers
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public List<Domain.Models.Contact> GetContacts()
         {
+            HttpContext.VerifyUserHasAnyAcceptedScope("Contacts.List");
             return _contactManager.GetContacts();
         }
         
@@ -49,6 +53,7 @@ namespace Contacts.Api.Controllers
         [HttpGet("{id}")]
         public Domain.Models.Contact GetContact(int id)
         {
+            HttpContext.VerifyUserHasAnyAcceptedScope("Contacts.View");
             return _contactManager.GetContact(id);
         }
 

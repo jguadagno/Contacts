@@ -106,7 +106,6 @@ Next up:
 * [Video](https://youtu.be/ee247e0CH6k)
 * Source Code [e77b039](https://github.com/jguadagno/Contacts/commit/e77b039fe1d7b4eb7bd3805d93aff2862112bfbf)
 
-- [ ] 
 ### Validate the API Works
 
 Use Postman and/or HttpRequest in Visual Studio Code and/or Rider's HttpClient
@@ -138,6 +137,12 @@ Wrapped up the Api by adding methods, endpoints, tests, and documentation for th
 
 * [Video](https://youtu.be/eiauddTufQU)
 * Source Code [abe7719](https://github.com/jguadagno/Contacts/commit/abe7719ad53b9bac8067f807ee125bdc9416828b)
+
+Added Authentication and Authorization using the [Microsoft Identity Platform](https://docs.microsoft.com/en-us/azure/active-directory/develop/). 
+This was part of a blog post [Protecting an ASP.NET Core Web API with Microsoft Identity Platform](https://www.josephguadagno.net/2020/06/12/protecting-an-asp-net-core-api-with-microsoft-identity-platform)
+
+* [Video]()
+* Source []()
 
 
 ## To the Cloud
