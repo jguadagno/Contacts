@@ -144,6 +144,11 @@ This was part of a blog post [Protecting an ASP.NET Core Web API with Microsoft 
 * [Video](https://youtu.be/8sCR0hLeMxM)
 * Source [a611c6f](https://github.com/jguadagno/Contacts/commit/a611c6f9c8f027dbcfef365a2a5edf665636213a)
 
+Finished the authentication permissions for the Contacts API
+
+* [Video]()
+* Source []()
+
 
 ## To the Cloud
 

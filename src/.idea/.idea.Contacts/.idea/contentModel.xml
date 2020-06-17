@@ -109,6 +109,9 @@
             </e>
           </e>
         </e>
+        <e p="Permissions" t="Include">
+          <e p="Contacts.cs" t="Include" />
+        </e>
       </e>
       <e p="Contacts.Logic" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />

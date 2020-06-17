@@ -35,9 +35,9 @@ namespace Contacts.Api.Controllers
         [HttpGet]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public List<Domain.Models.Contact> GetContacts()
+        public List<Contact> GetContacts()
         {
-            HttpContext.VerifyUserHasAnyAcceptedScope("Contacts.List");
+            HttpContext.VerifyUserHasAnyAcceptedScope(Domain.Permissions.Contacts.List);
             return _contactManager.GetContacts();
         }
         
@@ -51,9 +51,9 @@ namespace Contacts.Api.Controllers
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [HttpGet("{id}")]
-        public Domain.Models.Contact GetContact(int id)
+        public Contact GetContact(int id)
         {
-            HttpContext.VerifyUserHasAnyAcceptedScope("Contacts.View");
+            HttpContext.VerifyUserHasAnyAcceptedScope(Domain.Permissions.Contacts.View);
             return _contactManager.GetContact(id);
         }
 
@@ -67,8 +67,9 @@ namespace Contacts.Api.Controllers
         [HttpPost]
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public ActionResult<Domain.Models.Contact> SaveContact(Domain.Models.Contact contact)
+        public ActionResult<Contact> SaveContact(Contact contact)
         {
+            HttpContext.VerifyUserHasAnyAcceptedScope(Domain.Permissions.Contacts.Save); 
             var savedContact = _contactManager.SaveContact(contact);
 
             if (savedContact != null)
@@ -91,6 +92,7 @@ namespace Contacts.Api.Controllers
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public ActionResult<bool> DeleteContact(int id)
         {
+            HttpContext.VerifyUserHasAnyAcceptedScope(Domain.Permissions.Contacts.Delete);
             var wasDeleted = _contactManager.DeleteContact(id);
             if (wasDeleted)
             {
@@ -113,8 +115,9 @@ namespace Contacts.Api.Controllers
         [HttpGet("search")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public List<Domain.Models.Contact> GetContacts([FromQuery]string firstname, [FromQuery]string lastname)
+        public List<Contact> GetContacts([FromQuery]string firstname, [FromQuery]string lastname)
         {
+            HttpContext.VerifyUserHasAnyAcceptedScope(Domain.Permissions.Contacts.Search);
             return _contactManager.GetContacts(firstname, lastname);
         }
 
@@ -128,6 +131,7 @@ namespace Contacts.Api.Controllers
         [HttpGet("{id}/phones")]
         public List<Phone> GetContactPhones(int id)
         {
+            HttpContext.VerifyUserHasAnyAcceptedScope(Domain.Permissions.Contacts.View);
             return _contactManager.GetContactPhones(id);
         }
 
@@ -142,6 +146,7 @@ namespace Contacts.Api.Controllers
         [HttpGet("{id}/phones/{phoneId}")]
         public Phone GetContactPhone(int id, int phoneId)
         {
+            HttpContext.VerifyUserHasAnyAcceptedScope(Domain.Permissions.Contacts.View);
             return _contactManager.GetContactPhone(id, phoneId);
         }
         
@@ -155,6 +160,7 @@ namespace Contacts.Api.Controllers
         [HttpGet("{id}/addresses")]
         public List<Address> GetContactAddresses(int id)
         {
+            HttpContext.VerifyUserHasAnyAcceptedScope(Domain.Permissions.Contacts.View);
             return _contactManager.GetContactAddresses(id);
         }
 
@@ -169,6 +175,7 @@ namespace Contacts.Api.Controllers
         [HttpGet("{id}/addresses/{addressId}")]
         public Address GetContactAddress(int id, int addressId)
         {
+            HttpContext.VerifyUserHasAnyAcceptedScope(Domain.Permissions.Contacts.View);
             return _contactManager.GetContactAddress(id, addressId);
         }
     }
