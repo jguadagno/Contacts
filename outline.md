@@ -151,6 +151,8 @@ Finished the authentication permissions for the Contacts API
 
 Adding Asynchronous ability to our methods.
 
+* [Video](https://youtu.be/XWjaXSVUJMQ)
+* Source [748cf3e](https://github.com/jguadagno/Contacts/commit/748cf3edd654c52c637543939b72eac5954231b7)
 
 ## To the Cloud
 
