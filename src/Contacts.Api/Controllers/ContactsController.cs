@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using Contacts.Domain.Interfaces;
 using Contacts.Domain.Models;
 using Microsoft.AspNetCore.Authorization;
@@ -35,10 +36,10 @@ namespace Contacts.Api.Controllers
         [HttpGet]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public List<Contact> GetContacts()
+        public async Task<List<Contact>> GetContacts()
         {
             HttpContext.VerifyUserHasAnyAcceptedScope(Domain.Permissions.Contacts.List);
-            return _contactManager.GetContacts();
+            return await _contactManager.GetContactsAsync();
         }
         
         /// <summary>
@@ -51,10 +52,10 @@ namespace Contacts.Api.Controllers
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [HttpGet("{id}")]
-        public Contact GetContact(int id)
+        public async Task<Contact> GetContactAsync(int id)
         {
             HttpContext.VerifyUserHasAnyAcceptedScope(Domain.Permissions.Contacts.View);
-            return _contactManager.GetContact(id);
+            return await _contactManager.GetContactAsync(id);
         }
 
         /// <summary>
@@ -67,14 +68,14 @@ namespace Contacts.Api.Controllers
         [HttpPost]
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public ActionResult<Contact> SaveContact(Contact contact)
+        public async Task<ActionResult<Contact>> SaveContact(Contact contact)
         {
             HttpContext.VerifyUserHasAnyAcceptedScope(Domain.Permissions.Contacts.Save); 
-            var savedContact = _contactManager.SaveContact(contact);
+            var savedContact = await _contactManager.SaveContactAsync(contact);
 
             if (savedContact != null)
             {
-                return CreatedAtAction(nameof(GetContact), new {id = contact.ContactId},
+                return CreatedAtAction(nameof(GetContactAsync), new {id = contact.ContactId},
                     contact);
             }
             return Problem("Failed to insert the contact");
@@ -90,10 +91,10 @@ namespace Contacts.Api.Controllers
         [HttpDelete("{id}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public ActionResult<bool> DeleteContact(int id)
+        public async Task<ActionResult<bool>> DeleteContact(int id)
         {
             HttpContext.VerifyUserHasAnyAcceptedScope(Domain.Permissions.Contacts.Delete);
-            var wasDeleted = _contactManager.DeleteContact(id);
+            var wasDeleted = await _contactManager.DeleteContactAsync(id);
             if (wasDeleted)
             {
                 return NoContent();
@@ -115,10 +116,10 @@ namespace Contacts.Api.Controllers
         [HttpGet("search")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public List<Contact> GetContacts([FromQuery]string firstname, [FromQuery]string lastname)
+        public async Task<List<Contact>> GetContacts([FromQuery]string firstname, [FromQuery]string lastname)
         {
             HttpContext.VerifyUserHasAnyAcceptedScope(Domain.Permissions.Contacts.Search);
-            return _contactManager.GetContacts(firstname, lastname);
+            return await _contactManager.GetContactsAsync(firstname, lastname);
         }
 
         /// <summary>
@@ -129,10 +130,10 @@ namespace Contacts.Api.Controllers
         /// <response code="200">Ok</response>
         /// <response code="400">If the request is poorly formatted</response>    
         [HttpGet("{id}/phones")]
-        public List<Phone> GetContactPhones(int id)
+        public async Task<List<Phone>> GetContactPhones(int id)
         {
             HttpContext.VerifyUserHasAnyAcceptedScope(Domain.Permissions.Contacts.View);
-            return _contactManager.GetContactPhones(id);
+            return await _contactManager.GetContactPhonesAsync(id);
         }
 
         /// <summary>
@@ -144,10 +145,10 @@ namespace Contacts.Api.Controllers
         /// <response code="200">Ok</response>
         /// <response code="400">If the request is poorly formatted</response>    
         [HttpGet("{id}/phones/{phoneId}")]
-        public Phone GetContactPhone(int id, int phoneId)
+        public async Task<Phone> GetContactPhone(int id, int phoneId)
         {
             HttpContext.VerifyUserHasAnyAcceptedScope(Domain.Permissions.Contacts.View);
-            return _contactManager.GetContactPhone(id, phoneId);
+            return await _contactManager.GetContactPhoneAsync(id, phoneId);
         }
         
         /// <summary>
@@ -158,10 +159,10 @@ namespace Contacts.Api.Controllers
         /// <response code="200">Ok</response>
         /// <response code="400">If the request is poorly formatted</response>    
         [HttpGet("{id}/addresses")]
-        public List<Address> GetContactAddresses(int id)
+        public async Task<List<Address>> GetContactAddresses(int id)
         {
             HttpContext.VerifyUserHasAnyAcceptedScope(Domain.Permissions.Contacts.View);
-            return _contactManager.GetContactAddresses(id);
+            return await _contactManager.GetContactAddressesAsync(id);
         }
 
         /// <summary>
@@ -173,10 +174,10 @@ namespace Contacts.Api.Controllers
         /// <response code="200">Ok</response>
         /// <response code="400">If the request is poorly formatted</response>    
         [HttpGet("{id}/addresses/{addressId}")]
-        public Address GetContactAddress(int id, int addressId)
+        public async Task<Address> GetContactAddressAsync(int id, int addressId)
         {
             HttpContext.VerifyUserHasAnyAcceptedScope(Domain.Permissions.Contacts.View);
-            return _contactManager.GetContactAddress(id, addressId);
+            return await _contactManager.GetContactAddressAsync(id, addressId);
         }
     }
 }

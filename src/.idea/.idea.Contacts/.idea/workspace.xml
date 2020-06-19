@@ -19,7 +19,17 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="14fd18ef-6fed-455b-81a5-09cb395c5fc7" name="Default Changelist" comment="Created the initial database with EF Core" />
+    <list default="true" id="14fd18ef-6fed-455b-81a5-09cb395c5fc7" name="Default Changelist" comment="Created the initial database with EF Core">
+      <change beforePath="$PROJECT_DIR$/../outline.md" beforeDir="false" afterPath="$PROJECT_DIR$/../outline.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Contacts/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Contacts/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Contacts.Api/Controllers/ContactsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Contacts.Api/Controllers/ContactsController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Contacts.Data.Sqlite/SqliteDataStore.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Contacts.Data.Sqlite/SqliteDataStore.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Contacts.Data/ContactRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Contacts.Data/ContactRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Contacts.Domain/Interfaces/IContactDataStore.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Contacts.Domain/Interfaces/IContactDataStore.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Contacts.Domain/Interfaces/IContactManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Contacts.Domain/Interfaces/IContactManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Contacts.Domain/Interfaces/IContactRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Contacts.Domain/Interfaces/IContactRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Contacts.Logic/ContactManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Contacts.Logic/ContactManager.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -99,13 +109,7 @@
         <option value="$PROJECT_DIR$/Contacts.Data.Sqlite/Models/Contact.cs" />
         <option value="$PROJECT_DIR$/Contacts.Data.Sqlite/Models/Phone.cs" />
         <option value="$PROJECT_DIR$/Contacts.Data.Sqlite/ContactContext.cs" />
-        <option value="$PROJECT_DIR$/Contacts.Domain/Interfaces/IContactRepository.cs" />
-        <option value="$PROJECT_DIR$/Contacts.Domain/Interfaces/IContactManager.cs" />
-        <option value="$PROJECT_DIR$/Contacts.Domain/Interfaces/IContactDataStore.cs" />
-        <option value="$PROJECT_DIR$/Contacts.Data/ContactRepository.cs" />
         <option value="$PROJECT_DIR$/Contacts.Data.Sqlite/Models/Address.cs" />
-        <option value="$PROJECT_DIR$/Contacts.Logic/ContactManager.cs" />
-        <option value="$PROJECT_DIR$/Contacts.Data.Sqlite/SqliteDataStore.cs" />
         <option value="$PROJECT_DIR$/Contacts.Logic.Tests/ContactManagerTests.cs" />
         <option value="$PROJECT_DIR$/Contacts-Sample-Requests.http" />
         <option value="$PROJECT_DIR$/Contacts.Api/Contacts.Api.csproj" />
@@ -113,8 +117,14 @@
         <option value="$PROJECT_DIR$/Contacts.Api/appsettings.Development.json" />
         <option value="$PROJECT_DIR$/Contacts.Api/Startup.cs" />
         <option value="$PROJECT_DIR$/Contacts.Domain/Permissions/Contacts.cs" />
-        <option value="$PROJECT_DIR$/Contacts.Api/Controllers/ContactsController.cs" />
         <option value="$PROJECT_DIR$/../outline.md" />
+        <option value="$PROJECT_DIR$/Contacts.Domain/Interfaces/IContactDataStore.cs" />
+        <option value="$PROJECT_DIR$/Contacts.Data.Sqlite/SqliteDataStore.cs" />
+        <option value="$PROJECT_DIR$/Contacts.Domain/Interfaces/IContactRepository.cs" />
+        <option value="$PROJECT_DIR$/Contacts.Data/ContactRepository.cs" />
+        <option value="$PROJECT_DIR$/Contacts.Domain/Interfaces/IContactManager.cs" />
+        <option value="$PROJECT_DIR$/Contacts.Logic/ContactManager.cs" />
+        <option value="$PROJECT_DIR$/Contacts.Api/Controllers/ContactsController.cs" />
       </list>
     </option>
   </component>
@@ -466,7 +476,8 @@
       <workItem from="1591985163355" duration="1569000" />
       <workItem from="1592001564617" duration="1689000" />
       <workItem from="1592261713251" duration="86000" />
-      <workItem from="1592261903833" duration="3369000" />
+      <workItem from="1592261903833" duration="3953000" />
+      <workItem from="1592520770480" duration="3359000" />
     </task>
     <task id="LOCAL-00001" summary="Created the initial database with EF Core">
       <created>1588899122166</created>
@@ -631,8 +642,8 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state width="531" height="464" key="DebuggerActiveHint/0.0.1680.1050@0.0.1680.1050" timestamp="1591745584560" />
-    <state width="1638" height="265" key="GridCell.Tab.0.bottom" timestamp="1592355650005">
-      <screen x="0" y="23" width="1680" height="1027" />
+    <state width="1638" height="251" key="GridCell.Tab.0.bottom" timestamp="1592524435732">
+      <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state width="819" height="266" key="GridCell.Tab.0.bottom/0.0.1680.1050/-126.-1800.3200.1800@0.0.1680.1050" timestamp="1591937966026" />
     <state width="1638" height="365" key="GridCell.Tab.0.bottom/0.0.1680.1050/-525.-1692.3008.1692@-525.-1692.3008.1692" timestamp="1591674304334" />
@@ -640,15 +651,15 @@
     <state width="1628" height="282" key="GridCell.Tab.0.bottom/0.0.1680.1050/-607.-1692.3008.1692@0.0.1680.1050" timestamp="1589498349297" />
     <state width="1628" height="282" key="GridCell.Tab.0.bottom/0.0.1680.1050/-607.-1777.3200.1777@0.0.1680.1050" timestamp="1589241551783" />
     <state width="1638" height="265" key="GridCell.Tab.0.bottom/0.0.1680.1050/-607.-1800.3200.1800@0.0.1680.1050" timestamp="1592270139778" />
-    <state width="1638" height="265" key="GridCell.Tab.0.bottom/0.0.1680.1050/-629.-1800.3200.1800@0.0.1680.1050" timestamp="1592349229191" />
+    <state width="1638" height="251" key="GridCell.Tab.0.bottom/0.0.1680.1050/-629.-1800.3200.1800@0.0.1680.1050" timestamp="1592524435732" />
     <state width="1638" height="266" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1591829088886" />
     <state width="819" height="252" key="GridCell.Tab.0.bottom/0.23.1680.1027/-126.-1777.3200.1777@-126.-1777.3200.1777" timestamp="1592006742709" />
     <state width="819" height="252" key="GridCell.Tab.0.bottom/0.23.1680.1027/-126.-1777.3200.1777@0.23.1680.1027" timestamp="1591987246376" />
     <state width="1638" height="365" key="GridCell.Tab.0.bottom/0.23.1680.1027/-525.-1692.3008.1692@0.23.1680.1027" timestamp="1591066987095" />
     <state width="1628" height="282" key="GridCell.Tab.0.bottom/0.23.1680.1027/-607.-1669.3008.1669@-607.-1669.3008.1669" timestamp="1589513625212" />
-    <state width="1638" height="265" key="GridCell.Tab.0.bottom/0.23.1680.1027/-629.-1777.3200.1777@0.23.1680.1027" timestamp="1592355650005" />
-    <state width="1638" height="265" key="GridCell.Tab.0.center" timestamp="1592355650004">
-      <screen x="0" y="23" width="1680" height="1027" />
+    <state width="1638" height="251" key="GridCell.Tab.0.bottom/0.23.1680.1027/-629.-1777.3200.1777@0.23.1680.1027" timestamp="1592522223593" />
+    <state width="1638" height="251" key="GridCell.Tab.0.center" timestamp="1592524435727">
+      <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state width="819" height="266" key="GridCell.Tab.0.center/0.0.1680.1050/-126.-1800.3200.1800@0.0.1680.1050" timestamp="1591937966025" />
     <state width="1638" height="365" key="GridCell.Tab.0.center/0.0.1680.1050/-525.-1692.3008.1692@-525.-1692.3008.1692" timestamp="1591674304333" />
@@ -656,15 +667,15 @@
     <state width="1628" height="282" key="GridCell.Tab.0.center/0.0.1680.1050/-607.-1692.3008.1692@0.0.1680.1050" timestamp="1589498349285" />
     <state width="1628" height="282" key="GridCell.Tab.0.center/0.0.1680.1050/-607.-1777.3200.1777@0.0.1680.1050" timestamp="1589241551746" />
     <state width="1638" height="265" key="GridCell.Tab.0.center/0.0.1680.1050/-607.-1800.3200.1800@0.0.1680.1050" timestamp="1592270139777" />
-    <state width="1638" height="265" key="GridCell.Tab.0.center/0.0.1680.1050/-629.-1800.3200.1800@0.0.1680.1050" timestamp="1592349229186" />
+    <state width="1638" height="251" key="GridCell.Tab.0.center/0.0.1680.1050/-629.-1800.3200.1800@0.0.1680.1050" timestamp="1592524435727" />
     <state width="1638" height="266" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1591829088885" />
     <state width="819" height="252" key="GridCell.Tab.0.center/0.23.1680.1027/-126.-1777.3200.1777@-126.-1777.3200.1777" timestamp="1592006742708" />
     <state width="819" height="252" key="GridCell.Tab.0.center/0.23.1680.1027/-126.-1777.3200.1777@0.23.1680.1027" timestamp="1591987246376" />
     <state width="1638" height="365" key="GridCell.Tab.0.center/0.23.1680.1027/-525.-1692.3008.1692@0.23.1680.1027" timestamp="1591066987093" />
     <state width="1628" height="282" key="GridCell.Tab.0.center/0.23.1680.1027/-607.-1669.3008.1669@-607.-1669.3008.1669" timestamp="1589513625212" />
-    <state width="1638" height="265" key="GridCell.Tab.0.center/0.23.1680.1027/-629.-1777.3200.1777@0.23.1680.1027" timestamp="1592355650004" />
-    <state width="1638" height="265" key="GridCell.Tab.0.left" timestamp="1592355650003">
-      <screen x="0" y="23" width="1680" height="1027" />
+    <state width="1638" height="251" key="GridCell.Tab.0.center/0.23.1680.1027/-629.-1777.3200.1777@0.23.1680.1027" timestamp="1592522223591" />
+    <state width="1638" height="251" key="GridCell.Tab.0.left" timestamp="1592524435726">
+      <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state width="819" height="266" key="GridCell.Tab.0.left/0.0.1680.1050/-126.-1800.3200.1800@0.0.1680.1050" timestamp="1591937966024" />
     <state width="1638" height="365" key="GridCell.Tab.0.left/0.0.1680.1050/-525.-1692.3008.1692@-525.-1692.3008.1692" timestamp="1591674304331" />
@@ -672,15 +683,15 @@
     <state width="1628" height="282" key="GridCell.Tab.0.left/0.0.1680.1050/-607.-1692.3008.1692@0.0.1680.1050" timestamp="1589498349280" />
     <state width="1628" height="282" key="GridCell.Tab.0.left/0.0.1680.1050/-607.-1777.3200.1777@0.0.1680.1050" timestamp="1589241551739" />
     <state width="1638" height="265" key="GridCell.Tab.0.left/0.0.1680.1050/-607.-1800.3200.1800@0.0.1680.1050" timestamp="1592270139776" />
-    <state width="1638" height="265" key="GridCell.Tab.0.left/0.0.1680.1050/-629.-1800.3200.1800@0.0.1680.1050" timestamp="1592349229184" />
+    <state width="1638" height="251" key="GridCell.Tab.0.left/0.0.1680.1050/-629.-1800.3200.1800@0.0.1680.1050" timestamp="1592524435726" />
     <state width="1638" height="266" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1591829088884" />
     <state width="819" height="252" key="GridCell.Tab.0.left/0.23.1680.1027/-126.-1777.3200.1777@-126.-1777.3200.1777" timestamp="1592006742708" />
     <state width="819" height="252" key="GridCell.Tab.0.left/0.23.1680.1027/-126.-1777.3200.1777@0.23.1680.1027" timestamp="1591987246375" />
     <state width="1638" height="365" key="GridCell.Tab.0.left/0.23.1680.1027/-525.-1692.3008.1692@0.23.1680.1027" timestamp="1591066987091" />
     <state width="1628" height="282" key="GridCell.Tab.0.left/0.23.1680.1027/-607.-1669.3008.1669@-607.-1669.3008.1669" timestamp="1589513625211" />
-    <state width="1638" height="265" key="GridCell.Tab.0.left/0.23.1680.1027/-629.-1777.3200.1777@0.23.1680.1027" timestamp="1592355650003" />
-    <state width="1638" height="265" key="GridCell.Tab.0.right" timestamp="1592355650005">
-      <screen x="0" y="23" width="1680" height="1027" />
+    <state width="1638" height="251" key="GridCell.Tab.0.left/0.23.1680.1027/-629.-1777.3200.1777@0.23.1680.1027" timestamp="1592522223590" />
+    <state width="1638" height="251" key="GridCell.Tab.0.right" timestamp="1592524435730">
+      <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state width="819" height="266" key="GridCell.Tab.0.right/0.0.1680.1050/-126.-1800.3200.1800@0.0.1680.1050" timestamp="1591937966025" />
     <state width="1638" height="365" key="GridCell.Tab.0.right/0.0.1680.1050/-525.-1692.3008.1692@-525.-1692.3008.1692" timestamp="1591674304333" />
@@ -688,13 +699,13 @@
     <state width="1628" height="282" key="GridCell.Tab.0.right/0.0.1680.1050/-607.-1692.3008.1692@0.0.1680.1050" timestamp="1589498349289" />
     <state width="1628" height="282" key="GridCell.Tab.0.right/0.0.1680.1050/-607.-1777.3200.1777@0.0.1680.1050" timestamp="1589241551761" />
     <state width="1638" height="265" key="GridCell.Tab.0.right/0.0.1680.1050/-607.-1800.3200.1800@0.0.1680.1050" timestamp="1592270139777" />
-    <state width="1638" height="265" key="GridCell.Tab.0.right/0.0.1680.1050/-629.-1800.3200.1800@0.0.1680.1050" timestamp="1592349229189" />
+    <state width="1638" height="251" key="GridCell.Tab.0.right/0.0.1680.1050/-629.-1800.3200.1800@0.0.1680.1050" timestamp="1592524435730" />
     <state width="1638" height="266" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1591829088886" />
     <state width="819" height="252" key="GridCell.Tab.0.right/0.23.1680.1027/-126.-1777.3200.1777@-126.-1777.3200.1777" timestamp="1592006742709" />
     <state width="819" height="252" key="GridCell.Tab.0.right/0.23.1680.1027/-126.-1777.3200.1777@0.23.1680.1027" timestamp="1591987246376" />
     <state width="1638" height="365" key="GridCell.Tab.0.right/0.23.1680.1027/-525.-1692.3008.1692@0.23.1680.1027" timestamp="1591066987094" />
     <state width="1628" height="282" key="GridCell.Tab.0.right/0.23.1680.1027/-607.-1669.3008.1669@-607.-1669.3008.1669" timestamp="1589513625212" />
-    <state width="1638" height="265" key="GridCell.Tab.0.right/0.23.1680.1027/-629.-1777.3200.1777@0.23.1680.1027" timestamp="1592355650005" />
+    <state width="1638" height="251" key="GridCell.Tab.0.right/0.23.1680.1027/-629.-1777.3200.1777@0.23.1680.1027" timestamp="1592522223592" />
     <state width="1488" height="365" key="GridCell.Tab.1.bottom" timestamp="1591936067938">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
@@ -849,6 +860,10 @@
     <state x="379" y="164" key="SettingsEditor/0.0.1680.1050/-525.-1692.3008.1692@0.0.1680.1050" timestamp="1589858771142" />
     <state x="379" y="164" key="SettingsEditor/0.0.1680.1050/-607.-1800.3200.1800@0.0.1680.1050" timestamp="1588715646075" />
     <state x="379" y="164" key="SettingsEditor/0.0.1680.1050@0.0.1680.1050" timestamp="1591743889705" />
+    <state x="100" y="123" width="1480" height="827" key="VCS.FileHistoryDialog" timestamp="1592523991079">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state x="100" y="123" width="1480" height="827" key="VCS.FileHistoryDialog/0.23.1680.1027/-629.-1777.3200.1777@0.23.1680.1027" timestamp="1592523991079" />
     <state x="340" y="202" key="Vcs.Push.Dialog.v2" timestamp="1591833417230">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
@@ -901,26 +916,26 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Contacts.Logic/ContactManager.cs</url>
-          <line>83</line>
+          <line>68</line>
           <properties documentPath="$PROJECT_DIR$/Contacts.Logic/ContactManager.cs" initialLine="83">
             <startOffsets>
-              <option value="2950" />
+              <option value="2101" />
             </startOffsets>
             <endOffsets>
-              <option value="2997" />
+              <option value="2148" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="11" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Contacts.Data.Sqlite/SqliteDataStore.cs</url>
-          <line>63</line>
+          <line>91</line>
           <properties documentPath="$PROJECT_DIR$/Contacts.Data.Sqlite/SqliteDataStore.cs" initialLine="63">
             <startOffsets>
-              <option value="2345" />
+              <option value="3228" />
             </startOffsets>
             <endOffsets>
-              <option value="2385" />
+              <option value="3268" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="13" />
