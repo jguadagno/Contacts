@@ -138,6 +138,9 @@ Wrapped up the Api by adding methods, endpoints, tests, and documentation for th
 * [Video](https://youtu.be/eiauddTufQU)
 * Source Code [abe7719](https://github.com/jguadagno/Contacts/commit/abe7719ad53b9bac8067f807ee125bdc9416828b)
 
+### API Authentication
+
+Add client id / client secret to API
 Added Authentication and Authorization using the [Microsoft Identity Platform](https://docs.microsoft.com/en-us/azure/active-directory/develop/). 
 This was part of a blog post [Protecting an ASP.NET Core Web API with Microsoft Identity Platform](https://www.josephguadagno.net/2020/06/12/protecting-an-asp-net-core-api-with-microsoft-identity-platform)
 
@@ -170,13 +173,15 @@ Coming up next.  Add the Contacts Controller and User Interface.
 Here are some other client technologies that we can use.
 Remaining Options
 
-- Blazor
-- MAUI
-- Xamarin
-- Electron
-- React Native
-- Ionic Native
-- PowerApps
+#### Blazor Client
+
+#### Native Application
+
+##### React Native
+
+##### Ionic client
+
+#### WinForms (Maybe)
 
 ## To the Cloud
 
@@ -208,11 +213,9 @@ On commit to the source code repository...
 
 **NOTE** Figure out database changes
 
-### API Authentication
+## Application Flexibility
 
-Add client id / client secret to API
-
-## Client Applications
+Let's see how the application changes as we change different components of it.
 
 Add a picture for the person.
 
@@ -224,23 +227,7 @@ Uses:
 
 Update the models, data store, and API
 
-### ASP.NET Core Web Application
-
-### Blazor Client
-
-### Native Application
-
-#### React Native
-
-#### Ionic client
-
-### WinForms (Maybe)
-
-## Application Flexibility
-
-Let's see how the application changes as we change different components of it.
-
-### Data Persistance
+### Data Persistence
 
 Let's change out the database
 
