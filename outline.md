@@ -160,8 +160,8 @@ Adding Asynchronous ability to our methods.
 
 Started off creating the New ASP.NET Core Web Application using Model View Controller (MVC). We added the authentication to the application. Then we changes some of the home page text.
 
-* [Video]()
-* Source []()
+* [Video](https://youtu.be/ffsR0ms2XoU)
+* Source [46c8e58](https://github.com/jguadagno/Contacts/commit/46c8e58f17ccf91be2ab2ef6a512b4663f77b2c7)
 
 Coming up next.  Add the Contacts Controller and User Interface.
 
