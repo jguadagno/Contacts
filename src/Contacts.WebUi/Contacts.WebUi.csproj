@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>netcoreapp3.1</TargetFramework>
+        <UserSecretsId>aspnet-Contacts.WebUi-FB0ABABE-F2D5-4A1E-917E-92E971AD4C66</UserSecretsId>
+        <WebProject_DirectoryAccessLevelKey>0</WebProject_DirectoryAccessLevelKey>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.AspNetCore.Authentication.AzureAD.UI" Version="3.1.4" />
+        <PackageReference Include="Microsoft.Identity.Web" Version="0.1.5-preview" />
+    </ItemGroup>
+
+</Project>

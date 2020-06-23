@@ -154,6 +154,30 @@ Adding Asynchronous ability to our methods.
 * [Video](https://youtu.be/XWjaXSVUJMQ)
 * Source [748cf3e](https://github.com/jguadagno/Contacts/commit/748cf3edd654c52c637543939b72eac5954231b7)
 
+## Let's Build Some Clients
+
+### ASP.NET Core MVC
+
+Started off creating the New ASP.NET Core Web Application using Model View Controller (MVC). We added the authentication to the application. Then we changes some of the home page text.
+
+* [Video]()
+* Source []()
+
+Coming up next.  Add the Contacts Controller and User Interface.
+
+### Others
+
+Here are some other client technologies that we can use.
+Remaining Options
+
+- Blazor
+- MAUI
+- Xamarin
+- Electron
+- React Native
+- Ionic Native
+- PowerApps
+
 ## To the Cloud
 
 Setup the environment
