@@ -168,8 +168,8 @@ Started off creating the New ASP.NET Core Web Application using Model View Contr
 
 Added the Contacts Controller with an Index method. **NOTE** The code compiles but the authorization is broken.
 
-* [Video]()
-* Source []()
+* [Video](https://youtu.be/NV1fa81bIpY)
+* Source [d7a7111](https://github.com/jguadagno/Contacts/commit/d7a71110fb3b4baf20a87926465fa9753d64c3ff)
 
 ***Next up*** Continue to build out the Contacts.Index page with a view of the contacts.
 
