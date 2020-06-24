@@ -123,7 +123,7 @@ The [example](https://docs.microsoft.com/en-us/aspnet/core/tutorials/getting-sta
 
 We validated that the Api allows for saving the reference properties or address and phone.
 
-We used ASP.NET Core Dependency Inject to create the `ContactManager` and required dependencies
+We used ASP.NET Core Dependency Injection to create the `ContactManager` and required dependencies
 
 * [Video](https://t.co/o8Y3O8ighf)
 * Source Code [3f55ac17](https://github.com/jguadagno/Contacts/commit/3f55ac17654a23a2156b4b831bf4f45706142cad)
@@ -166,7 +166,13 @@ Started off creating the New ASP.NET Core Web Application using Model View Contr
 * [Video](https://youtu.be/ffsR0ms2XoU)
 * Source [46c8e58](https://github.com/jguadagno/Contacts/commit/46c8e58f17ccf91be2ab2ef6a512b4663f77b2c7)
 
-Coming up next.  Add the Contacts Controller and User Interface.
+Added the Contacts Controller with an Index method. **NOTE** The code compiles but the authorization is broken.
+
+* [Video]()
+* Source []()
+
+***Next up*** Continue to build out the Contacts.Index page with a view of the contacts.
+
 
 ### Others
 
