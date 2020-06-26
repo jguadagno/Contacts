@@ -178,8 +178,8 @@ Successful authenticated against the API.
 Send a request for Get Contacts
 Displayed simple results on the web page
 
-* [Video]()
-* Source []()
+* [Video](https://youtu.be/GjSeJbZaPOw)
+* Source [7eb353b](https://github.com/jguadagno/Contacts/commit/7eb353b13ca1a0b135e1a777c718f96bdb353025)
 
 ***Next up*** Continue to build out the Contacts.Index page with a view of the contacts.
 
