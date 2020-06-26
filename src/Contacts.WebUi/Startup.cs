@@ -24,15 +24,20 @@ namespace Contacts.WebUi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddSignIn(Configuration, "AzureAd")
-                .AddWebAppCallsProtectedWebApi(Configuration,
-                    initialScopes: new string[] 
-                        { "user.read", 
-                            Domain.Permissions.Contacts.Delete, 
-                            Domain.Permissions.Contacts.List, 
-                            Domain.Permissions.Contacts.Save, 
-                            Domain.Permissions.Contacts.Search, 
-                            Domain.Permissions.Contacts.View })
+
+            services.AddSignIn(Configuration);
+
+            var initialScopes = new[]
+            {
+                "api://dc68a11f-d265-4e9c-8a24-abbbd3520f8a/" + Domain.Permissions.Contacts.Delete,
+                "api://dc68a11f-d265-4e9c-8a24-abbbd3520f8a/" + Domain.Permissions.Contacts.List,
+                "api://dc68a11f-d265-4e9c-8a24-abbbd3520f8a/" + Domain.Permissions.Contacts.Save,
+                "api://dc68a11f-d265-4e9c-8a24-abbbd3520f8a/" + Domain.Permissions.Contacts.Search,
+                "api://dc68a11f-d265-4e9c-8a24-abbbd3520f8a/" + Domain.Permissions.Contacts.View
+            };
+            // Token acquisition service based on MSAL.NET
+            // and chosen token cache implementation
+            services.AddWebAppCallsProtectedWebApi(Configuration, initialScopes)
                 .AddInMemoryTokenCaches();
             
             services.AddControllersWithViews(options =>
@@ -41,17 +46,10 @@ namespace Contacts.WebUi
                     .RequireAuthenticatedUser()
                     .Build();
                 options.Filters.Add(new AuthorizeFilter(policy));
-            });
-            services.AddRazorPages();
-
-            services.AddControllersWithViews(options =>
-            {
-                var policy = new AuthorizationPolicyBuilder()
-                    .RequireAuthenticatedUser()
-                    .Build();
-                options.Filters.Add(new AuthorizeFilter(policy));
             }).AddMicrosoftIdentityUI();
             
+            services.AddRazorPages();
+
             var config = new Settings();
             Configuration.Bind("Settings", config);      //  <--- This
             services.AddSingleton(config);

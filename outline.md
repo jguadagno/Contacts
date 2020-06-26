@@ -161,6 +161,9 @@ Adding Asynchronous ability to our methods.
 
 ### ASP.NET Core MVC
 
+Authentication is based off of the following repository
+[Enable your Web Apps to sign-in users and call APIs with the Microsoft identity platform for developers](https://github.com/Azure-Samples/active-directory-aspnetcore-webapp-openidconnect-v2)
+
 Started off creating the New ASP.NET Core Web Application using Model View Controller (MVC). We added the authentication to the application. Then we changes some of the home page text.
 
 * [Video](https://youtu.be/ffsR0ms2XoU)
@@ -171,8 +174,14 @@ Added the Contacts Controller with an Index method. **NOTE** The code compiles b
 * [Video](https://youtu.be/NV1fa81bIpY)
 * Source [d7a7111](https://github.com/jguadagno/Contacts/commit/d7a71110fb3b4baf20a87926465fa9753d64c3ff)
 
-***Next up*** Continue to build out the Contacts.Index page with a view of the contacts.
+Successful authenticated against the API.
+Send a request for Get Contacts
+Displayed simple results on the web page
 
+* [Video]()
+* Source []()
+
+***Next up*** Continue to build out the Contacts.Index page with a view of the contacts.
 
 ### Others
 
@@ -192,6 +201,8 @@ Remaining Options
 ## To the Cloud
 
 Setup the environment
+
+[Post](https://www.phillipsj.net/posts/infrastructure-in-csharp-using-the-azure-management-sdk/) on building infrastructure with code.
 
 **NOTE**: These are tentative and might change as we build out the application
 

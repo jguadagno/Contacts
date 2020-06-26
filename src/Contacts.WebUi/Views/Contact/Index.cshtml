@@ -1,5 +1,14 @@
+@model IEnumerable<Contacts.Domain.Models.Contact>
+
 @{
     ViewData["Title"] = "Home Page";
 }
 
 Hello From Contacts.Index
+
+<ul>
+@foreach (var contact in Model)
+{
+    <li>@contact.FullName</li>
+}
+</ul>
