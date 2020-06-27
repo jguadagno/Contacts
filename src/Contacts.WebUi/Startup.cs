@@ -1,4 +1,5 @@
 using Contacts.WebUi.Models;
+using Contacts.WebUi.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -24,16 +25,18 @@ namespace Contacts.WebUi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-
+            var settings = new Settings();
+            Configuration.Bind("Settings", settings);
+            services.AddSingleton(settings);
+            
             services.AddSignIn(Configuration);
-
             var initialScopes = new[]
             {
-                "api://dc68a11f-d265-4e9c-8a24-abbbd3520f8a/" + Domain.Permissions.Contacts.Delete,
-                "api://dc68a11f-d265-4e9c-8a24-abbbd3520f8a/" + Domain.Permissions.Contacts.List,
-                "api://dc68a11f-d265-4e9c-8a24-abbbd3520f8a/" + Domain.Permissions.Contacts.Save,
-                "api://dc68a11f-d265-4e9c-8a24-abbbd3520f8a/" + Domain.Permissions.Contacts.Search,
-                "api://dc68a11f-d265-4e9c-8a24-abbbd3520f8a/" + Domain.Permissions.Contacts.View
+                settings.ApiScopeUri + Domain.Permissions.Contacts.Delete,
+                settings.ApiScopeUri + Domain.Permissions.Contacts.List,
+                settings.ApiScopeUri + Domain.Permissions.Contacts.Save,
+                settings.ApiScopeUri + Domain.Permissions.Contacts.Search,
+                settings.ApiScopeUri + Domain.Permissions.Contacts.View
             };
             // Token acquisition service based on MSAL.NET
             // and chosen token cache implementation
@@ -48,11 +51,8 @@ namespace Contacts.WebUi
                 options.Filters.Add(new AuthorizeFilter(policy));
             }).AddMicrosoftIdentityUI();
             
+            services.AddContactService();
             services.AddRazorPages();
-
-            var config = new Settings();
-            Configuration.Bind("Settings", config);      //  <--- This
-            services.AddSingleton(config);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
