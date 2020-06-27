@@ -181,6 +181,15 @@ Displayed simple results on the web page
 * [Video](https://youtu.be/GjSeJbZaPOw)
 * Source [7eb353b](https://github.com/jguadagno/Contacts/commit/7eb353b13ca1a0b135e1a777c718f96bdb353025)
 
+Special 'Cleanup' Episode!  
+
+We added a new Contact Service [Source](https://github.com/jguadagno/Contacts/commit/9f5c57778b65c5411c6224b839864829ff84879b)
+We moved the configuration of the SQLite Database to the AppSetting file [Source](https://github.com/jguadagno/Contacts/commit/043f9b5da795aa0d00f715c9394cd3e7d43ba6e0)
+Removed an unneeded TODO comment [Source](https://github.com/jguadagno/Contacts/commit/22d59eb5603de831c93f701e260c5faca08b70bf)
+
+* [Video](https://youtu.be/U4-l0IyqA6k)
+* Source [22d59eb](https://github.com/jguadagno/Contacts/commit/22d59eb5603de831c93f701e260c5faca08b70bf)
+
 ***Next up*** Continue to build out the Contacts.Index page with a view of the contacts.
 
 ### Others
