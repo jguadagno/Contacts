@@ -60,7 +60,7 @@ namespace Contacts.Api
                 var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
                 c.IncludeXmlComments(xmlPath);
             });
-
+            
             services.AddTransient<IContactDataStore, SqliteDataStore>();
             services.AddTransient<IContactRepository, ContactRepository>();
             services.AddTransient<IContactManager, ContactManager>();

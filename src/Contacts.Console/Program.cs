@@ -4,6 +4,7 @@ using Contacts.Data;
 using Contacts.Data.Sqlite;
 using Contacts.Domain.Models;
 using Contacts.Logic;
+using Microsoft.Extensions.Configuration;
 
 namespace Contacts.Console
 {
@@ -13,7 +14,10 @@ namespace Contacts.Console
         [ExcludeFromCodeCoverage]
         static void Main(string[] args)
         {
-            var contactManager = new ContactManager(new ContactRepository(new SqliteDataStore()));
+            IConfiguration config = new ConfigurationBuilder()
+                .AddJsonFile("appsettings.json", true, true)
+                .Build();
+            var contactManager = new ContactManager(new ContactRepository(new SqliteDataStore(config)));
             
             System.Console.WriteLine("--- Contact #1 ---");
             var searchedContact = contactManager.GetContact(1);

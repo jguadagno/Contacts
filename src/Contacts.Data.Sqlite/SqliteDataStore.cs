@@ -7,6 +7,7 @@ using AutoMapper;
 using Contacts.Data.Sqlite.Models;
 using Contacts.Domain.Interfaces;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using Contact = Contacts.Domain.Models.Contact;
 
 namespace Contacts.Data.Sqlite
@@ -17,14 +18,14 @@ namespace Contacts.Data.Sqlite
         private readonly ContactContext _contactContext;
         private readonly Mapper _mapper;
 
-        public SqliteDataStore()
+        public SqliteDataStore(IConfiguration configuration)
         {
-            _contactContext = new ContactContext();
+            _contactContext = new ContactContext(configuration);
             
-            var configuration = new MapperConfiguration(cfg => {
+            var mapperConfiguration = new MapperConfiguration(cfg => {
                 cfg.AddProfile<ContactProfile>();
             });
-            _mapper = new Mapper(configuration);
+            _mapper = new Mapper(mapperConfiguration);
         }
         
         public Contact GetContact(int contactId)
