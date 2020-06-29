@@ -260,3 +260,11 @@ Let's change out the database
 #### Move to Json file
 
 #### Move to AWS Dynamo
+
+## Nice to Haves
+
+A list of things that we might want to consider adding to the application
+
+* [ADDING SECURITY TO OAS 3 / SWAGGER IN .NET CORE 3.1 USING SWASHBUCKLE](https://pradeeploganathan.com/api/add-security-requirements-oas3-swagger-netcore3-1-using-swashbuckle/)
+* [Infrastructure in C# using the Azure Management SDK](https://www.phillipsj.net/posts/infrastructure-in-csharp-using-the-azure-management-sdk/)
+
