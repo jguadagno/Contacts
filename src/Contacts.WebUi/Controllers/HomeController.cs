@@ -22,6 +22,10 @@ namespace Contacts.WebUi.Controllers
 
         public IActionResult Index()
         {
+            foreach (var cookieKey in Request.Cookies.Keys)
+            {
+                Response.Cookies.Delete(cookieKey);
+            }
             return View();
         }
 

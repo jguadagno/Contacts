@@ -190,7 +190,12 @@ Removed an unneeded TODO comment [Source](https://github.com/jguadagno/Contacts/
 * [Video](https://youtu.be/U4-l0IyqA6k)
 * Source [22d59eb](https://github.com/jguadagno/Contacts/commit/22d59eb5603de831c93f701e260c5faca08b70bf)
 
-***Next up*** Continue to build out the Contacts.Index page with a view of the contacts.
+Built out the Contact List and Details Page
+
+* [Video](https://youtu.be/hXcKGbvsaWM)
+* Source [e6f70de](https://github.com/jguadagno/Contacts/commit/e6f70de7eba389321400dc674f8dca56993d96fc)
+
+***Next up*** Build out the Contact Edit Page
 
 ### Others
 
