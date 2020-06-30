@@ -1,14 +1,32 @@
 @model IEnumerable<Contacts.Domain.Models.Contact>
 
 @{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "View Contacts";
 }
 
-Hello From Contacts.Index
+<h1>Contacts</h1>
+<p class="lead">
+    These are the contacts that we have been building on 'Coding with JoeG'
+</p>
 
-<ul>
-@foreach (var contact in Model)
-{
-    <li>@contact.FullName</li>
-}
-</ul>
+<table class="table table-striped">
+    <thead class="thead-dark">
+    <tr>
+        <th scope="col">Id</th>
+        <th scope="col">First</th>
+        <th scope="col">Last</th>
+        <th scope="col">Full Name</th>
+    </tr>
+    </thead>
+    <tbody>
+        @foreach (var contact in Model)
+        {
+            <tr>
+                <td><a asp-controller="Contact" asp-action="Details" asp-route-id="@contact.ContactId">@contact.ContactId</a></td>
+                <td>@contact.FirstName</td>
+                <td>@contact.LastName</td>
+                <td>@contact.FullName</td>
+            </tr>
+        }
+    </tbody>
+</table>

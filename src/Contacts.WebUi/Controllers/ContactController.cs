@@ -1,8 +1,6 @@
 using System.Threading.Tasks;
-using Contacts.WebUi.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Identity.Web;
 using Contacts.WebUi.Services;
 
 namespace Contacts.WebUi.Controllers

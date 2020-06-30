@@ -1,7 +1,32 @@
 @model Contacts.Domain.Models.Contact
 
 @{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Details - " + @Model.FullName;
 }
 
-@Model.FullName
+<h1 class="display-1">@Model.FullName</h1>
+Email at <a href="mailto:@Model.EmailAddress"> @Model.EmailAddress</a>
+
+<h2>Name</h2>
+<dl class="row">
+    <dt class="col-sm-3">First Name</dt>
+    <dd class="col-sm-9">@Model.FirstName</dd>
+    <dt class="col-sm-3">Middle Name</dt>
+    <dd class="col-sm-9">@Model.MiddleName</dd>
+    <dt class="col-sm-3">Last Name</dt>
+    <dd class="col-sm-9">@Model.LastName</dd>
+</dl>
+
+<h2>Important Dates</h2>
+<dl class="row">
+    <dt class="col-sm-3">Birthday</dt>
+    <dd class="col-sm-9">@Model.Birthday</dd>
+    <dt class="col-sm-3">Anniversary</dt>
+    <dd class="col-sm-9">@Model.Anniversary</dd>
+</dl>
+
+@if (!string.IsNullOrEmpty(@Model.ImageUrl))
+{
+    <h2>Image</h2>
+    <img src="@Model.ImageUrl" class="rounded mx-auto d-block" alt="@Model.FullName">
+}
