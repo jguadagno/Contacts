@@ -176,6 +176,7 @@
           <e p="_ViewStart.cshtml" t="Include" />
           <e p="Contact" t="Include">
             <e p="Details.cshtml" t="Include" />
+            <e p="Edit.cshtml" t="Include" />
             <e p="Index.cshtml" t="Include" />
           </e>
           <e p="Home" t="Include">

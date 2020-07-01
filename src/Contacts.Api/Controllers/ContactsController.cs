@@ -14,10 +14,10 @@ namespace Contacts.Api.Controllers
     /// <summary>
     /// The contacts endpoints provide the functionality to maintain our contacts.
     /// </summary>
-    [ApiController]
     [Authorize]
     [Route("[controller]")]
-    public class ContactsController: Controller
+    [ApiController]
+    public class ContactsController: ControllerBase
     {
 
         private readonly IContactManager _contactManager;
@@ -52,6 +52,7 @@ namespace Contacts.Api.Controllers
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [HttpGet("{id}")]
+        [ActionName(nameof(GetContactAsync))]
         public async Task<Contact> GetContactAsync(int id)
         {
             HttpContext.VerifyUserHasAnyAcceptedScope(Domain.Permissions.Contacts.View);
@@ -75,7 +76,8 @@ namespace Contacts.Api.Controllers
 
             if (savedContact != null)
             {
-                return CreatedAtAction(nameof(GetContactAsync), new {id = contact.ContactId},
+                return CreatedAtAction(nameof(GetContactAsync),
+                    new {id = contact.ContactId},
                     contact);
             }
             return Problem("Failed to insert the contact");

@@ -16,6 +16,7 @@
         <th scope="col">First</th>
         <th scope="col">Last</th>
         <th scope="col">Full Name</th>
+        <th scope="col">&nbsp;</th>
     </tr>
     </thead>
     <tbody>
@@ -26,6 +27,7 @@
                 <td>@contact.FirstName</td>
                 <td>@contact.LastName</td>
                 <td>@contact.FullName</td>
+                <td><a asp-action="Edit" asp-controller="Contact" asp-route-id="@contact.ContactId" class="btn btn-primary">Edit</a> | </td>
             </tr>
         }
     </tbody>

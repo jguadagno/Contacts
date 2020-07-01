@@ -29,5 +29,19 @@ namespace Contacts.WebUi.Controllers
 
             return View(contact);
         }
+        
+        public async Task<IActionResult> Edit(int id)
+        {
+            var contact = await _contactService.GetContactAsync(id);
+
+            return View(contact);
+        }
+
+        [HttpPost]
+        public async Task<RedirectToActionResult> Edit(Domain.Models.Contact contact)
+        {
+            var result = await _contactService.SaveContactAsync(contact);
+            return RedirectToAction("Details", new {id = contact.ContactId});
+        }
     }
 }

@@ -90,7 +90,8 @@ namespace Contacts.Data.Sqlite
         public Contact SaveContact(Contact contact)
         {
             var dbContact = _mapper.Map<Sqlite.Models.Contact>(contact);
-            _contactContext.Contacts.Add(dbContact);
+            _contactContext.Entry(dbContact).State =
+                dbContact.ContactId == 0 ? EntityState.Added : EntityState.Modified;
 
             var wasSaved = _contactContext.SaveChanges() != 0;
             if (wasSaved)
@@ -104,7 +105,9 @@ namespace Contacts.Data.Sqlite
         public async Task<Contact> SaveContactAsync(Contact contact)
         {
             var dbContact = _mapper.Map<Sqlite.Models.Contact>(contact);
-            await _contactContext.Contacts.AddAsync(dbContact);
+
+            _contactContext.Entry(dbContact).State =
+                dbContact.ContactId == 0 ? EntityState.Added : EntityState.Modified;
 
             var wasSaved = await _contactContext.SaveChangesAsync() != 0;
             if (wasSaved)

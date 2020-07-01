@@ -30,3 +30,5 @@ Email at <a href="mailto:@Model.EmailAddress"> @Model.EmailAddress</a>
     <h2>Image</h2>
     <img src="@Model.ImageUrl" class="rounded mx-auto d-block" alt="@Model.FullName">
 }
+
+<a asp-action="Edit" asp-controller="Contact" asp-route-id="@Model.ContactId" class="btn btn-primary">Edit</a>
