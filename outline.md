@@ -183,9 +183,9 @@ Displayed simple results on the web page
 
 Special 'Cleanup' Episode!  
 
-We added a new Contact Service [Source](https://github.com/jguadagno/Contacts/commit/9f5c57778b65c5411c6224b839864829ff84879b)
-We moved the configuration of the SQLite Database to the AppSetting file [Source](https://github.com/jguadagno/Contacts/commit/043f9b5da795aa0d00f715c9394cd3e7d43ba6e0)
-Removed an unneeded TODO comment [Source](https://github.com/jguadagno/Contacts/commit/22d59eb5603de831c93f701e260c5faca08b70bf)
+* We added a new Contact Service [Source](https://github.com/jguadagno/Contacts/commit/9f5c57778b65c5411c6224b839864829ff84879b)
+* We moved the configuration of the SQLite Database to the AppSetting file [Source](https://github.com/jguadagno/Contacts/commit/043f9b5da795aa0d00f715c9394cd3e7d43ba6e0)
+* Removed an unneeded TODO comment [Source](https://github.com/jguadagno/Contacts/commit/22d59eb5603de831c93f701e260c5faca08b70bf)
 
 * [Video](https://youtu.be/U4-l0IyqA6k)
 * Source [22d59eb](https://github.com/jguadagno/Contacts/commit/22d59eb5603de831c93f701e260c5faca08b70bf)
@@ -195,7 +195,12 @@ Built out the Contact List and Details Page
 * [Video](https://youtu.be/hXcKGbvsaWM)
 * Source [e6f70de](https://github.com/jguadagno/Contacts/commit/e6f70de7eba389321400dc674f8dca56993d96fc)
 
-***Next up*** Build out the Contact Edit Page
+Built out the Contact Edit page.  I also fixed a bug that had to with using the CreatedAtAction in the Contacts.Api. Blog Post coming soon.
+
+* [Video](https://youtu.be/OsNIjcnP40s)
+* Source [ef1f842](https://github.com/jguadagno/Contacts/commit/ef1f84225c6c1e6e75ef0ee6c339b77d9039ebe8)
+
+***Next up*** Build out the Contact Delete Page
 
 ### Others
 
