@@ -23,14 +23,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="14fd18ef-6fed-455b-81a5-09cb395c5fc7" name="Default Changelist" comment="Added video and code links for June 29th, 2020 stream">
-      <change afterPath="$PROJECT_DIR$/Contacts.WebUi/Views/Contact/Edit.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Contacts/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Contacts/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../outline.md" beforeDir="false" afterPath="$PROJECT_DIR$/../outline.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Contacts/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Contacts/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Contacts.Api/Controllers/ContactsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Contacts.Api/Controllers/ContactsController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Contacts.Data.Sqlite/SqliteDataStore.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Contacts.Data.Sqlite/SqliteDataStore.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Contacts.WebUi/Controllers/ContactController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Contacts.WebUi/Controllers/ContactController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Contacts.WebUi/Views/Contact/Details.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Contacts.WebUi/Views/Contact/Details.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Contacts.WebUi/Views/Contact/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Contacts.WebUi/Views/Contact/Index.cshtml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,6 +44,7 @@
     <setting file="file://$PROJECT_DIR$/Contacts.Api/Controllers/ContactsController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/ED30D12D-C294-4AAE-877F-8369C6255ED5/86/HttpProtocol.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/C072ADA3-420F-4E08-8493-043C3240EB59/24/ControllerBase.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/jguadagno/Projects/Contacts/src/Contacts.Data.Sqlite/SqliteDataStore.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/E407D4BA-C36C-45DA-982B-FD389A659F31/1F/TypePair.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Contacts.Data/ContactRepository.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/E407D4BA-C36C-45DA-982B-FD389A659F31/F/Mapper.cs" root0="SKIP_HIGHLIGHTING" />
@@ -94,6 +89,7 @@
     <setting file="file://$PROJECT_DIR$/Contacts.Data.Sqlite/Migrations/InitialCreate.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Contacts.Logic.Tests/ContactManagerTests.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Contacts.WebUi/Views/_ViewImports.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Users/jguadagno/Projects/Contacts/src/Contacts.WebUi/Controllers/ContactController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Contacts.WebUi/Views/_ViewStart.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Contacts.WebUi/Views/Home/Index.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Contacts.WebUi/Views/Home/Privacy.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
@@ -104,6 +100,7 @@
     <setting file="file://$PROJECT_DIR$/Contacts.WebUi/Models/ISettings.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Contacts.WebUi/Models/ErrorViewModel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Contacts.WebUi/Models/Settings.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Users/jguadagno/Projects/Contacts/src/Contacts.Api/Controllers/ContactsController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Contacts.WebUi/Properties/launchSettings.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Contacts.WebUi/Startup.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Contacts.Api/Properties/launchSettings.json" root0="FORCE_HIGHLIGHTING" />
@@ -163,7 +160,6 @@
         <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
         <option value="$PROJECT_DIR$/Contacts.WebUi/appsettings.Development.json" />
         <option value="$PROJECT_DIR$/Contacts.WebUi/Controllers/HomeController.cs" />
-        <option value="$PROJECT_DIR$/../outline.md" />
         <option value="$PROJECT_DIR$/Contacts.WebUi/Views/Contact/Details.cshtml" />
         <option value="$PROJECT_DIR$/Contacts.WebUi/Views/Shared/_Layout.cshtml" />
         <option value="$PROJECT_DIR$/Contacts.WebUi/Views/Contact/Index.cshtml" />
@@ -172,6 +168,7 @@
         <option value="$PROJECT_DIR$/Contacts.Data.Sqlite/SqliteDataStore.cs" />
         <option value="$PROJECT_DIR$/Contacts.WebUi/Startup.cs" />
         <option value="$PROJECT_DIR$/Contacts.Api/Controllers/ContactsController.cs" />
+        <option value="$PROJECT_DIR$/../outline.md" />
       </list>
     </option>
   </component>
@@ -578,7 +575,7 @@
       <workItem from="1592865762266" duration="2863000" />
       <workItem from="1592877827662" duration="6721000" />
       <workItem from="1593469523700" duration="6023000" />
-      <workItem from="1593486728763" duration="10854000" />
+      <workItem from="1593486728763" duration="11878000" />
     </task>
     <task id="LOCAL-00001" summary="Created the initial database with EF Core">
       <created>1588899122166</created>
@@ -685,7 +682,14 @@
       <option name="project" value="LOCAL" />
       <updated>1593480769865</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Added the Edit Contact views and functionality">
+      <created>1593615484241</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1593615484241</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -737,7 +741,8 @@
     <MESSAGE value="Added Video and Source details for the June 10th, 2020 stream" />
     <MESSAGE value="Added Video and Source for June 22nd, 2020 Stream" />
     <MESSAGE value="Added video and code links for June 29th, 2020 stream" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added video and code links for June 29th, 2020 stream" />
+    <MESSAGE value="Added the Edit Contact views and functionality" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added the Edit Contact views and functionality" />
   </component>
   <component name="WindowStateProjectService">
     <state x="424" y="104" key="#Contacts.Api:_IIS_Express" timestamp="1590708432716">
@@ -1083,13 +1088,13 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="100" y="123" width="1480" height="827" key="VCS.FileHistoryDialog/0.23.1680.1027/-629.-1777.3200.1777@0.23.1680.1027" timestamp="1592523991079" />
-    <state x="340" y="202" key="Vcs.Push.Dialog.v2" timestamp="1593480772740">
+    <state x="340" y="202" key="Vcs.Push.Dialog.v2" timestamp="1593615487011">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="84" y="-1366" key="Vcs.Push.Dialog.v2/0.0.1680.1050/-525.-1692.3008.1692@-525.-1692.3008.1692" timestamp="1591671572897" />
     <state x="340" y="202" key="Vcs.Push.Dialog.v2/0.0.1680.1050/-525.-1692.3008.1692@0.0.1680.1050" timestamp="1591833417230" />
     <state x="340" y="202" key="Vcs.Push.Dialog.v2/0.0.1680.1050/-607.-1800.3200.1800@0.0.1680.1050" timestamp="1589242013521" />
-    <state x="340" y="202" key="Vcs.Push.Dialog.v2/0.0.1680.1050/-629.-1800.3200.1800@0.0.1680.1050" timestamp="1593480772740" />
+    <state x="340" y="202" key="Vcs.Push.Dialog.v2/0.0.1680.1050/-629.-1800.3200.1800@0.0.1680.1050" timestamp="1593615487011" />
     <state x="2" y="-1348" key="Vcs.Push.Dialog.v2/0.23.1680.1027/-607.-1669.3008.1669@-607.-1669.3008.1669" timestamp="1589513007054" />
     <state width="840" height="550" key="XDebugger.FullValuePopup" timestamp="1593129570201">
       <screen x="0" y="0" width="1680" height="1050" />
