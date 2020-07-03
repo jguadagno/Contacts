@@ -20,15 +20,20 @@
     </tr>
     </thead>
     <tbody>
-        @foreach (var contact in Model)
-        {
-            <tr>
-                <td><a asp-controller="Contact" asp-action="Details" asp-route-id="@contact.ContactId">@contact.ContactId</a></td>
-                <td>@contact.FirstName</td>
-                <td>@contact.LastName</td>
-                <td>@contact.FullName</td>
-                <td><a asp-action="Edit" asp-controller="Contact" asp-route-id="@contact.ContactId" class="btn btn-primary">Edit</a> | </td>
-            </tr>
-        }
+    @foreach (var contact in Model)
+    {
+        <tr>
+            <td><a asp-controller="Contact" asp-action="Details" asp-route-id="@contact.ContactId">@contact.ContactId</a></td>
+            <td>@contact.FirstName</td>
+            <td>@contact.LastName</td>
+            <td>@contact.FullName</td>
+            <td>
+                <a asp-action="Edit" asp-controller="Contact" asp-route-id="@contact.ContactId" class="btn btn-primary">Edit</a>
+                <a asp-action="Delete" asp-controller="Contact" asp-route-id="@contact.ContactId" class="btn btn-danger">Delete</a> 
+            </td>
+        </tr>
+    }
     </tbody>
 </table>
+
+<a asp-action="Add" asp-controller="Contact" class="btn btn-primary">Add</a>

@@ -120,36 +120,64 @@ namespace Contacts.Data.Sqlite
 
         public bool DeleteContact(int contactId)
         {
-            var contact = _contactContext.Contacts.Find(contactId);
+            var contact =   _contactContext.Contacts
+                .Include(c => c.Addresses)
+                .Include(c => c.Phones)
+                .FirstOrDefault(c => c.ContactId == contactId);
+
+            if (contact == null)
+            {
+                return false;
+            }
+            
             _contactContext.Contacts.Remove(contact);
+            foreach (var contactAddress in contact.Addresses)
+            {
+                _contactContext.Addresses.Remove(contactAddress);
+            }
+
+            foreach (var contactPhone in contact.Phones)
+            {
+                _contactContext.Phones.Remove(contactPhone);
+            }
+
             return _contactContext.SaveChanges() != 0;
         }
         
         public async Task<bool> DeleteContactAsync(int contactId)
         {
-            var contact = await _contactContext.Contacts.FindAsync(contactId);
+            var contact =  await _contactContext.Contacts
+                    .Include(c => c.Addresses)
+                    .Include(c => c.Phones)
+                    .FirstOrDefaultAsync(c => c.ContactId == contactId);
+
+            if (contact == null)
+            {
+                return false;
+            }
+            
             _contactContext.Contacts.Remove(contact);
+            foreach (var contactAddress in contact.Addresses)
+            {
+                _contactContext.Addresses.Remove(contactAddress);
+            }
+
+            foreach (var contactPhone in contact.Phones)
+            {
+                _contactContext.Phones.Remove(contactPhone);
+            }
+
             return await _contactContext.SaveChangesAsync() != 0;
         }
         
         public bool DeleteContact(Contact contact)
         {
-            if (!ValidateDeleteContact(contact)) return false;
-            
-            var dbContact = _mapper.Map<Sqlite.Models.Contact>(contact);
-            
-            _contactContext.Contacts.Remove(dbContact);
-            return _contactContext.SaveChanges() != 0;
+            return ValidateDeleteContact(contact) && DeleteContact(contact.ContactId);
         }
         
         public async Task<bool> DeleteContactAsync(Contact contact)
         {
-            if (!ValidateDeleteContact(contact)) return false;
-            
-            var dbContact = _mapper.Map<Sqlite.Models.Contact>(contact);
-            
-            _contactContext.Contacts.Remove(dbContact);
-            return await _contactContext.SaveChangesAsync() != 0;
+            return ValidateDeleteContact(contact) && await DeleteContactAsync(contact.ContactId);
         }
 
         private static bool ValidateDeleteContact(Contact contact)

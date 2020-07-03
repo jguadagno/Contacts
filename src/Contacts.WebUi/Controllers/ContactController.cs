@@ -43,5 +43,30 @@ namespace Contacts.WebUi.Controllers
             var result = await _contactService.SaveContactAsync(contact);
             return RedirectToAction("Details", new {id = contact.ContactId});
         }
+
+        [HttpGet]
+        public async Task<IActionResult> Delete(int id)
+        {
+            var result = await _contactService.DeleteContactAsync(id);
+
+            if (result)
+            {
+                return RedirectToAction("Index");
+            }
+
+            return View();
+        }
+        
+        public async Task<IActionResult> Add()
+        {
+            return View(new Contacts.Domain.Models.Contact());
+        }
+        
+        [HttpPost]
+        public async Task<RedirectToActionResult> Add(Domain.Models.Contact contact)
+        {
+            var savedContact = await _contactService.SaveContactAsync(contact);
+            return RedirectToAction("Details", new {id = savedContact.ContactId});
+        }
     }
 }

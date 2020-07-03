@@ -200,7 +200,12 @@ Built out the Contact Edit page.  I also fixed a bug that had to with using the 
 * [Video](https://youtu.be/OsNIjcnP40s)
 * Source [ef1f842](https://github.com/jguadagno/Contacts/commit/ef1f84225c6c1e6e75ef0ee6c339b77d9039ebe8)
 
-***Next up*** Build out the Contact Delete Page
+Built out the Contact Delete Page
+
+Built out the Contact Add Page
+
+* [Video]()
+* Source []()
 
 ### Others
 

@@ -1,0 +1,51 @@
+@model Contacts.Domain.Models.Contact
+
+@{
+    ViewData["Title"] = "Add - " + @Model.FullName;
+}
+
+<h1>Add a new contact</h1>
+<p class="lead">
+Enter all of the awesome details about the contact.
+</p>
+
+<form asp-action="Add">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <input type="hidden" asp-for="ContactId" />
+    <div class="form-group">
+        <label class="control-label">First Name</label>
+        <input asp-for="FirstName" class="form-control" />
+        <span asp-validation-for="FirstName" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label class="control-label">Middle Name</label>
+        <input asp-for="MiddleName" class="form-control" />
+        <span asp-validation-for="MiddleName" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label class="control-label">Last Name</label>
+        <input asp-for="LastName" class="form-control" />
+        <span asp-validation-for="LastName" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label class="control-label">Email</label>
+        <input asp-for="EmailAddress" type="email" class="form-control" />
+        <span asp-validation-for="EmailAddress"  class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label class="control-label">Birthday</label>
+        <input asp-for="Birthday" class="form-control" />
+        <span asp-validation-for="Birthday" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label class="control-label">Anniversary</label>
+        <input asp-for="Anniversary" class="form-control" />
+        <span asp-validation-for="Anniversary" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label class="control-label">Url for a Picture of the Contact</label>
+        <input asp-for="ImageUrl" class="form-control" />
+        <span asp-validation-for="ImageUrl" class="text-danger"></span>
+    </div>
+    <input type="submit" class="btn btn-primary" value="Save">
+</form>

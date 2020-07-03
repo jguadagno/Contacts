@@ -59,7 +59,11 @@ namespace Contacts.WebUi.Services
                     $"Invalid status code in the HttpResponseMessage: {response.StatusCode}.");
             
             var content = await response.Content.ReadAsStringAsync();
-            contact = JsonSerializer.Deserialize<Domain.Models.Contact>(content);
+            var options = new JsonSerializerOptions
+            {
+                PropertyNameCaseInsensitive = true,
+            };
+            contact = JsonSerializer.Deserialize<Domain.Models.Contact>(content, options);
             return contact;
         }
 
@@ -73,7 +77,7 @@ namespace Contacts.WebUi.Services
             await SetRequestHeader(Domain.Permissions.Contacts.Delete);
             var url = $"{_settings.ApiRootUri}contacts/{contactId}";
             var response = await _httpClient.DeleteAsync(url);
-            return response.StatusCode != HttpStatusCode.NoContent;
+            return response.StatusCode == HttpStatusCode.NoContent;
         }
 
         public async Task<Domain.Models.Phone> GetContactPhoneAsync(int contactId, int phoneId)
