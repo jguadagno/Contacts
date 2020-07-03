@@ -204,8 +204,8 @@ Built out the Contact Delete Page
 
 Built out the Contact Add Page
 
-* [Video]()
-* Source []()
+* [Video](https://youtu.be/9YeOythkTlE)
+* Source [e1f15c7](https://github.com/jguadagno/Contacts/commit/e1f15c79b795b0da2b447d60f7537878c5d5d604)
 
 ### Others
 
