@@ -1,11 +1,9 @@
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Contacts.WebUi.Services;
 
 namespace Contacts.WebUi.Controllers
 {
-    [Authorize]
     public class ContactController : Controller
     {
         private readonly IContactService _contactService;
@@ -40,8 +38,8 @@ namespace Contacts.WebUi.Controllers
         [HttpPost]
         public async Task<RedirectToActionResult> Edit(Domain.Models.Contact contact)
         {
-            var result = await _contactService.SaveContactAsync(contact);
-            return RedirectToAction("Details", new {id = contact.ContactId});
+            var savedContact = await _contactService.SaveContactAsync(contact);
+            return RedirectToAction("Details", new {id = savedContact.ContactId});
         }
 
         [HttpGet]
@@ -57,7 +55,7 @@ namespace Contacts.WebUi.Controllers
             return View();
         }
         
-        public async Task<IActionResult> Add()
+        public IActionResult Add()
         {
             return View(new Contacts.Domain.Models.Contact());
         }
