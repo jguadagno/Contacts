@@ -207,7 +207,20 @@ Built out the Contact Add Page
 * [Video](https://youtu.be/9YeOythkTlE)
 * Source [e1f15c7](https://github.com/jguadagno/Contacts/commit/e1f15c79b795b0da2b447d60f7537878c5d5d604)
 
-### Others
+Cleaned up the User Interface by adding some [Icons](https://icons.getbootstrap.com/) from the [Bootstrap UI](https://www.getbootstrap.com/) library.
+
+* [Video]()
+* Source []()
+
+## Migrate to SQL Server
+
+Next up, we will the database from SQLite to Microsoft SQL Server
+
+##  Move to the Cloud
+
+We'll move our application from our local machine to the Cloud
+
+## Future UI Clients
 
 Here are some other client technologies that we can use.
 Remaining Options

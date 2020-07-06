@@ -17,10 +17,29 @@
         <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
         <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       </Content>
+      <Content Include="node_modules\bootstrap-icons\bootstrap-icons.svg" />
+      <Content Remove="node_modules\**" />
+      <Content Remove="wwwroot\img\bootstrap-icons.svg" />
     </ItemGroup>
 
     <ItemGroup>
       <ProjectReference Include="..\Contacts.Domain\Contacts.Domain.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Remove="node_modules\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <EmbeddedResource Remove="node_modules\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="node_modules\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="wwwroot\img" />
     </ItemGroup>
 
 </Project>
