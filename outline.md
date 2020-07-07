@@ -209,8 +209,8 @@ Built out the Contact Add Page
 
 Cleaned up the User Interface by adding some [Icons](https://icons.getbootstrap.com/) from the [Bootstrap UI](https://www.getbootstrap.com/) library.
 
-* [Video]()
-* Source []()
+* [Video](https://youtu.be/N0Z96Al4ICk)
+* Source [8701a32](https://github.com/jguadagno/Contacts/commit/8701a324a1605cb8f931b108960e7b8c2d784adf)
 
 ## Migrate to SQL Server
 
