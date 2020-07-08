@@ -214,7 +214,10 @@ Cleaned up the User Interface by adding some [Icons](https://icons.getbootstrap.
 
 ## Migrate to SQL Server
 
-Next up, we will the database from SQLite to Microsoft SQL Server
+We start the database migration from SQLite to Microsoft SQL Server
+
+* [Video](https://youtu.be/ghN2dHanwCU)
+* No code for this
 
 ##  Move to the Cloud
 
