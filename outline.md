@@ -216,10 +216,17 @@ Cleaned up the User Interface by adding some [Icons](https://icons.getbootstrap.
 
 We start the database migration from SQLite to Microsoft SQL Server
 
+Part I: Move create the database and copy the data
+
 * [Video](https://youtu.be/ghN2dHanwCU)
 * No code for this
 
-##  Move to the Cloud
+Part II: Create the `Contacts.Data.SqlServer` data store
+
+* [Video](https://youtu.be/VQXF1GmkvrY)
+* Source [4c10c56](https://github.com/jguadagno/Contacts/commit/4c10c56875077097b20b604197b200c4cabf086b)
+
+## Move to the Cloud
 
 We'll move our application from our local machine to the Cloud
 
