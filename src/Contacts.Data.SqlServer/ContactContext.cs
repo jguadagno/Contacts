@@ -1,9 +1,9 @@
 ﻿using System.Diagnostics.CodeAnalysis;
 using Microsoft.EntityFrameworkCore;
-using Contacts.Data.Sqlite.Models;
+using Contacts.Data.SqlServer.Models;
 using Microsoft.Extensions.Configuration;
 
-namespace Contacts.Data.Sqlite
+namespace Contacts.Data.SqlServer
 {
     [ExcludeFromCodeCoverage]
     public class ContactContext : DbContext
@@ -20,6 +20,6 @@ namespace Contacts.Data.Sqlite
         public DbSet<PhoneType> PhoneTypes { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder options)
-            => options.UseSqlite(_configuration.GetConnectionString("ContactsDatabaseSqlite"));
+            => options.UseSqlServer(_configuration.GetConnectionString("ContactsDatabaseSqlServer"));
     }
 }

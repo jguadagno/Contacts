@@ -6,6 +6,7 @@ using System.Reflection;
 using System.Threading.Tasks;
 using Contacts.Data;
 using Contacts.Data.Sqlite;
+using Contacts.Data.SqlServer;
 using Contacts.Domain.Interfaces;
 using Contacts.Logic;
 using Microsoft.AspNetCore.Builder;
@@ -61,7 +62,8 @@ namespace Contacts.Api
                 c.IncludeXmlComments(xmlPath);
             });
             
-            services.AddTransient<IContactDataStore, SqliteDataStore>();
+            services.AddTransient<IContactDataStore, SqlServerDataStore>();
+            //services.AddTransient<IContactDataStore, SqliteDataStore>();
             services.AddTransient<IContactRepository, ContactRepository>();
             services.AddTransient<IContactManager, ContactManager>();
         }

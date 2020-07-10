@@ -88,6 +88,27 @@
         </e>
         <e p="SqliteDataStore.cs" t="Include" />
       </e>
+      <e p="Contacts.Data.SqlServer" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="ContactContext.cs" t="Include" />
+        <e p="Contacts.Data.SqlServer.csproj" t="IncludeRecursive" />
+        <e p="Models" t="Include">
+          <e p="Address.cs" t="Include" />
+          <e p="AddressType.cs" t="Include" />
+          <e p="Contact.cs" t="Include" />
+          <e p="ContactProfile.cs" t="Include" />
+          <e p="Phone.cs" t="Include" />
+          <e p="PhoneType.cs" t="Include" />
+        </e>
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp3.1" t="Include">
+              <e p="Contacts.Data.SqlServer.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="SqliteDataStore.cs" t="Include" />
+      </e>
       <e p="Contacts.Domain" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
         <e p="Contacts.Domain.csproj" t="IncludeRecursive" />
@@ -153,7 +174,6 @@
           <e p="ISettings.cs" t="Include" />
           <e p="Settings.cs" t="Include" />
         </e>
-        <e p="node_modules/bootstrap-icons" t="IncludeRecursive" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netcoreapp3.1" t="Include">
@@ -163,7 +183,6 @@
           </e>
         </e>
         <e p="package-lock.json" t="Include" />
-        <e p="package.json" t="Include" />
         <e p="Program.cs" t="Include" />
         <e p="Properties" t="Include">
           <e p="launchSettings.json" t="Include" />
@@ -200,9 +219,7 @@
             <e p="site.css" t="Include" />
           </e>
           <e p="favicon.ico" t="Include" />
-          <e p="img" t="Include">
-            <e p="bootstrap-icons.svg" t="Include" />
-          </e>
+          <e p="img" t="Include" />
           <e p="js" t="Include">
             <e p="site.js" t="Include" />
           </e>
