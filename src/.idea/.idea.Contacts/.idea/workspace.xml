@@ -23,23 +23,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="14fd18ef-6fed-455b-81a5-09cb395c5fc7" name="Default Changelist" comment="Added video and code links for June 29th, 2020 stream">
-      <change afterPath="$PROJECT_DIR$/Contacts.Data.SqlServer/ContactContext.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Contacts.Data.SqlServer/Models/Address.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Contacts.Data.SqlServer/Models/AddressType.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Contacts.Data.SqlServer/Models/Contact.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Contacts.Data.SqlServer/Models/ContactProfile.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Contacts.Data.SqlServer/Models/Phone.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Contacts.Data.SqlServer/Models/PhoneType.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Contacts.Data.SqlServer/SqliteDataStore.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Contacts/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Contacts/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../outline.md" beforeDir="false" afterPath="$PROJECT_DIR$/../outline.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Contacts/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Contacts/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Contacts/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Contacts/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Contacts/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Contacts/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Contacts.Api/Contacts.Api.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Contacts.Api/Contacts.Api.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Contacts.Api/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Contacts.Api/Startup.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Contacts.Api/appsettings.Development.json" beforeDir="false" afterPath="$PROJECT_DIR$/Contacts.Api/appsettings.Development.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Contacts.Data.Sqlite/ContactContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Contacts.Data.Sqlite/ContactContext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Contacts.sln" beforeDir="false" afterPath="$PROJECT_DIR$/Contacts.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Contacts.Api/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/Contacts.Api/appsettings.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -148,7 +137,6 @@
         <option value="$PROJECT_DIR$/Contacts.Logic.Tests/ContactManagerTests.cs" />
         <option value="$PROJECT_DIR$/Contacts-Sample-Requests.http" />
         <option value="$PROJECT_DIR$/Contacts.Api/Contacts.Api.csproj" />
-        <option value="$PROJECT_DIR$/Contacts.Api/appsettings.json" />
         <option value="$PROJECT_DIR$/Contacts.Domain/Permissions/Contacts.cs" />
         <option value="$PROJECT_DIR$/Contacts.Domain/Interfaces/IContactDataStore.cs" />
         <option value="$PROJECT_DIR$/Contacts.Domain/Interfaces/IContactRepository.cs" />
@@ -181,7 +169,6 @@
         <option value="$PROJECT_DIR$/Contacts.WebUi/Views/Contact/Details.cshtml" />
         <option value="$PROJECT_DIR$/Contacts.WebUi/Views/Contact/Add.cshtml" />
         <option value="$PROJECT_DIR$/Contacts.WebUi/Views/Contact/Edit.cshtml" />
-        <option value="$PROJECT_DIR$/../outline.md" />
         <option value="$PROJECT_DIR$/Contacts.Data.SqlServer/Class1.cs" />
         <option value="$PROJECT_DIR$/Contacts.Data.SqlServer/Models/Address.cs" />
         <option value="$PROJECT_DIR$/Contacts.Data.SqlServer/Models/AddressType.cs" />
@@ -190,12 +177,14 @@
         <option value="$PROJECT_DIR$/Contacts.Data.SqlServer/Models/PhoneType.cs" />
         <option value="$PROJECT_DIR$/Contacts.Data.SqlServer/ContactContext.cs" />
         <option value="$PROJECT_DIR$/Contacts.Data.Sqlite/ContactContext.cs" />
-        <option value="$PROJECT_DIR$/Contacts.Api/appsettings.Development.json" />
         <option value="$PROJECT_DIR$/Contacts.Data.SqlServer/SqliteDataStore.cs" />
-        <option value="$PROJECT_DIR$/Contacts.Api/Startup.cs" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/b11e6f26-9df6-4f33-8186-877876858ef2/console.sql" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/cb51efab-b2c6-4d2c-a317-d97aa0938ddd/console.sql" />
         <option value="$PROJECT_DIR$/Contacts.Data.SqlServer/Models/Contact.cs" />
+        <option value="$PROJECT_DIR$/Contacts.Api/appsettings.Development.json" />
+        <option value="$PROJECT_DIR$/Contacts.Api/Startup.cs" />
+        <option value="$PROJECT_DIR$/Contacts.Api/appsettings.json" />
+        <option value="$PROJECT_DIR$/../outline.md" />
       </list>
     </option>
   </component>
@@ -221,6 +210,7 @@
     <property name="TERMINAL_CUSTOM_COMMANDS_GOT_IT" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="HTTP Request" />
+    <property name="database.data.extractors.current.export.id" value="SQL Inserts" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
@@ -466,7 +456,39 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected=".NET Launch Settings Profile.Launch Contacts.API">
+  <component name="RunManager" selected="Azure - Publish Web App.Publish Contacts.Api to Azure">
+    <configuration name="Publish Contacts.Api to Azure" type="AzureDotNetWebAppPublish" factoryName="Azure Web App" temporary="true">
+      <option name="AZURE_WEB_APP_PROJECT" value="$PROJECT_DIR$/Contacts.Api/Contacts.Api.csproj" />
+      <option name="AZURE_WEB_APP_SUBSCRIPTION_ID" value="ee7c6464-c10f-4b39-becd-e9e002b306bc" />
+      <option name="AZURE_WEB_APP_IS_CREATE_APP" value="0" />
+      <option name="AZURE_WEB_APP_ID" value="/subscriptions/ee7c6464-c10f-4b39-becd-e9e002b306bc/resourceGroups/CodingWithJoeG/providers/Microsoft.Web/sites/cwjg-contacts-api" />
+      <option name="AZURE_WEB_APP_NAME" value="" />
+      <option name="AZURE_WEB_APP_IS_CREATE_RESOURCE_GROUP" value="0" />
+      <option name="AZURE_WEB_APP_RESOURCE_GROUP_NAME" value="" />
+      <option name="AZURE_WEB_APP_OPERATING_SYSTEM" value="WINDOWS" />
+      <option name="AZURE_WEB_APP_IS_CREATE_APP_SERVICE_PLAN" value="0" />
+      <option name="AZURE_WEB_APP_SERVICE_PLAN_ID" value="/subscriptions/ee7c6464-c10f-4b39-becd-e9e002b306bc/resourceGroups/CodingWithJoeG/providers/Microsoft.Web/serverfarms/Contacts-Web" />
+      <option name="AZURE_WEB_APP_SERVICE_PLAN_NAME" value="" />
+      <option name="AZURE_WEB_APP_LOCATION" value="eastus" />
+      <option name="AZURE_WEB_APP_PRICING_TIER" value="B1" />
+      <option name="AZURE_WEB_APP_NET_FRAMEWORK" value="4.7" />
+      <option name="AZURE_WEB_APP_NET_CORE_RUNTIME" value="DOTNETCORE 2.1" />
+      <option name="AZURE_SQL_DATABASE_SUBSCRIPTION_ID" value="ee7c6464-c10f-4b39-becd-e9e002b306bc" />
+      <option name="AZURE_SQL_DATABASE_IS_ENABLED" value="0" />
+      <option name="AZURE_SQL_DATABASE_CONNECTION_STRING_NAME" value="ContactsDatabaseSqlServer" />
+      <option name="AZURE_SQL_DATABASE_IS_CREATE" value="0" />
+      <option name="AZURE_SQL_DATABASE_ID" value="/subscriptions/ee7c6464-c10f-4b39-becd-e9e002b306bc/resourceGroups/CodingWithJoeG/providers/Microsoft.Sql/servers/codingwithjoeg-contacts/databases/Contacts" />
+      <option name="AZURE_SQL_DATABASE_NAME" value="" />
+      <option name="AZURE_SQL_DATABASE_IS_CREATE_RESOURCE_GROUP" value="0" />
+      <option name="AZURE_SQL_DATABASE_RESOURCE_GROUP_NAME" value="" />
+      <option name="AZURE_SQL_DATABASE_IS_CREATE_SQL_SERVER" value="0" />
+      <option name="AZURE_SQL_DATABASE_SQL_SERVER_ID" value="" />
+      <option name="AZURE_SQL_DATABASE_SQL_SERVER_NAME" value="" />
+      <option name="AZURE_SQL_DATABASE_SQL_SERVER_ADMIN_LOGIN" value="jguadagno" />
+      <option name="AZURE_SQL_DATABASE_LOCATION" value="eastus" />
+      <option name="AZURE_SQL_DATABASE_COLLATION" value="SQL_Latin1_General_CP1_CI_AS" />
+      <method v="2" />
+    </configuration>
     <configuration name="Contacts.Console" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
       <option name="PROGRAM_PARAMETERS" value="" />
@@ -485,16 +507,7 @@
         <option name="Build" />
       </method>
     </configuration>
-    <configuration name="Contacts-Sample-Requests#1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$PROJECT_DIR$/Contacts-Sample-Requests.http" runType="Run single request">
-      <method v="2" />
-    </configuration>
-    <configuration name="Contacts-Sample-Requests#10" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$PROJECT_DIR$/Contacts-Sample-Requests.http" index="10" runType="Run single request">
-      <method v="2" />
-    </configuration>
     <configuration name="Contacts-Sample-Requests#2" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$PROJECT_DIR$/Contacts-Sample-Requests.http" index="2" runType="Run single request">
-      <method v="2" />
-    </configuration>
-    <configuration name="Contacts-Sample-Requests#5" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$PROJECT_DIR$/Contacts-Sample-Requests.http" index="5" runType="Run single request">
       <method v="2" />
     </configuration>
     <configuration name="Contacts.Api: IIS Express" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
@@ -563,18 +576,14 @@
       <item itemvalue=".NET Launch Settings Profile.Contacts.WebUi: IIS Express" />
       <item itemvalue=".NET Launch Settings Profile.Contacts.WebUi" />
       <item itemvalue=".NET Project.Contacts.Console" />
-      <item itemvalue="HTTP Request.Contacts-Sample-Requests#1" />
-      <item itemvalue="HTTP Request.Contacts-Sample-Requests#5" />
-      <item itemvalue="HTTP Request.Contacts-Sample-Requests#10" />
+      <item itemvalue="Azure - Publish Web App.Publish Contacts.Api to Azure" />
       <item itemvalue="HTTP Request.Contacts-Sample-Requests#2" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Azure - Publish Web App.Publish Contacts.Api to Azure" />
         <item itemvalue=".NET Launch Settings Profile.Contacts.WebUi" />
         <item itemvalue="HTTP Request.Contacts-Sample-Requests#2" />
-        <item itemvalue="HTTP Request.Contacts-Sample-Requests#5" />
-        <item itemvalue="HTTP Request.Contacts-Sample-Requests#10" />
-        <item itemvalue="HTTP Request.Contacts-Sample-Requests#1" />
       </list>
     </recent_temporary>
   </component>
@@ -616,7 +625,10 @@
       <workItem from="1593787245571" duration="1638000" />
       <workItem from="1593789049315" duration="2816000" />
       <workItem from="1594075533299" duration="2530000" />
-      <workItem from="1594334855131" duration="4450000" />
+      <workItem from="1594334855131" duration="4995000" />
+      <workItem from="1594659559193" duration="1004000" />
+      <workItem from="1594680469407" duration="1530000" />
+      <workItem from="1594937965420" duration="2196000" />
     </task>
     <task id="LOCAL-00001" summary="Created the initial database with EF Core">
       <created>1588899122166</created>
@@ -751,7 +763,14 @@
       <option name="project" value="LOCAL" />
       <updated>1593791554925</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Added the SQL Server data source">
+      <created>1594340652380</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1594340652380</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -806,7 +825,8 @@
     <MESSAGE value="Added the Edit Contact views and functionality" />
     <MESSAGE value="Added the video and commit links for June 30th, 2020 stream." />
     <MESSAGE value="Cleaned up some of the authentication functionality" />
-    <option name="LAST_COMMIT_MESSAGE" value="Cleaned up some of the authentication functionality" />
+    <MESSAGE value="Added the SQL Server data source" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added the SQL Server data source" />
   </component>
   <component name="WindowStateProjectService">
     <state x="424" y="104" key="#Contacts.Api:_IIS_Express" timestamp="1590708432716">
@@ -817,12 +837,16 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="479" y="318" key="#Notifications/0.0.1680.1050/-629.-1800.3200.1800@0.0.1680.1050" timestamp="1593479661810" />
-    <state x="407" y="190" width="1273" height="690" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1594166082787">
+    <state x="340" y="87" key="#Plugins" timestamp="1594943406741">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="340" y="87" key="#Plugins/0.0.1680.1050/-629.-1800.3200.1800@0.0.1680.1050" timestamp="1594943406741" />
+    <state x="183" y="112" width="1079" height="806" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1594951657892">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="440" y="190" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1680.1050/-126.-1800.3200.1800@0.0.1680.1050" timestamp="1591935653658" />
     <state x="407" y="190" width="1273" height="690" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1680.1050/-607.-1800.3200.1800@0.0.1680.1050" timestamp="1593788939774" />
-    <state x="407" y="190" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1680.1050/-629.-1800.3200.1800@0.0.1680.1050" timestamp="1594166082787" />
+    <state x="183" y="112" width="1079" height="806" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1680.1050/-629.-1800.3200.1800@0.0.1680.1050" timestamp="1594951657892" />
     <state x="440" y="190" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1590708566709" />
     <state x="410" y="139" width="1046" height="705" key="#xdebugger.evaluate" timestamp="1593732880031">
       <screen x="0" y="0" width="1680" height="1050" />
@@ -839,7 +863,7 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="100" y="100" width="1480" height="850" key="DiffContextDialog/0.23.1680.1027/-629.-1777.3200.1777@0.23.1680.1027" timestamp="1594076561024" />
-    <state width="1626" height="249" key="GridCell.Tab.0.bottom" timestamp="1594339791422">
+    <state width="1626" height="249" key="GridCell.Tab.0.bottom" timestamp="1594951665370">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state width="819" height="266" key="GridCell.Tab.0.bottom/0.0.1680.1050/-126.-1800.3200.1800@0.0.1680.1050" timestamp="1591937966026" />
@@ -849,7 +873,7 @@
     <state width="1626" height="249" key="GridCell.Tab.0.bottom/0.0.1680.1050/-607.-1777.3200.1777@0.0.1680.1050" timestamp="1593791371708" />
     <state width="1626" height="403" key="GridCell.Tab.0.bottom/0.0.1680.1050/-607.-1800.3200.1800@0.0.1680.1050" timestamp="1593793941875" />
     <state width="1626" height="249" key="GridCell.Tab.0.bottom/0.0.1680.1050/-629.-1777.3200.1777@0.0.1680.1050" timestamp="1594337544613" />
-    <state width="1626" height="249" key="GridCell.Tab.0.bottom/0.0.1680.1050/-629.-1800.3200.1800@0.0.1680.1050" timestamp="1594339791422" />
+    <state width="1626" height="249" key="GridCell.Tab.0.bottom/0.0.1680.1050/-629.-1800.3200.1800@0.0.1680.1050" timestamp="1594951665370" />
     <state width="1638" height="266" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1591829088886" />
     <state width="819" height="252" key="GridCell.Tab.0.bottom/0.23.1680.1027/-126.-1777.3200.1777@-126.-1777.3200.1777" timestamp="1592006742709" />
     <state width="819" height="252" key="GridCell.Tab.0.bottom/0.23.1680.1027/-126.-1777.3200.1777@0.23.1680.1027" timestamp="1591987246376" />
@@ -857,7 +881,7 @@
     <state width="1628" height="282" key="GridCell.Tab.0.bottom/0.23.1680.1027/-607.-1669.3008.1669@-607.-1669.3008.1669" timestamp="1589513625212" />
     <state width="2377" height="372" key="GridCell.Tab.0.bottom/0.23.1680.1027/-607.-1777.3200.1777@-607.-1777.3200.1777" timestamp="1593231855069" />
     <state width="1626" height="249" key="GridCell.Tab.0.bottom/0.23.1680.1027/-629.-1777.3200.1777@0.23.1680.1027" timestamp="1594339633844" />
-    <state width="1626" height="249" key="GridCell.Tab.0.center" timestamp="1594339791420">
+    <state width="1626" height="249" key="GridCell.Tab.0.center" timestamp="1594951665368">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state width="819" height="266" key="GridCell.Tab.0.center/0.0.1680.1050/-126.-1800.3200.1800@0.0.1680.1050" timestamp="1591937966025" />
@@ -867,7 +891,7 @@
     <state width="1626" height="249" key="GridCell.Tab.0.center/0.0.1680.1050/-607.-1777.3200.1777@0.0.1680.1050" timestamp="1593791371706" />
     <state width="1626" height="403" key="GridCell.Tab.0.center/0.0.1680.1050/-607.-1800.3200.1800@0.0.1680.1050" timestamp="1593793941873" />
     <state width="1626" height="249" key="GridCell.Tab.0.center/0.0.1680.1050/-629.-1777.3200.1777@0.0.1680.1050" timestamp="1594337544609" />
-    <state width="1626" height="249" key="GridCell.Tab.0.center/0.0.1680.1050/-629.-1800.3200.1800@0.0.1680.1050" timestamp="1594339791420" />
+    <state width="1626" height="249" key="GridCell.Tab.0.center/0.0.1680.1050/-629.-1800.3200.1800@0.0.1680.1050" timestamp="1594951665368" />
     <state width="1638" height="266" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1591829088885" />
     <state width="819" height="252" key="GridCell.Tab.0.center/0.23.1680.1027/-126.-1777.3200.1777@-126.-1777.3200.1777" timestamp="1592006742708" />
     <state width="819" height="252" key="GridCell.Tab.0.center/0.23.1680.1027/-126.-1777.3200.1777@0.23.1680.1027" timestamp="1591987246376" />
@@ -875,7 +899,7 @@
     <state width="1628" height="282" key="GridCell.Tab.0.center/0.23.1680.1027/-607.-1669.3008.1669@-607.-1669.3008.1669" timestamp="1589513625212" />
     <state width="2377" height="372" key="GridCell.Tab.0.center/0.23.1680.1027/-607.-1777.3200.1777@-607.-1777.3200.1777" timestamp="1593231855068" />
     <state width="1626" height="249" key="GridCell.Tab.0.center/0.23.1680.1027/-629.-1777.3200.1777@0.23.1680.1027" timestamp="1594339633842" />
-    <state width="1626" height="249" key="GridCell.Tab.0.left" timestamp="1594339791419">
+    <state width="1626" height="249" key="GridCell.Tab.0.left" timestamp="1594951665366">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state width="819" height="266" key="GridCell.Tab.0.left/0.0.1680.1050/-126.-1800.3200.1800@0.0.1680.1050" timestamp="1591937966024" />
@@ -886,7 +910,7 @@
     <state width="1626" height="403" key="GridCell.Tab.0.left/0.0.1680.1050/-607.-1800.3200.1800@0.0.1680.1050" timestamp="1593793941872" />
     <state width="1626" height="249" key="GridCell.Tab.0.left/0.0.1680.1050/-629.-1777.3200.1777@0.0.1680.1050" timestamp="1594337544607" />
     <state width="1626" height="249" key="GridCell.Tab.0.left/0.0.1680.1050/-629.-1777.3200.1777@0.23.1680.1027" timestamp="1593561562631" />
-    <state width="1626" height="249" key="GridCell.Tab.0.left/0.0.1680.1050/-629.-1800.3200.1800@0.0.1680.1050" timestamp="1594339791419" />
+    <state width="1626" height="249" key="GridCell.Tab.0.left/0.0.1680.1050/-629.-1800.3200.1800@0.0.1680.1050" timestamp="1594951665366" />
     <state width="1638" height="266" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1591829088884" />
     <state width="819" height="252" key="GridCell.Tab.0.left/0.23.1680.1027/-126.-1777.3200.1777@-126.-1777.3200.1777" timestamp="1592006742708" />
     <state width="819" height="252" key="GridCell.Tab.0.left/0.23.1680.1027/-126.-1777.3200.1777@0.23.1680.1027" timestamp="1591987246375" />
@@ -894,7 +918,7 @@
     <state width="1628" height="282" key="GridCell.Tab.0.left/0.23.1680.1027/-607.-1669.3008.1669@-607.-1669.3008.1669" timestamp="1589513625211" />
     <state width="2377" height="372" key="GridCell.Tab.0.left/0.23.1680.1027/-607.-1777.3200.1777@-607.-1777.3200.1777" timestamp="1593231855068" />
     <state width="1626" height="249" key="GridCell.Tab.0.left/0.23.1680.1027/-629.-1777.3200.1777@0.23.1680.1027" timestamp="1594339633841" />
-    <state width="1626" height="249" key="GridCell.Tab.0.right" timestamp="1594339791421">
+    <state width="1626" height="249" key="GridCell.Tab.0.right" timestamp="1594951665369">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state width="819" height="266" key="GridCell.Tab.0.right/0.0.1680.1050/-126.-1800.3200.1800@0.0.1680.1050" timestamp="1591937966025" />
@@ -904,7 +928,7 @@
     <state width="1626" height="249" key="GridCell.Tab.0.right/0.0.1680.1050/-607.-1777.3200.1777@0.0.1680.1050" timestamp="1593791371707" />
     <state width="1626" height="403" key="GridCell.Tab.0.right/0.0.1680.1050/-607.-1800.3200.1800@0.0.1680.1050" timestamp="1593793941873" />
     <state width="1626" height="249" key="GridCell.Tab.0.right/0.0.1680.1050/-629.-1777.3200.1777@0.0.1680.1050" timestamp="1594337544611" />
-    <state width="1626" height="249" key="GridCell.Tab.0.right/0.0.1680.1050/-629.-1800.3200.1800@0.0.1680.1050" timestamp="1594339791421" />
+    <state width="1626" height="249" key="GridCell.Tab.0.right/0.0.1680.1050/-629.-1800.3200.1800@0.0.1680.1050" timestamp="1594951665369" />
     <state width="1638" height="266" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1591829088886" />
     <state width="819" height="252" key="GridCell.Tab.0.right/0.23.1680.1027/-126.-1777.3200.1777@-126.-1777.3200.1777" timestamp="1592006742709" />
     <state width="819" height="252" key="GridCell.Tab.0.right/0.23.1680.1027/-126.-1777.3200.1777@0.23.1680.1027" timestamp="1591987246376" />
@@ -1163,13 +1187,13 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="100" y="123" width="1480" height="827" key="VCS.FileHistoryDialog/0.23.1680.1027/-629.-1777.3200.1777@0.23.1680.1027" timestamp="1592523991079" />
-    <state x="340" y="202" key="Vcs.Push.Dialog.v2" timestamp="1593791557055">
+    <state x="340" y="202" key="Vcs.Push.Dialog.v2" timestamp="1594340694298">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="84" y="-1366" key="Vcs.Push.Dialog.v2/0.0.1680.1050/-525.-1692.3008.1692@-525.-1692.3008.1692" timestamp="1591671572897" />
     <state x="340" y="202" key="Vcs.Push.Dialog.v2/0.0.1680.1050/-525.-1692.3008.1692@0.0.1680.1050" timestamp="1591833417230" />
     <state x="340" y="202" key="Vcs.Push.Dialog.v2/0.0.1680.1050/-607.-1800.3200.1800@0.0.1680.1050" timestamp="1593791557055" />
-    <state x="340" y="202" key="Vcs.Push.Dialog.v2/0.0.1680.1050/-629.-1800.3200.1800@0.0.1680.1050" timestamp="1593616474005" />
+    <state x="340" y="202" key="Vcs.Push.Dialog.v2/0.0.1680.1050/-629.-1800.3200.1800@0.0.1680.1050" timestamp="1594340694298" />
     <state x="2" y="-1348" key="Vcs.Push.Dialog.v2/0.23.1680.1027/-607.-1669.3008.1669@-607.-1669.3008.1669" timestamp="1589513007054" />
     <state width="840" height="550" key="XDebugger.FullValuePopup" timestamp="1593732937587">
       <screen x="0" y="0" width="1680" height="1050" />

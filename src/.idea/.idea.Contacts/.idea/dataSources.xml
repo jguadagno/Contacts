@@ -13,5 +13,12 @@
       <jdbc-driver>com.microsoft.sqlserver.jdbc.SQLServerDriver</jdbc-driver>
       <jdbc-url>jdbc:sqlserver://localhost;database=Contacts</jdbc-url>
     </data-source>
+    <data-source source="LOCAL" name="Azure SQL Database - codingwithjoeg-contacts - Contacts" uuid="b382c822-49fd-4de6-8fe7-3a04fa85df67">
+      <driver-ref>azure.ms</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <jdbc-driver>com.microsoft.sqlserver.jdbc.SQLServerDriver</jdbc-driver>
+      <jdbc-url>jdbc:sqlserver://codingwithjoeg-contacts.database.windows.net:1433;encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;database=Contacts;</jdbc-url>
+    </data-source>
   </component>
 </project>
