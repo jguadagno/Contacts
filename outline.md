@@ -228,7 +228,17 @@ Part II: Create the `Contacts.Data.SqlServer` data store
 
 ## Move to the Cloud
 
-We'll move our application from our local machine to the Cloud
+We move our application from our local machine to the Cloud
+
+Part I: Create the database, app service plan, API app service, and UI App Service.  We then migrate the data off to the new SQL Server
+
+* [Video](https://youtu.be/dsrH75nSXdo)
+* *No Source Code*
+
+Part II: Upload the API to the App Service and connect the database
+
+* [Video](https://youtu.be/0b4cHz6p-FQ)
+* Source [f79fd6d](https://github.com/jguadagno/Contacts/commit/f79fd6d6605e86e5a35c6be0250349b67f698085) 
 
 ## Future UI Clients
 
