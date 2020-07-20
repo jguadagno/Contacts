@@ -18,8 +18,8 @@ jobs:
       with:
         dotnet-version: 3.1.301
     - name: Install dependencies
-      run: dotnet restore
+      run: dotnet restore ./src/Contacts.sln
     - name: Build
       run: dotnet build ./src/Contacts.sln --configuration Release --no-restore
     - name: Test
-      run: dotnet test --no-restore --verbosity normal
+      run: dotnet tesT ./src/Contacts.sln --no-restore --verbosity normal
