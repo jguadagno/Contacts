@@ -25,6 +25,7 @@ namespace Contacts.WebUi.Controllers
 
         public IActionResult Index()
         {
+            _logger.LogInformation("A view to the Index page");
             // HACK: This is a hack to avoid login issues since the Token is cached in memory
             // This means, we get an MsalUiRequiredException with the message of 
             // 'No account or login hint was passed to the AcquireTokenSilent call'

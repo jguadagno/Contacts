@@ -1,0 +1,143 @@
+2020-07-20 11:07:46.7744 Info Message Template Auto Format enabled
+2020-07-20 11:07:46.8326 Info Loading assembly: NLog.Web.AspNetCore
+2020-07-20 11:07:46.8335 Info Loading assembly: Microsoft.ApplicationInsights.NLogTarget
+2020-07-20 11:07:46.8744 Info Adding target FileTarget(Name=allfile)
+2020-07-20 11:07:46.8786 Info Adding target FileTarget(Name=ownFile-web)
+2020-07-20 11:07:46.8845 Info Adding target ApplicationInsightsTarget(Name=aiTarget)
+2020-07-20 11:07:46.9937 Info Validating config: TargetNames=allfile, ownFile-web, aiTarget, ConfigItems=52, FilePath=/Users/jguadagno/Projects/Contacts/src/Contacts.Api/bin/Debug/netcoreapp3.1/nlog.config
+2020-07-20 11:21:26.7110 Info Message Template Auto Format enabled
+2020-07-20 11:21:26.7826 Info Loading assembly: NLog.Web.AspNetCore
+2020-07-20 11:21:26.7851 Info Loading assembly: Microsoft.ApplicationInsights.NLogTarget
+2020-07-20 11:21:26.8356 Info Adding target FileTarget(Name=allfile)
+2020-07-20 11:21:26.8392 Info Adding target FileTarget(Name=ownFile-web)
+2020-07-20 11:21:26.8456 Info Adding target ApplicationInsightsTarget(Name=aiTarget)
+2020-07-20 11:21:26.8476 Warn Error when setting 'ContactsDatabaseSqlServer' on attibute 'connectionStringName' Exception: System.NotSupportedException: Parameter connectionStringName not supported on DatabaseTarget
+   at NLog.Internal.PropertyHelper.SetPropertyFromString(Object obj, String propertyName, String value, ConfigurationItemFactory configurationItemFactory)
+   at NLog.Config.LoggingConfigurationParser.ConfigureObjectFromAttributes(Object targetObject, ILoggingConfigurationElement element, Boolean ignoreType)
+2020-07-20 11:21:26.8549 Error Exception when parsing /Users/jguadagno/Projects/Contacts/src/Contacts.Api/bin/Debug/netcoreapp3.1/nlog.config.  Exception: System.NotSupportedException: Parameter connectionStringName not supported on DatabaseTarget
+   at NLog.Internal.PropertyHelper.SetPropertyFromString(Object obj, String propertyName, String value, ConfigurationItemFactory configurationItemFactory)
+   at NLog.Config.LoggingConfigurationParser.ConfigureObjectFromAttributes(Object targetObject, ILoggingConfigurationElement element, Boolean ignoreType)
+   at NLog.Config.LoggingConfigurationParser.ParseTargetElement(Target target, ILoggingConfigurationElement targetElement, Dictionary`2 typeNameToDefaultTargetParameters)
+   at NLog.Config.LoggingConfigurationParser.ParseTargetsElement(ILoggingConfigurationElement targetsElement)
+   at NLog.Config.LoggingConfigurationParser.ParseNLogSection(ILoggingConfigurationElement configSection)
+   at NLog.Config.XmlLoggingConfiguration.ParseNLogSection(ILoggingConfigurationElement configSection)
+   at NLog.Config.LoggingConfigurationParser.LoadConfig(ILoggingConfigurationElement nlogConfig, String basePath)
+   at NLog.Config.XmlLoggingConfiguration.ParseNLogElement(ILoggingConfigurationElement nlogElement, String filePath, Boolean autoReloadDefault)
+   at NLog.Config.XmlLoggingConfiguration.ParseTopLevel(NLogXmlElement content, String filePath, Boolean autoReloadDefault)
+   at NLog.Config.XmlLoggingConfiguration.Initialize(XmlReader reader, String fileName, Boolean ignoreErrors)
+2020-07-20 11:21:26.8571 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Exception when parsing /Users/jguadagno/Projects/Contacts/src/Contacts.Api/bin/Debug/netcoreapp3.1/nlog.config. 
+ ---> System.NotSupportedException: Parameter connectionStringName not supported on DatabaseTarget
+   at NLog.Internal.PropertyHelper.SetPropertyFromString(Object obj, String propertyName, String value, ConfigurationItemFactory configurationItemFactory)
+   at NLog.Config.LoggingConfigurationParser.ConfigureObjectFromAttributes(Object targetObject, ILoggingConfigurationElement element, Boolean ignoreType)
+   at NLog.Config.LoggingConfigurationParser.ParseTargetElement(Target target, ILoggingConfigurationElement targetElement, Dictionary`2 typeNameToDefaultTargetParameters)
+   at NLog.Config.LoggingConfigurationParser.ParseTargetsElement(ILoggingConfigurationElement targetsElement)
+   at NLog.Config.LoggingConfigurationParser.ParseNLogSection(ILoggingConfigurationElement configSection)
+   at NLog.Config.XmlLoggingConfiguration.ParseNLogSection(ILoggingConfigurationElement configSection)
+   at NLog.Config.LoggingConfigurationParser.LoadConfig(ILoggingConfigurationElement nlogConfig, String basePath)
+   at NLog.Config.XmlLoggingConfiguration.ParseNLogElement(ILoggingConfigurationElement nlogElement, String filePath, Boolean autoReloadDefault)
+   at NLog.Config.XmlLoggingConfiguration.ParseTopLevel(NLogXmlElement content, String filePath, Boolean autoReloadDefault)
+   at NLog.Config.XmlLoggingConfiguration.Initialize(XmlReader reader, String fileName, Boolean ignoreErrors)
+   --- End of inner exception stack trace ---
+2020-07-20 11:21:26.9709 Info Validating config: TargetNames=allfile, ownFile-web, aiTarget, ConfigItems=48, FilePath=/Users/jguadagno/Projects/Contacts/src/Contacts.Api/bin/Debug/netcoreapp3.1/nlog.config
+2020-07-20 11:21:26.9789 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: allfile
+2020-07-20 11:21:26.9789 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: ownFile-web
+2020-07-20 11:21:26.9883 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: aiTarget
+2020-07-20 11:22:36.4285 Info Message Template Auto Format enabled
+2020-07-20 11:22:36.5474 Info Loading assembly: NLog.Web.AspNetCore
+2020-07-20 11:22:36.5634 Info Loading assembly: Microsoft.ApplicationInsights.NLogTarget
+2020-07-20 11:22:36.6042 Info Adding target FileTarget(Name=allfile)
+2020-07-20 11:22:36.6068 Info Adding target FileTarget(Name=ownFile-web)
+2020-07-20 11:22:36.6128 Info Adding target ApplicationInsightsTarget(Name=aiTarget)
+2020-07-20 11:22:36.6144 Warn Error when setting 'ContactsDatabaseSqlServer' on attibute 'connectionStringName' Exception: System.NotSupportedException: Parameter connectionStringName not supported on DatabaseTarget
+   at NLog.Internal.PropertyHelper.SetPropertyFromString(Object obj, String propertyName, String value, ConfigurationItemFactory configurationItemFactory)
+   at NLog.Config.LoggingConfigurationParser.ConfigureObjectFromAttributes(Object targetObject, ILoggingConfigurationElement element, Boolean ignoreType)
+2020-07-20 11:22:36.6207 Error Exception when parsing /Users/jguadagno/Projects/Contacts/src/Contacts.Api/bin/Debug/netcoreapp3.1/nlog.config.  Exception: System.NotSupportedException: Parameter connectionStringName not supported on DatabaseTarget
+   at NLog.Internal.PropertyHelper.SetPropertyFromString(Object obj, String propertyName, String value, ConfigurationItemFactory configurationItemFactory)
+   at NLog.Config.LoggingConfigurationParser.ConfigureObjectFromAttributes(Object targetObject, ILoggingConfigurationElement element, Boolean ignoreType)
+   at NLog.Config.LoggingConfigurationParser.ParseTargetElement(Target target, ILoggingConfigurationElement targetElement, Dictionary`2 typeNameToDefaultTargetParameters)
+   at NLog.Config.LoggingConfigurationParser.ParseTargetsElement(ILoggingConfigurationElement targetsElement)
+   at NLog.Config.LoggingConfigurationParser.ParseNLogSection(ILoggingConfigurationElement configSection)
+   at NLog.Config.XmlLoggingConfiguration.ParseNLogSection(ILoggingConfigurationElement configSection)
+   at NLog.Config.LoggingConfigurationParser.LoadConfig(ILoggingConfigurationElement nlogConfig, String basePath)
+   at NLog.Config.XmlLoggingConfiguration.ParseNLogElement(ILoggingConfigurationElement nlogElement, String filePath, Boolean autoReloadDefault)
+   at NLog.Config.XmlLoggingConfiguration.ParseTopLevel(NLogXmlElement content, String filePath, Boolean autoReloadDefault)
+   at NLog.Config.XmlLoggingConfiguration.Initialize(XmlReader reader, String fileName, Boolean ignoreErrors)
+2020-07-20 11:22:36.6225 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Exception when parsing /Users/jguadagno/Projects/Contacts/src/Contacts.Api/bin/Debug/netcoreapp3.1/nlog.config. 
+ ---> System.NotSupportedException: Parameter connectionStringName not supported on DatabaseTarget
+   at NLog.Internal.PropertyHelper.SetPropertyFromString(Object obj, String propertyName, String value, ConfigurationItemFactory configurationItemFactory)
+   at NLog.Config.LoggingConfigurationParser.ConfigureObjectFromAttributes(Object targetObject, ILoggingConfigurationElement element, Boolean ignoreType)
+   at NLog.Config.LoggingConfigurationParser.ParseTargetElement(Target target, ILoggingConfigurationElement targetElement, Dictionary`2 typeNameToDefaultTargetParameters)
+   at NLog.Config.LoggingConfigurationParser.ParseTargetsElement(ILoggingConfigurationElement targetsElement)
+   at NLog.Config.LoggingConfigurationParser.ParseNLogSection(ILoggingConfigurationElement configSection)
+   at NLog.Config.XmlLoggingConfiguration.ParseNLogSection(ILoggingConfigurationElement configSection)
+   at NLog.Config.LoggingConfigurationParser.LoadConfig(ILoggingConfigurationElement nlogConfig, String basePath)
+   at NLog.Config.XmlLoggingConfiguration.ParseNLogElement(ILoggingConfigurationElement nlogElement, String filePath, Boolean autoReloadDefault)
+   at NLog.Config.XmlLoggingConfiguration.ParseTopLevel(NLogXmlElement content, String filePath, Boolean autoReloadDefault)
+   at NLog.Config.XmlLoggingConfiguration.Initialize(XmlReader reader, String fileName, Boolean ignoreErrors)
+   --- End of inner exception stack trace ---
+2020-07-20 11:22:36.7867 Info Validating config: TargetNames=allfile, ownFile-web, aiTarget, ConfigItems=48, FilePath=/Users/jguadagno/Projects/Contacts/src/Contacts.Api/bin/Debug/netcoreapp3.1/nlog.config
+2020-07-20 11:22:36.7948 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: allfile
+2020-07-20 11:22:36.7948 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: ownFile-web
+2020-07-20 11:22:36.7978 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: aiTarget
+2020-07-20 11:28:26.6608 Info Message Template Auto Format enabled
+2020-07-20 11:28:26.7153 Info Loading assembly: NLog.Web.AspNetCore
+2020-07-20 11:28:26.7197 Info Loading assembly: Microsoft.ApplicationInsights.NLogTarget
+2020-07-20 11:28:26.7732 Info Adding target FileTarget(Name=allfile)
+2020-07-20 11:28:26.7759 Info Adding target FileTarget(Name=ownFile-web)
+2020-07-20 11:28:26.7831 Info Adding target ApplicationInsightsTarget(Name=aiTarget)
+2020-07-20 11:28:26.7882 Info Adding target DatabaseTarget(Name=database)
+2020-07-20 11:28:26.8874 Info Validating config: TargetNames=allfile, ownFile-web, aiTarget, database, ConfigItems=81, FilePath=/Users/jguadagno/Projects/Contacts/src/Contacts.Api/bin/Debug/netcoreapp3.1/nlog.config
+2020-07-20 11:28:26.9268 Error DatabaseTarget(Name=database): Failed to create ConnectionType from DBProvider=sqlserver Exception: System.IO.FileNotFoundException: Could not load file or assembly 'System.Data.SqlClient, Culture=neutral, PublicKeyToken=null'. The system cannot find the file specified.
+
+File name: 'System.Data.SqlClient, Culture=neutral, PublicKeyToken=null'
+   at System.Reflection.RuntimeAssembly.nLoad(AssemblyName fileName, String codeBase, RuntimeAssembly assemblyContext, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, AssemblyLoadContext assemblyLoadContext)
+   at System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, StackCrawlMark& stackMark, AssemblyLoadContext assemblyLoadContext)
+   at System.Reflection.Assembly.Load(AssemblyName assemblyRef, StackCrawlMark& stackMark, AssemblyLoadContext assemblyLoadContext)
+   at System.Reflection.Assembly.Load(AssemblyName assemblyRef)
+   at NLog.Targets.DatabaseTarget.SetConnectionType()
+   at NLog.Targets.DatabaseTarget.InitializeTarget()
+
+
+2020-07-20 11:28:26.9338 Error Database Target[database]: Error initializing target Exception: System.IO.FileNotFoundException: Could not load file or assembly 'System.Data.SqlClient, Culture=neutral, PublicKeyToken=null'. The system cannot find the file specified.
+
+File name: 'System.Data.SqlClient, Culture=neutral, PublicKeyToken=null'
+   at System.Reflection.RuntimeAssembly.nLoad(AssemblyName fileName, String codeBase, RuntimeAssembly assemblyContext, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, AssemblyLoadContext assemblyLoadContext)
+   at System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, StackCrawlMark& stackMark, AssemblyLoadContext assemblyLoadContext)
+   at System.Reflection.Assembly.Load(AssemblyName assemblyRef, StackCrawlMark& stackMark, AssemblyLoadContext assemblyLoadContext)
+   at System.Reflection.Assembly.Load(AssemblyName assemblyRef)
+   at NLog.Targets.DatabaseTarget.SetConnectionType()
+   at NLog.Targets.DatabaseTarget.InitializeTarget()
+   at NLog.Targets.Target.Initialize(LoggingConfiguration configuration)
+
+
+2020-07-20 11:30:31.6477 Info Message Template Auto Format enabled
+2020-07-20 11:30:31.7122 Info Loading assembly: NLog.Web.AspNetCore
+2020-07-20 11:30:31.7159 Info Loading assembly: Microsoft.ApplicationInsights.NLogTarget
+2020-07-20 11:30:31.7582 Info Adding target FileTarget(Name=allfile)
+2020-07-20 11:30:31.7608 Info Adding target FileTarget(Name=ownFile-web)
+2020-07-20 11:30:31.7673 Info Adding target ApplicationInsightsTarget(Name=aiTarget)
+2020-07-20 11:30:31.7720 Info Adding target DatabaseTarget(Name=database)
+2020-07-20 11:30:31.8796 Info Validating config: TargetNames=allfile, ownFile-web, aiTarget, database, ConfigItems=81, FilePath=/Users/jguadagno/Projects/Contacts/src/Contacts.Api/bin/Debug/netcoreapp3.1/nlog.config
+2020-07-20 11:30:31.9207 Error DatabaseTarget(Name=database): Failed to create ConnectionType from DBProvider=sqlserver Exception: System.IO.FileNotFoundException: Could not load file or assembly 'System.Data.SqlClient, Culture=neutral, PublicKeyToken=null'. The system cannot find the file specified.
+
+File name: 'System.Data.SqlClient, Culture=neutral, PublicKeyToken=null'
+   at System.Reflection.RuntimeAssembly.nLoad(AssemblyName fileName, String codeBase, RuntimeAssembly assemblyContext, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, AssemblyLoadContext assemblyLoadContext)
+   at System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, StackCrawlMark& stackMark, AssemblyLoadContext assemblyLoadContext)
+   at System.Reflection.Assembly.Load(AssemblyName assemblyRef, StackCrawlMark& stackMark, AssemblyLoadContext assemblyLoadContext)
+   at System.Reflection.Assembly.Load(AssemblyName assemblyRef)
+   at NLog.Targets.DatabaseTarget.SetConnectionType()
+   at NLog.Targets.DatabaseTarget.InitializeTarget()
+
+
+2020-07-20 11:30:31.9289 Error Database Target[database]: Error initializing target Exception: System.IO.FileNotFoundException: Could not load file or assembly 'System.Data.SqlClient, Culture=neutral, PublicKeyToken=null'. The system cannot find the file specified.
+
+File name: 'System.Data.SqlClient, Culture=neutral, PublicKeyToken=null'
+   at System.Reflection.RuntimeAssembly.nLoad(AssemblyName fileName, String codeBase, RuntimeAssembly assemblyContext, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, AssemblyLoadContext assemblyLoadContext)
+   at System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, StackCrawlMark& stackMark, AssemblyLoadContext assemblyLoadContext)
+   at System.Reflection.Assembly.Load(AssemblyName assemblyRef, StackCrawlMark& stackMark, AssemblyLoadContext assemblyLoadContext)
+   at System.Reflection.Assembly.Load(AssemblyName assemblyRef)
+   at NLog.Targets.DatabaseTarget.SetConnectionType()
+   at NLog.Targets.DatabaseTarget.InitializeTarget()
+   at NLog.Targets.Target.Initialize(LoggingConfiguration configuration)
+
+

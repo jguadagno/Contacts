@@ -5,6 +5,7 @@ using Contacts.Domain.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 using Microsoft.Identity.Web.Resource;
 
 namespace Contacts.Api.Controllers
@@ -21,10 +22,12 @@ namespace Contacts.Api.Controllers
     {
 
         private readonly IContactManager _contactManager;
+        private readonly ILogger<ContactsController> _logger;
         
-        public ContactsController(IContactManager contactManager)
+        public ContactsController(IContactManager contactManager, ILogger<ContactsController> logger)
         {
             _contactManager = contactManager;
+            _logger = logger;
         }
         
         /// <summary>
@@ -38,6 +41,7 @@ namespace Contacts.Api.Controllers
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public async Task<List<Contact>> GetContacts()
         {
+            _logger.LogInformation("Call to GetContacts");
             HttpContext.VerifyUserHasAnyAcceptedScope(Domain.Permissions.Contacts.List);
             return await _contactManager.GetContactsAsync();
         }

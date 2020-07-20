@@ -252,6 +252,33 @@ We added [Application Insights](https://docs.microsoft.com/en-us/azure/azure-mon
 * [Video](https://www.youtube.com/watch?v=w5DcUrhk5wU)
 * Source [6338048](https://github.com/jguadagno/Contacts/commit/6338048e5a06eed0e47fa2a01d32f3e7794d7096)
 
+## Application Logging
+
+We added logging to the application using [Nlog](https://nlog-project.org)
+
+Helpful links
+
+* [Getting started with ASP.NET Core 3](https://github.com/NLog/NLog/wiki/Getting-started-with-ASP.NET-Core-3)
+* List of [Targets](https://nlog-project.org/config/)
+    * [Database](https://github.com/NLog/NLog/wiki/Database-target)
+    * [Application Insights](https://github.com/Microsoft/ApplicationInsights-dotnet-logging)
+
+* [Video]()
+* Source Code []()
+
+## Publish on Commit
+
+> Friends don't let friends right click and publish
+
+On commit to the source code repository...
+
+* Build the site using Azure Pipelines or Github Actions
+* Execute the Unit Tests
+* Deploy the API to the development slot of the Azure Web App
+* Once successful, 'click to deploy' to production
+
+**NOTE** Figure out database changes
+
 ## Future UI Clients
 
 Here are some other client technologies that we can use.

@@ -1,0 +1,26 @@
+2020-07-20 10:48:57.4742 Info Message Template Auto Format enabled
+2020-07-20 10:48:57.5457 Info Loading assembly: NLog.Web.AspNetCore
+2020-07-20 10:48:57.5859 Info Adding target FileTarget(Name=allfile)
+2020-07-20 10:48:57.5998 Info Adding target FileTarget(Name=ownFile-web)
+2020-07-20 10:48:57.7103 Info Validating config: TargetNames=allfile, ownFile-web, ConfigItems=45, FilePath=/Users/jguadagno/Projects/Contacts/src/Contacts.WebUi/bin/Debug/netcoreapp3.1/nlog.config
+2020-07-20 10:58:47.8808 Info Message Template Auto Format enabled
+2020-07-20 10:58:47.9452 Info Loading assembly: NLog.Web.AspNetCore
+2020-07-20 10:58:47.9460 Info Loading assembly: Microsoft.ApplicationInsights.NLogTarget
+2020-07-20 10:58:47.9861 Info Adding target FileTarget(Name=allfile)
+2020-07-20 10:58:47.9972 Info Adding target FileTarget(Name=ownFile-web)
+2020-07-20 10:58:48.0041 Info Adding target ApplicationInsightsTarget(Name=aiTarget)
+2020-07-20 10:58:48.1075 Info Validating config: TargetNames=allfile, ownFile-web, aiTarget, ConfigItems=52, FilePath=/Users/jguadagno/Projects/Contacts/src/Contacts.WebUi/bin/Debug/netcoreapp3.1/nlog.config
+2020-07-20 11:07:56.6005 Info Message Template Auto Format enabled
+2020-07-20 11:07:56.6669 Info Loading assembly: NLog.Web.AspNetCore
+2020-07-20 11:07:56.6680 Info Loading assembly: Microsoft.ApplicationInsights.NLogTarget
+2020-07-20 11:07:56.7114 Info Adding target FileTarget(Name=allfile)
+2020-07-20 11:07:56.7148 Info Adding target FileTarget(Name=ownFile-web)
+2020-07-20 11:07:56.7227 Info Adding target ApplicationInsightsTarget(Name=aiTarget)
+2020-07-20 11:07:56.8370 Info Validating config: TargetNames=allfile, ownFile-web, aiTarget, ConfigItems=52, FilePath=/Users/jguadagno/Projects/Contacts/src/Contacts.WebUi/bin/Debug/netcoreapp3.1/nlog.config
+2020-07-20 11:21:36.3150 Info Message Template Auto Format enabled
+2020-07-20 11:21:36.4302 Info Loading assembly: NLog.Web.AspNetCore
+2020-07-20 11:21:36.4310 Info Loading assembly: Microsoft.ApplicationInsights.NLogTarget
+2020-07-20 11:21:36.4884 Info Adding target FileTarget(Name=allfile)
+2020-07-20 11:21:36.4911 Info Adding target FileTarget(Name=ownFile-web)
+2020-07-20 11:21:36.4994 Info Adding target ApplicationInsightsTarget(Name=aiTarget)
+2020-07-20 11:21:36.6634 Info Validating config: TargetNames=allfile, ownFile-web, aiTarget, ConfigItems=52, FilePath=/Users/jguadagno/Projects/Contacts/src/Contacts.WebUi/bin/Debug/netcoreapp3.1/nlog.config
