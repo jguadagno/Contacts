@@ -23,3 +23,13 @@ jobs:
       run: dotnet build ./src/Contacts.sln --configuration Release --no-restore
     - name: Test
       run: dotnet test ./src/Contacts.sln --no-restore --verbosity normal
+    - name: Azure WebApp - Web UI
+      uses: Azure/webapps-deploy@v2
+      with:
+        # Name of the Azure Web App
+        app-name: cwjg-contacts-web
+        publish-profile: ${{ secrets.WEB_UI_PUBLISH_PROFILE  }}
+        # Applies to Web App only: Path to package or folder. *.zip, *.war, *.jar or a folder to deploy
+        package: src/Contacts.WebUi/bin/Release/netcoreapp3.1/
+       
+        
