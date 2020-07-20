@@ -250,7 +250,7 @@ Part III: Upload the Web UI to the App Service and connect it to the API
 We added [Application Insights](https://docs.microsoft.com/en-us/azure/azure-monitor/app/app-insights-overview) to the Web UI and API.
 
 * [Video](https://www.youtube.com/watch?v=w5DcUrhk5wU)
-* Source [bb89dfca](https://github.com/jguadagno/Contacts/commit/bb89dfcad720b6036850452e9c8f7ad78f37e866)
+* Source [6338048](https://github.com/jguadagno/Contacts/commit/6338048e5a06eed0e47fa2a01d32f3e7794d7096)
 
 ## Future UI Clients
 
