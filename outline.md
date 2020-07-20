@@ -263,8 +263,8 @@ Helpful links
     * [Database](https://github.com/NLog/NLog/wiki/Database-target)
     * [Application Insights](https://github.com/Microsoft/ApplicationInsights-dotnet-logging)
 
-* [Video]()
-* Source Code []()
+* [Video](https://youtu.be/8zTFfII4PXg)
+* Source Code [6bb62af](https://github.com/jguadagno/Contacts/commit/6bb62afd8926d6503fbcf7cccd319413cdf5eb2e)
 
 ## Publish on Commit
 
