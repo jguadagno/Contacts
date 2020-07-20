@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Threading.Tasks;
+using Contacts.Api.Models;
 using Contacts.Data;
 using Contacts.Data.Sqlite;
 using Contacts.Data.SqlServer;
@@ -34,8 +35,13 @@ namespace Contacts.Api
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddProtectedWebApi(Configuration);
+            var settings = new Settings();
+            Configuration.Bind("Settings", settings);
+            services.AddSingleton(settings);
+
+            services.AddApplicationInsightsTelemetry(settings.AppInsightsKey);
             
+            services.AddProtectedWebApi(Configuration);
             services.AddControllers();
             
             // Register the Swagger generator, defining 1 or more Swagger documents

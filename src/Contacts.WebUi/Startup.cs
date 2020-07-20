@@ -28,6 +28,8 @@ namespace Contacts.WebUi
             var settings = new Settings();
             Configuration.Bind("Settings", settings);
             services.AddSingleton(settings);
+
+            services.AddApplicationInsightsTelemetry(settings.AppInsightsKey);
             
             services.AddSignIn(Configuration);
             var initialScopes = new[]

@@ -238,7 +238,19 @@ Part I: Create the database, app service plan, API app service, and UI App Servi
 Part II: Upload the API to the App Service and connect the database
 
 * [Video](https://youtu.be/0b4cHz6p-FQ)
-* Source [f79fd6d](https://github.com/jguadagno/Contacts/commit/f79fd6d6605e86e5a35c6be0250349b67f698085) 
+* Source [f79fd6d](https://github.com/jguadagno/Contacts/commit/f79fd6d6605e86e5a35c6be0250349b67f698085)
+
+Part III: Upload the Web UI to the App Service and connect it to the API
+
+* [Video](https://www.youtube.com/watch?v=4rLaB_uk7X8)
+* Source [bb89dfca](https://github.com/jguadagno/Contacts/commit/bb89dfcad720b6036850452e9c8f7ad78f37e866)
+
+## Application Insights
+
+We added [Application Insights](https://docs.microsoft.com/en-us/azure/azure-monitor/app/app-insights-overview) to the Web UI and API.
+
+* [Video](https://www.youtube.com/watch?v=w5DcUrhk5wU)
+* Source [bb89dfca](https://github.com/jguadagno/Contacts/commit/bb89dfcad720b6036850452e9c8f7ad78f37e866)
 
 ## Future UI Clients
 

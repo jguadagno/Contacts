@@ -4,5 +4,6 @@ namespace Contacts.WebUi.Models
     {
         public string ApiRootUri { get; set; }
         public string ApiScopeUri { get; set; }
+        public string AppInsightsKey { get; set; }
     }
 }

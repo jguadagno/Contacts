@@ -11,6 +11,7 @@
     </ItemGroup>
 
     <ItemGroup>
+      <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.14.0" />
       <PackageReference Include="Microsoft.AspNetCore.StaticFiles" Version="2.2.0" />
       <PackageReference Include="Microsoft.Identity.Web" Version="0.1.5-preview" />
       <PackageReference Include="Swashbuckle.AspNetCore" Version="5.4.1" />
