@@ -6,6 +6,10 @@ on:
   pull_request:
     branches: [ main ]
 
+env:
+  AZURE_WEBAPP_PACKAGE_PATH: '.'      # set this to the path to your web app project, defaults to the repository root
+  AZURE_WEBAPI_PACKAGE_PATH: '.'
+
 jobs:
   build:
 
@@ -23,13 +27,13 @@ jobs:
       run: dotnet build ./src/Contacts.sln --configuration Release --no-restore
     - name: Test
       run: dotnet test ./src/Contacts.sln --no-restore --verbosity normal
+    - name: Publish WebUI
+      run: dotnet publish ./src/Contacts.sln  -c Release -o '${{ env.AZURE_WEBAPP_PACKAGE_PATH }}/myapp' 
     - name: Azure WebApp - Web UI
       uses: Azure/webapps-deploy@v2
       with:
-        # Name of the Azure Web App
         app-name: cwjg-contacts-web
         publish-profile: ${{ secrets.WEB_UI_PUBLISH_PROFILE  }}
-        # Applies to Web App only: Path to package or folder. *.zip, *.war, *.jar or a folder to deploy
-        package: src/Contacts.WebUi/bin/Release/netcoreapp3.1/
+        package: '${{ env.AZURE_WEBAPP_PACKAGE_PATH }}/myapp'
        
         
