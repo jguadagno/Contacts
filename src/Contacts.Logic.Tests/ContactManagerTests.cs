@@ -25,7 +25,8 @@ namespace Contacts.Logic.Tests
             var contact = contactManager.GetContact(-1); // Any number less than zero
 
             // Assert
-            Assert.Null(contact);
+            //Assert.Null(contact);
+            Assert.True(false);
         }
 
         [Fact]
