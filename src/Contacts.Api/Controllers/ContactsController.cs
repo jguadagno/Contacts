@@ -43,7 +43,9 @@ namespace Contacts.Api.Controllers
         {
             _logger.LogInformation("Call to GetContacts");
             HttpContext.VerifyUserHasAnyAcceptedScope(Domain.Permissions.Contacts.List);
-            return await _contactManager.GetContactsAsync();
+            var contacts = await _contactManager.GetContactsAsync();
+            contacts.Add(new Contact {FirstName = "David", LastName = "Brock", ContactId = 1234});
+            return contacts;
         }
         
         /// <summary>
