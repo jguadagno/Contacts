@@ -35,5 +35,13 @@ jobs:
         app-name: cwjg-contacts-web
         publish-profile: ${{ secrets.WEB_UI_PUBLISH_PROFILE  }}
         package: '${{ env.AZURE_WEBAPP_PACKAGE_PATH }}/webui'
+    - name: Publish Web API
+      run: dotnet publish ./src/Contacts.Api/Contacts.Api.csproj  -c Release -o '${{ env.AZURE_WEBAPP_PACKAGE_PATH }}/webapi' 
+    - name: Azure WebApp - Web API
+      uses: Azure/webapps-deploy@v2
+      with:
+        app-name: cwjg-contacts-api
+        publish-profile: ${{ secrets.WEB_API_PUBLISH_PROFILE  }}
+        package: '${{ env.AZURE_WEBAPP_PACKAGE_PATH }}/webapi'
        
         
