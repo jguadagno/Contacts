@@ -22,10 +22,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="14fd18ef-6fed-455b-81a5-09cb395c5fc7" name="Default Changelist" comment="Added video and code links for June 29th, 2020 stream">
-      <change beforePath="$PROJECT_DIR$/Contacts.Api/Controllers/ContactsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Contacts.Api/Controllers/ContactsController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Contacts.WebUi/Views/Home/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Contacts.WebUi/Views/Home/Index.cshtml" afterDir="false" />
-    </list>
+    <list default="true" id="14fd18ef-6fed-455b-81a5-09cb395c5fc7" name="Default Changelist" comment="Added video and code links for June 29th, 2020 stream" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -134,7 +131,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Contacts.WebUi/Controllers/Contact.cs" />
         <option value="$PROJECT_DIR$/Contacts.WebUi/Services/IContactService.cs" />
         <option value="$PROJECT_DIR$/Contacts.WebUi/Views/Contact/GetContact.cshtml" />
         <option value="$PROJECT_DIR$/Contacts.WebUi/Services/ContactServiceExtensions.cs" />
@@ -183,8 +179,9 @@
         <option value="$PROJECT_DIR$/Contacts.WebUi/nlog.config" />
         <option value="$PROJECT_DIR$/Contacts.Api/nlog.config" />
         <option value="$PROJECT_DIR$/../outline.md" />
-        <option value="$PROJECT_DIR$/Contacts.Api/Controllers/ContactsController.cs" />
         <option value="$PROJECT_DIR$/Contacts.WebUi/Views/Home/Index.cshtml" />
+        <option value="$PROJECT_DIR$/Contacts.Api/Controllers/ContactsController.cs" />
+        <option value="$PROJECT_DIR$/Contacts.Logic.Tests/ContactManagerTests.cs" />
       </list>
     </option>
   </component>
@@ -1324,13 +1321,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Contacts.Api/Controllers/ContactsController.cs</url>
-          <line>101</line>
+          <line>99</line>
           <properties documentPath="$PROJECT_DIR$/Contacts.Api/Controllers/ContactsController.cs" initialLine="99">
             <startOffsets>
-              <option value="4490" />
+              <option value="4354" />
             </startOffsets>
             <endOffsets>
-              <option value="4505" />
+              <option value="4369" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="56" />

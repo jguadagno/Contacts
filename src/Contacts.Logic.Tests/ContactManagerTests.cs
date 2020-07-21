@@ -22,7 +22,7 @@ namespace Contacts.Logic.Tests
             var contactManager = new ContactManager(mockContactRepository.Object);
 
             // Act
-            var contact = contactManager.GetContact(1); // Any number less than zero
+            var contact = contactManager.GetContact(-1); // Any number less than zero
 
             // Assert
             Assert.Null(contact);
