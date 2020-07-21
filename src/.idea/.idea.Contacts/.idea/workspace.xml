@@ -467,7 +467,7 @@
       <option name="AZURE_WEB_APP_SERVICE_PLAN_ID" value="/subscriptions/ee7c6464-c10f-4b39-becd-e9e002b306bc/resourceGroups/CodingWithJoeG/providers/Microsoft.Web/serverfarms/Contacts-Web" />
       <option name="AZURE_WEB_APP_SERVICE_PLAN_NAME" value="" />
       <option name="AZURE_WEB_APP_LOCATION" value="eastus" />
-      <option name="AZURE_WEB_APP_PRICING_TIER" value="B1" />
+      <option name="AZURE_WEB_APP_PRICING_TIER" value="" />
       <option name="AZURE_WEB_APP_NET_FRAMEWORK" value="4.7" />
       <option name="AZURE_WEB_APP_NET_CORE_RUNTIME" value="DOTNETCORE 2.1" />
       <option name="AZURE_SQL_DATABASE_SUBSCRIPTION_ID" value="ee7c6464-c10f-4b39-becd-e9e002b306bc" />
@@ -499,7 +499,7 @@
       <option name="AZURE_WEB_APP_SERVICE_PLAN_ID" value="/subscriptions/ee7c6464-c10f-4b39-becd-e9e002b306bc/resourceGroups/CodingWithJoeG/providers/Microsoft.Web/serverfarms/Contacts-Web" />
       <option name="AZURE_WEB_APP_SERVICE_PLAN_NAME" value="" />
       <option name="AZURE_WEB_APP_LOCATION" value="eastus" />
-      <option name="AZURE_WEB_APP_PRICING_TIER" value="S1" />
+      <option name="AZURE_WEB_APP_PRICING_TIER" value="" />
       <option name="AZURE_WEB_APP_NET_FRAMEWORK" value="4.7" />
       <option name="AZURE_WEB_APP_NET_CORE_RUNTIME" value="DOTNETCORE 2.1" />
       <option name="AZURE_SQL_DATABASE_SUBSCRIPTION_ID" value="ee7c6464-c10f-4b39-becd-e9e002b306bc" />
