@@ -4,6 +4,10 @@ This repository is being used for the stream ***Coding with JoeG***. Follow the 
 
 We'll follow the development flow [outlined here](outline.md) for content for the stream. The stream and outline will have us build a brand new application to manage and view your contacts.  I know, we have our phones for that, but everyone should understand the basic needs of the application. You should be able to following along with the stream as we go.
 
+## Build Status
+
+![Deploy Contacts Web UI and API](https://github.com/jguadagno/Contacts/workflows/Deploy%20Contacts%20Web%20UI%20and%20API/badge.svg)
+
 ## Setup
 
 We'll include any setup required to get going with this project
