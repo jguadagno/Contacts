@@ -277,6 +277,15 @@ On commit to the source code repository...
 * Deploy the API to the development slot of the Azure Web App
 * Once successful, 'click to deploy' to production
 
+Part 1:
+
+We set up the repository to use GitHub Actions for building the code, testing the code, and deploying the Web UI.
+
+* [Video](https://youtu.be/txuGf_M6NBE)
+* Source Code [77be93a](https://github.com/jguadagno/Contacts/commit/77be93ada46a154033f8604008d5766a5fb52d3e)
+
+Next up, deploy the Web Api and setting up badges
+
 **NOTE** Figure out database changes
 
 ## Future UI Clients
@@ -312,19 +321,6 @@ Setup the environment
 * Azure Key Vault ([docs](https://azure.microsoft.com/en-us/services/key-vault/))
 
 *Maybe* use Terraform to build out the environment
-
-### Publish the API
-
-> Friends don't let friends right click and publish
-
-On commit to the source code repository...
-
-* Build the site using Azure Pipelines or Github Actions
-* Execute the Unit Tests
-* Deploy the API to the development slot of the Azure Web App
-* Once successful, 'click to deploy' to production
-
-**NOTE** Figure out database changes
 
 ## Application Flexibility
 
