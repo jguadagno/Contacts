@@ -28,12 +28,12 @@ jobs:
     - name: Test
       run: dotnet test ./src/Contacts.sln --no-restore --verbosity normal
     - name: Publish WebUI
-      run: dotnet publish ./src/Contacts.WebUi/Contacts.WebUi.csproj  -c Release -o '${{ env.AZURE_WEBAPP_PACKAGE_PATH }}/myapp' 
+      run: dotnet publish ./src/Contacts.WebUi/Contacts.WebUi.csproj  -c Release -o '${{ env.AZURE_WEBAPP_PACKAGE_PATH }}/webui' 
     - name: Azure WebApp - Web UI
       uses: Azure/webapps-deploy@v2
       with:
         app-name: cwjg-contacts-web
         publish-profile: ${{ secrets.WEB_UI_PUBLISH_PROFILE  }}
-        package: '${{ env.AZURE_WEBAPP_PACKAGE_PATH }}/myapp'
+        package: '${{ env.AZURE_WEBAPP_PACKAGE_PATH }}/webui'
        
         
