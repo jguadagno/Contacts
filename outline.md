@@ -260,8 +260,8 @@ Helpful links
 
 * [Getting started with ASP.NET Core 3](https://github.com/NLog/NLog/wiki/Getting-started-with-ASP.NET-Core-3)
 * List of [Targets](https://nlog-project.org/config/)
-    * [Database](https://github.com/NLog/NLog/wiki/Database-target)
-    * [Application Insights](https://github.com/Microsoft/ApplicationInsights-dotnet-logging)
+  * [Database](https://github.com/NLog/NLog/wiki/Database-target)
+  * [Application Insights](https://github.com/Microsoft/ApplicationInsights-dotnet-logging)
 
 * [Video](https://youtu.be/8zTFfII4PXg)
 * Source Code [6bb62af](https://github.com/jguadagno/Contacts/commit/6bb62afd8926d6503fbcf7cccd319413cdf5eb2e)
@@ -277,22 +277,39 @@ On commit to the source code repository...
 * Deploy the API to the development slot of the Azure Web App
 * Once successful, 'click to deploy' to production
 
-**NOTE** Figure out database changes
+Part I: Created the `deploy-to-azure.yml` file.
+
+Created steps in the Action to
+
+* Restore packages
+* Build the solution
+* Test the Solution
+* Deploy the Web Application to Azure
+
+Part II: Deployed the Web API and added a new Build Status badge
+
+* [Video Part I](https://youtu.be/txuGf_M6NBE)
+* [Video Part II](https://youtu.be/L-9EaIzb-1E)
+* Source Code [96fad81](https://github.com/jguadagno/Contacts/commit/96fad81179bcebf16aa2f9c88c5a428b9c0f2381)
+
+## Fix the MSAL Security
+
+Implement the SQLServerCacheTokenProvider and update the package. 
 
 ## Future UI Clients
 
 Here are some other client technologies that we can use.
 Remaining Options
 
-#### Blazor Client
+### Blazor Client
 
-#### Native Application
+### Native Application
 
-##### React Native
+#### React Native
 
-##### Ionic client
+#### Ionic client
 
-#### WinForms (Maybe)
+### WinForms (Maybe)
 
 ## To the Cloud
 
@@ -312,19 +329,6 @@ Setup the environment
 * Azure Key Vault ([docs](https://azure.microsoft.com/en-us/services/key-vault/))
 
 *Maybe* use Terraform to build out the environment
-
-### Publish the API
-
-> Friends don't let friends right click and publish
-
-On commit to the source code repository...
-
-* Build the site using Azure Pipelines or Github Actions
-* Execute the Unit Tests
-* Deploy the API to the development slot of the Azure Web App
-* Once successful, 'click to deploy' to production
-
-**NOTE** Figure out database changes
 
 ## Application Flexibility
 
@@ -354,4 +358,3 @@ A list of things that we might want to consider adding to the application
 
 * [ADDING SECURITY TO OAS 3 / SWAGGER IN .NET CORE 3.1 USING SWASHBUCKLE](https://pradeeploganathan.com/api/add-security-requirements-oas3-swagger-netcore3-1-using-swashbuckle/)
 * [Infrastructure in C# using the Azure Management SDK](https://www.phillipsj.net/posts/infrastructure-in-csharp-using-the-azure-management-sdk/)
-
