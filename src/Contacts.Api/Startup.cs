@@ -1,23 +1,16 @@
 using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Reflection;
-using System.Threading.Tasks;
 using Contacts.Api.Models;
 using Contacts.Data;
-using Contacts.Data.Sqlite;
 using Contacts.Data.SqlServer;
 using Contacts.Domain.Interfaces;
 using Contacts.Logic;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 using Microsoft.Identity.Web;
 using Microsoft.OpenApi.Models;
 
@@ -41,7 +34,7 @@ namespace Contacts.Api
 
             services.AddApplicationInsightsTelemetry(settings.AppInsightsKey);
             
-            services.AddProtectedWebApi(Configuration);
+            services.AddMicrosoftWebApiAuthentication(Configuration);
             services.AddControllers();
             
             // Register the Swagger generator, defining 1 or more Swagger documents

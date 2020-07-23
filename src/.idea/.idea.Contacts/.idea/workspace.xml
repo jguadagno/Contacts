@@ -19,10 +19,25 @@
         <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </expand>
-    <select />
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:origin/main" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="14fd18ef-6fed-455b-81a5-09cb395c5fc7" name="Default Changelist" comment="Added video and code links for June 29th, 2020 stream" />
+    <list default="true" id="14fd18ef-6fed-455b-81a5-09cb395c5fc7" name="Default Changelist" comment="Added video and code links for June 29th, 2020 stream">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Contacts/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Contacts/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Contacts/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Contacts/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Contacts/riderModule.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Contacts/riderModule.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Contacts.Api/Contacts.Api.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Contacts.Api/Contacts.Api.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Contacts.Api/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Contacts.Api/Startup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Contacts.WebUi/Contacts.WebUi.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Contacts.WebUi/Contacts.WebUi.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Contacts.WebUi/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Contacts.WebUi/Startup.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -131,7 +146,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Contacts.WebUi/Services/IContactService.cs" />
         <option value="$PROJECT_DIR$/Contacts.WebUi/Views/Contact/GetContact.cshtml" />
         <option value="$PROJECT_DIR$/Contacts.WebUi/Services/ContactServiceExtensions.cs" />
         <option value="$PROJECT_DIR$/Contacts.Console/Program.cs" />
@@ -160,28 +174,29 @@
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/b11e6f26-9df6-4f33-8186-877876858ef2/console.sql" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/cb51efab-b2c6-4d2c-a317-d97aa0938ddd/console.sql" />
         <option value="$PROJECT_DIR$/Contacts.Data.SqlServer/Models/Contact.cs" />
-        <option value="$PROJECT_DIR$/Contacts.Api/appsettings.Development.json" />
         <option value="$PROJECT_DIR$/Contacts.WebUi/appsettings.Development.json" />
         <option value="$PROJECT_DIR$/Contacts.WebUi/wwwroot/js/site.js" />
         <option value="$PROJECT_DIR$/Contacts.WebUi/Models/ISettings.cs" />
         <option value="$PROJECT_DIR$/Contacts.WebUi/Models/Settings.cs" />
-        <option value="$PROJECT_DIR$/Contacts.WebUi/Startup.cs" />
         <option value="$PROJECT_DIR$/Contacts.Api/appsettings.json" />
         <option value="$PROJECT_DIR$/Contacts.Api/Models/ISettings.cs" />
         <option value="$PROJECT_DIR$/Contacts.Api/Models/Settings.cs" />
-        <option value="$PROJECT_DIR$/Contacts.Api/Startup.cs" />
-        <option value="$PROJECT_DIR$/Contacts.WebUi/Contacts.WebUi.csproj" />
         <option value="$PROJECT_DIR$/Contacts.WebUi/Program.cs" />
         <option value="$PROJECT_DIR$/Contacts.WebUi/appsettings.json" />
         <option value="$PROJECT_DIR$/Contacts.WebUi/Controllers/HomeController.cs" />
-        <option value="$PROJECT_DIR$/Contacts.Api/Contacts.Api.csproj" />
         <option value="$PROJECT_DIR$/Contacts.Api/Program.cs" />
         <option value="$PROJECT_DIR$/Contacts.WebUi/nlog.config" />
         <option value="$PROJECT_DIR$/Contacts.Api/nlog.config" />
         <option value="$PROJECT_DIR$/../outline.md" />
         <option value="$PROJECT_DIR$/Contacts.WebUi/Views/Home/Index.cshtml" />
         <option value="$PROJECT_DIR$/Contacts.Api/Controllers/ContactsController.cs" />
+        <option value="$PROJECT_DIR$/../README.md" />
         <option value="$PROJECT_DIR$/Contacts.Logic.Tests/ContactManagerTests.cs" />
+        <option value="$PROJECT_DIR$/Contacts.Api/appsettings.Development.json" />
+        <option value="$PROJECT_DIR$/Contacts.WebUi/Contacts.WebUi.csproj" />
+        <option value="$PROJECT_DIR$/Contacts.Api/Contacts.Api.csproj" />
+        <option value="$PROJECT_DIR$/Contacts.WebUi/Startup.cs" />
+        <option value="$PROJECT_DIR$/Contacts.Api/Startup.cs" />
       </list>
     </option>
   </component>
@@ -453,7 +468,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Azure - Publish Web App.Publish Contacts.WebUi to Azure">
+  <component name="RunManager" selected=".NET Launch Settings Profile.Contacts.WebUi">
     <configuration name="Publish Contacts.Api to Azure" type="AzureDotNetWebAppPublish" factoryName="Azure Web App" temporary="true">
       <option name="AZURE_WEB_APP_PROJECT" value="$PROJECT_DIR$/Contacts.Api/Contacts.Api.csproj" />
       <option name="AZURE_WEB_APP_SUBSCRIPTION_ID" value="ee7c6464-c10f-4b39-becd-e9e002b306bc" />
@@ -611,9 +626,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue=".NET Launch Settings Profile.Contacts.WebUi" />
         <item itemvalue="Azure - Publish Web App.Publish Contacts.WebUi to Azure" />
         <item itemvalue="Azure - Publish Web App.Publish Contacts.Api to Azure" />
-        <item itemvalue=".NET Launch Settings Profile.Contacts.WebUi" />
         <item itemvalue="HTTP Request.Contacts-Sample-Requests#2" />
       </list>
     </recent_temporary>
@@ -663,6 +678,8 @@
       <workItem from="1595020497992" duration="465000" />
       <workItem from="1595021269115" duration="100000" />
       <workItem from="1595178903067" duration="6924000" />
+      <workItem from="1595419833478" duration="998000" />
+      <workItem from="1595543777070" duration="1874000" />
     </task>
     <task id="LOCAL-00001" summary="Created the initial database with EF Core">
       <created>1588899122166</created>
@@ -839,7 +856,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -909,7 +938,7 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="100" y="100" width="1480" height="850" key="DiffContextDialog/0.23.1680.1027/-629.-1777.3200.1777@0.23.1680.1027" timestamp="1594076561024" />
-    <state width="1626" height="281" key="GridCell.Tab.0.bottom" timestamp="1595372814321">
+    <state width="1626" height="281" key="GridCell.Tab.0.bottom" timestamp="1595546707103">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state width="819" height="266" key="GridCell.Tab.0.bottom/0.0.1680.1050/-126.-1800.3200.1800@0.0.1680.1050" timestamp="1591937966026" />
@@ -919,15 +948,15 @@
     <state width="1626" height="249" key="GridCell.Tab.0.bottom/0.0.1680.1050/-607.-1777.3200.1777@0.0.1680.1050" timestamp="1593791371708" />
     <state width="1626" height="403" key="GridCell.Tab.0.bottom/0.0.1680.1050/-607.-1800.3200.1800@0.0.1680.1050" timestamp="1593793941875" />
     <state width="1626" height="249" key="GridCell.Tab.0.bottom/0.0.1680.1050/-629.-1777.3200.1777@0.0.1680.1050" timestamp="1594337544613" />
-    <state width="1626" height="281" key="GridCell.Tab.0.bottom/0.0.1680.1050/-629.-1800.3200.1800@0.0.1680.1050" timestamp="1595372814321" />
-    <state width="1638" height="266" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1591829088886" />
+    <state width="1626" height="281" key="GridCell.Tab.0.bottom/0.0.1680.1050/-629.-1800.3200.1800@0.0.1680.1050" timestamp="1595546707103" />
+    <state width="1626" height="281" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1595381587571" />
     <state width="819" height="252" key="GridCell.Tab.0.bottom/0.23.1680.1027/-126.-1777.3200.1777@-126.-1777.3200.1777" timestamp="1592006742709" />
     <state width="819" height="252" key="GridCell.Tab.0.bottom/0.23.1680.1027/-126.-1777.3200.1777@0.23.1680.1027" timestamp="1591987246376" />
     <state width="1638" height="365" key="GridCell.Tab.0.bottom/0.23.1680.1027/-525.-1692.3008.1692@0.23.1680.1027" timestamp="1591066987095" />
     <state width="1628" height="282" key="GridCell.Tab.0.bottom/0.23.1680.1027/-607.-1669.3008.1669@-607.-1669.3008.1669" timestamp="1589513625212" />
     <state width="2377" height="372" key="GridCell.Tab.0.bottom/0.23.1680.1027/-607.-1777.3200.1777@-607.-1777.3200.1777" timestamp="1593231855069" />
-    <state width="1626" height="281" key="GridCell.Tab.0.bottom/0.23.1680.1027/-629.-1777.3200.1777@0.23.1680.1027" timestamp="1595270003864" />
-    <state width="1626" height="281" key="GridCell.Tab.0.center" timestamp="1595372814318">
+    <state width="1626" height="281" key="GridCell.Tab.0.bottom/0.23.1680.1027/-629.-1777.3200.1777@0.23.1680.1027" timestamp="1595546643654" />
+    <state width="1626" height="281" key="GridCell.Tab.0.center" timestamp="1595546707102">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state width="819" height="266" key="GridCell.Tab.0.center/0.0.1680.1050/-126.-1800.3200.1800@0.0.1680.1050" timestamp="1591937966025" />
@@ -937,15 +966,15 @@
     <state width="1626" height="249" key="GridCell.Tab.0.center/0.0.1680.1050/-607.-1777.3200.1777@0.0.1680.1050" timestamp="1593791371706" />
     <state width="1626" height="403" key="GridCell.Tab.0.center/0.0.1680.1050/-607.-1800.3200.1800@0.0.1680.1050" timestamp="1593793941873" />
     <state width="1626" height="249" key="GridCell.Tab.0.center/0.0.1680.1050/-629.-1777.3200.1777@0.0.1680.1050" timestamp="1594337544609" />
-    <state width="1626" height="281" key="GridCell.Tab.0.center/0.0.1680.1050/-629.-1800.3200.1800@0.0.1680.1050" timestamp="1595372814318" />
-    <state width="1638" height="266" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1591829088885" />
+    <state width="1626" height="281" key="GridCell.Tab.0.center/0.0.1680.1050/-629.-1800.3200.1800@0.0.1680.1050" timestamp="1595546707102" />
+    <state width="1626" height="281" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1595381587569" />
     <state width="819" height="252" key="GridCell.Tab.0.center/0.23.1680.1027/-126.-1777.3200.1777@-126.-1777.3200.1777" timestamp="1592006742708" />
     <state width="819" height="252" key="GridCell.Tab.0.center/0.23.1680.1027/-126.-1777.3200.1777@0.23.1680.1027" timestamp="1591987246376" />
     <state width="1638" height="365" key="GridCell.Tab.0.center/0.23.1680.1027/-525.-1692.3008.1692@0.23.1680.1027" timestamp="1591066987093" />
     <state width="1628" height="282" key="GridCell.Tab.0.center/0.23.1680.1027/-607.-1669.3008.1669@-607.-1669.3008.1669" timestamp="1589513625212" />
     <state width="2377" height="372" key="GridCell.Tab.0.center/0.23.1680.1027/-607.-1777.3200.1777@-607.-1777.3200.1777" timestamp="1593231855068" />
-    <state width="1626" height="281" key="GridCell.Tab.0.center/0.23.1680.1027/-629.-1777.3200.1777@0.23.1680.1027" timestamp="1595270003862" />
-    <state width="1626" height="281" key="GridCell.Tab.0.left" timestamp="1595372814317">
+    <state width="1626" height="281" key="GridCell.Tab.0.center/0.23.1680.1027/-629.-1777.3200.1777@0.23.1680.1027" timestamp="1595546643652" />
+    <state width="1626" height="281" key="GridCell.Tab.0.left" timestamp="1595546707100">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state width="819" height="266" key="GridCell.Tab.0.left/0.0.1680.1050/-126.-1800.3200.1800@0.0.1680.1050" timestamp="1591937966024" />
@@ -956,15 +985,15 @@
     <state width="1626" height="403" key="GridCell.Tab.0.left/0.0.1680.1050/-607.-1800.3200.1800@0.0.1680.1050" timestamp="1593793941872" />
     <state width="1626" height="249" key="GridCell.Tab.0.left/0.0.1680.1050/-629.-1777.3200.1777@0.0.1680.1050" timestamp="1594337544607" />
     <state width="1626" height="249" key="GridCell.Tab.0.left/0.0.1680.1050/-629.-1777.3200.1777@0.23.1680.1027" timestamp="1593561562631" />
-    <state width="1626" height="281" key="GridCell.Tab.0.left/0.0.1680.1050/-629.-1800.3200.1800@0.0.1680.1050" timestamp="1595372814317" />
-    <state width="1638" height="266" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1591829088884" />
+    <state width="1626" height="281" key="GridCell.Tab.0.left/0.0.1680.1050/-629.-1800.3200.1800@0.0.1680.1050" timestamp="1595546707100" />
+    <state width="1626" height="281" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1595381587569" />
     <state width="819" height="252" key="GridCell.Tab.0.left/0.23.1680.1027/-126.-1777.3200.1777@-126.-1777.3200.1777" timestamp="1592006742708" />
     <state width="819" height="252" key="GridCell.Tab.0.left/0.23.1680.1027/-126.-1777.3200.1777@0.23.1680.1027" timestamp="1591987246375" />
     <state width="1638" height="365" key="GridCell.Tab.0.left/0.23.1680.1027/-525.-1692.3008.1692@0.23.1680.1027" timestamp="1591066987091" />
     <state width="1628" height="282" key="GridCell.Tab.0.left/0.23.1680.1027/-607.-1669.3008.1669@-607.-1669.3008.1669" timestamp="1589513625211" />
     <state width="2377" height="372" key="GridCell.Tab.0.left/0.23.1680.1027/-607.-1777.3200.1777@-607.-1777.3200.1777" timestamp="1593231855068" />
-    <state width="1626" height="281" key="GridCell.Tab.0.left/0.23.1680.1027/-629.-1777.3200.1777@0.23.1680.1027" timestamp="1595270003859" />
-    <state width="1626" height="281" key="GridCell.Tab.0.right" timestamp="1595372814320">
+    <state width="1626" height="281" key="GridCell.Tab.0.left/0.23.1680.1027/-629.-1777.3200.1777@0.23.1680.1027" timestamp="1595546643651" />
+    <state width="1626" height="281" key="GridCell.Tab.0.right" timestamp="1595546707103">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state width="819" height="266" key="GridCell.Tab.0.right/0.0.1680.1050/-126.-1800.3200.1800@0.0.1680.1050" timestamp="1591937966025" />
@@ -974,14 +1003,14 @@
     <state width="1626" height="249" key="GridCell.Tab.0.right/0.0.1680.1050/-607.-1777.3200.1777@0.0.1680.1050" timestamp="1593791371707" />
     <state width="1626" height="403" key="GridCell.Tab.0.right/0.0.1680.1050/-607.-1800.3200.1800@0.0.1680.1050" timestamp="1593793941873" />
     <state width="1626" height="249" key="GridCell.Tab.0.right/0.0.1680.1050/-629.-1777.3200.1777@0.0.1680.1050" timestamp="1594337544611" />
-    <state width="1626" height="281" key="GridCell.Tab.0.right/0.0.1680.1050/-629.-1800.3200.1800@0.0.1680.1050" timestamp="1595372814320" />
-    <state width="1638" height="266" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1591829088886" />
+    <state width="1626" height="281" key="GridCell.Tab.0.right/0.0.1680.1050/-629.-1800.3200.1800@0.0.1680.1050" timestamp="1595546707103" />
+    <state width="1626" height="281" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1595381587570" />
     <state width="819" height="252" key="GridCell.Tab.0.right/0.23.1680.1027/-126.-1777.3200.1777@-126.-1777.3200.1777" timestamp="1592006742709" />
     <state width="819" height="252" key="GridCell.Tab.0.right/0.23.1680.1027/-126.-1777.3200.1777@0.23.1680.1027" timestamp="1591987246376" />
     <state width="1638" height="365" key="GridCell.Tab.0.right/0.23.1680.1027/-525.-1692.3008.1692@0.23.1680.1027" timestamp="1591066987094" />
     <state width="1628" height="282" key="GridCell.Tab.0.right/0.23.1680.1027/-607.-1669.3008.1669@-607.-1669.3008.1669" timestamp="1589513625212" />
     <state width="2377" height="372" key="GridCell.Tab.0.right/0.23.1680.1027/-607.-1777.3200.1777@-607.-1777.3200.1777" timestamp="1593231855069" />
-    <state width="1626" height="281" key="GridCell.Tab.0.right/0.23.1680.1027/-629.-1777.3200.1777@0.23.1680.1027" timestamp="1595270003863" />
+    <state width="1626" height="281" key="GridCell.Tab.0.right/0.23.1680.1027/-629.-1777.3200.1777@0.23.1680.1027" timestamp="1595546643653" />
     <state width="1626" height="403" key="GridCell.Tab.1.bottom" timestamp="1593793941879">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
@@ -1216,10 +1245,11 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="566" y="236" key="RiderGenerateDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1591744390216" />
-    <state x="561" y="177" key="RollbackChangesDialog" timestamp="1593790999805">
+    <state x="561" y="177" key="RollbackChangesDialog" timestamp="1595546593625">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="561" y="177" key="RollbackChangesDialog/0.0.1680.1050/-607.-1800.3200.1800@0.0.1680.1050" timestamp="1593790999805" />
+    <state x="561" y="177" key="RollbackChangesDialog/0.0.1680.1050/-629.-1800.3200.1800@0.0.1680.1050" timestamp="1595546593625" />
     <state x="325" y="65" key="SettingsEditor" timestamp="1595021158635">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
@@ -1230,9 +1260,10 @@
     <state x="325" y="65" key="SettingsEditor/0.0.1680.1050/0.-1080.1920.1080/-1920.0.1920.1080@0.0.1680.1050" timestamp="1595021158635" />
     <state x="379" y="164" key="SettingsEditor/0.0.1680.1050@0.0.1680.1050" timestamp="1591743889705" />
     <state x="115" y="-1518" key="SettingsEditor/0.23.1680.1027/-607.-1777.3200.1777@-607.-1777.3200.1777" timestamp="1593223585320" />
-    <state x="100" y="123" width="1480" height="827" key="VCS.FileHistoryDialog" timestamp="1592523991079">
-      <screen x="0" y="23" width="1680" height="1027" />
+    <state x="100" y="102" width="1480" height="846" key="VCS.FileHistoryDialog" timestamp="1595375537717">
+      <screen x="0" y="0" width="1680" height="1050" />
     </state>
+    <state x="100" y="102" width="1480" height="846" key="VCS.FileHistoryDialog/0.0.1680.1050/-629.-1800.3200.1800@0.0.1680.1050" timestamp="1595375537717" />
     <state x="100" y="123" width="1480" height="827" key="VCS.FileHistoryDialog/0.23.1680.1027/-629.-1777.3200.1777@0.23.1680.1027" timestamp="1592523991079" />
     <state x="340" y="202" key="Vcs.Push.Dialog.v2" timestamp="1594952259914">
       <screen x="0" y="0" width="1680" height="1050" />

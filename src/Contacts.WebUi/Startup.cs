@@ -30,8 +30,7 @@ namespace Contacts.WebUi
             services.AddSingleton(settings);
 
             services.AddApplicationInsightsTelemetry(settings.AppInsightsKey);
-            
-            services.AddSignIn(Configuration);
+                        
             var initialScopes = new[]
             {
                 settings.ApiScopeUri + Domain.Permissions.Contacts.Delete,
@@ -42,7 +41,8 @@ namespace Contacts.WebUi
             };
             // Token acquisition service based on MSAL.NET
             // and chosen token cache implementation
-            services.AddWebAppCallsProtectedWebApi(Configuration, initialScopes)
+            services.AddMicrosoftWebAppAuthentication(Configuration)
+                .AddMicrosoftWebAppCallsWebApi(Configuration, initialScopes)
                 .AddInMemoryTokenCaches();
             
             services.AddControllersWithViews(options =>
