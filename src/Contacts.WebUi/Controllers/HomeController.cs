@@ -25,22 +25,6 @@ namespace Contacts.WebUi.Controllers
 
         public IActionResult Index()
         {
-            _logger.LogInformation("A view to the Index page");
-            // HACK: This is a hack to avoid login issues since the Token is cached in memory
-            // This means, we get an MsalUiRequiredException with the message of 
-            // 'No account or login hint was passed to the AcquireTokenSilent call'
-            // everytime we start the application.  Until we migrate to SqlServer or another distributed
-            // caching means, we need to Delete all the cookies.
-            
-            // TODO: Stop deleting cookies once a distributed cache is used for the MSAL
-            if (_environment.IsDevelopment())
-            {
-                foreach (var cookieKey in Request.Cookies.Keys)
-                {
-                    Response.Cookies.Delete(cookieKey);
-                }
-            }
-
             return View();
         }
 

@@ -8,6 +8,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Identity.Web;
+using Microsoft.Identity.Web.TokenCacheProviders.Distributed;
 using Microsoft.Identity.Web.TokenCacheProviders.InMemory;
 using Microsoft.Identity.Web.UI;
 
@@ -43,7 +44,15 @@ namespace Contacts.WebUi
             // and chosen token cache implementation
             services.AddMicrosoftWebAppAuthentication(Configuration)
                 .AddMicrosoftWebAppCallsWebApi(Configuration, initialScopes)
-                .AddInMemoryTokenCaches();
+                .AddDistributedTokenCaches();
+            
+            services.AddDistributedSqlServerCache(options =>
+            {
+                options.ConnectionString = 
+                    Configuration.GetConnectionString("ContactsDatabaseSqlServer");
+                options.SchemaName = "dbo";
+                options.TableName = "Cache";
+            });
             
             services.AddControllersWithViews(options =>
             {

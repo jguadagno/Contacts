@@ -32,11 +32,10 @@
     <list default="true" id="14fd18ef-6fed-455b-81a5-09cb395c5fc7" name="Default Changelist" comment="Added video and code links for June 29th, 2020 stream">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Contacts/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Contacts/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Contacts/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Contacts/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Contacts/riderModule.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Contacts/riderModule.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Contacts.Api/Contacts.Api.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Contacts.Api/Contacts.Api.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Contacts.Api/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Contacts.Api/Startup.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Contacts.WebUi/Contacts.WebUi.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Contacts.WebUi/Contacts.WebUi.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Contacts.WebUi/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Contacts.WebUi/Startup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Contacts.WebUi/appsettings.Development.json" beforeDir="false" afterPath="$PROJECT_DIR$/Contacts.WebUi/appsettings.Development.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Contacts.WebUi/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/Contacts.WebUi/appsettings.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,92 +55,74 @@
     <option name="SET_USER_NAME_GLOBALLY" value="false" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Contacts.WebUi/Controllers/HomeController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Contacts.Data.SqlServer/SqliteDataStore.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Contacts.WebUi/Views/Contact/Add.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Contacts.Api/appsettings.json" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Contacts.Api/appsettings.Development.json" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Contacts.Api/Program.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Contacts.Api/Controllers/ContactsController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/ED30D12D-C294-4AAE-877F-8369C6255ED5/86/HttpProtocol.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/C072ADA3-420F-4E08-8493-043C3240EB59/24/ControllerBase.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Contacts.WebUi/Views/Contact/Delete.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/E407D4BA-C36C-45DA-982B-FD389A659F31/1F/TypePair.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Contacts.Data/ContactRepository.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/E407D4BA-C36C-45DA-982B-FD389A659F31/F/Mapper.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/C072ADA3-420F-4E08-8493-043C3240EB59/26/CreatedAtActionResult.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/C072ADA3-420F-4E08-8493-043C3240EB59/4B/ObjectResult.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Contacts.WebUi/nlog.config" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/E6F4E365-4FD2-455E-9BA6-DE4ADFAA7BB3/4/DeveloperExceptionPageMiddleware.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Contacts.Data.Sqlite/ContactContext.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/533330B7-1484-4988-ABDE-951A10BAE9EF/24/FormatterCollection.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/C6E4F3CD-47A3-455E-B489-40966E899125/3/AuthorizationMiddleware.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Contacts.Api/nlog.config" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/348CE0C5-409D-4B55-9D33-ACFA68256918/8/ServiceProvider.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/9EE8EE86-E367-481B-BF0E-11BEFE86882F/394/Collection.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/9EE8EE86-E367-481B-BF0E-11BEFE86882F/3A4/List.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Contacts.Console/Program.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/04488B37-7C19-4E76-A561-DA6D832C42D0/1/MvcServiceCollectionExtensions.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/C072ADA3-420F-4E08-8493-043C3240EB59/11/ActionResultOfT.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Contacts.Domain/Models/Contact.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/C072ADA3-420F-4E08-8493-043C3240EB59/FE/ControllerActionInvoker.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Contacts.Domain/Models/PhoneType.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Contacts.Domain/Models/Address.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Contacts.Domain/Models/AddressType.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Contacts.Domain/Models/Phone.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Contacts.Domain/Interfaces/IContactRepository.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Contacts.WebUi/Views/Contact/Details.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Contacts.Domain/Interfaces/IContactManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Contacts.Domain/Interfaces/IContactDataStore.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Contacts.Logic/ContactManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Contacts.Domain/Permissions/Contacts.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Contacts.Data.Sqlite/SqliteDataStore.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/9EE8EE86-E367-481B-BF0E-11BEFE86882F/22D/AsyncValueTaskMethodBuilder.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Contacts.WebUi/Controllers/ContactController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Contacts.WebUi/Views/Contact/Edit.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Contacts.Data.Sqlite/Models/Contact.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Contacts.Data.Sqlite/Models/Phone.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Contacts.Data.Sqlite/Models/ContactProfile.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Contacts.Data.Sqlite/Models/PhoneType.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Contacts.Data.Sqlite/Models/AddressType.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Contacts.Data.Sqlite/Models/Address.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Contacts.Api/Models/Settings.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Contacts.Data.Sqlite/Migrations/ContactContextModelSnapshot.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Contacts.Api/Models/ISettings.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Contacts.Data.Sqlite/Migrations/InitialCreate.Designer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9152434B-0FAC-463B-87F2-DD9AF798817F/02/c977ac4d/Assert.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Contacts.Data.Sqlite/Migrations/InitialCreate.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Contacts.Logic.Tests/ContactManagerTests.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Contacts.WebUi/Views/_ViewImports.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Contacts.WebUi/Views/_ViewStart.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Contacts.WebUi/Views/Home/Index.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Contacts.WebUi/Views/Home/Privacy.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Contacts.WebUi/Views/Shared/_LoginPartial.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Contacts.WebUi/Views/Shared/Error.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Contacts.WebUi/Views/Shared/_Layout.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Contacts.WebUi/Views/Contact/Index.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Contacts.WebUi/Models/ISettings.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Contacts.WebUi/Models/ErrorViewModel.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Contacts.WebUi/Models/Settings.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Contacts.WebUi/Properties/launchSettings.json" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Contacts.WebUi/Startup.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Contacts.Api/Properties/launchSettings.json" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Contacts.WebUi/appsettings.json" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Contacts.WebUi/appsettings.Development.json" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Contacts.WebUi/Program.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Contacts.Data.SqlServer/Models/Phone.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Contacts.Data.SqlServer/Models/Address.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Contacts.Data.SqlServer/Models/PhoneType.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Contacts.Data.SqlServer/Models/AddressType.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Contacts.Data.SqlServer/Models/Phone.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Contacts.Data.SqlServer/Models/ContactProfile.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Contacts.Data.SqlServer/Models/Contact.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Contacts.Data.SqlServer/Models/AddressType.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Contacts.Data.SqlServer/Models/Address.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/26E73D93-802A-4CA4-9862-16C321E0DF82/22D/AsyncValueTaskMethodBuilder.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Contacts.Data.SqlServer/ContactContext.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Contacts.Data.SqlServer/SqliteDataStore.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Contacts.WebUi/Models/ErrorViewModel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Contacts.WebUi/Models/Settings.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Contacts.WebUi/Views/Contact/Add.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Contacts.WebUi/Models/ISettings.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Contacts.Logic/ContactManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Contacts.WebUi/Views/Contact/Index.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Contacts.WebUi/Views/Contact/Delete.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Contacts.WebUi/Views/Contact/Details.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Contacts.WebUi/Views/Contact/Edit.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Contacts.Logic.Tests/ContactManagerTests.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Contacts.WebUi/Views/Shared/_Layout.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Contacts.Data.Sqlite/Migrations/InitialCreate.Designer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Contacts.WebUi/Views/Shared/_LoginPartial.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Contacts.Data.Sqlite/Migrations/InitialCreate.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Contacts.WebUi/Views/Shared/Error.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Contacts.Data.Sqlite/Models/Address.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Contacts.WebUi/Views/Home/Privacy.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Contacts.Data.Sqlite/Migrations/ContactContextModelSnapshot.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Contacts.WebUi/Views/Home/Index.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Contacts.Data.Sqlite/Models/PhoneType.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Contacts.WebUi/Views/_ViewStart.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Contacts.Data.Sqlite/Models/AddressType.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Contacts.Data.Sqlite/Models/Phone.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Contacts.Data.Sqlite/Models/ContactProfile.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Contacts.Data.Sqlite/Models/Contact.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Contacts.WebUi/Views/_ViewImports.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Contacts.Api/Properties/launchSettings.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Contacts.WebUi/Properties/launchSettings.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Contacts.Console/Program.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Contacts.WebUi/Startup.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Contacts.Data.Sqlite/ContactContext.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Contacts.Data.Sqlite/SqliteDataStore.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Contacts.WebUi/appsettings.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Contacts.WebUi/Program.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Contacts.WebUi/appsettings.Development.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Contacts.WebUi/nlog.config" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Contacts.Console/appsettings.Development.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Contacts.Domain/Permissions/Contacts.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Contacts.Domain/Interfaces/IContactManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Contacts.Domain/Interfaces/IContactDataStore.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Contacts.Domain/Models/Phone.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Contacts.Domain/Interfaces/IContactRepository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Contacts.Domain/Models/Address.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Contacts.Domain/Models/AddressType.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Contacts.Domain/Models/Contact.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Contacts.Domain/Models/PhoneType.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Contacts.Api/Models/Settings.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Contacts.Data/ContactRepository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Contacts.Api/Models/ISettings.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Contacts.WebUi/Controllers/HomeController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Contacts.WebUi/Controllers/ContactController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Contacts.WebUi/Services/IContactService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Contacts.WebUi/Services/ContactService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Contacts.WebUi/Services/ContactServiceExtensions.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Contacts.Api/nlog.config" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Contacts.Api/Program.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Contacts.Api/appsettings.Development.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Contacts.Api/appsettings.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Contacts.Api/Startup.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Contacts.WebUi/Services/IContactService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Contacts.Api/Controllers/ContactsController.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -174,7 +155,6 @@
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/b11e6f26-9df6-4f33-8186-877876858ef2/console.sql" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/cb51efab-b2c6-4d2c-a317-d97aa0938ddd/console.sql" />
         <option value="$PROJECT_DIR$/Contacts.Data.SqlServer/Models/Contact.cs" />
-        <option value="$PROJECT_DIR$/Contacts.WebUi/appsettings.Development.json" />
         <option value="$PROJECT_DIR$/Contacts.WebUi/wwwroot/js/site.js" />
         <option value="$PROJECT_DIR$/Contacts.WebUi/Models/ISettings.cs" />
         <option value="$PROJECT_DIR$/Contacts.WebUi/Models/Settings.cs" />
@@ -182,12 +162,10 @@
         <option value="$PROJECT_DIR$/Contacts.Api/Models/ISettings.cs" />
         <option value="$PROJECT_DIR$/Contacts.Api/Models/Settings.cs" />
         <option value="$PROJECT_DIR$/Contacts.WebUi/Program.cs" />
-        <option value="$PROJECT_DIR$/Contacts.WebUi/appsettings.json" />
         <option value="$PROJECT_DIR$/Contacts.WebUi/Controllers/HomeController.cs" />
         <option value="$PROJECT_DIR$/Contacts.Api/Program.cs" />
         <option value="$PROJECT_DIR$/Contacts.WebUi/nlog.config" />
         <option value="$PROJECT_DIR$/Contacts.Api/nlog.config" />
-        <option value="$PROJECT_DIR$/../outline.md" />
         <option value="$PROJECT_DIR$/Contacts.WebUi/Views/Home/Index.cshtml" />
         <option value="$PROJECT_DIR$/Contacts.Api/Controllers/ContactsController.cs" />
         <option value="$PROJECT_DIR$/../README.md" />
@@ -195,8 +173,11 @@
         <option value="$PROJECT_DIR$/Contacts.Api/appsettings.Development.json" />
         <option value="$PROJECT_DIR$/Contacts.WebUi/Contacts.WebUi.csproj" />
         <option value="$PROJECT_DIR$/Contacts.Api/Contacts.Api.csproj" />
-        <option value="$PROJECT_DIR$/Contacts.WebUi/Startup.cs" />
         <option value="$PROJECT_DIR$/Contacts.Api/Startup.cs" />
+        <option value="$PROJECT_DIR$/../outline.md" />
+        <option value="$PROJECT_DIR$/Contacts.WebUi/appsettings.Development.json" />
+        <option value="$PROJECT_DIR$/Contacts.WebUi/appsettings.json" />
+        <option value="$PROJECT_DIR$/Contacts.WebUi/Startup.cs" />
       </list>
     </option>
   </component>
@@ -680,6 +661,8 @@
       <workItem from="1595178903067" duration="6924000" />
       <workItem from="1595419833478" duration="998000" />
       <workItem from="1595543777070" duration="1874000" />
+      <workItem from="1595641235071" duration="524000" />
+      <workItem from="1595641908063" duration="2001000" />
     </task>
     <task id="LOCAL-00001" summary="Created the initial database with EF Core">
       <created>1588899122166</created>
@@ -828,7 +811,14 @@
       <option name="project" value="LOCAL" />
       <updated>1594952255428</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Added the code and stream for July 23, 2020">
+      <created>1595642269302</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1595642269302</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -897,7 +887,8 @@
     <MESSAGE value="Cleaned up some of the authentication functionality" />
     <MESSAGE value="Added the SQL Server data source" />
     <MESSAGE value="Migration to the cloud" />
-    <option name="LAST_COMMIT_MESSAGE" value="Migration to the cloud" />
+    <MESSAGE value="Added the code and stream for July 23, 2020" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added the code and stream for July 23, 2020" />
   </component>
   <component name="WindowStateProjectService">
     <state x="424" y="104" key="#Contacts.Api:_IIS_Express" timestamp="1590708432716">
@@ -938,8 +929,8 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="100" y="100" width="1480" height="850" key="DiffContextDialog/0.23.1680.1027/-629.-1777.3200.1777@0.23.1680.1027" timestamp="1594076561024" />
-    <state width="1626" height="281" key="GridCell.Tab.0.bottom" timestamp="1595546707103">
-      <screen x="0" y="0" width="1680" height="1050" />
+    <state width="1740" height="265" key="GridCell.Tab.0.bottom" timestamp="1595643926295">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="819" height="266" key="GridCell.Tab.0.bottom/0.0.1680.1050/-126.-1800.3200.1800@0.0.1680.1050" timestamp="1591937966026" />
     <state width="1638" height="365" key="GridCell.Tab.0.bottom/0.0.1680.1050/-525.-1692.3008.1692@-525.-1692.3008.1692" timestamp="1591674304334" />
@@ -950,14 +941,15 @@
     <state width="1626" height="249" key="GridCell.Tab.0.bottom/0.0.1680.1050/-629.-1777.3200.1777@0.0.1680.1050" timestamp="1594337544613" />
     <state width="1626" height="281" key="GridCell.Tab.0.bottom/0.0.1680.1050/-629.-1800.3200.1800@0.0.1680.1050" timestamp="1595546707103" />
     <state width="1626" height="281" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1595381587571" />
+    <state width="1740" height="265" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1595643926295" />
     <state width="819" height="252" key="GridCell.Tab.0.bottom/0.23.1680.1027/-126.-1777.3200.1777@-126.-1777.3200.1777" timestamp="1592006742709" />
     <state width="819" height="252" key="GridCell.Tab.0.bottom/0.23.1680.1027/-126.-1777.3200.1777@0.23.1680.1027" timestamp="1591987246376" />
     <state width="1638" height="365" key="GridCell.Tab.0.bottom/0.23.1680.1027/-525.-1692.3008.1692@0.23.1680.1027" timestamp="1591066987095" />
     <state width="1628" height="282" key="GridCell.Tab.0.bottom/0.23.1680.1027/-607.-1669.3008.1669@-607.-1669.3008.1669" timestamp="1589513625212" />
     <state width="2377" height="372" key="GridCell.Tab.0.bottom/0.23.1680.1027/-607.-1777.3200.1777@-607.-1777.3200.1777" timestamp="1593231855069" />
     <state width="1626" height="281" key="GridCell.Tab.0.bottom/0.23.1680.1027/-629.-1777.3200.1777@0.23.1680.1027" timestamp="1595546643654" />
-    <state width="1626" height="281" key="GridCell.Tab.0.center" timestamp="1595546707102">
-      <screen x="0" y="0" width="1680" height="1050" />
+    <state width="1740" height="265" key="GridCell.Tab.0.center" timestamp="1595643926294">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="819" height="266" key="GridCell.Tab.0.center/0.0.1680.1050/-126.-1800.3200.1800@0.0.1680.1050" timestamp="1591937966025" />
     <state width="1638" height="365" key="GridCell.Tab.0.center/0.0.1680.1050/-525.-1692.3008.1692@-525.-1692.3008.1692" timestamp="1591674304333" />
@@ -968,14 +960,15 @@
     <state width="1626" height="249" key="GridCell.Tab.0.center/0.0.1680.1050/-629.-1777.3200.1777@0.0.1680.1050" timestamp="1594337544609" />
     <state width="1626" height="281" key="GridCell.Tab.0.center/0.0.1680.1050/-629.-1800.3200.1800@0.0.1680.1050" timestamp="1595546707102" />
     <state width="1626" height="281" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1595381587569" />
+    <state width="1740" height="265" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1595643926294" />
     <state width="819" height="252" key="GridCell.Tab.0.center/0.23.1680.1027/-126.-1777.3200.1777@-126.-1777.3200.1777" timestamp="1592006742708" />
     <state width="819" height="252" key="GridCell.Tab.0.center/0.23.1680.1027/-126.-1777.3200.1777@0.23.1680.1027" timestamp="1591987246376" />
     <state width="1638" height="365" key="GridCell.Tab.0.center/0.23.1680.1027/-525.-1692.3008.1692@0.23.1680.1027" timestamp="1591066987093" />
     <state width="1628" height="282" key="GridCell.Tab.0.center/0.23.1680.1027/-607.-1669.3008.1669@-607.-1669.3008.1669" timestamp="1589513625212" />
     <state width="2377" height="372" key="GridCell.Tab.0.center/0.23.1680.1027/-607.-1777.3200.1777@-607.-1777.3200.1777" timestamp="1593231855068" />
     <state width="1626" height="281" key="GridCell.Tab.0.center/0.23.1680.1027/-629.-1777.3200.1777@0.23.1680.1027" timestamp="1595546643652" />
-    <state width="1626" height="281" key="GridCell.Tab.0.left" timestamp="1595546707100">
-      <screen x="0" y="0" width="1680" height="1050" />
+    <state width="1740" height="265" key="GridCell.Tab.0.left" timestamp="1595643926294">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="819" height="266" key="GridCell.Tab.0.left/0.0.1680.1050/-126.-1800.3200.1800@0.0.1680.1050" timestamp="1591937966024" />
     <state width="1638" height="365" key="GridCell.Tab.0.left/0.0.1680.1050/-525.-1692.3008.1692@-525.-1692.3008.1692" timestamp="1591674304331" />
@@ -987,14 +980,15 @@
     <state width="1626" height="249" key="GridCell.Tab.0.left/0.0.1680.1050/-629.-1777.3200.1777@0.23.1680.1027" timestamp="1593561562631" />
     <state width="1626" height="281" key="GridCell.Tab.0.left/0.0.1680.1050/-629.-1800.3200.1800@0.0.1680.1050" timestamp="1595546707100" />
     <state width="1626" height="281" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1595381587569" />
+    <state width="1740" height="265" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1595643926294" />
     <state width="819" height="252" key="GridCell.Tab.0.left/0.23.1680.1027/-126.-1777.3200.1777@-126.-1777.3200.1777" timestamp="1592006742708" />
     <state width="819" height="252" key="GridCell.Tab.0.left/0.23.1680.1027/-126.-1777.3200.1777@0.23.1680.1027" timestamp="1591987246375" />
     <state width="1638" height="365" key="GridCell.Tab.0.left/0.23.1680.1027/-525.-1692.3008.1692@0.23.1680.1027" timestamp="1591066987091" />
     <state width="1628" height="282" key="GridCell.Tab.0.left/0.23.1680.1027/-607.-1669.3008.1669@-607.-1669.3008.1669" timestamp="1589513625211" />
     <state width="2377" height="372" key="GridCell.Tab.0.left/0.23.1680.1027/-607.-1777.3200.1777@-607.-1777.3200.1777" timestamp="1593231855068" />
     <state width="1626" height="281" key="GridCell.Tab.0.left/0.23.1680.1027/-629.-1777.3200.1777@0.23.1680.1027" timestamp="1595546643651" />
-    <state width="1626" height="281" key="GridCell.Tab.0.right" timestamp="1595546707103">
-      <screen x="0" y="0" width="1680" height="1050" />
+    <state width="1740" height="265" key="GridCell.Tab.0.right" timestamp="1595643926294">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="819" height="266" key="GridCell.Tab.0.right/0.0.1680.1050/-126.-1800.3200.1800@0.0.1680.1050" timestamp="1591937966025" />
     <state width="1638" height="365" key="GridCell.Tab.0.right/0.0.1680.1050/-525.-1692.3008.1692@-525.-1692.3008.1692" timestamp="1591674304333" />
@@ -1005,6 +999,7 @@
     <state width="1626" height="249" key="GridCell.Tab.0.right/0.0.1680.1050/-629.-1777.3200.1777@0.0.1680.1050" timestamp="1594337544611" />
     <state width="1626" height="281" key="GridCell.Tab.0.right/0.0.1680.1050/-629.-1800.3200.1800@0.0.1680.1050" timestamp="1595546707103" />
     <state width="1626" height="281" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1595381587570" />
+    <state width="1740" height="265" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1595643926294" />
     <state width="819" height="252" key="GridCell.Tab.0.right/0.23.1680.1027/-126.-1777.3200.1777@-126.-1777.3200.1777" timestamp="1592006742709" />
     <state width="819" height="252" key="GridCell.Tab.0.right/0.23.1680.1027/-126.-1777.3200.1777@0.23.1680.1027" timestamp="1591987246376" />
     <state width="1638" height="365" key="GridCell.Tab.0.right/0.23.1680.1027/-525.-1692.3008.1692@0.23.1680.1027" timestamp="1591066987094" />
@@ -1265,19 +1260,24 @@
     </state>
     <state x="100" y="102" width="1480" height="846" key="VCS.FileHistoryDialog/0.0.1680.1050/-629.-1800.3200.1800@0.0.1680.1050" timestamp="1595375537717" />
     <state x="100" y="123" width="1480" height="827" key="VCS.FileHistoryDialog/0.23.1680.1027/-629.-1777.3200.1777@0.23.1680.1027" timestamp="1592523991079" />
-    <state x="340" y="202" key="Vcs.Push.Dialog.v2" timestamp="1594952259914">
-      <screen x="0" y="0" width="1680" height="1050" />
+    <state x="389" y="200" key="Vcs.Push.Dialog.v2" timestamp="1595642277030">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="84" y="-1366" key="Vcs.Push.Dialog.v2/0.0.1680.1050/-525.-1692.3008.1692@-525.-1692.3008.1692" timestamp="1591671572897" />
     <state x="340" y="202" key="Vcs.Push.Dialog.v2/0.0.1680.1050/-525.-1692.3008.1692@0.0.1680.1050" timestamp="1591833417230" />
     <state x="340" y="202" key="Vcs.Push.Dialog.v2/0.0.1680.1050/-607.-1800.3200.1800@0.0.1680.1050" timestamp="1593791557055" />
     <state x="340" y="202" key="Vcs.Push.Dialog.v2/0.0.1680.1050/-629.-1800.3200.1800@0.0.1680.1050" timestamp="1594952259914" />
+    <state x="389" y="200" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1595642277030" />
     <state x="2" y="-1348" key="Vcs.Push.Dialog.v2/0.23.1680.1027/-607.-1669.3008.1669@-607.-1669.3008.1669" timestamp="1589513007054" />
     <state width="840" height="550" key="XDebugger.FullValuePopup" timestamp="1593732937587">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state width="840" height="550" key="XDebugger.FullValuePopup/0.0.1680.1050/-629.-1800.3200.1800@0.0.1680.1050" timestamp="1593732937587" />
     <state width="840" height="537" key="XDebugger.FullValuePopup/0.23.1680.1027/-629.-1777.3200.1777@0.23.1680.1027" timestamp="1593127745782" />
+    <state x="703" y="376" key="cloudConfig.PluginsDialog" timestamp="1595641761191">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="703" y="376" key="cloudConfig.PluginsDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1595641761191" />
     <state x="325" y="116" key="com.intellij.database.dbimport.ImportDialog" timestamp="1594166262042">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
