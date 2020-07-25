@@ -292,7 +292,12 @@ Part II: Deployed the Web API and added a new Build Status badge
 * [Video Part II](https://youtu.be/L-9EaIzb-1E)
 * Source Code [96fad81](https://github.com/jguadagno/Contacts/commit/96fad81179bcebf16aa2f9c88c5a428b9c0f2381)
 
-## Fix the MSAL Security
+## Updated the Microsoft Identity Web package
+
+There were some breaking changes with this update but otherwise it was painful.
+
+* [Video](https://www.youtube.com/watch?v=-Sl8rz4fRQU)
+* Source Code [07211dc](https://github.com/jguadagno/Contacts/commit/07211dc0d8b2dad6ad9ea0e989f5d4691966a8c9)
 
 Implement the SQLServerCacheTokenProvider and update the package. 
 
