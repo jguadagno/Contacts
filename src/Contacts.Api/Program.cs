@@ -1,6 +1,7 @@
 using System;
 using Contacts.Api;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.Azure;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using NLog.Web;
@@ -11,6 +12,7 @@ namespace Contacts.WebUi
     {
         public static void Main(string[] args)
         {
+
             var logger = NLog.Web.NLogBuilder.ConfigureNLog("nlog.config").GetCurrentClassLogger();
             try
             {
