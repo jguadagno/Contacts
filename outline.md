@@ -301,6 +301,13 @@ There were some breaking changes with this update but otherwise it was painful.
 
 Implement the SQLServerCacheTokenProvider and update the package. 
 
+## User Secrets
+
+We migrated the code to use User Secrets.  No more connection strings in source.
+
+* [Video](https://youtu.be/zLSyy2G6YDg)
+* Source Code [fcdf12b](https://github.com/jguadagno/Contacts/commit/fcdf12bb74570a71417ecfabee826fc6ca2fe0e9)
+
 ## Future UI Clients
 
 Here are some other client technologies that we can use.
