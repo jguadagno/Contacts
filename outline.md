@@ -277,7 +277,7 @@ On commit to the source code repository...
 * Deploy the API to the development slot of the Azure Web App
 * Once successful, 'click to deploy' to production
 
-Part I: Created the `deploy-to-azure.yml` file.
+Part I: Created the [`deploy-to-azure.yml`](/.github/workflows/deploy-to-azure.yml) file.
 
 Created steps in the Action to
 
@@ -314,8 +314,8 @@ Let's take a look at what it would take to upload an image of our contacts to ou
 
 ASP.NET Docs for [File Uploads](https://docs.microsoft.com/en-us/aspnet/core/mvc/models/file-uploads?view=aspnetcore-3.1#:~:text=%20Upload%20files%20in%20ASP.NET%20Core%20%201,are%20buffering%20and%20streaming.%20The%20entire...%20More%20)
 
-* Video []
-* Source code []()s
+* [Video](https://youtu.be/N5m9flz0BJI)
+* Source code [29ac0a8](https://github.com/jguadagno/Contacts/commit/29ac0a8dae6d8cef7ad5e40486fb70bd296b8abc)
 
 ## Future UI Clients
 
