@@ -27,6 +27,7 @@ namespace Contacts.Domain.Models
         [ExcludeFromCodeCoverage]
         [Url]
         public string ImageUrl { get; set; }
+
         [ExcludeFromCodeCoverage]
         public List<Address> Addresses { get; set;}
         [ExcludeFromCodeCoverage]

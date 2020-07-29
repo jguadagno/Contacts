@@ -308,6 +308,15 @@ We migrated the code to use User Secrets.  No more connection strings in source.
 * [Video](https://youtu.be/zLSyy2G6YDg)
 * Source Code [fcdf12b](https://github.com/jguadagno/Contacts/commit/fcdf12bb74570a71417ecfabee826fc6ca2fe0e9)
 
+## Uploading Images of Contacts
+
+Let's take a look at what it would take to upload an image of our contacts to our server.  Once uploaded we can than save and serve them from blob storage.
+
+ASP.NET Docs for [File Uploads](https://docs.microsoft.com/en-us/aspnet/core/mvc/models/file-uploads?view=aspnetcore-3.1#:~:text=%20Upload%20files%20in%20ASP.NET%20Core%20%201,are%20buffering%20and%20streaming.%20The%20entire...%20More%20)
+
+* Video []
+* Source code []()s
+
 ## Future UI Clients
 
 Here are some other client technologies that we can use.

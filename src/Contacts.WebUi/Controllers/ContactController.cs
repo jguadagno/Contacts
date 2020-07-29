@@ -1,6 +1,9 @@
+using System.Collections.Generic;
+using System.Diagnostics;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Contacts.WebUi.Services;
+using Microsoft.AspNetCore.Http;
 
 namespace Contacts.WebUi.Controllers
 {
@@ -65,6 +68,16 @@ namespace Contacts.WebUi.Controllers
         {
             var savedContact = await _contactService.SaveContactAsync(contact);
             return RedirectToAction("Details", new {id = savedContact.ContactId});
+        }
+
+        [HttpPost]
+        public IActionResult Upload(int contactId, IFormFile uploadFile)
+        {
+            // TODO: Save the file to Blob Storage
+            // TODO: Update the Url for the image
+            
+            Debug.WriteLine(uploadFile.FileName);
+            return RedirectToAction("Details", new {id = contactId});
         }
     }
 }
