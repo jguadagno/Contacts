@@ -1,5 +1,7 @@
+using Azure.Storage.Blobs.Models;
 using Contacts.WebUi.Models;
 using Contacts.WebUi.Services;
+using JosephGuadagno.AzureHelpers.Storage;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -9,7 +11,6 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Identity.Web;
 using Microsoft.Identity.Web.TokenCacheProviders.Distributed;
-using Microsoft.Identity.Web.TokenCacheProviders.InMemory;
 using Microsoft.Identity.Web.UI;
 
 namespace Contacts.WebUi
@@ -30,6 +31,14 @@ namespace Contacts.WebUi
             Configuration.Bind("Settings", settings);
             services.AddSingleton(settings);
 
+            // Register Contact Images Container
+            services.AddSingleton(provider =>
+            {
+                var blobs = new Blobs(settings.ContactBlobStorageAccount, settings.ContactImageContainerName);
+                var blob = blobs.BlobContainerClient.SetAccessPolicy(accessType: PublicAccessType.Blob);
+                return blobs;
+            });
+            
             services.AddApplicationInsightsTelemetry(settings.AppInsightsKey);
                         
             var initialScopes = new[]

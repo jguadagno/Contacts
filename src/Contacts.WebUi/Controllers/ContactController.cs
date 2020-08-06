@@ -1,8 +1,10 @@
-using System.Collections.Generic;
+using System;
 using System.Diagnostics;
 using System.Threading.Tasks;
+using Contacts.WebUi.Models;
 using Microsoft.AspNetCore.Mvc;
 using Contacts.WebUi.Services;
+using JosephGuadagno.AzureHelpers.Storage;
 using Microsoft.AspNetCore.Http;
 
 namespace Contacts.WebUi.Controllers
@@ -10,9 +12,14 @@ namespace Contacts.WebUi.Controllers
     public class ContactController : Controller
     {
         private readonly IContactService _contactService;
-        public ContactController(IContactService contactService)
+        private readonly Blobs _blobs;
+        private readonly Settings _settings;
+        
+        public ContactController(IContactService contactService, Blobs blobs, Settings settings)
         {
             _contactService = contactService;
+            _blobs = blobs;
+            _settings = settings;
         }
 
         // GET All
@@ -71,12 +78,19 @@ namespace Contacts.WebUi.Controllers
         }
 
         [HttpPost]
-        public IActionResult Upload(int contactId, IFormFile uploadFile)
+        public async Task<IActionResult> Upload(int contactId, IFormFile uploadFile)
         {
-            // TODO: Save the file to Blob Storage
-            // TODO: Update the Url for the image
             
-            Debug.WriteLine(uploadFile.FileName);
+            var fileExtension = new System.IO.FileInfo(uploadFile.FileName).Extension;
+            var filename = $"{contactId}{fileExtension}";
+
+            var blobContentInfo = await _blobs.UploadAsync(filename, uploadFile.OpenReadStream(), true);
+            
+            var imageUrl = $"{_settings.ContactImageUrl}{_settings.ContactImageContainerName}/{filename}";
+            var contact = await _contactService.GetContactAsync(contactId);
+            contact.ImageUrl = imageUrl;
+            var wasSaved = await _contactService.SaveContactAsync(contact);
+            
             return RedirectToAction("Details", new {id = contactId});
         }
     }

@@ -317,6 +317,20 @@ ASP.NET Docs for [File Uploads](https://docs.microsoft.com/en-us/aspnet/core/mvc
 * [Video](https://youtu.be/N5m9flz0BJI)
 * Source code [29ac0a8](https://github.com/jguadagno/Contacts/commit/29ac0a8dae6d8cef7ad5e40486fb70bd296b8abc)
 
+### Adding Azure Blog Storage
+
+Getting starting adding the uploaded image to Azure Blob Storage
+
+#### Links
+
+* Azure [Blob Storage](https://azure.microsoft.com/en-us/services/storage/blobs/)
+* Storage Emulators
+  * [Using Azurite](https://docs.microsoft.com/en-us/azure/storage/common/storage-use-azurite)
+  * [Using Azure Storage Explorer](https://docs.microsoft.com/en-us/azure/storage/common/storage-use-emulator)
+* .NET SDK [Quickstart](https://docs.microsoft.com/en-us/azure/storage/blobs/storage-quickstart-blobs-dotnet)
+* NuGet Package [JosephGuadagno.AzureHelpers.Storage](https://github.com/jguadagno/JosephGuadagno.AzureHelpers.Storage)
+
+
 ## Future UI Clients
 
 Here are some other client technologies that we can use.
