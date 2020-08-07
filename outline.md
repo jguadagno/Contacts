@@ -321,6 +321,10 @@ ASP.NET Docs for [File Uploads](https://docs.microsoft.com/en-us/aspnet/core/mvc
 
 Getting starting adding the uploaded image to Azure Blob Storage
 
+* Part 1 - Local [Video](https://youtu.be/t3aqdXEY_-k)
+* Part 2 - Azure [Video](https://youtu.be/LGUug-C_qL4)
+* Source Code [bf937d0](https://github.com/jguadagno/Contacts/commit/bf937d04e9a01b831577cf408f2875fb862da49a)
+
 #### Links
 
 * Azure [Blob Storage](https://azure.microsoft.com/en-us/services/storage/blobs/)
@@ -330,6 +334,9 @@ Getting starting adding the uploaded image to Azure Blob Storage
 * .NET SDK [Quickstart](https://docs.microsoft.com/en-us/azure/storage/blobs/storage-quickstart-blobs-dotnet)
 * NuGet Package [JosephGuadagno.AzureHelpers.Storage](https://github.com/jguadagno/JosephGuadagno.AzureHelpers.Storage)
 
+### Adding a Content Delivery Network (CDN)
+
+Let's put a CDN in front of our Azure Blob Storage container to server up images fast!
 
 ## Future UI Clients
 
