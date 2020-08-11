@@ -17,9 +17,11 @@ namespace Contacts.WebUi
 {
     public class Startup
     {
-        public Startup(IConfiguration configuration)
+        private IWebHostEnvironment _environment;
+        public Startup(IConfiguration configuration, IWebHostEnvironment environment)
         {
             Configuration = configuration;
+            _environment = environment;
         }
 
         public IConfiguration Configuration { get; }
@@ -34,7 +36,15 @@ namespace Contacts.WebUi
             // Register Contact Images Container
             services.AddSingleton(provider =>
             {
-                var blobs = new Blobs(settings.ContactBlobStorageAccount, settings.ContactImageContainerName);
+                Blobs blobs;
+                if (_environment.IsDevelopment()) { 
+                    blobs = new Blobs(settings.ContactBlobStorageAccount, settings.ContactImageContainerName);
+                }
+                else
+                {
+                    blobs = new Blobs("cwjgcontacts", null, settings.ContactImageContainerName);
+                }
+
                 var blob = blobs.BlobContainerClient.SetAccessPolicy(accessType: PublicAccessType.Blob);
                 return blobs;
             });
