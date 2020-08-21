@@ -6,6 +6,7 @@ namespace Contacts.WebUi.Models
         string ApiScopeUri { get; set; }
         string AppInsightsKey { get; set; }
         string ContactBlobStorageAccount { get; set; }
+        string ContactBlobStorageAccountName { get; set; }
         string ContactImageContainerName { get; set; }
         string ContactImageUrl { get; set; }
     }

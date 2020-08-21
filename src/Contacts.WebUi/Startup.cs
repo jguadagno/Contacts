@@ -34,20 +34,9 @@ namespace Contacts.WebUi
             services.AddSingleton(settings);
 
             // Register Contact Images Container
-            services.AddSingleton(provider =>
-            {
-                Blobs blobs;
-                if (_environment.IsDevelopment()) { 
-                    blobs = new Blobs(settings.ContactBlobStorageAccount, settings.ContactImageContainerName);
-                }
-                else
-                {
-                    blobs = new Blobs("cwjgcontacts", null, settings.ContactImageContainerName);
-                }
-
-                var blob = blobs.BlobContainerClient.SetAccessPolicy(accessType: PublicAccessType.Blob);
-                return blobs;
-            });
+            services.AddSingleton(provider => _environment.IsDevelopment()
+                ? new Blobs(settings.ContactBlobStorageAccount, settings.ContactImageContainerName)
+                : new Blobs(settings.ContactBlobStorageAccountName, null, settings.ContactImageContainerName));
             
             services.AddApplicationInsightsTelemetry(settings.AppInsightsKey);
                         
