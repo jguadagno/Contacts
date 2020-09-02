@@ -7,7 +7,7 @@
         <PackageReference Include="JosephGuadagno.AzureHelpers.Storage" Version="1.1.2-20200901.3-preview" />
         <PackageReference Include="Microsoft.Azure.WebJobs.Extensions.Storage" Version="3.0.4" />
         <PackageReference Include="Microsoft.NET.Sdk.Functions" Version="3.0.3" />
-        <PackageReference Include="System.Drawing.Common" Version="4.7.0" />
+        <PackageReference Include="SixLabors.ImageSharp" Version="1.0.1" />
     </ItemGroup>
     <ItemGroup>
         <None Update="host.json">

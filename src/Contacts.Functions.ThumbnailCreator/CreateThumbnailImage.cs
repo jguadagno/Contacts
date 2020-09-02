@@ -1,11 +1,10 @@
 using System.Threading.Tasks;
-using System;
-using System.Drawing;
-using System.Drawing.Imaging;
 using System.IO;
 using Microsoft.Azure.WebJobs;
-using Microsoft.Azure.WebJobs.Host;
 using Microsoft.Extensions.Logging;
+using SixLabors.ImageSharp;
+using SixLabors.ImageSharp.Formats.Jpeg;
+using SixLabors.ImageSharp.Processing;
 
 namespace Contacts.Functions.ThumbnailCreator
 {
@@ -22,14 +21,20 @@ namespace Contacts.Functions.ThumbnailCreator
                 new JosephGuadagno.AzureHelpers.Storage.Blobs("UseDevelopmentStorage=true",
                     imageToConvert.ContainerName);
             var imageToConvertStream = new MemoryStream();
-            var originalImageBlobInfo =
+            var wasDownloaded =
                 await contactImageContainer.DownloadToAsync(imageToConvert.ImageName, imageToConvertStream);
+
+            if (wasDownloaded == false)
+            {
+                log.LogCritical($"Could not download the source image for contact id of '{imageToConvert.ContactId}'");
+                return;
+            }
             
             // Create the Thumbnail
-            // TODO: Fix the thumbnail creation, the image is empty
-            Image newImage=GetReducedImage(32,32, imageToConvertStream);
+            var sourceImage = await Image.LoadAsync(imageToConvertStream);
+            sourceImage.Mutate(x => x.Resize(120,120));
             var thumbnailStream = new MemoryStream();
-            newImage.Save(thumbnailStream, ImageFormat.Jpeg);
+            await sourceImage.SaveAsync(thumbnailStream, new JpegEncoder());
             
             // Upload New Thumbnail
             var contactThumbnailContainer =
@@ -39,28 +44,6 @@ namespace Contacts.Functions.ThumbnailCreator
                 await contactThumbnailContainer.UploadAsync(imageToConvert.ImageName, imageToConvertStream, true);
 
             log.LogDebug($"Saved thumbnail for contact id '{imageToConvert.ContactId}' was '{thumbnailImageBlobInfo}'");
-        }
-
-        private static Image GetReducedImage(int width, int height, Stream resourceImage)
-        {
-            try
-            {
-                Image image = Image.FromStream(resourceImage);
-                Image thumb = image.GetThumbnailImage(width, height, () => false, IntPtr.Zero);
-
-                return thumb;
-            }
-            catch (Exception e)
-            {
-                return null;
-            }
-        }
-        
-        private static Stream GetStream(Image img, ImageFormat format)
-        {
-            var ms = new MemoryStream();
-            img.Save(ms, format);
-            return ms;
         }
     }
 }
