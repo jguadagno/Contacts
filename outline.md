@@ -325,6 +325,8 @@ Getting starting adding the uploaded image to Azure Blob Storage
 * Part 2 - Azure [Video](https://youtu.be/LGUug-C_qL4)
 * Source Code [bf937d0](https://github.com/jguadagno/Contacts/commit/bf937d04e9a01b831577cf408f2875fb862da49a)
 
+Read the blog post [Securing Azure Containers and Blobs with Managed Identities](https://www.josephguadagno.net/2020/08/22/securing-azure-containers-and-blobs-with-managed-identities) for more details.
+
 #### Links
 
 * Azure [Blob Storage](https://azure.microsoft.com/en-us/services/storage/blobs/)
@@ -333,6 +335,13 @@ Getting starting adding the uploaded image to Azure Blob Storage
   * [Using Azure Storage Explorer](https://docs.microsoft.com/en-us/azure/storage/common/storage-use-emulator)
 * .NET SDK [Quickstart](https://docs.microsoft.com/en-us/azure/storage/blobs/storage-quickstart-blobs-dotnet)
 * NuGet Package [JosephGuadagno.AzureHelpers.Storage](https://github.com/jguadagno/JosephGuadagno.AzureHelpers.Storage)
+
+### Creating Thumbnails
+
+* Part 1: [Video](https://youtu.be/HWHQRE0J3sc)
+* Part 2: [Video](https://youtu.be/rD7Je7kBB9c)
+* Source Code [8b4b65f](https://github.com/jguadagno/Contacts/commit/8b4b65f76992ee469e3c29c658efdde7b2626016)
+
 
 ### Adding a Content Delivery Network (CDN)
 
