@@ -4,6 +4,7 @@
     <e p="C:\Projects\Contacts\outline.md" t="Include" />
     <e p="C:\Projects\Contacts\README.md" t="Include" />
     <e p="C:\Projects\Contacts\src" t="IncludeFlat">
+      <e p="AzureFunctions" t="Include" />
       <e p="Contacts-Sample-Requests.http" t="Include" />
       <e p="Contacts.Api" t="IncludeRecursive">
         <e p="appsettings.Development.json" t="Include" />
@@ -115,6 +116,9 @@
           <e p="Address.cs" t="Include" />
           <e p="AddressType.cs" t="Include" />
           <e p="Contact.cs" t="Include" />
+          <e p="Messages" t="Include">
+            <e p="ImageToConvert.cs" t="Include" />
+          </e>
           <e p="Phone.cs" t="Include" />
           <e p="PhoneType.cs" t="Include" />
         </e>
@@ -127,6 +131,21 @@
         </e>
         <e p="Permissions" t="Include">
           <e p="Contacts.cs" t="Include" />
+        </e>
+      </e>
+      <e p="Contacts.Functions.ThumbnailCreator" t="IncludeRecursive">
+        <e p=".gitignore" t="Include" />
+        <e p="bin\Debug\netcoreapp3.1\bin" t="ExcludeRecursive" />
+        <e p="Contacts.Functions.ThumbnailCreator.csproj" t="IncludeRecursive" />
+        <e p="CreateThumbnailImage.cs" t="Include" />
+        <e p="host.json" t="Include" />
+        <e p="local.settings.json" t="Include" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp3.1" t="Include">
+              <e p="Contacts.Functions.ThumbnailCreator.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
         </e>
       </e>
       <e p="Contacts.Logic" t="IncludeRecursive">

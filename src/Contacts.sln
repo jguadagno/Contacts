@@ -25,6 +25,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contacts.WebUi", "Contacts.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contacts.Data.SqlServer", "Contacts.Data.SqlServer\Contacts.Data.SqlServer.csproj", "{A4AB8B52-C09E-4E50-B146-CD3A7BA001F5}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AzureFunctions", "AzureFunctions", "{FBCB16D1-1458-49DB-9B1C-B4A430E74266}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contacts.Functions.ThumbnailCreator", "Contacts.Functions.ThumbnailCreator\Contacts.Functions.ThumbnailCreator.csproj", "{A449756D-D226-4CEB-B08F-2465850BAF5B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -67,5 +71,12 @@ Global
 		{A4AB8B52-C09E-4E50-B146-CD3A7BA001F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A4AB8B52-C09E-4E50-B146-CD3A7BA001F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A4AB8B52-C09E-4E50-B146-CD3A7BA001F5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A449756D-D226-4CEB-B08F-2465850BAF5B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A449756D-D226-4CEB-B08F-2465850BAF5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A449756D-D226-4CEB-B08F-2465850BAF5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A449756D-D226-4CEB-B08F-2465850BAF5B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A449756D-D226-4CEB-B08F-2465850BAF5B} = {FBCB16D1-1458-49DB-9B1C-B4A430E74266}
 	EndGlobalSection
 EndGlobal

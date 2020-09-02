@@ -1,5 +1,6 @@
 using System;
 using System.Diagnostics;
+using System.Text.Json;
 using System.Threading.Tasks;
 using Contacts.WebUi.Models;
 using Microsoft.AspNetCore.Mvc;
@@ -13,13 +14,15 @@ namespace Contacts.WebUi.Controllers
     {
         private readonly IContactService _contactService;
         private readonly Blobs _blobs;
+        private readonly Queue _queue;
         private readonly Settings _settings;
         
-        public ContactController(IContactService contactService, Blobs blobs, Settings settings)
+        public ContactController(IContactService contactService, Blobs blobs, Settings settings, Queue queue)
         {
             _contactService = contactService;
             _blobs = blobs;
             _settings = settings;
+            _queue = queue;
         }
 
         // GET All
@@ -89,6 +92,18 @@ namespace Contacts.WebUi.Controllers
             var imageUrl = $"{_settings.ContactImageUrl}{_settings.ContactImageContainerName}/{filename}";
             var contact = await _contactService.GetContactAsync(contactId);
             contact.ImageUrl = imageUrl;
+            
+            // Create the Thumbnail
+            // ContactId,  ContainerName, filename
+            var thumbnailCreateMessage = new Domain.Models.Messages.ImageToConvert
+            {
+                ContactId = contactId,
+                ContainerName = _settings.ContactImageContainerName,
+                ImageName = filename
+            };
+            
+            var sendReceipt = await _queue.AddMessageWithBase64EncodingAsync(thumbnailCreateMessage);
+
             var wasSaved = await _contactService.SaveContactAsync(contact);
             
             return RedirectToAction("Details", new {id = contactId});

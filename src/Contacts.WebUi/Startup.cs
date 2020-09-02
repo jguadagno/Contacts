@@ -38,6 +38,11 @@ namespace Contacts.WebUi
                 ? new Blobs(settings.ContactBlobStorageAccount, settings.ContactImageContainerName)
                 : new Blobs(settings.ContactBlobStorageAccountName, null, settings.ContactImageContainerName));
             
+            // Register Thumbnail Create Queue
+            services.AddSingleton(provider => _environment.IsDevelopment()
+                ? new Queue(settings.ThumbnailQueueStorageAccount, settings.ThumbnailQueueName)
+                : new Queue(settings.ThumbnailQueueStorageAccount, null, settings.ThumbnailQueueName));
+            
             services.AddApplicationInsightsTelemetry(settings.AppInsightsKey);
                         
             var initialScopes = new[]
