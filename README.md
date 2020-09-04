@@ -26,8 +26,8 @@ We'll include any setup required to get going with this project
 
 * Azure SQL Database ([docs](https://azure.microsoft.com/en-us/services/sql-database/))
 * Azure Web Apps ([docs](https://azure.microsoft.com/en-us/services/app-service/web/))
-* Azure API Management ([docs](https://azure.microsoft.com/en-us/services/api-management/)
 * Blog Storage ([docs](https://azure.microsoft.com/en-us/services/storage/blobs/))
 * Azure CDN ([docs](https://azure.microsoft.com/en-us/services/cdn/))
 * Azure Active Directory ([docs](https://azure.microsoft.com/en-us/services/active-directory/))
 * Azure Key Vault ([docs](https://azure.microsoft.com/en-us/services/key-vault/))
+* Azure API Management ([docs](https://azure.microsoft.com/en-us/services/api-management/))
