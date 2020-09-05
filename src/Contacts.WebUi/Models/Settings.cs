@@ -11,5 +11,6 @@ namespace Contacts.WebUi.Models
         public string ContactImageUrl { get; set; }
         public string ThumbnailQueueName { get; set; }
         public string ThumbnailQueueStorageAccount { get; set; }
+        public string ThumbnailQueueStorageAccountName { get; set; }
     }
 }

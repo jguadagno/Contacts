@@ -41,7 +41,7 @@ namespace Contacts.WebUi
             // Register Thumbnail Create Queue
             services.AddSingleton(provider => _environment.IsDevelopment()
                 ? new Queue(settings.ThumbnailQueueStorageAccount, settings.ThumbnailQueueName)
-                : new Queue(settings.ThumbnailQueueStorageAccount, null, settings.ThumbnailQueueName));
+                : new Queue(settings.ThumbnailQueueStorageAccountName, null, settings.ThumbnailQueueName));
             
             services.AddApplicationInsightsTelemetry(settings.AppInsightsKey);
                         
