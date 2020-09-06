@@ -1,7 +1,7 @@
-using Azure.Storage.Blobs.Models;
 using Contacts.WebUi.Models;
 using Contacts.WebUi.Services;
 using JosephGuadagno.AzureHelpers.Storage;
+using Microsoft.AspNetCore.Authentication.OpenIdConnect;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -9,15 +9,15 @@ using Microsoft.AspNetCore.Mvc.Authorization;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Identity.Client;
 using Microsoft.Identity.Web;
-using Microsoft.Identity.Web.TokenCacheProviders.Distributed;
 using Microsoft.Identity.Web.UI;
 
 namespace Contacts.WebUi
 {
     public class Startup
     {
-        private IWebHostEnvironment _environment;
+        private readonly IWebHostEnvironment _environment;
         public Startup(IConfiguration configuration, IWebHostEnvironment environment)
         {
             Configuration = configuration;
@@ -55,8 +55,9 @@ namespace Contacts.WebUi
             };
             // Token acquisition service based on MSAL.NET
             // and chosen token cache implementation
-            services.AddMicrosoftWebAppAuthentication(Configuration)
-                .AddMicrosoftWebAppCallsWebApi(Configuration, initialScopes)
+            services.AddAuthentication(OpenIdConnectDefaults.AuthenticationScheme)
+                .AddMicrosoftIdentityWebApp(Configuration)
+                .EnableTokenAcquisitionToCallDownstreamApi(initialScopes)
                 .AddDistributedTokenCaches();
             
             services.AddDistributedSqlServerCache(options =>

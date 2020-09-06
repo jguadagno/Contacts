@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Net;
 using System.Net.Http;
 using System.Net.Http.Headers;
@@ -131,7 +130,8 @@ namespace Contacts.WebUi.Services
         private async Task SetRequestHeader(string scope, string mediaType = "application/json")
         {
             string fullScopeName = _settings.ApiScopeUri + scope;
-            var accessToken = await _tokenAcquisition.GetAccessTokenForUserAsync(new[] {fullScopeName});
+            string accessToken = await _tokenAcquisition.GetAccessTokenForUserAsync(new[] {fullScopeName});
+            
             _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", accessToken);
             _httpClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue(mediaType));
         }
