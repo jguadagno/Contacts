@@ -5,6 +5,8 @@
     </PropertyGroup>
     <ItemGroup>
         <PackageReference Include="JosephGuadagno.AzureHelpers.Storage" Version="1.1.2-20200901.3-preview" />
+        <PackageReference Include="JosephGuadagno.Extensions" Version="1.2.1" />
+        <PackageReference Include="Microsoft.Azure.Functions.Extensions" Version="1.0.0" />
         <PackageReference Include="Microsoft.Azure.WebJobs.Extensions.Storage" Version="4.0.2" />
         <PackageReference Include="Microsoft.NET.Sdk.Functions" Version="3.0.9" />
         <PackageReference Include="SixLabors.ImageSharp" Version="1.0.1" />

@@ -1,5 +1,6 @@
 using System.Threading.Tasks;
 using System.IO;
+using Contacts.Functions.ThumbnailCreator.Models;
 using Microsoft.Azure.WebJobs;
 using Microsoft.Extensions.Logging;
 using SixLabors.ImageSharp;
@@ -8,17 +9,25 @@ using SixLabors.ImageSharp.Processing;
 
 namespace Contacts.Functions.ThumbnailCreator
 {
-    public static class CreateThumbnailImage
+    public class CreateThumbnailImage
     {
+
+        private readonly ISettings _settings;
+
+        public CreateThumbnailImage(ISettings settings)
+        {
+            _settings = settings;
+        }
+        
         [FunctionName("CreateThumbnailImage")]
-        public static async Task RunAsync([QueueTrigger("thumbnail-create", Connection = "ThumbnailQueueStorageAccount")]
+        public async Task RunAsync([QueueTrigger("%ThumbnailQueueName%", Connection = "ThumbnailQueueStorageAccount")]
             Domain.Models.Messages.ImageToConvert imageToConvert, ILogger log)
         {
             log.LogDebug($"Creating Thumbnail for contact id '{imageToConvert.ContactId}'.");
 
             // Get the Image To Convert
             var contactImageContainer =
-                new JosephGuadagno.AzureHelpers.Storage.Blobs("UseDevelopmentStorage=true",
+                new JosephGuadagno.AzureHelpers.Storage.Blobs(_settings.ContactBlobStorageAccount,
                     imageToConvert.ContainerName);
             var imageToConvertStream = new MemoryStream();
             var wasDownloaded =
@@ -32,14 +41,14 @@ namespace Contacts.Functions.ThumbnailCreator
             
             // Create the Thumbnail
             var sourceImage = await Image.LoadAsync(imageToConvertStream);
-            sourceImage.Mutate(x => x.Resize(120,120));
+            sourceImage.Mutate(x => x.Resize(_settings.ResizeWidthSize, _settings.ResizeHeightSize));
             var thumbnailStream = new MemoryStream();
             await sourceImage.SaveAsync(thumbnailStream, new JpegEncoder());
             
             // Upload New Thumbnail
             var contactThumbnailContainer =
-                new JosephGuadagno.AzureHelpers.Storage.Blobs("UseDevelopmentStorage=true",
-                    "contact-images-thumbnails");
+                new JosephGuadagno.AzureHelpers.Storage.Blobs(_settings.ContactThumbnailBlobStorageAccount,
+                    _settings.ContactThumbnailImageContainerName);
             var thumbnailImageBlobInfo =
                 await contactThumbnailContainer.UploadAsync(imageToConvert.ImageName, imageToConvertStream, true);
 
