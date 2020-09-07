@@ -34,7 +34,7 @@ namespace Contacts.Api
 
             services.AddApplicationInsightsTelemetry(settings.AppInsightsKey);
             
-            services.AddMicrosoftWebApiAuthentication(Configuration);
+            services.AddMicrosoftIdentityWebApiAuthentication(Configuration);
             services.AddControllers();
             
             // Register the Swagger generator, defining 1 or more Swagger documents
