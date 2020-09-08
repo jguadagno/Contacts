@@ -1,6 +1,8 @@
+using System;
 using System.Threading.Tasks;
 using System.IO;
 using Contacts.Functions.ThumbnailCreator.Models;
+using JosephGuadagno.AzureHelpers.Storage;
 using Microsoft.Azure.WebJobs;
 using Microsoft.Extensions.Logging;
 using SixLabors.ImageSharp;
@@ -11,7 +13,6 @@ namespace Contacts.Functions.ThumbnailCreator
 {
     public class CreateThumbnailImage
     {
-
         private readonly ISettings _settings;
 
         public CreateThumbnailImage(ISettings settings)
@@ -20,15 +21,18 @@ namespace Contacts.Functions.ThumbnailCreator
         }
         
         [FunctionName("CreateThumbnailImage")]
-        public async Task RunAsync([QueueTrigger("%ThumbnailQueueName%", Connection = "ThumbnailQueueStorageAccount")]
+        public async Task RunAsync([QueueTrigger("thumbnail-create")]
             Domain.Models.Messages.ImageToConvert imageToConvert, ILogger log)
         {
             log.LogDebug($"Creating Thumbnail for contact id '{imageToConvert.ContactId}'.");
 
             // Get the Image To Convert
-            var contactImageContainer =
-                new JosephGuadagno.AzureHelpers.Storage.Blobs(_settings.ContactBlobStorageAccount,
+            Blobs contactImageContainer = IsDevelopment()
+                ? new Blobs(_settings.ContactBlobStorageAccount,
+                    imageToConvert.ContainerName)
+                : new Blobs(_settings.ContactBlobStorageAccountName, null,
                     imageToConvert.ContainerName);
+
             var imageToConvertStream = new MemoryStream();
             var wasDownloaded =
                 await contactImageContainer.DownloadToAsync(imageToConvert.ImageName, imageToConvertStream);
@@ -48,13 +52,21 @@ namespace Contacts.Functions.ThumbnailCreator
             thumbnailStream.Position = 0; // Need to reset the position to 0 so that Azure SDK can upload it
             
             // Upload New Thumbnail
-            var contactThumbnailContainer =
-                new JosephGuadagno.AzureHelpers.Storage.Blobs(_settings.ContactThumbnailBlobStorageAccount,
+            Blobs contactThumbnailContainer = IsDevelopment()
+                ? new Blobs(_settings.ContactThumbnailBlobStorageAccount,
+                    _settings.ContactThumbnailImageContainerName)
+                : new Blobs(_settings.ContactThumbnailBlobStorageAccountName, null,
                     _settings.ContactThumbnailImageContainerName);
+            
             var thumbnailImageBlobInfo =
                 await contactThumbnailContainer.UploadAsync(imageToConvert.ImageName, thumbnailStream, true);
 
-            log.LogDebug($"Saved thumbnail for contact id '{imageToConvert.ContactId}' was '{thumbnailImageBlobInfo}'");
+            log.LogDebug($"Saved thumbnail for contact id '{imageToConvert.ContactId}' was '{thumbnailImageBlobInfo!=null}'");
+        }
+
+        private static bool IsDevelopment()
+        {
+            return Environment.GetEnvironmentVariable("AZURE_FUNCTIONS_ENVIRONMENT") == "Development";
         }
     }
 }
