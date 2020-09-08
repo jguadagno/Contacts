@@ -340,8 +340,9 @@ Read the blog post [Securing Azure Containers and Blobs with Managed Identities]
 
 * Part 1: [Video](https://youtu.be/HWHQRE0J3sc)
 * Part 2: [Video](https://youtu.be/rD7Je7kBB9c)
+* Part 3: [Video](https://www.youtube.com/watch?v=-SBcFNQXlTY)
 * Source Code [8b4b65f](https://github.com/jguadagno/Contacts/commit/8b4b65f76992ee469e3c29c658efdde7b2626016)
-
+* Final Source Code [6563ef6](https://github.com/jguadagno/Contacts/commit/6563ef6cd4019d892e0df6631127d96a044e3714)
 
 ### Adding a Content Delivery Network (CDN)
 
