@@ -348,18 +348,31 @@ Read the blog post [Securing Azure Containers and Blobs with Managed Identities]
 
 Let's put a CDN in front of our Azure Blob Storage container to server up images fast!
 
+There was no code for this, just the video
+
+* [Video](https://www.youtube.com/watch?v=Cf6Y69C5jUA)
+
+## Refactoring Code
+
+After building out the application we noticed that there are quite a few places that we have our imaging functions.  Let's go through and refactor the code to create an Image Manager that we can us in the WebUI and Azure Function.
+
+* Creating the Image Manager Part 1 [Video](https://www.youtube.com/watch?v=DxzRUaMuN5U)
+* Creating the Image Manager Part 2 [Video](https://www.youtube.com/watch?v=LrHcsQuAt6k)
+* Creating the Image Manager Part Finale [Video](https://www.youtube.com/watch?v=OHyPbasWNEc)
+* Source Code [b123c1c](https://github.com/jguadagno/Contacts/commit/b123c1cd6d386999aa2169fb9348fed7be91c3bc)
+
 ## Future UI Clients
 
 Here are some other client technologies that we can use.
 Remaining Options
-
-### Blazor Client
 
 ### Native Application
 
 #### React Native
 
 #### Ionic client
+
+### Blazor Client
 
 ### WinForms (Maybe)
 
@@ -383,18 +396,6 @@ Setup the environment
 *Maybe* use Terraform to build out the environment
 
 ## Application Flexibility
-
-Let's see how the application changes as we change different components of it.
-
-Add a picture for the person.
-
-Uses:
-
-* Blog Storage
-* Queues
-* CDN to host the images
-
-Update the models, data store, and API
 
 ### Data Persistence
 
