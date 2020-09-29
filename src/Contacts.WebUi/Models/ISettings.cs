@@ -9,6 +9,8 @@ namespace Contacts.WebUi.Models
         string ContactBlobStorageAccountName { get; set; }
         string ContactImageContainerName { get; set; }
         string ContactImageUrl { get; set; }    
+        string ContactThumbnailBlobStorageAccountName { get; set; }
+        string ContactThumbnailImageContainerName { get; set; }
         string ThumbnailQueueName { get; set; }
         string ThumbnailQueueStorageAccount { get; set; }
         string ThumbnailQueueStorageAccountName { get; set; }

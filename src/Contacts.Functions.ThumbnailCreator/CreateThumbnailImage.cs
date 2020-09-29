@@ -1,6 +1,7 @@
 using System;
 using System.Threading.Tasks;
 using System.IO;
+using Contacts.Domain.Interfaces;
 using Contacts.Functions.ThumbnailCreator.Models;
 using JosephGuadagno.AzureHelpers.Storage;
 using Microsoft.Azure.WebJobs;
@@ -14,54 +15,24 @@ namespace Contacts.Functions.ThumbnailCreator
     public class CreateThumbnailImage
     {
         private readonly ISettings _settings;
+        private readonly IImageManager _imageManager;
 
-        public CreateThumbnailImage(ISettings settings)
+        public CreateThumbnailImage(ISettings settings, IImageManager imageManager)
         {
             _settings = settings;
+            _imageManager = imageManager;
         }
         
         [FunctionName("CreateThumbnailImage")]
         public async Task RunAsync([QueueTrigger("thumbnail-create")]
             Domain.Models.Messages.ImageToConvert imageToConvert, ILogger log)
         {
-            log.LogDebug($"Creating Thumbnail for contact id '{imageToConvert.ContactId}'.");
+            log.LogDebug($"Creating thumbnail of '{imageToConvert.ImageName}' in container '{imageToConvert.ContainerName}'.");
 
-            // Get the Image To Convert
-            Blobs contactImageContainer = IsDevelopment()
-                ? new Blobs(_settings.ContactBlobStorageAccount,
-                    imageToConvert.ContainerName)
-                : new Blobs(_settings.ContactBlobStorageAccountName, null,
-                    imageToConvert.ContainerName);
+            var imageUrl = await _imageManager.CreateThumbnailImageAsync(imageToConvert.ImageName,
+                _settings.ResizeWidthSize, _settings.ResizeHeightSize);
 
-            var imageToConvertStream = new MemoryStream();
-            var wasDownloaded =
-                await contactImageContainer.DownloadToAsync(imageToConvert.ImageName, imageToConvertStream);
-
-            if (wasDownloaded == false)
-            {
-                log.LogCritical($"Could not download the source image for contact id of '{imageToConvert.ContactId}'");
-                return;
-            }
-            imageToConvertStream.Position = 0; // Need to reset because Azure SDK does not close the stream
-            
-            // Create the Thumbnail
-            var sourceImage = await Image.LoadAsync(imageToConvertStream);
-            sourceImage.Mutate(x => x.Resize(_settings.ResizeWidthSize, _settings.ResizeHeightSize));
-            var thumbnailStream = new MemoryStream();
-            await sourceImage.SaveAsync(thumbnailStream, new JpegEncoder());
-            thumbnailStream.Position = 0; // Need to reset the position to 0 so that Azure SDK can upload it
-            
-            // Upload New Thumbnail
-            Blobs contactThumbnailContainer = IsDevelopment()
-                ? new Blobs(_settings.ContactThumbnailBlobStorageAccount,
-                    _settings.ContactThumbnailImageContainerName)
-                : new Blobs(_settings.ContactThumbnailBlobStorageAccountName, null,
-                    _settings.ContactThumbnailImageContainerName);
-            
-            var thumbnailImageBlobInfo =
-                await contactThumbnailContainer.UploadAsync(imageToConvert.ImageName, thumbnailStream, true);
-
-            log.LogDebug($"Saved thumbnail for contact id '{imageToConvert.ContactId}' was '{thumbnailImageBlobInfo!=null}'");
+            log.LogDebug($"Saved thumbnail of '{imageToConvert.ImageName}' to '{imageUrl}'");
         }
 
         private static bool IsDevelopment()

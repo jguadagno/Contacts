@@ -1,11 +1,8 @@
-using System;
-using System.Diagnostics;
-using System.Text.Json;
 using System.Threading.Tasks;
+using Contacts.Domain.Interfaces;
 using Contacts.WebUi.Models;
 using Microsoft.AspNetCore.Mvc;
 using Contacts.WebUi.Services;
-using JosephGuadagno.AzureHelpers.Storage;
 using Microsoft.AspNetCore.Http;
 
 namespace Contacts.WebUi.Controllers
@@ -13,16 +10,14 @@ namespace Contacts.WebUi.Controllers
     public class ContactController : Controller
     {
         private readonly IContactService _contactService;
-        private readonly Blobs _blobs;
-        private readonly Queue _queue;
+        private readonly IImageManager _imageManager;
         private readonly Settings _settings;
         
-        public ContactController(IContactService contactService, Blobs blobs, Settings settings, Queue queue)
+        public ContactController(IContactService contactService, IImageManager imageManager, Settings settings)
         {
             _contactService = contactService;
-            _blobs = blobs;
+            _imageManager = imageManager;
             _settings = settings;
-            _queue = queue;
         }
 
         // GET All
@@ -83,29 +78,15 @@ namespace Contacts.WebUi.Controllers
         [HttpPost]
         public async Task<IActionResult> Upload(int contactId, IFormFile uploadFile)
         {
+            // Save the image with the Image Manager
+            var imageUrl = await _imageManager.SaveImageAsync(uploadFile.OpenReadStream());
             
-            var fileExtension = new System.IO.FileInfo(uploadFile.FileName).Extension;
-            var filename = $"{contactId}{fileExtension}";
-
-            var blobContentInfo = await _blobs.UploadAsync(filename, uploadFile.OpenReadStream(), true);
-            
-            var imageUrl = $"{_settings.ContactImageUrl}{_settings.ContactImageContainerName}/{filename}";
+            // Update the ImageUrl
             var contact = await _contactService.GetContactAsync(contactId);
-            contact.ImageUrl = imageUrl;
-            
-            // Create the Thumbnail
-            // ContactId,  ContainerName, filename
-            var thumbnailCreateMessage = new Domain.Models.Messages.ImageToConvert
-            {
-                ContactId = contactId,
-                ContainerName = _settings.ContactImageContainerName,
-                ImageName = filename
-            };
-            
-            var sendReceipt = await _queue.AddMessageWithBase64EncodingAsync(thumbnailCreateMessage);
-
+            contact.ImageUrl = $"{_settings.ContactImageUrl}{imageUrl}";
             var wasSaved = await _contactService.SaveContactAsync(contact);
             
+            // Return the details
             return RedirectToAction("Details", new {id = contactId});
         }
     }
