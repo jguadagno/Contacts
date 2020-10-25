@@ -36,6 +36,7 @@ namespace Contacts.Api
             
             services.AddMicrosoftIdentityWebApiAuthentication(Configuration);
             services.AddControllers();
+            services.AddCors();
             
             // Register the Swagger generator, defining 1 or more Swagger documents
             services.AddSwaggerGen(c =>
@@ -43,9 +44,9 @@ namespace Contacts.Api
                 c.SwaggerDoc("v1",
                     new OpenApiInfo
                     {
-                        Title = "Coding with JoeG Contact Api", 
+                        Title = "Coding with JoeG Contact API", 
                         Version = "v1",
-                        Description = "The Api for the Contacts Application on Coding with JoeG",
+                        Description = "The API for the Contacts Application on Coding with JoeG",
                         TermsOfService = new Uri("https://example.com/terms"),
                         Contact = new OpenApiContact
                         {
@@ -74,7 +75,14 @@ namespace Contacts.Api
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+                
             }
+            
+            // TODO: Research and document for React Native client
+            app.UseCors(x => x
+                .AllowAnyMethod()
+                .AllowAnyHeader()
+                .WithOrigins("http://localhost:19006", "https://localhost:5001", "https://cwjg-contacts-web.azurewebsites.net"));
             
             // Enable middleware to serve generated Swagger as a JSON endpoint.
             app.UseSwagger();

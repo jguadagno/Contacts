@@ -1,3 +1,4 @@
+using System;
 using Contacts.Domain.Interfaces;
 using Contacts.ImageManager;
 using Contacts.WebUi.Models;
@@ -32,8 +33,26 @@ namespace Contacts.WebUi
         {
             var settings = new Settings();
             Configuration.Bind("Settings", settings);
+            
+            //  For Project Tye
+            var uri = Configuration.GetServiceUri("contacts-api", "https");
+            // If the uri is null we assume Tye is not running.
+            // If not null, assure Uri ends in /
+            if (uri != null)
+            {
+                var url = uri.AbsoluteUri;
+                if (!url.EndsWith("/"))
+                {
+                    url += "/";
+                }
+                // https://localhost:5001/
+                settings.ApiRootUri = url;
+            }
+            
             services.AddSingleton(settings);
-
+            
+            Console.WriteLine(settings.ApiRootUri);
+            
             services.AddSingleton<IImageStore>(provider =>
             {
                 var blobs = _environment.IsDevelopment()

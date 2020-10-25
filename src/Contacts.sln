@@ -6,8 +6,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contacts.Logic", "Contacts.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contacts.Data", "Contacts.Data\Contacts.Data.csproj", "{52597FF3-2460-438E-AB28-4DE8CF2A5523}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contacts.Console", "Contacts.Console\Contacts.Console.csproj", "{EF7DFAB8-FB92-445C-B749-1F07D3CD6459}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contacts.Logic.Tests", "Contacts.Logic.Tests\Contacts.Logic.Tests.csproj", "{C2B7EC80-48C8-489F-B33E-7AE87F43CA74}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contacts.Data.Sqlite", "Contacts.Data.Sqlite\Contacts.Data.Sqlite.csproj", "{C487C364-6D0C-4D35-9989-F309079B9A5A}"
@@ -49,10 +47,6 @@ Global
 		{52597FF3-2460-438E-AB28-4DE8CF2A5523}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{52597FF3-2460-438E-AB28-4DE8CF2A5523}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{52597FF3-2460-438E-AB28-4DE8CF2A5523}.Release|Any CPU.Build.0 = Release|Any CPU
-		{EF7DFAB8-FB92-445C-B749-1F07D3CD6459}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{EF7DFAB8-FB92-445C-B749-1F07D3CD6459}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{EF7DFAB8-FB92-445C-B749-1F07D3CD6459}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{EF7DFAB8-FB92-445C-B749-1F07D3CD6459}.Release|Any CPU.Build.0 = Release|Any CPU
 		{C2B7EC80-48C8-489F-B33E-7AE87F43CA74}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{C2B7EC80-48C8-489F-B33E-7AE87F43CA74}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C2B7EC80-48C8-489F-B33E-7AE87F43CA74}.Release|Any CPU.ActiveCfg = Release|Any CPU

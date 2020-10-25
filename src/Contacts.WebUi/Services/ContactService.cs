@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Net;
 using System.Net.Http;
@@ -21,6 +22,7 @@ namespace Contacts.WebUi.Services
             _httpClient = httpClient;
             _tokenAcquisition = tokenAcquisition;
             _settings = settings;
+            Console.WriteLine($"Settings Url in ContactsService ='{settings.ApiRootUri}'.");
         }
 
         public async Task<Domain.Models.Contact> GetContactAsync(int contactId)
@@ -34,6 +36,7 @@ namespace Contacts.WebUi.Services
         {
             await SetRequestHeader(Domain.Permissions.Contacts.List);
             var url = $"{_settings.ApiRootUri}contacts";
+            Console.WriteLine($"Contacts.GetContactsAsync Url='{url}'.");
             return await ExecuteGetAsync<List<Domain.Models.Contact>>(url);
         }
 
