@@ -17,6 +17,7 @@ ProjectSection(SolutionItems) = preProject
 	..\outline.md = ..\outline.md
 	..\README.md = ..\README.md
 	Contacts-Sample-Requests.http = Contacts-Sample-Requests.http
+	..\.github\workflows\deploy-to-azure.yml = ..\.github\workflows\deploy-to-azure.yml
 EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contacts.WebUi", "Contacts.WebUi\Contacts.WebUi.csproj", "{55B91C6D-7342-4984-BB2E-D588B5F7F371}"

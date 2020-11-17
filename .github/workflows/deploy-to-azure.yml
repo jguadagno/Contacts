@@ -20,7 +20,7 @@ jobs:
     - name: Setup .NET Core
       uses: actions/setup-dotnet@v1
       with:
-        dotnet-version: 3.1.301
+        dotnet-version: 5.0.100
     - name: Install dependencies
       run: dotnet restore ./src/Contacts.sln
     - name: Build
@@ -43,5 +43,3 @@ jobs:
         app-name: cwjg-contacts-api
         publish-profile: ${{ secrets.WEB_API_PUBLISH_PROFILE  }}
         package: '${{ env.AZURE_WEBAPP_PACKAGE_PATH }}/webapi'
-       
-        
