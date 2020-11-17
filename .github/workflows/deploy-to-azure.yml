@@ -23,8 +23,10 @@ jobs:
         dotnet-version: 5.0.100
     - name: Install dependencies
       run: dotnet restore ./src/Contacts.sln
-    - name: Build
-      run: dotnet build ./src/Contacts.sln --configuration Release --no-restore
+    - name: Build API
+      run: dotnet build ./src/Contacts.API/Contacts.Api.csporj --configuration Release --no-restore
+    - name: Build Web
+      run: dotnet build ./src/Contacts.Web/Contacts.Web.csproj --configuration Release --no-restore
     - name: Test
       run: dotnet test ./src/Contacts.sln --no-restore --verbosity normal
     - name: Publish WebUI
