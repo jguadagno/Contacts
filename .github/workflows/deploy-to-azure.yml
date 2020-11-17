@@ -24,7 +24,7 @@ jobs:
     - name: Install dependencies
       run: dotnet restore ./src/Contacts.sln
     - name: Build API
-      run: dotnet build ./src/Contacts.Api/Contacts.Api.csprojj --configuration Release --no-restore
+      run: dotnet build ./src/Contacts.Api/Contacts.Api.csproj --configuration Release --no-restore
     - name: Build Web
       run: dotnet build ./src/Contacts.WebUi/Contacts.WebUi.csproj --configuration Release --no-restore
     - name: Test
