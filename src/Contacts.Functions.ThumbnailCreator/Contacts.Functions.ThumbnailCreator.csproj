@@ -1,15 +1,15 @@
 <Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
-        <TargetFramework>netcoreapp3.1</TargetFramework>
+        <TargetFramework>net7.0</TargetFramework>
         <AzureFunctionsVersion>V3</AzureFunctionsVersion>
     </PropertyGroup>
     <ItemGroup>
-        <PackageReference Include="JosephGuadagno.AzureHelpers.Storage" Version="1.1.4" />
-        <PackageReference Include="JosephGuadagno.Extensions" Version="1.2.2" />
+        <PackageReference Include="JosephGuadagno.AzureHelpers.Storage" Version="1.1.6" />
+        <PackageReference Include="JosephGuadagno.Extensions" Version="1.2.3" />
         <PackageReference Include="Microsoft.Azure.Functions.Extensions" Version="1.1.0" />
-        <PackageReference Include="Microsoft.Azure.WebJobs.Extensions.Storage" Version="4.0.3" />
-        <PackageReference Include="Microsoft.NET.Sdk.Functions" Version="3.0.11" />
-        <PackageReference Include="SixLabors.ImageSharp" Version="1.0.2" />
+        <PackageReference Include="Microsoft.Azure.WebJobs.Extensions.Storage" Version="5.2.1" />
+        <PackageReference Include="Microsoft.NET.Sdk.Functions" Version="4.2.0" />
+        <PackageReference Include="SixLabors.ImageSharp" Version="3.0.2" />
     </ItemGroup>
     <ItemGroup>
         <None Update="host.json">
