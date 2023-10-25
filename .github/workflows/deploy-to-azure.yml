@@ -9,6 +9,7 @@ on:
 env:
   AZURE_WEBAPP_PACKAGE_PATH: '.'      # set this to the path to your web app project, defaults to the repository root
   AZURE_WEBAPI_PACKAGE_PATH: '.'
+  DOTNET_CORE_VERSION: 7.0.x
 
 jobs:
   build:
@@ -16,11 +17,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
-    - name: Setup .NET Core
-      uses: actions/setup-dotnet@v1
+    - uses: actions/checkout@v3
+    - name: Setup .NET SDK
+      uses: actions/setup-dotnet@v3
       with:
-        dotnet-version: 7.x
+        dotnet-version: ${{ env.DOTNET_CORE_VERSION }}
     - name: Install dependencies
       run: dotnet restore ./src/Contacts.sln
     - name: Build API
