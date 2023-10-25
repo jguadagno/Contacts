@@ -1,34 +1,38 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contacts.Domain", "Contacts.Domain\Contacts.Domain.csproj", "{2C0E4798-C750-400A-AF50-0E0E0EB072D4}"
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34202.233
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Contacts.Domain", "Contacts.Domain\Contacts.Domain.csproj", "{2C0E4798-C750-400A-AF50-0E0E0EB072D4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contacts.Logic", "Contacts.Logic\Contacts.Logic.csproj", "{A0614ABC-550E-43D3-B2E8-EDBF43F793FE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Contacts.Logic", "Contacts.Logic\Contacts.Logic.csproj", "{A0614ABC-550E-43D3-B2E8-EDBF43F793FE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contacts.Data", "Contacts.Data\Contacts.Data.csproj", "{52597FF3-2460-438E-AB28-4DE8CF2A5523}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Contacts.Data", "Contacts.Data\Contacts.Data.csproj", "{52597FF3-2460-438E-AB28-4DE8CF2A5523}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contacts.Logic.Tests", "Contacts.Logic.Tests\Contacts.Logic.Tests.csproj", "{C2B7EC80-48C8-489F-B33E-7AE87F43CA74}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Contacts.Logic.Tests", "Contacts.Logic.Tests\Contacts.Logic.Tests.csproj", "{C2B7EC80-48C8-489F-B33E-7AE87F43CA74}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contacts.Data.Sqlite", "Contacts.Data.Sqlite\Contacts.Data.Sqlite.csproj", "{C487C364-6D0C-4D35-9989-F309079B9A5A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Contacts.Data.Sqlite", "Contacts.Data.Sqlite\Contacts.Data.Sqlite.csproj", "{C487C364-6D0C-4D35-9989-F309079B9A5A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contacts.Api", "Contacts.Api\Contacts.Api.csproj", "{4438D2B3-8C0A-4692-975F-9E92887F47B8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Contacts.Api", "Contacts.Api\Contacts.Api.csproj", "{4438D2B3-8C0A-4692-975F-9E92887F47B8}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ExtraStuff", "ExtraStuff", "{F237316C-4113-4191-9EF7-EFA8065ED236}"
-ProjectSection(SolutionItems) = preProject
-	..\outline.md = ..\outline.md
-	..\README.md = ..\README.md
-	Contacts-Sample-Requests.http = Contacts-Sample-Requests.http
-	..\.github\workflows\deploy-to-azure.yml = ..\.github\workflows\deploy-to-azure.yml
-EndProjectSection
+	ProjectSection(SolutionItems) = preProject
+		Contacts-Sample-Requests.http = Contacts-Sample-Requests.http
+		..\.github\workflows\cwjg-functions.yml = ..\.github\workflows\cwjg-functions.yml
+		..\.github\workflows\deploy-to-azure.yml = ..\.github\workflows\deploy-to-azure.yml
+		..\outline.md = ..\outline.md
+		..\README.md = ..\README.md
+	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contacts.WebUi", "Contacts.WebUi\Contacts.WebUi.csproj", "{55B91C6D-7342-4984-BB2E-D588B5F7F371}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Contacts.WebUi", "Contacts.WebUi\Contacts.WebUi.csproj", "{55B91C6D-7342-4984-BB2E-D588B5F7F371}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contacts.Data.SqlServer", "Contacts.Data.SqlServer\Contacts.Data.SqlServer.csproj", "{A4AB8B52-C09E-4E50-B146-CD3A7BA001F5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Contacts.Data.SqlServer", "Contacts.Data.SqlServer\Contacts.Data.SqlServer.csproj", "{A4AB8B52-C09E-4E50-B146-CD3A7BA001F5}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AzureFunctions", "AzureFunctions", "{FBCB16D1-1458-49DB-9B1C-B4A430E74266}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contacts.Functions.ThumbnailCreator", "Contacts.Functions.ThumbnailCreator\Contacts.Functions.ThumbnailCreator.csproj", "{A449756D-D226-4CEB-B08F-2465850BAF5B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Contacts.Functions.ThumbnailCreator", "Contacts.Functions.ThumbnailCreator\Contacts.Functions.ThumbnailCreator.csproj", "{A449756D-D226-4CEB-B08F-2465850BAF5B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contacts.ImageManager", "Contacts.ImageManager\Contacts.ImageManager.csproj", "{559F81DB-27D1-49D9-9DF6-C1C5B2F63C46}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Contacts.ImageManager", "Contacts.ImageManager\Contacts.ImageManager.csproj", "{559F81DB-27D1-49D9-9DF6-C1C5B2F63C46}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -76,6 +80,9 @@ Global
 		{559F81DB-27D1-49D9-9DF6-C1C5B2F63C46}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{559F81DB-27D1-49D9-9DF6-C1C5B2F63C46}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{559F81DB-27D1-49D9-9DF6-C1C5B2F63C46}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{A449756D-D226-4CEB-B08F-2465850BAF5B} = {FBCB16D1-1458-49DB-9B1C-B4A430E74266}
