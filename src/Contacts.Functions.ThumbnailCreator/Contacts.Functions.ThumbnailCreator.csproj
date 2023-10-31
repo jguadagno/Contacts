@@ -2,6 +2,7 @@
     <PropertyGroup>
         <TargetFramework>net7.0</TargetFramework>
         <AzureFunctionsVersion>V3</AzureFunctionsVersion>
+        <UserSecretsId>64ebfe8a-6f91-4efd-b756-10010171af1d</UserSecretsId>
     </PropertyGroup>
     <ItemGroup>
         <PackageReference Include="JosephGuadagno.AzureHelpers.Storage" Version="1.1.6" />
