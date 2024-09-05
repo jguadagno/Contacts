@@ -7,7 +7,7 @@ env:
   AZURE_FUNCTIONAPP_NAME: cwjg-functions
   AZURE_FUNCTIONAPP_PACKAGE_PATH: .\published
   CONFIGURATION: Release
-  DOTNET_CORE_VERSION: 7.0.x
+  DOTNET_CORE_VERSION: 8.0.x
   WORKING_DIRECTORY: ./src/Contacts.Functions.ThumbnailCreator
 jobs:
   build:
@@ -34,7 +34,7 @@ jobs:
     needs: build
     steps:
     - name: Download artifact from build job
-      uses: actions/download-artifact@v3
+      uses: actions/download-artifact@v4
       with:
         name: functionapp
         path: ${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}
