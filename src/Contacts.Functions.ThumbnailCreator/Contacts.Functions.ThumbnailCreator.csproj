@@ -5,10 +5,10 @@
         <UserSecretsId>64ebfe8a-6f91-4efd-b756-10010171af1d</UserSecretsId>
     </PropertyGroup>
     <ItemGroup>
-        <PackageReference Include="JosephGuadagno.AzureHelpers.Storage" Version="1.1.7" />
+        <PackageReference Include="JosephGuadagno.AzureHelpers.Storage" Version="1.1.8" />
         <PackageReference Include="JosephGuadagno.Extensions" Version="1.2.4" />
         <PackageReference Include="Microsoft.Azure.Functions.Extensions" Version="1.1.0" />
-        <PackageReference Include="Microsoft.Azure.WebJobs.Extensions.Storage" Version="5.3.1" />
+        <PackageReference Include="Microsoft.Azure.WebJobs.Extensions.Storage" Version="5.3.3" />
         <PackageReference Include="Microsoft.NET.Sdk.Functions" Version="4.4.1" />
         <PackageReference Include="SixLabors.ImageSharp" Version="3.1.5" />
         <PackageReference Include="System.ComponentModel" Version="4.3.0" />

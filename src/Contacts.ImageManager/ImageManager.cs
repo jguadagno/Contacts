@@ -5,7 +5,6 @@ using System.Threading.Tasks;
 using Contacts.Domain.Interfaces;
 using JosephGuadagno.AzureHelpers.Storage;
 using SixLabors.ImageSharp;
-using SixLabors.ImageSharp.Formats;
 using SixLabors.ImageSharp.Formats.Jpeg;
 using SixLabors.ImageSharp.Processing;
 

@@ -8,17 +8,17 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="JosephGuadagno.AzureHelpers.Storage" Version="1.1.7" />
+        <PackageReference Include="JosephGuadagno.AzureHelpers.Storage" Version="1.1.8" />
         <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.22.0" />
         <PackageReference Include="Microsoft.ApplicationInsights.NLogTarget" Version="2.22.0" />
-        <PackageReference Include="Microsoft.Extensions.Caching.SqlServer" Version="8.0.8" />
-        <PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="8.0.0" />
-        <PackageReference Include="Microsoft.Graph" Version="5.56.1" />
-        <PackageReference Include="Microsoft.Identity.Web" Version="3.1.0" />
-        <PackageReference Include="Microsoft.Identity.Web.UI" Version="3.1.0" />
+        <PackageReference Include="Microsoft.Extensions.Caching.SqlServer" Version="8.0.10" />
+        <PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="8.0.1" />
+        <PackageReference Include="Microsoft.Graph" Version="5.60.0" />
+        <PackageReference Include="Microsoft.Identity.Web" Version="3.2.2" />
+        <PackageReference Include="Microsoft.Identity.Web.UI" Version="3.2.2" />
         <PackageReference Include="Microsoft.Tye.Extensions.Configuration" Version="0.4.0-alpha.20371.1" />
-        <PackageReference Include="NLog" Version="5.3.3" />
-        <PackageReference Include="NLog.Web.AspNetCore" Version="5.3.12" />
+        <PackageReference Include="NLog" Version="5.3.4" />
+        <PackageReference Include="NLog.Web.AspNetCore" Version="5.3.14" />
     </ItemGroup>
 
     <ItemGroup>
