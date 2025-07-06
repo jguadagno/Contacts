@@ -22,6 +22,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ExtraStuff", "ExtraStuff", 
 		..\.github\workflows\deploy-to-azure.yml = ..\.github\workflows\deploy-to-azure.yml
 		..\outline.md = ..\outline.md
 		..\README.md = ..\README.md
+		..\.gitignore = ..\.gitignore
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Contacts.WebUi", "Contacts.WebUi\Contacts.WebUi.csproj", "{55B91C6D-7342-4984-BB2E-D588B5F7F371}"
