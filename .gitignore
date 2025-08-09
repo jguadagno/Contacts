@@ -497,3 +497,4 @@ MigrationBackup/
 .idea/
 /src/Contacts.Api/internal-nlog-api.txt
 /src/Contacts.WebUi/internal-nlog-web-ui.txt
+**/logs/
