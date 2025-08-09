@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk.Web">
   <PropertyGroup>
-    <TargetFramework>net9.0</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
     <UserSecretsId>2f1978d6-8063-4f20-98c3-17a97a844dad</UserSecretsId>
     <LangVersion>default</LangVersion>
   </PropertyGroup>
