@@ -1,4 +1,5 @@
-using System;
+using System.IO;
+using System.Linq;
 using Contacts.Domain.Interfaces;
 using Contacts.ImageManager;
 using Contacts.WebUi.Models;
@@ -11,65 +12,37 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc.Authorization;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.Identity.Web;
 using Microsoft.Identity.Web.UI;
-using NLog;
-using NLog.Web;
-using WebApplication = Microsoft.AspNetCore.Builder.WebApplication;
+using Serilog;
+using Serilog.Exceptions;
+using Serilog.Sinks.MSSqlServer;
 
-var logger = LogManager.Setup().LoadConfigurationFromAppSettings().GetCurrentClassLogger();
+var builder = WebApplication.CreateBuilder(args);
 
-try
-{
-    var builder = WebApplication.CreateBuilder(args);
+ConfigureServices(builder.Configuration, builder.Services, builder.Environment);
 
-    builder.Logging.ClearProviders();
-    builder.Host.UseNLog();
+var app = builder.Build();
+ConfigureMiddleware(app, builder.Environment);
 
-    ConfigureServices(builder.Configuration, builder.Services, builder.Environment);
-
-    var app = builder.Build();
-    ConfigureMiddleware(app, builder.Environment);
-    app.Run();
-}
-catch (Exception exception)
-{
-    // NLog: catch setup errors
-    logger.Error(exception, "Stopped program because of exception");
-    throw;
-}
-finally
-{
-    // Ensure to flush and stop internal timers/threads before application-exit (Avoid segmentation fault on Linux)
-    LogManager.Shutdown();
-}
+app.Run();
 
 void ConfigureServices(IConfiguration configuration, IServiceCollection services, IWebHostEnvironment environment)
 {
     var settings = new Settings();
     configuration.Bind("Settings", settings);
-            
-    //  For Project Tye
-    var uri = configuration.GetServiceUri("contacts-api", "https");
-    // If the uri is null we assume Tye is not running.
-    // If not null, assure Uri ends in /
-    if (uri != null)
-    {
-        var url = uri.AbsoluteUri;
-        if (!url.EndsWith("/"))
-        {
-            url += "/";
-        }
-        // https://localhost:5001/
-        settings.ApiRootUri = url;
-    }
     
     services.AddSingleton(settings);
-            
-    Console.WriteLine(settings.ApiRootUri);
+
+    // Configure the logger
+    var fullyQualifiedLogFile = Path.Combine(builder.Environment.ContentRootPath, "logs\\logs.txt");
+    ConfigureLogging(builder.Configuration, builder.Services, fullyQualifiedLogFile, "Web");
     
+    services.AddHttpClient();
+    services.TryAddScoped<IContactService, ContactService>();
     services.AddSingleton<IImageStore>(_ =>
     {
         var blobs = environment.IsDevelopment()
@@ -86,10 +59,10 @@ void ConfigureServices(IConfiguration configuration, IServiceCollection services
         return new ThumbnailImageStore(blobs);
     });
 
-    services.AddSingleton<IImageManager, ImageManager>();
+    services.TryAddScoped<IImageManager, ImageManager>();
     
     // Register Thumbnail Create Queue
-    services.AddSingleton(_ => environment.IsDevelopment()
+    services.TryAddScoped(_ => environment.IsDevelopment()
         ? new Queue(settings.ThumbnailQueueStorageAccount, settings.ThumbnailQueueName)
         : new Queue(settings.ThumbnailQueueStorageAccountName, null, settings.ThumbnailQueueName));
     
@@ -132,27 +105,61 @@ void ConfigureServices(IConfiguration configuration, IServiceCollection services
     services.AddRazorPages();
 }
 
-void ConfigureMiddleware(WebApplication app, IWebHostEnvironment env)
+void ConfigureMiddleware(WebApplication application, IWebHostEnvironment env)
 {
     if (env.IsDevelopment())
     {
-        app.UseDeveloperExceptionPage();
+        application.UseDeveloperExceptionPage();
     }
     else
     {
-        app.UseExceptionHandler("/Home/Error");
+        application.UseExceptionHandler("/Home/Error");
         // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
-        app.UseHsts();
+        application.UseHsts();
     }
 
-    app.UseHttpsRedirection();
-    app.UseStaticFiles();
-
-    app.UseRouting();
+    application.UseHttpsRedirection();
+    application.UseStaticFiles();
 
     app.UseAuthentication();
     app.UseAuthorization();
 
-    app.MapDefaultControllerRoute();
-    app.MapRazorPages();
+    application.MapDefaultControllerRoute();
+    application.MapRazorPages();
+}
+
+void ConfigureLogging(IConfigurationRoot configurationRoot, IServiceCollection services, string logPath, string applicationName)
+{
+    var logger = new LoggerConfiguration()
+        .Enrich.FromLogContext()
+        .Enrich.WithMachineName()
+        .Enrich.WithThreadId()
+        .Enrich.WithEnvironmentName()
+        .Enrich.WithAssemblyName()
+        .Enrich.WithAssemblyVersion(true)
+        .Enrich.WithExceptionDetails()
+        .Enrich.WithProperty("Application", applicationName)
+        .Destructure.ToMaximumDepth(4)
+        .Destructure.ToMaximumStringLength(100)
+        .Destructure.ToMaximumCollectionCount(10)
+        .WriteTo.Console()
+        .WriteTo.File(logPath, rollingInterval: RollingInterval.Day)
+        .WriteTo.MSSqlServer(
+            connectionString: configurationRoot.GetConnectionString("ContactsDatabaseSqlServer"),
+            sinkOptions: new MSSqlServerSinkOptions
+            {
+                TableName = "Logs",
+                AutoCreateSqlTable = false, 
+                AutoCreateSqlDatabase = false
+            })
+        .WriteTo.OpenTelemetry()
+        .CreateLogger();
+    services.AddLogging(loggingBuilder =>
+    {
+        loggingBuilder.AddApplicationInsights(configureTelemetryConfiguration: (config) =>
+                config.ConnectionString =
+                    configurationRoot["ApplicationInsights:ConnectionString"],
+            configureApplicationInsightsLoggerOptions: (_) => { });loggingBuilder.AddApplicationInsights();
+        loggingBuilder.AddSerilog(logger);
+    });
 }

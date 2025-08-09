@@ -6,54 +6,40 @@ using Contacts.Data.SqlServer;
 using Contacts.Domain.Interfaces;
 using Contacts.Logic;
 using Microsoft.AspNetCore.Builder;
-
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
-using Microsoft.Identity.Web;
 using Microsoft.OpenApi.Models;
-using NLog;
-using NLog.Web;
+using Serilog;
+using Serilog.Exceptions;
+using Serilog.Sinks.MSSqlServer;
+using WebApplication = Microsoft.AspNetCore.Builder.WebApplication;
 
-var logger = LogManager.Setup().LoadConfigurationFromAppSettings().GetCurrentClassLogger();
+var builder = WebApplication.CreateBuilder(args);
 
-try
+ConfigureServices(builder.Services);
+
+var app = builder.Build();
+
+if (builder.Environment.IsDevelopment())
 {
-    var builder = WebApplication.CreateBuilder(args);
-
-    builder.Logging.ClearProviders();
-    builder.Host.UseNLog();
-
-    ConfigureServices(builder.Configuration, builder.Services);
-
-    var app = builder.Build();
-
-    if (builder.Environment.IsDevelopment())
-    {
-        app.UseDeveloperExceptionPage();
-    }
-
-    ConfigureMiddleware(app, app.Services);
-    app.Run();
-}
-catch (Exception exception)
-{
-    // NLog: catch setup errors
-    logger.Error(exception, "Stopped program because of exception");
-    throw;
-}
-finally
-{
-    // Ensure to flush and stop internal timers/threads before application-exit (Avoid segmentation fault on Linux)
-    LogManager.Shutdown();
+    app.UseDeveloperExceptionPage();
 }
 
-void ConfigureServices(ConfigurationManager configuration, IServiceCollection services)
+ConfigureMiddleware(app);
+app.Run();
+
+
+void ConfigureServices(IServiceCollection services)
 {
+    
     services.AddApplicationInsightsTelemetry();
-            
-    services.AddMicrosoftIdentityWebApiAuthentication(configuration);
+
+    // Configure the logger
+    var fullyQualifiedLogFile = Path.Combine(builder.Environment.ContentRootPath, "logs\\logs.txt");
+    ConfigureLogging(builder.Configuration, builder.Services, fullyQualifiedLogFile, "Web");
+    
     services.AddRazorPages();
     services.AddControllers();
     services.AddCors();
@@ -89,34 +75,68 @@ void ConfigureServices(ConfigurationManager configuration, IServiceCollection se
     services.AddTransient<IContactManager, ContactManager>();
 }
 
-void ConfigureMiddleware(IApplicationBuilder app, IServiceProvider services)
+void ConfigureMiddleware(IApplicationBuilder applicationBuilder)
 {
             
     // TODO: Research and document for React Native client
-    app.UseCors(x => x
+    applicationBuilder.UseCors(x => x
         .AllowAnyMethod()
         .AllowAnyHeader()
         .WithOrigins("https://localhost:44311", "https://localhost:5001", "https://cwjg-contacts-web.azurewebsites.net"));
             
     // Enable middleware to serve generated Swagger as a JSON endpoint.
-    app.UseSwagger();
+    applicationBuilder.UseSwagger();
 
     // Enable middleware to serve swagger-ui (HTML, JS, CSS, etc.),
     // specifying the Swagger JSON endpoint.
-    app.UseSwaggerUI(c =>
+    applicationBuilder.UseSwaggerUI(c =>
     {
         c.SwaggerEndpoint("/swagger/v1/swagger.json", "Coding with JoeG Contact Api V1");
     });
 
-    app.UseHttpsRedirection();
-    app.UseRouting();
-
-    app.UseAuthentication();
-    app.UseAuthorization();
+    applicationBuilder.UseHttpsRedirection();
+    applicationBuilder.UseRouting();
         
-    app.UseEndpoints(endpoints =>
+    applicationBuilder.UseEndpoints(endpoints =>
     {
         endpoints.MapControllers(); // Map attribute-routed API controllers
         endpoints.MapRazorPages();//map razor pages
+    });
+}
+
+
+void ConfigureLogging(IConfigurationRoot configurationRoot, IServiceCollection services, string logPath, string applicationName)
+{
+    var logger = new LoggerConfiguration()
+        .Enrich.FromLogContext()
+        .Enrich.WithMachineName()
+        .Enrich.WithThreadId()
+        .Enrich.WithEnvironmentName()
+        .Enrich.WithAssemblyName()
+        .Enrich.WithAssemblyVersion(true)
+        .Enrich.WithExceptionDetails()
+        .Enrich.WithProperty("Application", applicationName)
+        .Destructure.ToMaximumDepth(4)
+        .Destructure.ToMaximumStringLength(100)
+        .Destructure.ToMaximumCollectionCount(10)
+        .WriteTo.Console()
+        .WriteTo.File(logPath, rollingInterval: RollingInterval.Day)
+        .WriteTo.MSSqlServer(
+            connectionString: configurationRoot.GetConnectionString("ContactsDatabaseSqlServer"),
+            sinkOptions: new MSSqlServerSinkOptions
+            {
+                TableName = "Logs",
+                AutoCreateSqlTable = false, 
+                AutoCreateSqlDatabase = false
+            })
+        .WriteTo.OpenTelemetry()
+        .CreateLogger();
+    services.AddLogging(loggingBuilder =>
+    {
+        loggingBuilder.AddApplicationInsights(configureTelemetryConfiguration: (config) =>
+                config.ConnectionString =
+                    configurationRoot["ApplicationInsights:ConnectionString"],
+            configureApplicationInsightsLoggerOptions: (_) => { });loggingBuilder.AddApplicationInsights();
+        loggingBuilder.AddSerilog(logger);
     });
 }

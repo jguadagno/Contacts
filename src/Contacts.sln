@@ -25,6 +25,21 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ExtraStuff", "ExtraStuff", 
 		..\.gitignore = ..\.gitignore
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SQLServer", "SQLServer", "{6385B702-FE45-4AEF-93CC-E724BEC47B0D}"
+	ProjectSection(SolutionItems) = preProject
+		..\db-scripts\sqlserver\create-data.sql = ..\db-scripts\sqlserver\create-data.sql
+		..\db-scripts\sqlserver\create-tables.sql = ..\db-scripts\sqlserver\create-tables.sql
+		..\db-scripts\sqlserver\readme.md = ..\db-scripts\sqlserver\readme.md
+		..\db-scripts\sqlserver\create-database-and-user.sql = ..\db-scripts\sqlserver\create-database-and-user.sql
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sqlite", "Sqlite", "{A887E7C4-B0BC-42EA-BF4E-A564BBFF30C6}"
+	ProjectSection(SolutionItems) = preProject
+		..\db-scripts\sqlite\readme.md = ..\db-scripts\sqlite\readme.md
+		..\db-scripts\sqlite\create-data.sql = ..\db-scripts\sqlite\create-data.sql
+		..\db-scripts\sqlite\create-tables.sql = ..\db-scripts\sqlite\create-tables.sql
+	EndProjectSection
+EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Contacts.WebUi", "Contacts.WebUi\Contacts.WebUi.csproj", "{55B91C6D-7342-4984-BB2E-D588B5F7F371}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Contacts.Data.SqlServer", "Contacts.Data.SqlServer\Contacts.Data.SqlServer.csproj", "{A4AB8B52-C09E-4E50-B146-CD3A7BA001F5}"
